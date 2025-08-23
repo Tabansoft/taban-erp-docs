@@ -1,0 +1,15 @@
+site_name: مستندات ERP تابان
+site_description: توضیحات پروژه شما اینجا قرار می‌گیرد.
+site_author: تابان‌سافت
+
+theme:
+  name: material
+  language: fa
+  direction: rtl
+
+nav:
+  - 'معرفی': index.md
+  - 'شروع به کار': setup.md
+  - 'امکانات':
+    - 'جستجو': search.md
+    - 'لینک‌ها': links.md
