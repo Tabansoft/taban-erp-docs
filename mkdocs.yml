@@ -8,10 +8,12 @@ theme:
   name: material
   language: fa
   direction: rtl
+  font:
+    text: Vazirmatn
+    code: Fira Code
 
 nav:
   - 'معرفی': index.md
-  - 'شروع به کار': setup.md
-  - 'امکانات':
-    - 'جستجو': search.md
-    - 'لینک‌ها': links.md
+  - 'ساختار سازمان':
+    - 'ساختار مالی':
+      - 'بنگاه اقتصادی': enterprise-structure/financial/legal-entity.md
