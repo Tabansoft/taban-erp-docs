@@ -17,3 +17,5 @@ nav:
   - 'ساختار سازمان':
     - 'ساختار مالی':
       - 'بنگاه اقتصادی': enterprise-structure/financial/legal-entity.md
+    - 'ساختار عملیاتی':
+      - 'مکان عملیاتی': enterprise-structure/operational/operating-unit.md
