@@ -19,3 +19,16 @@ nav:
       - 'بنگاه اقتصادی': enterprise-structure/financial/legal-entity.md
     - 'ساختار عملیاتی':
       - 'مکان عملیاتی': enterprise-structure/operational/operating-unit.md
+  # - 'فروش':
+  #   - 'اطلاعات پایه':
+  #     - 'واحد فروش': sales/operational/operating-unit.md
+  #     - 'کانال توزیع': sales/operational/operating-unit.md
+  #     - 'مشتری': sales/operational/operating-unit.md
+  #   - 'سفارش فروش': sales/operational/operating-unit.md
+    # - 'قیمت‌گذاری':
+    #   - 'لیست قیمت': sales/operational/operating-unit.md
+    #   - 'تعدیلات قیمت': sales/operational/operating-unit.md
+    #   - 'قوانین تعدیلات قیمت': sales/operational/operating-unit.md
+  - 'حمل‌و‌نقل و لجستیک':
+    - 'تعاریف پایه':
+      - 'انواع وسیله نقلیه': transportation-management/master-data/vehicle-type.md
