@@ -29,6 +29,11 @@ nav:
     #   - 'لیست قیمت': sales/operational/operating-unit.md
     #   - 'تعدیلات قیمت': sales/operational/operating-unit.md
     #   - 'قوانین تعدیلات قیمت': sales/operational/operating-unit.md
-  - 'حمل‌و‌نقل و لجستیک':
+  
+  - 'مدیریت موجودی':
+    - 'تعاریف پایه':
+      - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
+
+  - 'مدیریت حمل‌ونقل':
     - 'تعاریف پایه':
       - 'انواع وسیله نقلیه': transportation-management/master-data/vehicle-type.md
