@@ -34,6 +34,10 @@ nav:
     - 'تعاریف پایه':
       - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
 
+  - 'مدیریت انبار':
+    - 'تعاریف پایه':
+      - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
+
   - 'مدیریت حمل‌ونقل':
     - 'تعاریف پایه':
       - 'انواع وسیله نقلیه': transportation-management/master-data/vehicle-type.md
