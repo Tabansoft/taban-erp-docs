@@ -1,7 +1,7 @@
 site_name: مستندات ERP تابان
 site_description: توضیحات پروژه شما اینجا قرار می‌گیرد.
 site_author: تابان‌سافت
-site_url: https://docs.tabansoft.ir/
+site_url: https://docs.tabansoft.ir
 repo_url: https://github.com/tabansoft/taban-erp-docs/
 
 theme:
