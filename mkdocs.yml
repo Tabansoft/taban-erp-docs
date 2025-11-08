@@ -1,7 +1,7 @@
 site_name: مستندات ERP تابان
 site_description: توضیحات پروژه شما اینجا قرار می‌گیرد.
 site_author: تابان‌سافت
-site_url: https://tabansoft.github.io/taban-erp-docs/
+site_url: https://docs.tabansoft.ir/
 repo_url: https://github.com/tabansoft/taban-erp-docs/
 
 theme:
@@ -37,6 +37,23 @@ nav:
   - 'مدیریت انبار':
     - 'تعاریف پایه':
       - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
+
+  - 'برنامه‌ریزی و کنترل تولید':
+    - 'تعاریف پایه':
+      - 'قابلیت‌ها': manufacturing/master-data/capability.md
+      - 'انواع منبع': manufacturing/master-data/resource-type.md
+      - 'منابع': manufacturing/master-data/resource.md
+      - 'مراکز کاری': manufacturing/master-data/work-center.md
+      - 'فرمول‌های تولید': manufacturing/master-data/bom.md
+      - 'فرآیند‌های تولید': manufacturing/master-data/routing.md
+      - 'قواعد تخصیص': manufacturing/master-data/dispatching-rules.md
+      - 'موتور زمان‌بندی': manufacturing/master-data/sheduler.md
+    - 'برنامه‌ریزی':
+      - 'برنامه‌های تولید اصلی': manufacturing/planning/master-production-schedules.md
+    - 'اجرای تولید':
+      - 'دستور‌های تولید': manufacturing/planning/resources.md
+      
+    
 
   - 'مدیریت حمل‌ونقل':
     - 'تعاریف پایه':

@@ -12,13 +12,13 @@
         <meta name="author" content="تابان‌سافت">
       
       
-        <link rel="canonical" href="https://docs.tabansoft.ir/inventory-management/master-data/package-type/">
+        <link rel="canonical" href="https://docs.tabansoft.ir/manufacturing/master-data/bom/">
       
       
-        <link rel="prev" href="./">
+        <link rel="prev" href="../work-center/">
       
       
-        <link rel="next" href="../../../manufacturing/master-data/capability/">
+        <link rel="next" href="../routing/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>انواع بسته‌بندی کالا - مستندات ERP تابان</title>
+        <title>فرمول‌های تولید - مستندات ERP تابان</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#package-type" class="md-skip">
+        <a href="#bill-of-materials-bom" class="md-skip">
           پرش به محتویات
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              انواع بسته‌بندی کالا
+              فرمول‌های تولید
             
           </span>
         </div>
@@ -502,32 +502,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    انواع بسته‌بندی کالا
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
         
   
   
@@ -538,116 +516,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      فهرست موضوعات
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۱. هدف
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۲. محل دسترسی در سیستم
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۳. تعریف
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۴. کاربردها
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۵. فیلدهای اطلاعاتی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۶. نکات کاربردی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۷. مثال کاربردی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۸. ارتباط با سایر ماژول‌ها
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۹. خطاها و هشدارهای احتمالی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۱۰. توسعه‌های آتی (پیشنهادی)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -672,20 +540,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -701,10 +567,126 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             مدیریت انبار
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع بسته‌بندی کالا
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌ریزی و کنترل تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            برنامه‌ریزی و کنترل تولید
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -725,253 +707,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    تعاریف پایه
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            تعاریف پایه
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    انواع بسته‌بندی کالا
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    انواع بسته‌بندی کالا
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      فهرست موضوعات
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۱. هدف
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۲. محل دسترسی در سیستم
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۳. تعریف
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۴. کاربردها
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۵. فیلدهای اطلاعاتی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۶. نکات کاربردی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۷. مثال کاربردی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۸. ارتباط با سایر ماژول‌ها
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۹. خطاها و هشدارهای احتمالی
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۱۰. توسعه‌های آتی (پیشنهادی)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    برنامه‌ریزی و کنترل تولید
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            برنامه‌ریزی و کنترل تولید
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -987,7 +723,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             تعاریف پایه
@@ -1001,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/capability/" class="md-nav__link">
+      <a href="../capability/" class="md-nav__link">
         
   
   
@@ -1024,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/resource-type/" class="md-nav__link">
+      <a href="../resource-type/" class="md-nav__link">
         
   
   
@@ -1047,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/resource/" class="md-nav__link">
+      <a href="../resource/" class="md-nav__link">
         
   
   
@@ -1070,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/work-center/" class="md-nav__link">
+      <a href="../work-center/" class="md-nav__link">
         
   
   
@@ -1090,10 +826,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/bom/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    فرمول‌های تولید
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1104,6 +862,140 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. هدف
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. محل دسترسی در سیستم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. تعریف
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. کاربردها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. فیلدهای اطلاعاتی
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۵. فیلدهای اطلاعاتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش هدر (BOM Header)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom-components-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش اجزا (BOM Components / Lines)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. نکات کاربردی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. مثال کاربردی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۸. ارتباط با سایر ماژول‌ها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۹. خطاها و هشدارهای احتمالی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۰. توسعه‌های آتی (پیشنهادی)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1116,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/routing/" class="md-nav__link">
+      <a href="../routing/" class="md-nav__link">
         
   
   
@@ -1139,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/dispatching-rules/" class="md-nav__link">
+      <a href="../dispatching-rules/" class="md-nav__link">
         
   
   
@@ -1162,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/master-data/sheduler/" class="md-nav__link">
+      <a href="../sheduler/" class="md-nav__link">
         
   
   
@@ -1231,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/planning/master-production-schedules.md" class="md-nav__link">
+      <a href="../../planning/master-production-schedules.md" class="md-nav__link">
         
   
   
@@ -1300,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../manufacturing/planning/resources.md" class="md-nav__link">
+      <a href="../../planning/resources.md" class="md-nav__link">
         
   
   
@@ -1514,6 +1406,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="۵. فیلدهای اطلاعاتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش هدر (BOM Header)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom-components-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش اجزا (BOM Components / Lines)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1580,144 +1496,170 @@
   
 
 
-<h1 id="package-type">نوع بسته‌بندی کالا (Package Type)</h1>
+<h1 id="bill-of-materials-bom">فرمول‌ تولید (Bill of Materials - BOM)</h1>
 <hr />
 <h2 id="_1">۱. هدف</h2>
-<p>هدف از این فرم، تعریف و مدیریت انواع <strong>بسته‌های فیزیکی</strong> است که کالاها در آن‌ها قرار می‌گیرند.<br />
-هر نوع بسته‌بندی صرفاً مشخص‌کننده‌ی <strong>شکل یا جنس ظرف</strong> کالا است (مثل کیسه، کارتن، قوطی، بطری) و برای استفاده در تعریف کالا، BOM، و عملیات بسته‌بندی مرسوله‌ها کاربرد دارد.  </p>
-<p>در این سطح، جزئیات ابعادی یا ظرفیتی تعریف نمی‌شود — این اطلاعات در سطح کالا (Product Master) یا نوع بسته مرسوله (Shipment Package Type) نگهداری می‌شود.</p>
+<p>هدف از این فرم، تعریف دقیق <strong>مواد، قطعات و زیرمجموعه‌هایی</strong> است که برای تولید یک محصول مشخص (یا نیمه‌ساخته) مورد نیاز است. BOM به سوال «محصول <strong>از چه چیزی</strong> ساخته می‌شود؟» پاسخ می‌دهد.</p>
 <hr />
 <h2 id="_2">۲. محل دسترسی در سیستم</h2>
-<p><strong>ماژول:</strong> مدیریت موجودی (Inventory Management)<br />
-<strong>مسیر:</strong><br />
-<code>مدیریت موجودی / تعاریف پایه / نوع بسته‌بندی کالا</code></p>
-<blockquote>
-<p><em>در صورتی که سیستم دارای ماژول مدیریت حمل‌ونقل (Transportation Management) یا WMS باشد، از داده‌های این فرم در فرآیند بسته‌بندی و بارگیری نیز استفاده می‌شود.</em></p>
-</blockquote>
+<p><strong>ماژول:</strong> مدیریت تولید (Production Management)
+<strong>مسیر:</strong>
+<code>مدیریت تولید / مهندسی / فرمول‌های تولید (BOM)</code></p>
 <hr />
 <h2 id="_3">۳. تعریف</h2>
-<p><strong>نوع بسته‌بندی کالا (Package Type)</strong> نشان‌دهنده‌ی نوع فیزیکی یا جنس بسته‌ای است که کالا در آن عرضه می‌شود.<br />
-این تعریف صرفاً جنبه‌ی طبقه‌بندی دارد و در منطق محاسباتی وزن، حجم یا ظرفیت دخالتی ندارد.  </p>
-<p><strong>مثال‌ها:</strong></p>
-<ul>
-<li>کیسه ۲۵ کیلویی  </li>
-<li>جعبه مقوایی  </li>
-<li>قوطی فلزی  </li>
-<li>بطری پلاستیکی  </li>
-<li>کارتن ۱۲ تایی  </li>
-<li>سطل پلاستیکی  </li>
-</ul>
+<p><strong>فرمول تولید (BOM)</strong> یک لیست ساختاریافته (معروف به «درخت محصول») است که شامل تمام اجزای مورد نیاز برای تولید یک «مقدار پایه» (Basis Quantity) از محصول نهایی است. این سند، ستون فقرات برنامه‌ریزی مواد (MRP) و محاسبه بهای تمام شده مواد است.</p>
+<p>این فرم از دو بخش اصلی تشکیل شده است:
+۱. <strong>هدر (Header):</strong> اطلاعات کلی BOM (برای کدام محصول و چه مقداری).
+۲. <strong>اجزا (Components):</strong> لیست مواد و قطعات مورد نیاز.</p>
 <hr />
 <h2 id="_4">۴. کاربردها</h2>
 <ul>
-<li>در زمان <strong>تعریف کالا</strong> برای مشخص کردن نوع بسته‌بندی کالا (مثلاً “خوراک دام کیسه‌ای”).  </li>
-<li>در <strong>BOM (صورت مواد)</strong> برای تعیین نیاز به مواد بسته‌بندی (مثل کیسه خالی یا کارتن).  </li>
-<li>در <strong>انبار و حمل‌ونقل</strong> برای نمایش نوع بسته در اسناد مرسوله و لیبل‌گذاری.  </li>
-<li>در <strong>گزارشات آماری</strong> جهت تفکیک کالاها بر اساس نوع بسته (مثلاً درصد کالاهای فله‌ای در مقابل بسته‌ای).</li>
+<li><strong>برنامه‌ریزی تأمین مواد (MRP):</strong> محاسبه دقیق نیازمندی‌های مواد اولیه بر اساس سفارش‌های تولید.</li>
+<li><strong>صدور حواله انبار:</strong> تعیین اینکه چه موادی و به چه مقدار باید از انبار برای یک سفارش تولید صادر شود.</li>
+<li><strong>بهای تمام شده:</strong> محاسبه هزینه مواد مستقیم (Direct Material Cost) برای محصول نهایی.</li>
+<li><strong>مهندسی محصول:</strong> نگهداری سوابق دقیق از ساختار محصولات.</li>
 </ul>
 <hr />
 <h2 id="_5">۵. فیلدهای اطلاعاتی</h2>
+<h3 id="bom-header">بخش هدر (BOM Header)</h3>
 <table>
 <thead>
 <tr>
-<th>نام فیلد</th>
-<th>نوع داده</th>
-<th>توضیح</th>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">توضیح</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>کد نوع بسته‌بندی</strong></td>
-<td>متنی / عددی</td>
-<td>شناسه یکتا برای هر نوع بسته‌بندی (مثلاً <code>PKG_001</code>)</td>
+<td style="text-align: left;"><strong>نام (Name)</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">یک نام توصیفی (مثلاً «لیست مواد دوچرخه M-200»)</td>
 </tr>
 <tr>
-<td><strong>نام نوع بسته‌بندی</strong></td>
-<td>متنی</td>
-<td>عنوان نوع بسته‌بندی (مثلاً کیسه، کارتن، بطری)</td>
+<td style="text-align: left;"><strong>محصول (Product)</strong></td>
+<td style="text-align: left;">انتخابی (از کالاها)</td>
+<td style="text-align: left;">محصول نهایی (والد) که این BOM آن را تعریف می‌کند (مثلاً «دوچرخه M-200»)</td>
 </tr>
 <tr>
-<td><strong>جنس بسته‌بندی</strong></td>
-<td>انتخابی</td>
-<td>مقوایی، پلاستیکی، فلزی، شیشه‌ای، پارچه‌ای و ...</td>
+<td style="text-align: left;"><strong>مقدار پایه (Basis Quantity)</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">این لیست مواد برای چه مقداری از محصول تعریف شده است (مثلاً: ۱)</td>
 </tr>
 <tr>
-<td><strong>قابلیت بازیافت</strong></td>
-<td>بولین (بله / خیر)</td>
-<td>مشخص می‌کند آیا بسته قابل بازیافت است یا خیر</td>
+<td style="text-align: left;"><strong>واحد مقدار پایه</strong></td>
+<td style="text-align: left;">انتخابی (از UoM)</td>
+<td style="text-align: left;">واحد اندازه‌گیری مقدار پایه (مثلاً «عدد»، «کیلوگرم»)</td>
 </tr>
 <tr>
-<td><strong>قابلیت چندبار استفاده (Reusable)</strong></td>
-<td>بولین</td>
-<td>آیا این بسته می‌تواند مجدداً برای بسته‌بندی استفاده شود</td>
+<td style="text-align: left;"><strong>وضعیت (Status)</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">وضعیت BOM (مثلاً: در حال طراحی، تایید شده، بایگانی شده)</td>
 </tr>
 <tr>
-<td><strong>توضیحات</strong></td>
-<td>متنی</td>
-<td>توضیحات تکمیلی در مورد نوع بسته‌بندی</td>
+<td style="text-align: left;"><strong>نسخه (Version Number)</strong></td>
+<td style="text-align: left;">متنی (آینده)</td>
+<td style="text-align: left;">(توسعه آتی) برای مدیریت تغییرات مهندسی (ECM)</td>
 </tr>
 <tr>
-<td><strong>وضعیت فعال</strong></td>
-<td>بولین</td>
-<td>تعیین می‌کند که نوع بسته‌بندی در حال استفاده است یا خیر</td>
+<td style="text-align: left;"><strong>تاریخ اعتبار (Valid From/To)</strong></td>
+<td style="text-align: left;">تاریخ (آینده)</td>
+<td style="text-align: left;">(توسعه آتی) محدوده زمانی اعتبار این نسخه از BOM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bom-components-lines">بخش اجزا (BOM Components / Lines)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>قطعه/ماده (Component)</strong></td>
+<td style="text-align: left;">انتخابی (از کالاها)</td>
+<td style="text-align: left;">ماده اولیه یا قطعه نیمه‌ساخته مورد نیاز (مثلاً «لاستیک»)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مقدار (Quantity)</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">چه مقدار از این قطعه برای «مقدار پایه» محصول لازم است (مثلاً: ۲)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>واحد اندازه‌گیری (UoM)</strong></td>
+<td style="text-align: left;">انتخابی (از UoM)</td>
+<td style="text-align: left;">واحد اندازه‌گیری قطعه (مثلاً «عدد»، «کیلوگرم»، «متر»)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شماره عملیات تخصیص (Op. Seq.)</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;"><strong>(بسیار مهم)</strong> شماره عملیاتی از «فرآیند تولید» (Routing) که این ماده باید در آنجا مصرف شود</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>درصد ضایعات (Scrap %)</strong></td>
+<td style="text-align: left;">درصدی</td>
+<td style="text-align: left;">درصد ضایعات پیش‌بینی شده برای این ماده (برای افزایش درخواست از انبار)</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="_6">۶. نکات کاربردی</h2>
 <ol>
-<li>ابعاد، وزن یا ظرفیت بسته‌بندی در این فرم تعریف نمی‌شود — این موارد باید در سطح <strong>کالا (Product Master)</strong> مشخص شوند.  </li>
-<li>اگر یک کالا در چند نوع بسته مختلف تولید می‌شود (مثلاً ۱۰ کیلویی و ۲۵ کیلویی)، هرکدام باید <strong>کالای جداگانه</strong> باشد که به نوع بسته‌بندی مربوطه لینک دارد.  </li>
-<li>نوع بسته‌بندی را می‌توان در <strong>BOM کالا</strong> نیز استفاده کرد تا مقدار مصرف بسته خالی کنترل شود.  </li>
-<li>اگر در آینده نیاز به جزئیات فیزیکی بسته دارید (ابعاد، وزن خالی و غیره)، می‌توانید آن را در یک جدول توسعه‌ای جداگانه با ارتباط یک‌به‌یک اضافه کنید.</li>
+<li><strong>اهمیت مقدار پایه:</strong> تمام مقادیر اجزا (Lines) باید نسبت به «مقدار پایه» (Header) تعریف شوند. اگر مقدار پایه ۱ (عدد) دوچرخه باشد، مقدار لاستیک ۲ (عدد) است. اگر مقدار پایه ۱۰۰۰ (کیلوگرم) خوراک طیور باشد، مقدار ذرت ۴۰۰ (کیلوگرم) است.</li>
+<li><strong>اهمیت شماره عملیات تخصیص:</strong> این فیلد، BOM (چه چیزی) را به Routing (چگونه) متصل می‌کند. این فیلد به سیستم می‌گوید که «لوله فریم» باید در عملیات ۱۰ (برشکاری) در دسترس باشد، نه در عملیات ۳۰ (رنگ‌آمیزی).</li>
+<li><strong>ضایعات (Scrap):</strong> اگر برای تولید ۱ دوچرخه (مقدار پایه) به ۲ متر لوله نیاز دارید (مقدار) اما ۵٪ ضایعات برشکاری دارید، باید در فیلد ضایعات ۵٪ را وارد کنید. سیستم هنگام برنامه‌ریزی، $۲ \times ۱.۰۵ = ۲.۱$ متر لوله درخواست خواهد کرد.</li>
 </ol>
 <hr />
 <h2 id="_7">۷. مثال کاربردی</h2>
+<p><strong>سناریو: تولید ۱ عدد «دوچرخه M-200»</strong></p>
+<p><strong>هدر (Header):</strong>
+* <strong>نام:</strong> BOM دوچرخه M-200
+* <strong>محصول:</strong> دوچرخه M-200 (کد P-100)
+* <strong>مقدار پایه:</strong> ۱
+* <strong>واحد:</strong> عدد
+* <strong>وضعیت:</strong> تایید شده</p>
+<p><strong>اجزا (Components):</strong></p>
 <table>
 <thead>
 <tr>
-<th>کد</th>
-<th>نام</th>
-<th>جنس</th>
-<th>قابلیت بازیافت</th>
-<th>وضعیت</th>
+<th style="text-align: left;">قطعه/ماده (کد کالا)</th>
+<th style="text-align: left;">مقدار</th>
+<th style="text-align: left;">واحد</th>
+<th style="text-align: left;">شماره عملیات تخصیص</th>
+<th style="text-align: left;">ضایعات</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>PKG_001</td>
-<td>کیسه ۲۵ کیلویی</td>
-<td>پلی‌پروپیلن</td>
-<td>بله</td>
-<td>فعال</td>
+<td style="text-align: left;">فریم (P-101)</td>
+<td style="text-align: left;">۱</td>
+<td style="text-align: left;">عدد</td>
+<td style="text-align: left;">۲۰ (مونتاژ)</td>
+<td style="text-align: left;">۰٪</td>
 </tr>
 <tr>
-<td>PKG_002</td>
-<td>کارتن مقوایی</td>
-<td>مقوایی</td>
-<td>بله</td>
-<td>فعال</td>
+<td style="text-align: left;">لاستیک (C-200)</td>
+<td style="text-align: left;">۲</td>
+<td style="text-align: left;">عدد</td>
+<td style="text-align: left;">۲۰ (مونتاژ)</td>
+<td style="text-align: left;">۱٪</td>
 </tr>
 <tr>
-<td>PKG_003</td>
-<td>بطری ۱ لیتری</td>
-<td>PET پلاستیکی</td>
-<td>بله</td>
-<td>فعال</td>
+<td style="text-align: left;">لوله فریم (R-300)</td>
+<td style="text-align: left;">۳</td>
+<td style="text-align: left;">متر</td>
+<td style="text-align: left;">۱۰ (برشکاری)</td>
+<td style="text-align: left;">۵٪</td>
 </tr>
 <tr>
-<td>PKG_004</td>
-<td>سطل فلزی ۱۰ کیلویی</td>
-<td>فلزی</td>
-<td>خیر</td>
-<td>فعال</td>
-</tr>
-<tr>
-<td>PKG_005</td>
-<td>قوطی کنسرو</td>
-<td>فلزی</td>
-<td>بله</td>
-<td>فعال</td>
+<td style="text-align: left;">رنگ قرمز (R-301)</td>
+<td style="text-align: left;">۰.۵</td>
+<td style="text-align: left;">کیلوگرم</td>
+<td style="text-align: left;">۳۰ (رنگ‌آمیزی)</td>
+<td style="text-align: left;">۲٪</td>
 </tr>
 </tbody>
 </table>
@@ -1726,36 +1668,36 @@
 <table>
 <thead>
 <tr>
-<th>ماژول مرتبط</th>
-<th>نوع ارتباط</th>
-<th>توضیح</th>
+<th style="text-align: left;">ماژول مرتبط</th>
+<th style="text-align: left;">نوع ارتباط</th>
+<th style="text-align: left;">توضیح</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>مدیریت کالا (Product Master)</strong></td>
-<td>استفاده مستقیم</td>
-<td>انتخاب نوع بسته‌بندی در تعریف کالا</td>
+<td style="text-align: left;"><strong>مدیریت کالا (Product Master)</strong></td>
+<td style="text-align: left;">استفاده مستقیم</td>
+<td style="text-align: left;">هم برای محصول والد و هم برای اجزای فرزند</td>
 </tr>
 <tr>
-<td><strong>مدیریت موجودی (Inventory)</strong></td>
-<td>وابسته</td>
-<td>گزارش‌گیری از کالاها بر اساس نوع بسته‌بندی</td>
+<td style="text-align: left;"><strong>فرآیند تولید (Routing)</strong></td>
+<td style="text-align: left;">وابسته (بسیار قوی)</td>
+<td style="text-align: left;">اتصال از طریق «شماره عملیات تخصیص»</td>
 </tr>
 <tr>
-<td><strong>مدیریت تولید (Production / BOM)</strong></td>
-<td>وابسته</td>
-<td>تعیین نوع بسته خالی به عنوان جزء BOM</td>
+<td style="text-align: left;"><strong>برنامه‌ریزی تولید (MRP)</strong></td>
+<td style="text-align: left;">استفاده مستقیم</td>
+<td style="text-align: left;">مبنای محاسبه نیازمندی‌های مواد</td>
 </tr>
 <tr>
-<td><strong>مدیریت انبار (WMS)</strong></td>
-<td>تحلیلی</td>
-<td>جهت لیبل‌گذاری و آماده‌سازی سفارش</td>
+<td style="text-align: left;"><strong>انبار (Inventory)</strong></td>
+<td style="text-align: left;">وابسته</td>
+<td style="text-align: left;">مبنای صدور حواله خروج مواد اولیه</td>
 </tr>
 <tr>
-<td><strong>مدیریت حمل‌ونقل (Transportation Management)</strong></td>
-<td>تحلیلی</td>
-<td>نمایش نوع بسته در اسناد حمل</td>
+<td style="text-align: left;"><strong>بهای تمام شده (Costing)</strong></td>
+<td style="text-align: left;">وابسته</td>
+<td style="text-align: left;">مبنای محاسبه هزینه مواد محصول</td>
 </tr>
 </tbody>
 </table>
@@ -1764,37 +1706,41 @@
 <table>
 <thead>
 <tr>
-<th>خطا / هشدار</th>
-<th>علت</th>
-<th>راه‌حل</th>
+<th style="text-align: left;">خطا / هشدار</th>
+<th style="text-align: left;">علت</th>
+<th style="text-align: left;">راه‌حل</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>«نوع بسته‌بندی انتخاب نشده است»</td>
-<td>کالا بدون نوع بسته‌بندی ثبت شده</td>
-<td>در تعریف کالا، نوع بسته‌بندی را انتخاب کنید</td>
+<td style="text-align: left;">«محصول والد فاقد BOM است»</td>
+<td style="text-align: left;">(خطای برنامه‌ریزی) تلاش برای تولید محصولی که BOM ندارد</td>
+<td style="text-align: left;">BOM معتبر و «تایید شده» برای محصول ایجاد کنید</td>
 </tr>
 <tr>
-<td>«نوع بسته‌بندی غیرفعال است»</td>
-<td>وضعیت فعال = خیر</td>
-<td>وضعیت را فعال کنید یا نوع دیگری انتخاب نمایید</td>
+<td style="text-align: left;">«شماره عملیات تخصیص نامعتبر»</td>
+<td style="text-align: left;">شماره عملیاتی وارد شده که در Routing متصل به این BOM وجود ندارد</td>
+<td style="text-align: left;">شماره عملیات را در BOM یا Routing اصلاح کنید</td>
 </tr>
 <tr>
-<td>«نوع بسته‌بندی تکراری است»</td>
-<td>نام یا کد مشابه قبلاً تعریف شده</td>
-<td>از نام یکتا استفاده کنید</td>
+<td style="text-align: left;">«BOM چرخه‌ای (Circular)»</td>
+<td style="text-align: left;">محصول A به B نیاز دارد، و محصول B به A نیاز دارد</td>
+<td style="text-align: left;">ساختار BOM را اصلاح کنید تا چرخه از بین برود</td>
+</tr>
+<tr>
+<td style="text-align: left;">«مقدار قطعه صفر است»</td>
+<td style="text-align: left;">مقدار یکی از اجزا ۰ وارد شده</td>
+<td style="text-align: left;">مقدار صحیح را وارد کنید یا ردیف را حذف کنید</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="_10">۱۰. توسعه‌های آتی (پیشنهادی)</h2>
 <ul>
-<li>افزودن فیلدهای اختیاری مثل <strong>وزن خالی بسته</strong>، <strong>ابعاد استاندارد بسته</strong>، و <strong>ظرفیت حجمی</strong>.  </li>
-<li>افزودن <strong>کد شناسایی بارکد بسته‌بندی (Package Barcode)</strong> جهت ردیابی در WMS.  </li>
-<li>امکان تعریف <strong>گروه بسته‌بندی (Package Category)</strong> برای تفکیک بسته‌های مصرفی، چندبارمصرف و صادراتی.</li>
+<li>فعال‌سازی <strong>مدیریت نسخه (Versioning)</strong> و <strong>تاریخ اعتبار</strong> برای مدیریت تغییرات مهندسی (ECM).</li>
+<li>افزودن <strong>نوع آیتم (Item Type)</strong> در ردیف‌ها (مثلاً: ماده اولیه، کالای نیمه‌ساخته، محصول جانبی (By-product)، محصول مشترک (Co-product)).</li>
+<li>پشتیبانی از <strong>BOM فانتوم (Phantom BOM)</strong> برای زیرمجموعه‌هایی که تولید یا انبارش مستقل ندارند.</li>
 </ul>
-<hr />
 
 
 
