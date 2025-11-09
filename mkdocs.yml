@@ -43,11 +43,12 @@ nav:
       - 'قابلیت‌ها': manufacturing/master-data/capability.md
       - 'انواع منبع': manufacturing/master-data/resource-type.md
       - 'منابع': manufacturing/master-data/resource.md
-      - 'مراکز کاری': manufacturing/master-data/work-center.md
-      - 'فرمول‌های تولید': manufacturing/master-data/bom.md
-      - 'فرآیند‌های تولید': manufacturing/master-data/routing.md
-      - 'قواعد تخصیص': manufacturing/master-data/dispatching-rules.md
+      - 'مراکز کار': manufacturing/master-data/work-center.md
+      - 'قواعد تخصیص': manufacturing/master-data/dispatching-rule.md
       - 'موتور زمان‌بندی': manufacturing/master-data/sheduler.md
+    - 'مهندسی تولید':
+      - 'فرمول‌های تولید': manufacturing/production-engineering/bom.md
+      - 'فرآیند‌های تولید': manufacturing/production-engineering/routing.md
     - 'برنامه‌ریزی':
       - 'برنامه‌های تولید اصلی': manufacturing/planning/master-production-schedules.md
     - 'اجرای تولید':
