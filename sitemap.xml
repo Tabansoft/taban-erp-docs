@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.tabansoft.ir/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/enterprise-structure/financial/legal-entity/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/enterprise-structure/operational/operating-unit/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/inventory-management/master-data/package-type/</loc>
-         <lastmod>2025-11-08</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.tabansoft.ir/manufacturing/master-data/bom/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/master-data/capability/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.tabansoft.ir/manufacturing/master-data/dispatching-rules/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <loc>https://docs.tabansoft.ir/manufacturing/master-data/dispatching-rule/</loc>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/master-data/resource-type/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/master-data/resource/</loc>
-         <lastmod>2025-11-08</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.tabansoft.ir/manufacturing/master-data/routing/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/master-data/sheduler/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/master-data/work-center/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/planning/master-production-schedule/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.tabansoft.ir/manufacturing/production-engineering/bom/</loc>
+         <lastmod>2025-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.tabansoft.ir/manufacturing/production-engineering/routing/</loc>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/manufacturing/production-execution/production-order/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://docs.tabansoft.ir/transportation-management/master-data/vehicle-type/</loc>
-         <lastmod>2025-11-08</lastmod>
+         <lastmod>2025-11-09</lastmod>
     </url>
 </urlset>
