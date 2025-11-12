@@ -13,49 +13,65 @@ theme:
     code: Fira Code
 
 nav:
-  - 'معرفی': index.md
-  - 'ساختار سازمان':
-    - 'ساختار مالی':
-      - 'بنگاه اقتصادی': enterprise-structure/financial/legal-entity.md
-    - 'ساختار عملیاتی':
-      - 'مکان عملیاتی': enterprise-structure/operational/operating-unit.md
+  - "معرفی": index.md
+  - "ساختار سازمان":
+      - "ساختار مالی":
+          - "بنگاه اقتصادی": enterprise-structure/financial/legal-entity.md
+      - "ساختار عملیاتی":
+          - "مکان عملیاتی": enterprise-structure/operational/operating-unit.md
+
+  - "خزانه‌داری":
+      - "معرفی ماژول خزانه‌داری": "treasury/overview.md"
+      - "تعاریف پایه":
+          - "حساب‌های نقدی": treasury/master-data/cash-account.md
+          - "حساب‌های بانکی": treasury/master-data/bank-account.md
+          - "بانک‌ها": treasury/master-data/bank.md
+          - "‌شعب بانک‌ها": treasury/master-data/bank-branch.md
+          - "دسته‌چک‌ها": treasury/master-data/checkbook.md
+          - "تنظیمات پرداخت":
+            - "روش‌های پرداخت": treasury/master-data/payment-settings/payment-method.md
+      - "عملیات":
+          - "ثبت دریافت/پرداخت": treasury/transactions/payment-receipt-document.md
+          - "تسویه حساب": treasury/transactions/settlement.md
+          - "مدیریت چک‌ها": treasury/transactions/check-management.md
+          - "رأس‌گیری چک‌ها": treasury/transactions/check-due-date-averaging.md
+      - "عملیات دوره‌ای":
+          - "مغایرت بانکی": treasury/periodic-operations/bank-reconciliation.md
   # - 'فروش':
   #   - 'اطلاعات پایه':
   #     - 'واحد فروش': sales/operational/operating-unit.md
   #     - 'کانال توزیع': sales/operational/operating-unit.md
   #     - 'مشتری': sales/operational/operating-unit.md
   #   - 'سفارش فروش': sales/operational/operating-unit.md
-    # - 'قیمت‌گذاری':
-    #   - 'لیست قیمت': sales/operational/operating-unit.md
-    #   - 'تعدیلات قیمت': sales/operational/operating-unit.md
-    #   - 'قوانین تعدیلات قیمت': sales/operational/operating-unit.md
-  
-  - 'مدیریت موجودی':
-    - 'تعاریف پایه':
-      - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
+  # - 'قیمت‌گذاری':
+  #   - 'لیست قیمت': sales/operational/operating-unit.md
+  #   - 'تعدیلات قیمت': sales/operational/operating-unit.md
+  #   - 'قوانین تعدیلات قیمت': sales/operational/operating-unit.md
 
-  - 'مدیریت انبار':
-    - 'تعاریف پایه':
-      - 'انواع بسته‌بندی کالا': inventory-management/master-data/package-type.md
+  - "مدیریت موجودی":
+      - "تعاریف پایه":
+          - "انواع بسته‌بندی کالا": inventory-management/master-data/package-type.md
 
-  - 'برنامه‌ریزی و کنترل تولید':
-    - 'تعاریف پایه':
-      - 'قابلیت‌ها': manufacturing/master-data/capability.md
-      - 'انواع منبع': manufacturing/master-data/resource-type.md
-      - 'منابع': manufacturing/master-data/resource.md
-      - 'مراکز کار': manufacturing/master-data/work-center.md
-      - 'قواعد تخصیص': manufacturing/master-data/dispatching-rule.md
-      - 'موتور زمان‌بندی': manufacturing/master-data/sheduler.md
-    - 'مهندسی تولید':
-      - 'فرمول‌های تولید': manufacturing/production-engineering/bom.md
-      - 'فرآیند‌های تولید': manufacturing/production-engineering/routing.md
-    - 'برنامه‌ریزی':
-      - 'برنامه‌های تولید اصلی': manufacturing/planning/master-production-schedules.md
-    - 'اجرای تولید':
-      - 'دستور‌های تولید': manufacturing/planning/resources.md
-      
-    
+  - "مدیریت انبار":
+      - "تعاریف پایه":
+          - "انواع بسته‌بندی کالا": inventory-management/master-data/package-type.md
 
-  - 'مدیریت حمل‌ونقل':
-    - 'تعاریف پایه':
-      - 'انواع وسیله نقلیه': transportation-management/master-data/vehicle-type.md
+  - "برنامه‌ریزی و کنترل تولید":
+      - "تعاریف پایه":
+          - "قابلیت‌ها": manufacturing/master-data/capability.md
+          - "انواع منبع": manufacturing/master-data/resource-type.md
+          - "منابع": manufacturing/master-data/resource.md
+          - "مراکز کار": manufacturing/master-data/work-center.md
+          - "قواعد تخصیص": manufacturing/master-data/dispatching-rule.md
+          - "موتور زمان‌بندی": manufacturing/master-data/sheduler.md
+      - "مهندسی تولید":
+          - "فرمول‌های تولید": manufacturing/production-engineering/bom.md
+          - "فرآیند‌های تولید": manufacturing/production-engineering/routing.md
+      - "برنامه‌ریزی":
+          - "برنامه‌های تولید اصلی": manufacturing/planning/master-production-schedules.md
+      - "اجرای تولید":
+          - "دستور‌های تولید": manufacturing/planning/resources.md
+
+  - "مدیریت حمل‌ونقل":
+      - "تعاریف پایه":
+          - "انواع وسیله نقلیه": transportation-management/master-data/vehicle-type.md
