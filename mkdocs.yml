@@ -23,7 +23,7 @@ nav:
   - "خزانه‌داری":
       - "معرفی ماژول خزانه‌داری": "treasury/overview.md"
       - "تعاریف پایه":
-          - "حساب‌های نقدی": treasury/master-data/cash-account.md
+          - "صندوق‌ها": treasury/master-data/cash-box.md
           - "حساب‌های بانکی": treasury/master-data/bank-account.md
           - "بانک‌ها": treasury/master-data/bank.md
           - "‌شعب بانک‌ها": treasury/master-data/bank-branch.md
