@@ -12,7 +12,7 @@
         <meta name="author" content="تابان‌سافت">
       
       
-        <link rel="canonical" href="https://docs.tabansoft.ir/treasury/master-data/cash-account/">
+        <link rel="canonical" href="https://docs.tabansoft.ir/treasury/master-data/cash-box/">
       
       
         <link rel="prev" href="../../overview/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>حساب‌های نقدی - مستندات ERP تابان</title>
+        <title>صندوق‌ها - مستندات ERP تابان</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#petty-cash-funds" class="md-skip">
+        <a href="#cash-boxes" class="md-skip">
           پرش به محتویات
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              حساب‌های نقدی
+              صندوق‌ها
             
           </span>
         </div>
@@ -546,7 +546,7 @@
   
   
   <span class="md-ellipsis">
-    حساب‌های نقدی
+    صندوق‌ها
     
   </span>
   
@@ -559,7 +559,7 @@
   
   
   <span class="md-ellipsis">
-    حساب‌های نقدی
+    صندوق‌ها
     
   </span>
   
@@ -584,26 +584,62 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. تعریف
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#petty-cash-definition" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف صندوق (Petty Cash Definition)
+      ۲. معماری و دسته‌بندی
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف صندوق (Petty Cash Definition)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. یکپارچه‌سازی (Integration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cash-box-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. فرم تعریف صندوق (Cash Box Definition)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. فرم تعریف صندوق (Cash Box Definition)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      بخش ۱: اطلاعات عمومی (General)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش ۲: تنظیمات حسابداری (Accounting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#petty-cash-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش ۳: کنترل‌های تنخواه (Petty Cash Controls)
     </span>
   </a>
   
@@ -615,9 +651,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#core-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. فرآیندهای اصلی و گردش کار (Core Workflows)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۵. فرآیندهای اصلی و گردش کار (Core Workflows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-imprest" class="md-nav__link">
+    <span class="md-ellipsis">
+      گردش کار ۱: تنخواه گردان (سیستم سقف ثابت - Imprest)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ۳. کاربرد در سیستم
+      گردش کار ۲: صندوق عملیاتی (فروشگاه)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      گردش کار ۳: صندوق‌گردانی و ثبت مغایرت (Reconciliation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. ❓ پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -690,7 +768,7 @@
   
   
   <span class="md-ellipsis">
-    شعب بانک
+    ‌شعب بانک‌ها
     
   </span>
   
@@ -719,6 +797,75 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تنظیمات پرداخت
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            تنظیمات پرداخت
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payment-settings/payment-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    روش‌های پرداخت
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1776,26 +1923,62 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. تعریف
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#petty-cash-definition" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف صندوق (Petty Cash Definition)
+      ۲. معماری و دسته‌بندی
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف صندوق (Petty Cash Definition)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. یکپارچه‌سازی (Integration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cash-box-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. فرم تعریف صندوق (Cash Box Definition)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. فرم تعریف صندوق (Cash Box Definition)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      بخش ۱: اطلاعات عمومی (General)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش ۲: تنظیمات حسابداری (Accounting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#petty-cash-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      بخش ۳: کنترل‌های تنخواه (Petty Cash Controls)
     </span>
   </a>
   
@@ -1807,9 +1990,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#core-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. فرآیندهای اصلی و گردش کار (Core Workflows)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۵. فرآیندهای اصلی و گردش کار (Core Workflows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-imprest" class="md-nav__link">
+    <span class="md-ellipsis">
+      گردش کار ۱: تنخواه گردان (سیستم سقف ثابت - Imprest)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ۳. کاربرد در سیستم
+      گردش کار ۲: صندوق عملیاتی (فروشگاه)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconciliation" class="md-nav__link">
+    <span class="md-ellipsis">
+      گردش کار ۳: صندوق‌گردانی و ثبت مغایرت (Reconciliation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. ❓ پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -1834,110 +2059,261 @@
   
 
 
-<h1 id="petty-cash-funds">مفهوم و فرم: صندوق‌ها و تنخواه‌گردان‌ها (Petty Cash Funds)</h1>
-<hr />
-<h2 id="_1">۱. مفهوم</h2>
-<p>«صندوق» (Petty Cash) نماینده وجوه نقد فیزیکی (اسکناس) است که برای پوشش هزینه‌های جزئی و روزمره در اختیار یک فرد (تنخواه‌گردان) یا یک بخش قرار می‌گیرد.</p>
+<h1 id="cash-boxes">صندوق‌ها (Cash Boxes)</h1>
+<h2 id="_1">۱. تعریف</h2>
+<p><strong>صندوق (Cash Box)</strong> در ERP تابان، یک موجودیت اصلی (Master Data) در ماژول خزانه‌داری است که برای مدیریت و ردیابی <strong>هرگونه وجه نقد فیزیکی</strong> تحت تملک یا کنترل سازمان به کار می‌رود.</p>
+<p>این موجودیت یک <strong>دفتر معین (Sub-Ledger)</strong> برای حساب‌های نقد در ترازنامه (مانند "صندوق" یا "تنخواه گردان") عمل می‌کند. هر تراکنش ورودی یا خروجی از صندوق، علاوه بر ثبت در سابقه صندوق، منجر به صدور یک <strong>سند حسابداری خودکار</strong> در دفتر کل (GL) می‌شود.</p>
+<h2 id="_2">۲. معماری و دسته‌بندی</h2>
+<p>موجودیتی به نام «صندوق» تمام موارد زیر را پوشش می‌دهد و تمایز آن‌ها از طریق <strong>"نوع صندوق (Cash Box Type)"</strong> صورت می‌گیرد:</p>
 <ul>
-<li><strong>هدف:</strong> مدیریت نقدینگی فیزیکی، ردیابی هزینه‌های انجام شده از محل تنخواه و فرآیند شارژ مجدد (Replenishment) آن.</li>
-<li><strong>ارتباط با ساختار سازمانی:</strong> همانطور که در مستندات تابان اشاره شد، صندوق‌ها برخلاف حساب‌های بانکی (که به بنگاه اقتصادی متصل‌اند)، معمولاً به یک <strong>مکان عملیاتی</strong> (مانند کارخانه، دفتر اداری) و یک <strong>فرد مسئول (تنخواه‌گردان)</strong> مرتبط می‌شوند.</li>
-<li><strong>جایگاه در حسابداری:</strong> هر صندوق نیز مانند حساب بانکی، باید به یک سرفصل معین در <strong>دفتر کل (GL)</strong> (مثلاً: «صندوق دفتر مرکزی» یا «تنخواه آقای رضایی») متصل باشد.</li>
+<li>
+<p><strong>صندوق عملیاتی/فروش (Operational/POS Cash Box):</strong></p>
+<ul>
+<li><strong>هدف:</strong> دریافت و پرداخت‌های روزمره.</li>
+<li><strong>مثال:</strong> صندوق فروشگاه، صندوق پذیرش هتل، صندوق دریافت شهریه.</li>
+<li><strong>گردش کار:</strong> دریافت‌های مکرر، پرداخت‌های جزئی، و واریز دوره‌ای به بانک (EOD - End of Day Process).</li>
 </ul>
+</li>
+<li>
+<p><strong>تنخواه گردان (Petty Cash):</strong></p>
+<ul>
+<li><strong>هدف:</strong> مدیریت هزینه‌های جزئی و فوری سازمان تحت یک سقف مشخص.</li>
+<li><strong>مثال:</strong> تنخواه دفتر مدیرعامل، تنخواه کارپردازی، تنخواه تعمیرات و نگهداری.</li>
+<li><strong>گردش کار:</strong> مبتنی بر <strong>سیستم سقف ثابت (Imprest System)</strong> است؛ یعنی شارژ اولیه، ثبت هزینه‌ها، و شارژ مجدد <em>معادل</em> هزینه‌های انجام شده برای رساندن موجودی به سقف تعیین شده.</li>
+</ul>
+</li>
+<li>
+<p><strong>صندوق مرکزی (Central Cash Box):</strong></p>
+<ul>
+<li><strong>هدف:</strong> مدیریت وجوه نقد اصلی سازمان، معمولاً در خزانه مرکزی.</li>
+<li><strong>مثال:</strong> گاوصندوق اصلی شرکت.</li>
+<li><strong>گردش کار:</strong> دریافت وجوه از صندوق‌های عملیاتی، پرداخت‌های نقدی کلان (در صورت لزوم)، و نگهداری موجودی.</li>
+</ul>
+</li>
+</ul>
+<h2 id="integration">۳. یکپارچه‌سازی (Integration)</h2>
+<p>تعریف «صندوق» به تنهایی کافی نیست؛ ارزش آن در یکپارچگی با سایر بخش‌های ERP است:</p>
+<ul>
+<li><strong>دفتر کل (General Ledger):</strong> حیاتی‌ترین ارتباط. هر صندوق باید به یک <strong>حساب معین منحصربه‌فرد</strong> در GL متصل باشد. این حساب، بازتاب ریالی موجودی آن صندوق در ترازنامه است.</li>
+<li><strong>حساب‌های دریافتنی (AR):</strong> هنگامی که مشتری فاکتور خود را "نقدی" پرداخت می‌کند، وجه به یک صندوق (مثلاً صندوق فروش) واریز می‌شود.</li>
+<li><strong>حساب‌های پرداختنی (AP):</strong> پرداخت‌های نقدی به تأمین‌کنندگان (بسیار نادر، اما ممکن) یا پرداخت هزینه‌ها (بسیار رایج در تنخواه) از مبدأ صندوق ثبت می‌شود.</li>
+<li><strong>مدیریت سازمانی (OM):</strong> هر صندوق به یک <strong>مکان عملیاتی</strong> (Operating Unit) و یک <strong>شخص مسئول (Custodian)</strong> که کارمند تعریف شده در ماژول منابع انسانی است لینک می‌شود.</li>
+</ul>
+<h2 id="cash-box-definition">۴. فرم تعریف صندوق (Cash Box Definition)</h2>
+<p>این فرم، قلب تپنده ماژول است. فیلدها باید به صورت منطقی دسته‌بندی شوند:</p>
+<p><strong>مسیر:</strong> <code>خزانه‌داری &gt; تعاریف پایه &gt; مدیریت صندوق‌ها و تنخواه</code></p>
 <hr />
-<h2 id="petty-cash-definition">۲. فرم: تعریف صندوق (Petty Cash Definition)</h2>
-<p><strong>مسیر:</strong>
-<code>خزانه‌داری / تعاریف پایه / صندوق‌ها و تنخواه</code></p>
-<h3 id="_2">فیلدهای اطلاعاتی فرم</h3>
+<h3 id="general">بخش ۱: اطلاعات عمومی (General)</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">نام فیلد</th>
-<th style="text-align: left;">نوع داده</th>
-<th style="text-align: left;">اجباری</th>
 <th style="text-align: left;">توضیح</th>
 <th style="text-align: left;">مثال</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>کد صندوق</strong></td>
-<td style="text-align: left;">متنی/عددی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">شناسه یکتای صندوق در سیستم.</td>
-<td style="text-align: left;"><code>PC-10</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>نام صندوق</strong></td>
-<td style="text-align: left;">متنی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">نام توصیفی.</td>
-<td style="text-align: left;"><code>صندوق دفتر مرکزی اداری</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مکان عملیاتی</strong></td>
-<td style="text-align: left;">انتخابی (FK)</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">مکانی که این صندوق در آن قرار دارد.</td>
-<td style="text-align: left;"><code>1500 - دفتر مرکزی اداری</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مسئول (تنخواه‌گردان)</strong></td>
-<td style="text-align: left;">انتخابی (FK)</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">کارمند یا شخصی که مسئول صندوق است.</td>
-<td style="text-align: left;"><code>علی احمدی</code></td>
+<td style="text-align: left;"><strong>نام صندوق (Name)</strong></td>
+<td style="text-align: left;">نام کامل و توصیفی صندوق</td>
+<td style="text-align: left;"><code>تنخواه گردان واحد بازرگانی</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
-<td style="text-align: left;">انتخابی (FK)</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">بنگاه اقتصادی که مالک این نقدینگی است.</td>
-<td style="text-align: left;"><code>1000 - ایران خودرو مرکزی</code></td>
+<td style="text-align: left;">(اجباری) شرکتی که مالک این وجه نقد است.</td>
+<td style="text-align: left;"><code>شرکت اصلی تابان</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>ارز (Currency)</strong></td>
-<td style="text-align: left;">انتخابی (FK)</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">ارز پایه صندوق.</td>
+<td style="text-align: left;"><strong>مکان عملیاتی</strong></td>
+<td style="text-align: left;">(اختیاری) محلی که صندوق در آن مستقر است.</td>
+<td style="text-align: left;"><code>3500 -کارخانه</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;">فعال / غیرفعال / مسدود (جهت صندوق گردانی)</td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="accounting">بخش ۲: تنظیمات حسابداری (Accounting)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>نوع صندوق</strong></td>
+<td style="text-align: left;">(اجباری) منطق عملیاتی صندوق را تعیین می‌کند.</td>
+<td style="text-align: left;"><code>تنخواه (Petty Cash)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ارز صندوق</strong></td>
+<td style="text-align: left;">(اجباری) ارز پایه صندوق. (اگر ارزی باشد، فرآیند تسعیر لازم است)</td>
 <td style="text-align: left;"><code>IRR</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>حساب معین (GL)</strong></td>
-<td style="text-align: left;">انتخابی (FK)</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><strong>(بسیار مهم)</strong> سرفصل حسابداری در دفتر کل.</td>
-<td style="text-align: left;"><code>11020101 - صندوق مرکزی</code></td>
+<td style="text-align: left;">(اجباری) <strong>مهم‌ترین فیلد.</strong> حساب معین اختصاصی این صندوق در دفتر کل.</td>
+<td style="text-align: left;"><code>11020105 - تنخواه بازرگانی</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>سقف تنخواه</strong></td>
-<td style="text-align: left;">عددی</td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">حداکثر مبلغی که این صندوق می‌تواند نگهداری کند.</td>
-<td style="text-align: left;"><code>500,000,000</code></td>
+<td style="text-align: left;"><strong>حساب کسری صندوق</strong></td>
+<td style="text-align: left;">(توصیه اکید) حساب هزینه‌ای برای ثبت مغایرت‌های <em>کسری</em>.</td>
+<td style="text-align: left;"><code>63010010 - هزینه کسری صندوق</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>وضعیت</strong></td>
-<td style="text-align: left;">انتخابی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">(فعال، غیرفعال).</td>
-<td style="text-align: left;"><code>فعال</code></td>
+<td style="text-align: left;"><strong>حساب سرک صندوق</strong></td>
+<td style="text-align: left;">(توصیه اکید) حساب درآمدی برای ثبت مغایرت‌های <em>سرک</em>.</td>
+<td style="text-align: left;"><code>71010020 - درآمد سرک صندوق</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>موجودی اولیه</strong></td>
-<td style="text-align: left;">عددی</td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">(فقط در زمان استقرار) موجودی اولیه نقد.</td>
-<td style="text-align: left;"><code>10,000,000</code></td>
+<td style="text-align: left;"><strong>ابعاد مالی پیش‌فرض</strong></td>
+<td style="text-align: left;">(اختیاری) برای سادگی در ورود اطلاعات.</td>
+<td style="text-align: left;"><code>مرکز هزینه: 3500</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="petty-cash-controls">بخش ۳: کنترل‌های تنخواه (Petty Cash Controls)</h3>
+<blockquote>
+<p><strong>توجه:</strong> این تب فقط زمانی فعال و اجباری می‌شود که «نوع صندوق» = «تنخواه (Petty Cash)» باشد.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>سقف تنخواه (Imprest Amount)</strong></td>
+<td style="text-align: left;">(اجباری) حداکثر مبلغی که این صندوق <em>باید</em> داشته باشد.</td>
+<td style="text-align: left;"><code>50,000,000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>آستانه هشدار شارژ</strong></td>
+<td style="text-align: left;">درصدی از سقف که در صورت رسیدن موجودی به آن، سیستم هشدار شارژ می‌دهد.</td>
+<td style="text-align: left;"><code>20%</code> (یعنی 10 میلیون)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سقف هر هزینه (Max Expense Limit)</strong></td>
+<td style="text-align: left;">حداکثر مبلغ مجاز برای <em>هر</em> سند هزینه ثبت شده از این تنخواه.</td>
+<td style="text-align: left;"><code>5,000,000</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="_3">۳. کاربرد در سیستم</h2>
+<h2 id="core-workflows">۵. فرآیندهای اصلی و گردش کار (Core Workflows)</h2>
+<h3 id="-imprest">گردش کار ۱: تنخواه گردان (سیستم سقف ثابت - Imprest)</h3>
+<ol>
+<li>
+<p><strong>ایجاد و شارژ اولیه (Establish Fund):</strong></p>
 <ul>
-<li>این صندوق می‌تواند به عنوان مبدأ (در پرداخت‌های نقدی) یا مقصد (در دریافت‌های نقدی) در <strong>سند دریافت و پرداخت</strong> انتخاب شود.</li>
-<li>هنگامی که تنخواه‌گردان هزینه‌هایی را ثبت می‌کند (مثلاً خرید ملزومات اداری)، این هزینه‌ها از موجودی صندوق کسر می‌شوند.</li>
-<li>فرآیند «شارژ تنخواه» (Replenishment) معمولاً با یک سند پرداخت (مثلاً صدور چک در وجه تنخواه‌گردان یا انتقال از حساب بانکی به صندوق) انجام می‌شود که موجودی صندوق را افزایش می‌دهد.</li>
+<li><strong>عملیات:</strong> مدیر مالی یک "پرداخت" از <code>حساب بانک</code> به <code>صندوق تنخواه</code> ثبت می‌کند.</li>
+<li><strong>مبلغ:</strong> دقیقاً به اندازه <code>سقف تنخواه</code> (مثلاً 50 میلیون).</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>11020105 - تنخواه بازرگانی</code> (50 م)</li>
+<li>بستانکار: <code>11010001 - بانک پاسارگاد</code> (50 م)</li>
 </ul>
+</li>
+<li><em>موجودی صندوق: 50 م. موجودی GL تنخواه: 50 م.</em></li>
+</ul>
+</li>
+<li>
+<p><strong>ثبت هزینه‌ها (Disbursement):</strong></p>
+</li>
+</ol>
+<p><strong>عملیات:</strong> تنخواه‌گردان هزینه‌های جزئی مثل خرید ملزومات، کرایه، ایاب‌وذهاب، حمل‌ونقل و … را از پول صندوق تنخواه پرداخت می‌کند.
+در ERP یک <strong>رسید هزینه</strong> یا <strong>گزارش هزینه تنخواه</strong> ثبت می‌کند.</p>
+<p><strong>روش استاندارد: Imprest System (روش توصیه‌شده حسابداری)</strong></p>
+<p><strong>مرحله ۱: شارژ اولیه</strong></p>
+<p>تنخواه اولیه (مثلاً 50 م) از بانک برداشت می‌شود.</p>
+<p><strong>سند:</strong></p>
+<ul>
+<li>بدهکار: 11020105 – تنخواه — 50 م</li>
+<li>بستانکار: 11010001 – بانک — 50 م</li>
+</ul>
+<p><strong>نکته مهم:</strong>
+از این لحظه به بعد <strong>حساب GL تنخواه باید همیشه 50 م بماند</strong>.</p>
+<p><strong>مرحله ۲: ثبت هزینه‌ها</strong></p>
+<p>تنخواه‌گردان فقط هزینه‌ها را در سیستم ثبت می‌کند (Expense Report).</p>
+<p><strong>هیچ سند حسابداری صادر نمی‌شود</strong>
+ <strong>GL تنخواه تغییر نمی‌کند</strong></p>
+<p>موجودی فیزیکی صندوق کم می‌شود
+ فقط اسناد هزینه در سیستم ذخیره می‌شود</p>
+<p><strong>مرحله ۳: شارژ مجدد تنخواه</strong></p>
+<p>هنگامی که اسناد هزینه جمعاً 40 م شد، مدیر مالی همان مقدار را از بانک پرداخت می‌کند.</p>
+<p><strong>سند حسابداری شارژ مجدد (تنها سند مربوط به هزینه‌ها):</strong></p>
+<ul>
+<li>بدهکار: هزینه ملزومات — 2.5 م</li>
+<li>بدهکار: هزینه ایاب و ذهاب — 1.5 م</li>
+<li>بدهکار: سایر هزینه‌ها — … (تا مجموع 40 م)</li>
+<li>بستانکار: بانک — 40 م</li>
+</ul>
+<h3 id="_3">گردش کار ۲: صندوق عملیاتی (فروشگاه)</h3>
+<ol>
+<li><strong>دریافت نقدی (Receipt):</strong><ul>
+<li><strong>عملیات:</strong> مشتری کالا را خریده و مبلغ 1 م نقداً پرداخت می‌کند.</li>
+<li><strong>سند حسابداری (خودکار - از ماژول فروش):</strong><ul>
+<li>بدهکار: <code>11020101 - صندوق فروشگاه 1</code> (1 م)</li>
+<li>بستانکار: <code>41010001 - درآمد فروش</code> (1 م)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>عملیات پایان روز (EOD - واریز به بانک):</strong><ul>
+<li><strong>عملیات:</strong> صندوق‌دار در پایان روز، 30 م از وجوه را به بانک واریز می‌کند. یک "انتقال وجه" (Cash Transfer) از <code>صندوق فروشگاه 1</code> به <code>حساب بانک</code> ثبت می‌کند.</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>11010001 - بانک پاسارگاد</code> (30 م)</li>
+<li>بستانکار: <code>11020101 - صندوق فروشگاه 1</code> (30 م)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="reconciliation">گردش کار ۳: صندوق‌گردانی و ثبت مغایرت (Reconciliation)</h3>
+<p>این فرآیند <em>باید</em> در سیستم پشتیبانی شود.</p>
+<ol>
+<li><strong>شمارش فیزیکی:</strong> مسئول صندوق، موجودی فیزیکی را می‌شمارد (مثلاً 4,500,000).</li>
+<li><strong>مقایسه با سیستم:</strong> موجودی سیستمی (موجودی GL) در آن لحظه 4,550,000 است.</li>
+<li><strong>نتیجه:</strong> 50,000 کسری وجود دارد.</li>
+<li><strong>عملیات در ERP:</strong> کاربر فرم "صندوق‌گردانی/ثبت مغایرت" را باز می‌کند.<ul>
+<li>صندوق: <code>تنخواه بازرگانی</code></li>
+<li>موجودی سیستمی: <code>4,550,000</code></li>
+<li>موجودی واقعی: <code>4,500,000</code></li>
+<li>مغایرت: <code>(50,000)</code> (کسری)</li>
+</ul>
+</li>
+<li><strong>ثبت سند (خودکار پس از تأیید):</strong><ul>
+<li>سیستم از حساب‌هایی که در "تب ۲: تنظیمات حسابداری" تعریف کردیم استفاده می‌کند:</li>
+<li>بدهکار: <code>63010010 - هزینه کسری صندوق</code> (50,000)</li>
+<li>بستانکار: <code>11020105 - تنخواه بازرگانی</code> (50,000)</li>
+<li><em>نتیجه:</em> موجودی GL تنخواه با موجودی واقعی یکسان می‌شود (4,500,000).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="faq">۵. ❓ پرسش‌های متداول (FAQ)</h2>
+<p><strong>تفاوت اصلی "صندوق عملیاتی" و "تنخواه" در سیستم چیست؟</strong></p>
+<p>هر دو صندوق هستند، اما منطق متفاوتی دارند. <strong>صندوق عملیاتی</strong> (مثل فروشگاه) ذاتاً <em>دریافت‌کننده</em> وجه است و موجودی آن متغیر است و در پایان روز به بانک واریز می‌شود. <strong>تنخواه</strong> ذاتاً <em>پرداخت‌کننده</em> هزینه است، بر اساس سقف ثابت (Imprest) کار می‌کند و هدفش رساندن موجودی به سقف تعیین شده از طریق شارژ مجدد است.</p>
+<p><strong>چرا هر صندوق باید "حساب معین" جداگانه داشته باشد؟ آیا نمی‌توان همه را زیر یک حساب "صندوق" تعریف کرد؟</strong></p>
+<p>این یک الزام کنترل داخلی است. اگر همه صندوق‌ها یک حساب معین داشته باشند، شما در ترازنامه فقط یک عدد کلی (مثلاً «موجودی صندوق: 500 م») می‌بینید. اما اگر هر صندوق (تنخواه الف، تنخواه ب، صندوق فروشگاه ۱) حساب معین جدا داشته باشد، می‌توانید مغایرت‌گیری، ردیابی و گزارش‌گیری را <em>به تفکیک هر صندوق</em> انجام دهید و ترازنامه شما شفافیت کامل (Drill-Down) تا سطح هر صندوق خواهد داشت.</p>
+<p><strong>مسئول صندوق (Custodian) چه نقشی دارد؟</strong></p>
+<p>این فرد، مسئول فیزیکی و قانونی وجوه آن صندوق است. در ERP، این فیلد کنترل‌های امنیتی را فعال می‌کند. مثلاً:</p>
+<ol>
+<li>فقط "مسئول" یا کاربران مجاز می‌توانند برای آن صندوق تراکنش ثبت کنند.</li>
+<li>در فرآیند صندوق‌گردانی، نام "مسئول" به عنوان تأیید کننده ثبت می‌شود.</li>
+<li>گزارش‌ها (مانند گردش صندوق) می‌توانند بر اساس مسئول فیلتر شوند.</li>
+</ol>
+<p><strong>اگر در صندوق‌گردانی مغایرت (کسری یا سرک) داشتیم چه؟</strong></p>
+<p>این اتفاق رایج است. به همین دلیل در فرم "تعریف صندوق"، فیلدهای <strong>"حساب کسری"</strong> و <strong>"حساب سرک"</strong> را تعریف کردیم. فرآیند "صندوق‌گردانی" در ERP باید به کاربر اجازه دهد موجودی واقعی را وارد کند و سیستم به طور خودکار سند مغایرت را (همانطور که در مثال گردش کار ۳ توضیح داده شد) صادر کند تا موجودی GL با موجودی واقعی برابر شود.</p>
+<p><strong>آیا یک صندوق می‌تواند چند ارزی (Multi-Currency) باشد؟</strong></p>
+<p><strong>توصیه اکید:</strong> خیر. هر صندوق باید <em>فقط یک ارز</em> داشته باشد (همان فیلد "ارز صندوق"). اگر شما وجوه ریالی و یورویی دارید، باید <em>دو صندوق جداگانه</em> تعریف کنید: <code>صندوق مرکزی (ریالی)</code> و <code>صندوق مرکزی (یورویی)</code> که هر کدام به حساب معین ارزی یا ریالی خود متصل هستند. مدیریت چند ارز در یک صندوق فیزیکی، فرآیندهای حسابداری و تسعیر ارز را به شدت پیچیده و مستعد خطا می‌کند.</p>
 
 
 
