@@ -12,21 +12,25 @@
         <meta name="author" content="تابان‌سافت">
       
       
-        <link rel="canonical" href="https://docs.tabansoft.ir/manufacturing/production-execution/production-order/">
+        <link rel="canonical" href="https://docs.tabansoft.ir/financial/treasury/transactions/settlement/">
       
       
+        <link rel="prev" href="../payment-receipt-document/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+        <link rel="next" href="../check-management/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Production order - مستندات ERP تابان</title>
+        <title>تسویه حساب - مستندات ERP تابان</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -45,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#settlement-clearing" class="md-skip">
+          پرش به محتویات
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="سرتیتر">
-    <a href="../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+    <a href="../../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Production order
+              تسویه حساب
             
           </span>
         </div>
@@ -185,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+    <a href="../../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -215,7 +224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -313,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
+      <a href="../../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
         
   
   
@@ -382,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
+      <a href="../../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
         
   
   
@@ -417,18 +426,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -444,7 +455,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             مالی
@@ -455,18 +466,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -482,7 +495,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             خزانه‌داری
@@ -496,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
@@ -557,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/cash-box/" class="md-nav__link">
+      <a href="../../master-data/cash-box/" class="md-nav__link">
         
   
   
@@ -580,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank-account/" class="md-nav__link">
+      <a href="../../master-data/bank-account/" class="md-nav__link">
         
   
   
@@ -603,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank/" class="md-nav__link">
+      <a href="../../master-data/bank/" class="md-nav__link">
         
   
   
@@ -626,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank-branch/" class="md-nav__link">
+      <a href="../../master-data/bank-branch/" class="md-nav__link">
         
   
   
@@ -649,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/checkbook/" class="md-nav__link">
+      <a href="../../master-data/checkbook/" class="md-nav__link">
         
   
   
@@ -710,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/payment-settings/payment-method/" class="md-nav__link">
+      <a href="../../master-data/payment-settings/payment-method/" class="md-nav__link">
         
   
   
@@ -746,18 +759,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
@@ -773,7 +788,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1_3">
             <span class="md-nav__icon md-icon"></span>
             عملیات
@@ -787,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/payment-receipt-document/" class="md-nav__link">
+      <a href="../payment-receipt-document/" class="md-nav__link">
         
   
   
@@ -807,10 +822,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/settlement/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    تسویه حساب
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -821,6 +858,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مفهوم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settlement-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. فرم: میزکار تسویه حساب (Settlement Workbench)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. فرم: میزکار تسویه حساب (Settlement Workbench)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. تسویه خودکار (Automatic Settlement)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -833,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/check-management/" class="md-nav__link">
+      <a href="../check-management/" class="md-nav__link">
         
   
   
@@ -856,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/check-due-date-averaging/" class="md-nav__link">
+      <a href="../check-due-date-averaging/" class="md-nav__link">
         
   
   
@@ -925,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/periodic-operations/bank-reconciliation/" class="md-nav__link">
+      <a href="../../periodic-operations/bank-reconciliation/" class="md-nav__link">
         
   
   
@@ -1002,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/accounting/overview.md" class="md-nav__link">
+      <a href="../../../accounting/overview.md" class="md-nav__link">
         
   
   
@@ -1116,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+      <a href="../../../../inventory-management/master-data/package-type/" class="md-nav__link">
         
   
   
@@ -1230,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+      <a href="../../../../inventory-management/master-data/package-type/" class="md-nav__link">
         
   
   
@@ -1344,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/capability/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/capability/" class="md-nav__link">
         
   
   
@@ -1367,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/resource-type/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/resource-type/" class="md-nav__link">
         
   
   
@@ -1390,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/resource/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/resource/" class="md-nav__link">
         
   
   
@@ -1413,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/work-center/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/work-center/" class="md-nav__link">
         
   
   
@@ -1436,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/dispatching-rule/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/dispatching-rule/" class="md-nav__link">
         
   
   
@@ -1459,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/sheduler/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/sheduler/" class="md-nav__link">
         
   
   
@@ -1528,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-engineering/bom/" class="md-nav__link">
+      <a href="../../../../manufacturing/production-engineering/bom/" class="md-nav__link">
         
   
   
@@ -1551,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-engineering/routing/" class="md-nav__link">
+      <a href="../../../../manufacturing/production-engineering/routing/" class="md-nav__link">
         
   
   
@@ -1620,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../planning/master-production-schedules.md" class="md-nav__link">
+      <a href="../../../../manufacturing/planning/master-production-schedules.md" class="md-nav__link">
         
   
   
@@ -1689,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../planning/resources.md" class="md-nav__link">
+      <a href="../../../../manufacturing/planning/resources.md" class="md-nav__link">
         
   
   
@@ -1803,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
+      <a href="../../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
         
   
   
@@ -1851,6 +1950,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مفهوم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settlement-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. فرم: میزکار تسویه حساب (Settlement Workbench)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. فرم: میزکار تسویه حساب (Settlement Workbench)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. تسویه خودکار (Automatic Settlement)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1869,9 +2020,71 @@
   
 
 
-  <h1>Production order</h1>
-
-
+<h1 id="settlement-clearing">مفهوم و فرم: تسویه حساب (Settlement / Clearing)</h1>
+<hr />
+<h2 id="_1">۱. مفهوم</h2>
+<p>تسویه حساب، فرآیند حیاتی «اتصال» آیتم‌های بستانکار (مانند پرداخت‌ها، پیش‌پرداخت‌ها، اعتبارات) به آیتم‌های بدهکار (مانند فاکتورها) در حساب یک طرف حساب (مشتری یا تأمین‌کننده) است.</p>
+<ul>
+<li><strong>هدف:</strong> صفر کردن مانده حساب آیتم‌های باز و تعیین وضعیت «تسویه شده» برای فاکتورها و پرداخت‌ها.</li>
+<li><strong>نیاز به تسویه (M:N):</strong> این فرآیند ضروری است زیرا ارتباط بین فاکتور و پرداخت همیشه یک به یک (1:1) نیست:<ul>
+<li><strong>چند به یک (N:1):</strong> یک مشتری ممکن است ۳ فاکتور باز را با ۱ چک پرداخت کند.</li>
+<li><strong>یک به چند (1:N):</strong> یک مشتری ممکن است ۱ فاکتور را در ۳ قسط پرداخت کند.</li>
+<li><strong>چند به چند (M:N):</strong> یک مشتری ممکن است ۲ فاکتور و بخشی از فاکتور سوم را با ۱ چک و ۱ واریز نقدی (که قبلاً علی‌الحساب پرداخت کرده) تسویه کند.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="settlement-workbench">۲. فرم: میزکار تسویه حساب (Settlement Workbench)</h2>
+<p>این فرم یک ابزار تعاملی است که به کاربر (حسابدار) اجازه می‌دهد آیتم‌های باز یک طرف حساب را مشاهده و با هم تسویه کند.</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / عملیات / تسویه حساب مشتریان</code>
+<code>خزانه‌داری / عملیات / تسویه حساب تأمین‌کنندگان</code></p>
+<h3 id="ux">رابط کاربری (UX)</h3>
+<p>این فرم معمولاً به صورت زیر طراحی می‌شود:</p>
+<ol>
+<li><strong>انتخاب طرف حساب:</strong> کاربر ابتدا مشتری یا تأمین‌کننده مورد نظر را انتخاب می‌کند.</li>
+<li>
+<p><strong>نمایش دو ستونی:</strong> سیستم تمامی آیتم‌های باز (Open Items) آن شخص را در دو ستون نمایش می‌دهد:</p>
+<ul>
+<li>
+<p><strong>ستون ۱: بدهی‌ها (Invoices / Debits):</strong></p>
+<ul>
+<li>لیست تمام فاکتورهای فروش (برای مشتری) یا فاکتورهای خرید (برای تأمین‌کننده) که هنوز تسویه نشده‌اند.</li>
+<li>شامل: شماره فاکتور، تاریخ، مبلغ کل، مبلغ باقیمانده.</li>
+</ul>
+</li>
+<li>
+<p><strong>ستون ۲: بستانکاری‌ها (Payments / Credits):</strong></p>
+<ul>
+<li>لیست تمام پرداخت‌های «علی‌الحساب».</li>
+<li>پیش‌پرداخت‌های مرتبط.</li>
+<li>برگشت از فروش‌ها (Credit Memos).</li>
+<li>شامل: شماره سند پرداخت، تاریخ، مبلغ کل، مبلغ باقیمانده قابل تخصیص.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>فرآیند تسویه (Matching):</strong></p>
+<ul>
+<li>کاربر آیتم‌های مورد نظر از هر دو ستون را انتخاب (تیک) می‌کند.</li>
+<li><em>مثال:</em> انتخاب فاکتور ۱ (مبلغ ۱۰۰) و فاکتور ۲ (مبلغ ۵۰) از ستون ۱؛ و انتخاب پرداخت علی‌الحساب (مبلغ ۱۲۰) و پرداخت جدید (مبلغ ۳۰) از ستون ۲.</li>
+<li>مجموع بدهی انتخاب شده = ۱۵۰</li>
+<li>مجموع بستانکاری انتخاب شده = ۱۵۰</li>
+</ul>
+</li>
+<li>
+<p><strong>دکمه «تسویه» (Settle):</strong></p>
+<ul>
+<li>کاربر دکمه تسویه را می‌زند.</li>
+<li>سیستم بررسی می‌کند که مجموع دو طرف برابر باشد (یا در صورت تسویه جزئی، منطق آن رعایت شود).</li>
+<li>سیستم وضعیت فاکتورها و پرداخت‌های انتخاب شده را به «تسویه شده» (Cleared) تغییر می‌دهد و رکوردهای ارتباطی (Settlement Line) را ایجاد می‌کند.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="automatic-settlement">۳. تسویه خودکار (Automatic Settlement)</h2>
+<p>برای سادگی، سیستم می‌تواند یک دکمه «تسویه خودکار» نیز داشته باشد که بر اساس منطق FIFO (اولین فاکتور با اولین پرداخت) یا بر اساس شماره ارجاع یکسان، آیتم‌ها را به صورت خودکار تسویه کند.</p>
 
 
 
@@ -1920,10 +2133,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>

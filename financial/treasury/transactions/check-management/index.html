@@ -12,21 +12,25 @@
         <meta name="author" content="تابان‌سافت">
       
       
-        <link rel="canonical" href="https://docs.tabansoft.ir/manufacturing/production-execution/production-order/">
+        <link rel="canonical" href="https://docs.tabansoft.ir/financial/treasury/transactions/check-management/">
       
       
+        <link rel="prev" href="../settlement/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+        <link rel="next" href="../check-due-date-averaging/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Production order - مستندات ERP تابان</title>
+        <title>مدیریت چک‌ها - مستندات ERP تابان</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -45,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#check-management" class="md-skip">
+          پرش به محتویات
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="سرتیتر">
-    <a href="../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+    <a href="../../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Production order
+              مدیریت چک‌ها
             
           </span>
         </div>
@@ -185,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+    <a href="../../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -215,7 +224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -313,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
+      <a href="../../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
         
   
   
@@ -382,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
+      <a href="../../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
         
   
   
@@ -417,18 +426,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -444,7 +455,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             مالی
@@ -455,18 +466,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -482,7 +495,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             خزانه‌داری
@@ -496,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
@@ -557,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/cash-box/" class="md-nav__link">
+      <a href="../../master-data/cash-box/" class="md-nav__link">
         
   
   
@@ -580,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank-account/" class="md-nav__link">
+      <a href="../../master-data/bank-account/" class="md-nav__link">
         
   
   
@@ -603,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank/" class="md-nav__link">
+      <a href="../../master-data/bank/" class="md-nav__link">
         
   
   
@@ -626,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/bank-branch/" class="md-nav__link">
+      <a href="../../master-data/bank-branch/" class="md-nav__link">
         
   
   
@@ -649,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/checkbook/" class="md-nav__link">
+      <a href="../../master-data/checkbook/" class="md-nav__link">
         
   
   
@@ -710,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/master-data/payment-settings/payment-method/" class="md-nav__link">
+      <a href="../../master-data/payment-settings/payment-method/" class="md-nav__link">
         
   
   
@@ -746,18 +759,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
@@ -773,7 +788,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1_3">
             <span class="md-nav__icon md-icon"></span>
             عملیات
@@ -787,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/payment-receipt-document/" class="md-nav__link">
+      <a href="../payment-receipt-document/" class="md-nav__link">
         
   
   
@@ -810,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/settlement/" class="md-nav__link">
+      <a href="../settlement/" class="md-nav__link">
         
   
   
@@ -830,10 +845,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/check-management/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    مدیریت چک‌ها
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -844,6 +881,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مفهوم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#received-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. فرم: داشبورد مدیریت چک‌های دریافتی (Received Checks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. فرم: داشبورد مدیریت چک‌های دریافتی (Received Checks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX) و فیلترها
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملیات قابل انجام (Actions)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issued-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. فرم: داشبورد مدیریت چک‌های پرداختی (Issued Checks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۳. فرم: داشبورد مدیریت چک‌های پرداختی (Issued Checks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX) و عملیات
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملیات قابل انجام (Actions)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -856,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/transactions/check-due-date-averaging/" class="md-nav__link">
+      <a href="../check-due-date-averaging/" class="md-nav__link">
         
   
   
@@ -925,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/treasury/periodic-operations/bank-reconciliation/" class="md-nav__link">
+      <a href="../../periodic-operations/bank-reconciliation/" class="md-nav__link">
         
   
   
@@ -1002,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../financial/accounting/overview.md" class="md-nav__link">
+      <a href="../../../accounting/overview.md" class="md-nav__link">
         
   
   
@@ -1116,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+      <a href="../../../../inventory-management/master-data/package-type/" class="md-nav__link">
         
   
   
@@ -1230,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+      <a href="../../../../inventory-management/master-data/package-type/" class="md-nav__link">
         
   
   
@@ -1344,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/capability/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/capability/" class="md-nav__link">
         
   
   
@@ -1367,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/resource-type/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/resource-type/" class="md-nav__link">
         
   
   
@@ -1390,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/resource/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/resource/" class="md-nav__link">
         
   
   
@@ -1413,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/work-center/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/work-center/" class="md-nav__link">
         
   
   
@@ -1436,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/dispatching-rule/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/dispatching-rule/" class="md-nav__link">
         
   
   
@@ -1459,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data/sheduler/" class="md-nav__link">
+      <a href="../../../../manufacturing/master-data/sheduler/" class="md-nav__link">
         
   
   
@@ -1528,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-engineering/bom/" class="md-nav__link">
+      <a href="../../../../manufacturing/production-engineering/bom/" class="md-nav__link">
         
   
   
@@ -1551,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-engineering/routing/" class="md-nav__link">
+      <a href="../../../../manufacturing/production-engineering/routing/" class="md-nav__link">
         
   
   
@@ -1620,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../planning/master-production-schedules.md" class="md-nav__link">
+      <a href="../../../../manufacturing/planning/master-production-schedules.md" class="md-nav__link">
         
   
   
@@ -1689,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../planning/resources.md" class="md-nav__link">
+      <a href="../../../../manufacturing/planning/resources.md" class="md-nav__link">
         
   
   
@@ -1803,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
+      <a href="../../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
         
   
   
@@ -1851,6 +1983,91 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مفهوم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#received-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. فرم: داشبورد مدیریت چک‌های دریافتی (Received Checks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. فرم: داشبورد مدیریت چک‌های دریافتی (Received Checks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX) و فیلترها
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملیات قابل انجام (Actions)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issued-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. فرم: داشبورد مدیریت چک‌های پرداختی (Issued Checks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۳. فرم: داشبورد مدیریت چک‌های پرداختی (Issued Checks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      رابط کاربری (UX) و عملیات
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملیات قابل انجام (Actions)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1869,9 +2086,145 @@
   
 
 
-  <h1>Production order</h1>
-
-
+<h1 id="check-management">مفهوم و فرم: مدیریت چک (Check Management)</h1>
+<hr />
+<h2 id="_1">۱. مفهوم</h2>
+<p>با توجه به اهمیت بالای چک در سیستم مالی ایران، تابان نیازمند یک مرکز فرماندهی (داشبورد) برای ردیابی <strong>چرخه عمر (Lifecycle)</strong> تمامی چک‌های دریافتی و پرداختی است.</p>
+<ul>
+<li><strong>هدف:</strong> مدیریت عملیات مرتبط با چک (واگذاری، وصول، برگشت) و به‌روزرسانی خودکار وضعیت چک و اسناد حسابداری مرتبط.</li>
+</ul>
+<p>این ماژول باید دو بخش مجزا داشته باشد:</p>
+<ol>
+<li><strong>مدیریت چک‌های دریافتی (از مشتریان)</strong></li>
+<li><strong>مدیریت چک‌های پرداختی (به تأمین‌کنندگان)</strong></li>
+</ol>
+<hr />
+<h2 id="received-checks">۲. فرم: داشبورد مدیریت چک‌های دریافتی (Received Checks)</h2>
+<p>این فرم لیستی از تمام چک‌های دریافتی را نشان می‌دهد که وضعیت آن‌ها «نهایی» نشده است (یعنی پاس نشده یا برگشت نخورده است).</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / عملیات / مدیریت چک‌های دریافتی</code></p>
+<h3 id="ux">رابط کاربری (UX) و فیلترها</h3>
+<ul>
+<li><strong>فیلترها:</strong> بر اساس وضعیت چک (نزد صندوق، در جریان وصول)، تاریخ سررسید (از... تا...)، مشتری، بنگاه اقتصادی.</li>
+<li><strong>نمایش جدولی:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">انتخاب</th>
+<th style="text-align: left;">شماره چک</th>
+<th style="text-align: left;">سررسید</th>
+<th style="text-align: left;">مبلغ</th>
+<th style="text-align: left;">بانک</th>
+<th style="text-align: left;">مشتری</th>
+<th style="text-align: left;">وضعیت فعلی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">[]</td>
+<td style="text-align: left;"><code>12345</code></td>
+<td style="text-align: left;"><code>1403/10/20</code></td>
+<td style="text-align: left;">100,000</td>
+<td style="text-align: left;">ملت</td>
+<td style="text-align: left;">شرکت الف</td>
+<td style="text-align: left;"><strong>نزد صندوق</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">[]</td>
+<td style="text-align: left;"><code>67890</code></td>
+<td style="text-align: left;"><code>1403/10/22</code></td>
+<td style="text-align: left;">250,000</td>
+<td style="text-align: left;">سامان</td>
+<td style="text-align: left;">شرکت ب</td>
+<td style="text-align: left;"><strong>در جریان وصول</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="actions">عملیات قابل انجام (Actions)</h3>
+<p>کاربر یک یا چند چک را از لیست انتخاب کرده و یکی از عملیات زیر را اجرا می‌کند:</p>
+<ol>
+<li>
+<p><strong>واگذاری به بانک (Deposit):</strong></p>
+<ul>
+<li><em>عملیات:</em> کاربر چک‌هایی که «نزد صندوق» هستند را انتخاب می‌کند.</li>
+<li><em>فرم بازشو:</em> «تاریخ واگذاری» و «حساب بانکی مقصد» (کدام حساب شرکت) را انتخاب می‌کند.</li>
+<li><em>نتیجه:</em> وضعیت چک به «در جریان وصول» (In Collection) تغییر می‌یابد و سند حسابداری (موقت) ثبت می‌شود.</li>
+</ul>
+</li>
+<li>
+<p><strong>اعلام وصول (Clear):</strong></p>
+<ul>
+<li><em>عملیات:</em> کاربر چک‌هایی که «در جریان وصول» هستند را انتخاب می‌کند.</li>
+<li><em>فرم بازشو:</em> «تاریخ وصول» را وارد می‌کند.</li>
+<li><em>نتیجه:</em> وضعیت چک به «پاس شده» (Cleared) تغییر می‌یابد. موجودی حساب بانکی شرکت <em>واقعاً</em> افزایش می‌یابد و سند حسابداری نهایی ثبت می‌شود.</li>
+</ul>
+</li>
+<li>
+<p><strong>اعلام برگشت (Bounce):</strong></p>
+<ul>
+<li><em>عملیات:</em> کاربر چک‌هایی که «در جریان وصول» هستند را انتخاب می‌کند.</li>
+<li><em>فرم بازشو:</em> «تاریخ برگشت» و «دلیل برگشت» را وارد می‌کند.</li>
+<li><em>نتیجه:</em> وضعیت چک به «برگشتی» (Bounced) تغییر می‌یابد. چک از حساب بانکی خارج و به حساب «اسناد دریافتنی برگشتی» (در GL) و حساب مشتری منتقل می‌شود.</li>
+</ul>
+</li>
+<li>
+<p><strong>عودت چک (Return to Customer):</strong></p>
+<ul>
+<li><em>عملیات:</em> (معمولاً برای چک‌های برگشتی یا قبل از واگذاری)</li>
+<li><em>نتیجه:</em> چک از سیستم خارج و حساب مشتری مجدداً بدهکار می‌شود.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="issued-checks">۳. فرم: داشبورد مدیریت چک‌های پرداختی (Issued Checks)</h2>
+<p>این فرم مشابه بخش قبلی است اما برای چک‌هایی که شرکت صادر کرده است.</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / عملیات / مدیریت چک‌های پرداختی</code></p>
+<h3 id="ux_1">رابط کاربری (UX) و عملیات</h3>
+<ul>
+<li><strong>نمایش جدولی:</strong> لیستی از چک‌های «صادر شده» که هنوز «پاس نشده‌اند».</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">شماره سریال</th>
+<th style="text-align: left;">سررسید</th>
+<th style="text-align: left;">مبلغ</th>
+<th style="text-align: left;">حساب بانکی (مبدأ)</th>
+<th style="text-align: left;">در وجه (تأمین‌کننده)</th>
+<th style="text-align: left;">وضعیت فعلی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>1001</code></td>
+<td style="text-align: left;"><code>1403/10/25</code></td>
+<td style="text-align: left;">500,000</td>
+<td style="text-align: left;">بانک ملت</td>
+<td style="text-align: left;">شرکت ج</td>
+<td style="text-align: left;"><strong>صادر شده</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="actions_1">عملیات قابل انجام (Actions)</h3>
+<ol>
+<li>
+<p><strong>اعلام پاس شدن (Clear):</strong></p>
+<ul>
+<li><em>عملیات:</em> این معمولاً از طریق «مغایرت بانکی» یا ثبت دستی انجام می‌شود.</li>
+<li><em>فرم بازشو:</em> «تاریخ پاس شدن» را وارد می‌کند.</li>
+<li><em>نتیجه:</em> وضعیت چک به «پاس شده» (Cleared) تغییر می‌یابد. موجودی حساب بانکی شرکت <em>واقعاً</em> کاهش می‌یابد و سند حسابداری نهایی ثبت می‌شود.</li>
+</ul>
+</li>
+<li>
+<p><strong>ابطال چک (Void):</strong></p>
+<ul>
+<li><em>عملیات:</em> اگر چک قبل از تحویل به تأمین‌کننده یا به هر دلیلی باطل شود.</li>
+<li><em>نتیجه:</em> وضعیت چک به «باطل شده» (Voided) تغییر می‌یابد. سریال چک (اگر امکان‌پذیر باشد) می‌تواند مجدداً «خام» شود یا برای همیشه باطل بماند.</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -1920,10 +2273,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
