@@ -28,13 +28,17 @@ nav:
               - "بانک‌ها": financial/treasury/master-data/bank.md
               - "‌شعب بانک‌ها": financial/treasury/master-data/bank-branch.md
               - "دسته‌چک‌ها": financial/treasury/master-data/checkbook.md
+              - "پورتفو‌های چک‌های دریافت‌شده": financial/treasury/master-data/received-checks-portfolio.md
               - "تنظیمات پرداخت":
                   - "روش‌های پرداخت": financial/treasury/master-data/payment-settings/payment-method.md
           - "عملیات":
               - "ثبت دریافت/پرداخت": financial/treasury/transactions/payment-receipt-document.md
               - "تسویه حساب": financial/treasury/transactions/settlement.md
-              - "مدیریت چک‌ها": financial/treasury/transactions/check-management.md
-              - "رأس‌گیری چک‌ها": financial/treasury/transactions/check-due-date-averaging.md
+          - "مدیریت چک‌های دریافتی":
+              - "مقدمه": financial/treasury/received-check-management/overview.md
+              - "دریافت چک جدید": financial/treasury/received-check-management/receipt-check.md
+              - "واگذاری چک به بانک": financial/treasury/received-check-management/deposite-check.md
+              - "اعلام وصول/برگشت چک": financial/treasury/received-check-management/clearance-check.md
           - "عملیات دوره‌ای":
               - "مغایرت بانکی": financial/treasury/periodic-operations/bank-reconciliation.md
       - "حسابداری":
