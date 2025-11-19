@@ -23,14 +23,13 @@ nav:
       - "خزانه‌داری":
           - "معرفی ماژول خزانه‌داری": "financial/treasury/overview.md"
           - "تعاریف پایه":
-              - "صندوق‌ها": financial/treasury/master-data/cash-box.md
-              - "حساب‌های بانکی": financial/treasury/master-data/bank-account.md
+              - "صندوق‌های نقدی": financial/treasury/master-data/cash-box.md
+              - "صندوق‌های اسناد": financial/treasury/master-data/document-box.md
               - "بانک‌ها": financial/treasury/master-data/bank.md
               - "‌شعب بانک‌ها": financial/treasury/master-data/bank-branch.md
+              - "حساب‌های بانکی": financial/treasury/master-data/bank-account.md
               - "دسته‌چک‌ها": financial/treasury/master-data/checkbook.md
-              - "صندوق اسناد": financial/treasury/master-data/document-box.md
-              - "تنظیمات پرداخت":
-                  - "روش‌های پرداخت": financial/treasury/master-data/payment-settings/payment-method.md
+              - "روش‌های پرداخت": financial/treasury/master-data/payment-method.md
           - "عملیات":
               - "ثبت دریافت/پرداخت": financial/treasury/transactions/payment-receipt-document.md
               - "تسویه حساب": financial/treasury/transactions/settlement.md
