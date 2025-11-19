@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.tabansoft.ir/financial/treasury/master-data/bank/">
       
       
-        <link rel="prev" href="../bank-account/">
+        <link rel="prev" href="../document-box/">
       
       
         <link rel="next" href="../bank-branch/">
@@ -577,7 +577,7 @@
   
   
   <span class="md-ellipsis">
-    صندوق‌ها
+    صندوق‌های نقدی
     
   </span>
   
@@ -595,12 +595,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../bank-account/" class="md-nav__link">
+      <a href="../document-box/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    حساب‌های بانکی
+    صندوق‌های اسناد
     
   </span>
   
@@ -670,26 +670,53 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. مقدمه: چرا باید نام بانک‌ها را تعریف کنیم؟
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bank-definition" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف بانک (Bank Definition)
+      ۲. راهنمای تکمیل فرم
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف بانک (Bank Definition)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. معماری درختی: بانک، شعبه یا حساب؟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. نکات پیاده‌سازی (ویژه تیم فنی و استقرار)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. نکات پیاده‌سازی (ویژه تیم فنی و استقرار)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      الف) داده‌های اولیه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ب) اعتبارسنجی‌ها (Validations)
     </span>
   </a>
   
@@ -701,9 +728,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
-      ۳. کاربرد در سیستم
+      ۵. پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -748,6 +775,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../bank-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    حساب‌های بانکی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../checkbook/" class="md-nav__link">
         
   
@@ -771,68 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../received-checks-portfolio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    پورتفو‌های چک‌های دریافت‌شده
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1_2_7" id="__nav_3_1_2_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    تنظیمات پرداخت
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1_2_7">
-            <span class="md-nav__icon md-icon"></span>
-            تنظیمات پرداخت
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../payment-settings/payment-method/" class="md-nav__link">
+      <a href="../payment-method/" class="md-nav__link">
         
   
   
@@ -843,14 +832,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -2123,26 +2104,53 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. مقدمه: چرا باید نام بانک‌ها را تعریف کنیم؟
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bank-definition" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف بانک (Bank Definition)
+      ۲. راهنمای تکمیل فرم
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف بانک (Bank Definition)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. معماری درختی: بانک، شعبه یا حساب؟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. نکات پیاده‌سازی (ویژه تیم فنی و استقرار)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. نکات پیاده‌سازی (ویژه تیم فنی و استقرار)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      الف) داده‌های اولیه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ب) اعتبارسنجی‌ها (Validations)
     </span>
   </a>
   
@@ -2154,9 +2162,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
-      ۳. کاربرد در سیستم
+      ۵. پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -2181,75 +2189,148 @@
   
 
 
-<h1 id="banks">مفهوم و فرم: بانک‌ها (Banks)</h1>
+<h1 id="banks">بانک‌ها (Banks)</h1>
+<h2 id="_1">۱. مقدمه: چرا باید نام بانک‌ها را تعریف کنیم؟</h2>
+<p>در سیستم ERP تابان، موجودیت <strong>«بانک» (Bank)</strong> سنگ بنای تمام عملیات مالی است. این فرم، <strong>لیست مرجع (Reference List)</strong> تمام موسسات مالی و اعتباری مجاز در شبکه بانکی کشور را نگهداری می‌کند.</p>
+<p>دقت کنید که در این مرحله، شما <strong>شماره حساب</strong> یا <strong>شعبه</strong> تعریف نمی‌کنید؛ بلکه فقط هویت اصلی بانک (برند بانک) را ثبت می‌کنید.</p>
+<p><strong>چرا نمی‌توانیم نام بانک را دستی تایپ کنیم؟</strong>
+اگر این لیست مرجع وجود نداشته باشد، کاربران نام بانک را به سلیقه خود وارد می‌کنند (یکی می‌نویسد "ملت"، دیگری "بانک ملت"، سومی "Mellat").
+این عدم یکپارچگی باعث فاجعه در سیستم می‌شود:</p>
+<ol>
+<li><strong>گزارش‌گیری غلط:</strong> سیستم نمی‌تواند بفهمد که "ملت" و "بانک ملت" یکی هستند.</li>
+<li><strong>عدم اعتبارسنجی:</strong> سیستم نمی‌تواند شماره شبا (IBAN) یا شناسه صیادی چک را کنترل کند (چون الگوریتم هر بانک متفاوت است).</li>
+<li><strong>مغایرت بانکی:</strong> فایل اکسل بانک با سیستم تطبیق پیدا نمی‌کند.</li>
+</ol>
 <hr />
-<h2 id="_1">۱. مفهوم</h2>
-<p>موجودیت «بانک» یک تعریف پایه و بسیار ساده در سیستم است. این موجودیت صرفاً لیستی از نام بانک‌هایی را که سازمان با آن‌ها یا مشتریان و تأمین‌کنندگان سازمان با آن‌ها کار می‌کنند، نگهداری می‌کند.</p>
-<ul>
-<li><strong>هدف:</strong> این فرم به عنوان یک فهرست (List) برای انتخاب در فرم‌های دیگر (مانند تعریف حساب بانکی شرکت یا ثبت چک دریافتی از مشتری) عمل می‌کند.</li>
-<li><strong>مثال:</strong> بانک ملت، بانک سامان، بانک ملی ایران، بانک پاسارگاد و ...</li>
-</ul>
-<hr />
-<h2 id="bank-definition">۲. فرم: تعریف بانک (Bank Definition)</h2>
-<p>این فرم معمولاً در بخش تعاریف پایه ماژول خزانه‌داری یا حسابداری قرار دارد.</p>
-<p><strong>مسیر:</strong>
-<code>خزانه‌داری / تعاریف پایه / بانک‌ها</code></p>
-<h3 id="_2">فیلدهای اطلاعاتی فرم</h3>
+<h2 id="_2">۲. راهنمای تکمیل فرم</h2>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; تعاریف پایه &gt; بانک‌ها</code></p>
+<p>این فرم معمولاً یک‌بار در زمان استقرار سیستم توسط مدیر سیستم پر می‌شود (یا به صورت آماده بارگذاری می‌شود).</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">عنوان فیلد (در نرم‌افزار)</th>
+<th style="text-align: left;">نام فنی (Technical)</th>
 <th style="text-align: left;">نوع داده</th>
-<th style="text-align: left;">اجباری</th>
-<th style="text-align: left;">توضیح</th>
-<th style="text-align: left;">مثال</th>
+<th style="text-align: left;">راهنمای تکمیل و منطق سیستم</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>کد بانک</strong></td>
-<td style="text-align: left;">متنی/عددی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">یک شناسه یکتا برای بانک (می‌تواند کد سوئیفت یا کد استاندارد بانک مرکزی باشد).</td>
-<td style="text-align: left;"><code>012</code> (بانک ملت)</td>
+<td style="text-align: left;"><strong>شناسه سیستمی</strong></td>
+<td style="text-align: left;"><code>ID</code></td>
+<td style="text-align: left;">Integer (PK)</td>
+<td style="text-align: left;"><strong>(فنی)</strong> کلید اصلی جدول (تولید خودکار).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>کد سیستم</strong></td>
+<td style="text-align: left;"><code>Code</code></td>
+<td style="text-align: left;">String (Unique)</td>
+<td style="text-align: left;">یک کد کوتاه لاتین برای استفاده در سیستم. <br> <em>مثال:</em> <code>MEL</code> برای ملت، <code>BMI</code> برای ملی.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>نام بانک</strong></td>
-<td style="text-align: left;">متنی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">نام کامل و رسمی بانک.</td>
-<td style="text-align: left;"><code>بانک ملت</code></td>
+<td style="text-align: left;"><code>Name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">نام کامل و رسمی بانک طبق مجوز بانک مرکزی. <br> <em>مثال:</em> <code>بانک پاسارگاد</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>نام اختصاری</strong></td>
-<td style="text-align: left;">متنی</td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">نام کوتاه یا رایج بانک.</td>
-<td style="text-align: left;"><code>ملت</code></td>
+<td style="text-align: left;"><strong>کد بانک مرکزی</strong></td>
+<td style="text-align: left;"><code>CentralBankCode</code></td>
+<td style="text-align: left;">String (digits)</td>
+<td style="text-align: left;"><strong>(حیاتی برای چک صیادی)</strong> <br> کد ۲ یا ۳ رقمی که بانک مرکزی به هر بانک اختصاص داده است. <br> <em>مثال:</em> <code>057</code> برای پاسارگاد، <code>012</code> برای ملت. <br> <em>منطق سیستم:</em> سیستم هنگام ثبت چک صیادی، با استفاده از این کد بررسی می‌کند که آیا شناسه ۱۶ رقمی چک معتبر است یا خیر.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>لوگو (آیکون)</strong></td>
-<td style="text-align: left;">تصویر</td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">لوگوی بانک برای نمایش بهتر در گزارش‌ها و فرم‌ها.</td>
-<td style="text-align: left;">``</td>
+<td style="text-align: left;"><strong>کد سوئیفت</strong></td>
+<td style="text-align: left;"><code>SwiftCode</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">کد شناسایی بین‌المللی بانک (برای شرکت‌هایی که تراکنش ارزی/صرافی دارند).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>وضعیت فعال</strong></td>
-<td style="text-align: left;">بولین</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">مشخص می‌کند آیا این بانک در لیست‌های انتخابی نمایش داده شود یا خیر.</td>
-<td style="text-align: left;"><code>فعال</code></td>
+<td style="text-align: left;"><strong>نام لاتین</strong></td>
+<td style="text-align: left;"><code>EnName</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">نام انگلیسی بانک (اختیاری).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>لینک اینترنت بانک</strong></td>
+<td style="text-align: left;"><code>WebsiteURL</code></td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">لینک صفحه لاگین بانکداری شرکتی. <br> <em>ارزش افزوده:</em> حسابدار می‌تواند در داشبورد خود روی لوگوی بانک کلیک کرده و مستقیم وارد سایت بانک شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>لوگو/آیکون</strong></td>
+<td style="text-align: left;"><code>LogoBlob</code></td>
+<td style="text-align: left;">Image/Binary</td>
+<td style="text-align: left;">فایل تصویر لوگوی بانک. <br> <em>کاربرد:</em> نمایش در لیست کارت‌خوان‌ها (POS) و گزارش موجودی نقدینگی برای تشخیص بصری سریع.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>رنگ سازمانی</strong></td>
+<td style="text-align: left;"><code>ColorHex</code></td>
+<td style="text-align: left;">String (Hex)</td>
+<td style="text-align: left;">(اختیاری) کد رنگ برند بانک (مثلاً <code>#FFD700</code> برای پاسارگاد). جهت زیباسازی نمودارها.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;"><code>IsActive</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">اگر بانکی منحل شد (مثل ادغام بانک‌های نظامی در سپه)، تیک فعال را بردارید. <strong>هرگز بانک را حذف نکنید</strong> تا تاریخچه چک‌های قدیمی خراب نشود.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="_3">۳. کاربرد در سیستم</h2>
+<h2 id="_3">۳. معماری درختی: بانک، شعبه یا حساب؟</h2>
+<p>بسیاری از کاربران در تفکیک این سه مفهوم دچار اشتباه می‌شوند. ساختار درختی سیستم تابان به شکل زیر است:</p>
+<ol>
+<li>
+<p><strong>سطح اول (ریشه): بانک (Bank)</strong></p>
 <ul>
-<li>هنگام تعریف «حساب بانکی» (متعلق به شرکت)، شما از این لیست، بانکِ صاحب حساب را انتخاب می‌کنید.</li>
-<li>هنگام ثبت «چک دریافتی» از مشتری، شما بانک صادرکننده آن چک را از این لیست انتخاب می‌کنید.</li>
-<li>هنگام ثبت «چک پرداختی» به تأمین‌کننده، شما بانک مقصد (در صورت نیاز) را مشخص می‌کنید.</li>
+<li><em>ماهیت:</em> برند موسسه مالی.</li>
+<li><em>مثال:</em> بانک ملی ایران.</li>
+<li><em>محل تعریف:</em> همین فرم جاری.</li>
 </ul>
+</li>
+<li>
+<p><strong>سطح دوم (فرزند): شعبه (Bank Branch)</strong></p>
+<ul>
+<li><em>ماهیت:</em> ساختمان فیزیکی بانک در یک شهر/منطقه خاص.</li>
+<li><em>مثال:</em> شعبه بازار، کد ۱۲۳.</li>
+<li><em>محل تعریف:</em> فرم «مدیریت شعب» (وابسته به سطح ۱).</li>
+</ul>
+</li>
+<li>
+<p><strong>سطح سوم (فرزندِ فرزند): حساب بانکی (Bank Account)</strong></p>
+<ul>
+<li><em>ماهیت:</em> شماره حساب مالی شرکت شما در آن شعبه.</li>
+<li><em>مثال:</em> جاری ۰۱۰۵۵۵۵۵۵۰۰۰۱.</li>
+<li><em>محل تعریف:</em> فرم «حساب‌های بانکی» (وابسته به سطح ۱ و ۲).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="_4">۴. نکات پیاده‌سازی (ویژه تیم فنی و استقرار)</h2>
+<h3 id="_5">الف) داده‌های اولیه</h3>
+<p>تجربه کاربری (UX) حرفه‌ای حکم می‌کند که کاربر نهایی مجبور نباشد نام ۳۰ بانک کشور را دستی وارد کند.
+<strong>پیشنهاد:</strong> تیم فنی باید اسکریپتی (Migration Script) آماده کند که لیست تمام بانک‌های فعال ایران را همراه با <code>Code</code>، <code>CentralBankCode</code> و <code>Logo</code> به صورت پیش‌فرض در دیتابیس درج کند.</p>
+<ul>
+<li><em>بانک ملی:</em> Code=<code>BMI</code>, CB=<code>017</code></li>
+<li><em>بانک ملت:</em> Code=<code>MEL</code>, CB=<code>012</code></li>
+<li><em>بانک صادرات:</em> Code=<code>BSI</code>, CB=<code>019</code></li>
+<li><em>...</em></li>
+</ul>
+<h3 id="validations">ب) اعتبارسنجی‌ها (Validations)</h3>
+<ol>
+<li><strong>یکتایی نام:</strong> سیستم نباید اجازه دهد دو بانک با نام <code>Name</code> یکسان ثبت شوند.</li>
+<li><strong>یکتایی کد بانک مرکزی:</strong> این فیلد بسیار حساس است و نباید تکراری باشد.</li>
+<li><strong>حذف ممنوع (Soft Delete):</strong> اگر رکوردی در جدول <code>Cheques</code> یا <code>BankAccounts</code> وجود دارد که به <code>BankID=5</code> ارجاع می‌دهد، حذف فیزیکی بانک شماره ۵ باید مسدود شود.</li>
+</ol>
+<hr />
+<h2 id="faq">۵. پرسش‌های متداول (FAQ)</h2>
+<p><strong>س: آیا اگر با بانک «آینده» کار نمی‌کنیم، باز هم باید آن را تعریف کنیم؟</strong></p>
+<p>پ: بله! شاید خودتان در آنجا حساب نداشته باشید، اما ممکن است مشتری شما چکی از بانک آینده به شما بدهد. برای ثبت آن چک، نام بانک آینده باید در سیستم باشد. به همین دلیل توصیه می‌کنیم لیست تمام بانک‌های کشور را فعال نگه دارید.</p>
+<p><strong>س: اگر دو بانک ادغام شدند (مثل بانک انصار در سپه) چه کنیم؟</strong></p>
+<p>پ: بانک قدیمی (انصار) را غیرفعال (<code>IsActive = False</code>) کنید و بانک جدید (سپه) را فعال نگه دارید. سوابق چک‌های قدیمی انصار با همان نام "انصار" باقی می‌مانند، اما برای چک‌های جدید باید "سپه" انتخاب شود.</p>
+<p><strong>س: کد بانک مرکزی را از کجا پیدا کنیم؟</strong></p>
+<p>پ: این کد معمولاً همان ۳ رقم یا ۲ رقم اول شماره حساب‌های متمرکز یا بخشی از شماره شبا است. همچنین در لیست‌های رسمی سایت بانک مرکزی (شاپرک) موجود است. (اگر از داده‌های پیش‌فرض سیستم استفاده کنید، نیازی به جستجو ندارید).</p>
 
 
 
