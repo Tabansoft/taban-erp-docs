@@ -1,0 +1,4396 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="توضیحات پروژه شما اینجا قرار می‌گیرد.">
+      
+      
+        <meta name="author" content="تابان‌سافت">
+      
+      
+        <link rel="canonical" href="https://docs.tabansoft.ir/financial/treasury/merged/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>مفهوم و فرم: بانک‌ها (Banks) - مستندات ERP تابان</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#banks" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات ERP تابان
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              مفهوم و فرم: بانک‌ها (Banks)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tabansoft/taban-erp-docs/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات ERP تابان
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tabansoft/taban-erp-docs/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار سازمان
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار سازمان
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بنگاه‌های اقتصادی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار عملیاتی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار عملیاتی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مکان‌های عملیاتی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    خزانه‌داری
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            خزانه‌داری
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی ماژول خزانه‌داری
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/cash-box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صندوق‌های نقدی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/document-box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صندوق‌های اسناد
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/bank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بانک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/bank-branch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ‌شعب بانک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/bank-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    حساب‌های بانکی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/checkbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دسته‌چک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/payment-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    روش‌های پرداخت
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/payment-receipt-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ثبت دریافت/پرداخت
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/settlement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تسویه حساب
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت چک‌های دریافتی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت چک‌های دریافتی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مقدمه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/receipt-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دریافت چک جدید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/deposite-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    واگذاری چک به بانک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/clearance-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اعلام وصول/برگشت چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/endorsement-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    خرج کردن چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../received-check-management/return-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    استرداد چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات دوره‌ای
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات دوره‌ای
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../periodic-operations/bank-reconciliation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مغایرت بانکی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    حسابداری
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            حسابداری
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounting/overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی ماژول حسابداری
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت موجودی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت موجودی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع بسته‌بندی کالا
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت انبار
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت انبار
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع بسته‌بندی کالا
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌ریزی و کنترل تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            برنامه‌ریزی و کنترل تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/capability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    قابلیت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/resource-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع منبع
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/resource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    منابع
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/work-center/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مراکز کار
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/dispatching-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    قواعد تخصیص
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/sheduler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    موتور زمان‌بندی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مهندسی تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            مهندسی تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/production-engineering/bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فرمول‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/production-engineering/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فرآیند‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌ریزی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            برنامه‌ریزی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/planning/master-production-schedules.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌های تولید اصلی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    اجرای تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            اجرای تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/planning/resources.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دستور‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت حمل‌ونقل
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت حمل‌ونقل
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع وسیله نقلیه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مفهوم
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bank-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. فرم: تعریف بانک (Bank Definition)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. فرم: تعریف بانک (Bank Definition)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      فیلدهای اطلاعاتی فرم
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. کاربرد در سیستم
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="banks">مفهوم و فرم: بانک‌ها (Banks)</h1>
+<hr />
+<h2 id="_1">۱. مفهوم</h2>
+<p>موجودیت «بانک» یک تعریف پایه و بسیار ساده در سیستم است. این موجودیت صرفاً لیستی از نام بانک‌هایی را که سازمان با آن‌ها یا مشتریان و تأمین‌کنندگان سازمان با آن‌ها کار می‌کنند، نگهداری می‌کند.</p>
+<ul>
+<li><strong>هدف:</strong> این فرم به عنوان یک فهرست (List) برای انتخاب در فرم‌های دیگر (مانند تعریف حساب بانکی شرکت یا ثبت چک دریافتی از مشتری) عمل می‌کند.</li>
+<li><strong>مثال:</strong> بانک ملت، بانک سامان، بانک ملی ایران، بانک پاسارگاد و ...</li>
+</ul>
+<hr />
+<h2 id="bank-definition">۲. فرم: تعریف بانک (Bank Definition)</h2>
+<p>این فرم معمولاً در بخش تعاریف پایه ماژول خزانه‌داری یا حسابداری قرار دارد.</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / بانک‌ها</code></p>
+<h3 id="_2">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>کد بانک</strong></td>
+<td style="text-align: left;">متنی/عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">یک شناسه یکتا برای بانک (می‌تواند کد سوئیفت یا کد استاندارد بانک مرکزی باشد).</td>
+<td style="text-align: left;"><code>012</code> (بانک ملت)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام بانک</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">نام کامل و رسمی بانک.</td>
+<td style="text-align: left;"><code>بانک ملت</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام اختصاری</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">نام کوتاه یا رایج بانک.</td>
+<td style="text-align: left;"><code>ملت</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>لوگو (آیکون)</strong></td>
+<td style="text-align: left;">تصویر</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">لوگوی بانک برای نمایش بهتر در گزارش‌ها و فرم‌ها.</td>
+<td style="text-align: left;">``</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت فعال</strong></td>
+<td style="text-align: left;">بولین</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">مشخص می‌کند آیا این بانک در لیست‌های انتخابی نمایش داده شود یا خیر.</td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_3">۳. کاربرد در سیستم</h2>
+<ul>
+<li>هنگام تعریف «حساب بانکی» (متعلق به شرکت)، شما از این لیست، بانکِ صاحب حساب را انتخاب می‌کنید.</li>
+<li>هنگام ثبت «چک دریافتی» از مشتری، شما بانک صادرکننده آن چک را از این لیست انتخاب می‌کنید.</li>
+<li>هنگام ثبت «چک پرداختی» به تأمین‌کننده، شما بانک مقصد (در صورت نیاز) را مشخص می‌کنید.</li>
+</ul>
+<h1 id="bank-accounts">مفهوم و فرم: حساب‌های بانکی (Bank Accounts)</h1>
+<hr />
+<h2 id="_4">۱. مفهوم</h2>
+<p>این موجودیت یکی از <strong>مهم‌ترین</strong> تعاریف پایه در ماژول خزانه‌داری و حسابداری است. «حساب بانکی» در ERP تابان، نماینده یک حساب بانکی <em>واقعی</em> متعلق به یکی از <strong>بنگاه‌های اقتصادی</strong> شرکت شما است.</p>
+<ul>
+<li><strong>هدف:</strong> مدیریت موجودی ریالی/ارزی، ردیابی تراکنش‌ها و تعریف دسته چک‌ها.</li>
+<li><strong>جایگاه در حسابداری:</strong> هر حساب بانکی در تابان باید به یک سرفصل معین در <strong>دفتر کل (GL)</strong> (مثلاً: «موجودی نقد - بانک ملت شعبه مرکزی») متصل باشد. تمامی واریزها و برداشت‌ها از این حساب بانکی، به صورت خودکار سرفصل GL متناظر را بدهکار یا بستانکار می‌کنند.</li>
+</ul>
+<blockquote>
+<p><strong>نکته کلیدی:</strong> یک حساب بانکی در ERP تابان، هم یک موجودیت خزانه‌داری (برای مدیریت موجودی و چک) و هم یک موجودیت حسابداری (به عنوان یک حساب معین) است.</p>
+</blockquote>
+<hr />
+<h2 id="bank-account-definition">۲. فرم: تعریف حساب بانکی (Bank Account Definition)</h2>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / حساب‌های بانکی</code></p>
+<h3 id="_5">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">بنگاه اقتصادی (شرکت) که مالک این حساب است.</td>
+<td style="text-align: left;"><code>1000 - ایران خودرو مرکزی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>کد حساب (داخلی)</strong></td>
+<td style="text-align: left;">متنی/عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">یک شناسه کوتاه و یکتا در داخل سیستم تابان.</td>
+<td style="text-align: left;"><code>MEL-100</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام حساب</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">نام توصیفی حساب برای استفاده در گزارش‌ها.</td>
+<td style="text-align: left;"><code>حساب جاری - بانک ملت مرکزی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بانک</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">بانکی که حساب در آن قرار دارد (از فرم بانک‌ها).</td>
+<td style="text-align: left;"><code>بانک ملت</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شعبه بانک</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شعبه‌ای که حساب در آن افتتاح شده (از فرم شعب).</td>
+<td style="text-align: left;"><code>شعبه مرکزی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شماره حساب</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شماره حساب رسمی.</td>
+<td style="text-align: left;"><code>1-2345678-90</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شماره شبا (IBAN)</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شماره شبا جهت انتقالات بانکی (با اعتبارسنجی ساختار).</td>
+<td style="text-align: left;"><code>IR...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نوع حساب</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">(جاری، پس‌انداز، ارزی، ...).</td>
+<td style="text-align: left;"><code>جاری</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ارز (Currency)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">ارز پایه حساب.</td>
+<td style="text-align: left;"><code>IRR</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب معین (GL)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><strong>(بسیار مهم)</strong> سرفصل حسابداری در دفتر کل که موجودی این حساب را نشان می‌دهد.</td>
+<td style="text-align: left;"><code>11010101 - بانک ملت مرکزی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب موقت (GL)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">(پیشرفته) سرفصل واسط برای مغایرت بانکی (در صورت نیاز).</td>
+<td style="text-align: left;"><code>...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">(فعال، مسدود، بسته شده).</td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ افتتاح</strong></td>
+<td style="text-align: left;">تاریخ</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1400/01/01</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>موجودی اولیه</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">(فقط در زمان استقرار) موجودی اولیه در تاریخ استقرار.</td>
+<td style="text-align: left;"><code>1,000,000,000</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">۳. کاربرد در سیستم</h2>
+<ul>
+<li>این حساب، مبدأ «پرداخت‌ها» و مقصد «دریافت‌ها» در <strong>سند دریافت و پرداخت</strong> است.</li>
+<li>موجودی این حساب با هر تراکنش (واریز، برداشت، پاس شدن چک) به‌روز می‌شود.</li>
+<li><strong>دسته چک‌ها</strong> (Checkbooks) فقط برای حساب‌هایی از نوع «جاری» که به این فرم معرفی شده‌اند، تعریف می‌شوند.</li>
+<li>در فرآیند <strong>مغایرت بانکی</strong>، تراکنش‌های ثبت شده برای این حساب با صورتحساب واقعی بانک تطبیق داده می‌شود.</li>
+</ul>
+<h1 id="banks-branches">مفهوم و فرم: شعب بانک‌ها (Banks Branches)</h1>
+<hr />
+<h2 id="_7">۱. مفهوم</h2>
+<p>موجودیت «شعبه بانک» اطلاعات دقیق‌تری در مورد هر شعبه‌ای که شرکت در آن حساب دارد یا با آن در ارتباط است، ارائه می‌دهد. این اطلاعات هم برای حساب‌های خود شرکت و هم برای ردیابی چک‌های مشتریان (جهت وصول) کاربرد دارد.</p>
+<ul>
+<li><strong>هدف:</strong> نگهداری اطلاعات آدرس، کد شعبه و اطلاعات تماس شعب بانکی.</li>
+<li><strong>ارتباط:</strong> هر شعبه بانک (Bank Branch) الزاماً به یک «بانک» (Bank) از فرم قبلی مرتبط است. (ارتباط یک به چند از بانک به شعبه).</li>
+</ul>
+<hr />
+<h2 id="bank-branch-definition">۲. فرم: تعریف شعبه بانک (Bank Branch Definition)</h2>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / بانک‌ها و شعب / تعریف شعب</code></p>
+<h3 id="_8">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>بانک (Bank)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">بانکی که این شعبه به آن تعلق دارد (از فرم بانک‌ها).</td>
+<td style="text-align: left;"><code>بانک ملت</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>کد شعبه</strong></td>
+<td style="text-align: left;">متنی/عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">کد شناسایی شعبه که توسط بانک ارائه می‌شود.</td>
+<td style="text-align: left;"><code>12345</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام شعبه</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">نام رسمی شعبه.</td>
+<td style="text-align: left;"><code>شعبه مرکزی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>استان</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">استان محل استقرار شعبه.</td>
+<td style="text-align: left;"><code>تهران</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شهر</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">شهر محل استقرار شعبه.</td>
+<td style="text-align: left;"><code>تهران</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>آدرس</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">آدرس دقیق شعبه.</td>
+<td style="text-align: left;"><code>خیابان انقلاب، ...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تلفن</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">شماره تماس شعبه.</td>
+<td style="text-align: left;"><code>021-66...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت فعال</strong></td>
+<td style="text-align: left;">بولین</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">۳. کاربرد در سیستم</h2>
+<ul>
+<li>هنگام تعریف «حساب بانکی» شرکت، شما شعبه‌ای که در آن حساب افتتاح شده را از این لیست انتخاب می‌کنید.</li>
+<li>هنگام ثبت «چک دریافتی» از مشتری، شعبه صادرکننده چک را برای سهولت در فرآیند وصول (واگذاری به بانک) در این فرم ثبت می‌کنید.</li>
+</ul>
+<h1 id="cash-boxes">صندوق‌ها (Cash Boxes)</h1>
+<h2 id="_10">۱. تعریف</h2>
+<p><strong>صندوق (Cash Box)</strong> در ERP تابان، یک موجودیت اصلی (Master Data) در ماژول خزانه‌داری است که برای مدیریت و ردیابی <strong>هرگونه وجه نقد فیزیکی</strong> تحت تملک یا کنترل سازمان به کار می‌رود.</p>
+<p>این موجودیت یک <strong>دفتر معین (Sub-Ledger)</strong> برای حساب‌های نقد در ترازنامه (مانند "صندوق" یا "تنخواه گردان") عمل می‌کند. هر تراکنش ورودی یا خروجی از صندوق، علاوه بر ثبت در سابقه صندوق، منجر به صدور یک <strong>سند حسابداری خودکار</strong> در دفتر کل (GL) می‌شود.</p>
+<h2 id="_11">۲. معماری و دسته‌بندی</h2>
+<p>موجودیتی به نام «صندوق» تمام موارد زیر را پوشش می‌دهد و تمایز آن‌ها از طریق <strong>"نوع صندوق (Cash Box Type)"</strong> صورت می‌گیرد:</p>
+<ul>
+<li>
+<p><strong>صندوق عملیاتی/فروش (Operational/POS Cash Box):</strong></p>
+<ul>
+<li><strong>هدف:</strong> دریافت و پرداخت‌های روزمره.</li>
+<li><strong>مثال:</strong> صندوق فروشگاه، صندوق پذیرش هتل، صندوق دریافت شهریه.</li>
+<li><strong>گردش کار:</strong> دریافت‌های مکرر، پرداخت‌های جزئی، و واریز دوره‌ای به بانک (EOD - End of Day Process).</li>
+</ul>
+</li>
+<li>
+<p><strong>تنخواه گردان (Petty Cash):</strong></p>
+<ul>
+<li><strong>هدف:</strong> مدیریت هزینه‌های جزئی و فوری سازمان تحت یک سقف مشخص.</li>
+<li><strong>مثال:</strong> تنخواه دفتر مدیرعامل، تنخواه کارپردازی، تنخواه تعمیرات و نگهداری.</li>
+<li><strong>گردش کار:</strong> مبتنی بر <strong>سیستم سقف ثابت (Imprest System)</strong> است؛ یعنی شارژ اولیه، ثبت هزینه‌ها، و شارژ مجدد <em>معادل</em> هزینه‌های انجام شده برای رساندن موجودی به سقف تعیین شده.</li>
+</ul>
+</li>
+<li>
+<p><strong>صندوق مرکزی (Central Cash Box):</strong></p>
+<ul>
+<li><strong>هدف:</strong> مدیریت وجوه نقد اصلی سازمان، معمولاً در خزانه مرکزی.</li>
+<li><strong>مثال:</strong> گاوصندوق اصلی شرکت.</li>
+<li><strong>گردش کار:</strong> دریافت وجوه از صندوق‌های عملیاتی، پرداخت‌های نقدی کلان (در صورت لزوم)، و نگهداری موجودی.</li>
+</ul>
+</li>
+</ul>
+<h2 id="integration">۳. یکپارچه‌سازی (Integration)</h2>
+<p>تعریف «صندوق» به تنهایی کافی نیست؛ ارزش آن در یکپارچگی با سایر بخش‌های ERP است:</p>
+<ul>
+<li><strong>دفتر کل (General Ledger):</strong> حیاتی‌ترین ارتباط. هر صندوق باید به یک <strong>حساب معین منحصربه‌فرد</strong> در GL متصل باشد. این حساب، بازتاب ریالی موجودی آن صندوق در ترازنامه است.</li>
+<li><strong>حساب‌های دریافتنی (AR):</strong> هنگامی که مشتری فاکتور خود را "نقدی" پرداخت می‌کند، وجه به یک صندوق (مثلاً صندوق فروش) واریز می‌شود.</li>
+<li><strong>حساب‌های پرداختنی (AP):</strong> پرداخت‌های نقدی به تأمین‌کنندگان (بسیار نادر، اما ممکن) یا پرداخت هزینه‌ها (بسیار رایج در تنخواه) از مبدأ صندوق ثبت می‌شود.</li>
+<li><strong>مدیریت سازمانی (OM):</strong> هر صندوق به یک <strong>مکان عملیاتی</strong> (Operating Unit) و یک <strong>شخص مسئول (Custodian)</strong> که کارمند تعریف شده در ماژول منابع انسانی است لینک می‌شود.</li>
+</ul>
+<h2 id="cash-box-definition">۴. فرم تعریف صندوق (Cash Box Definition)</h2>
+<p>این فرم، قلب تپنده ماژول است. فیلدها باید به صورت منطقی دسته‌بندی شوند:</p>
+<p><strong>مسیر:</strong> <code>خزانه‌داری &gt; تعاریف پایه &gt; مدیریت صندوق‌ها و تنخواه</code></p>
+<hr />
+<h3 id="general">بخش ۱: اطلاعات عمومی (General)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>نام صندوق (Name)</strong></td>
+<td style="text-align: left;">نام کامل و توصیفی صندوق</td>
+<td style="text-align: left;"><code>تنخواه گردان واحد بازرگانی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
+<td style="text-align: left;">(اجباری) شرکتی که مالک این وجه نقد است.</td>
+<td style="text-align: left;"><code>شرکت اصلی تابان</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مکان عملیاتی</strong></td>
+<td style="text-align: left;">(اختیاری) محلی که صندوق در آن مستقر است.</td>
+<td style="text-align: left;"><code>3500 -کارخانه</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;">فعال / غیرفعال / مسدود (جهت صندوق گردانی)</td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="accounting">بخش ۲: تنظیمات حسابداری (Accounting)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>نوع صندوق</strong></td>
+<td style="text-align: left;">(اجباری) منطق عملیاتی صندوق را تعیین می‌کند.</td>
+<td style="text-align: left;"><code>تنخواه (Petty Cash)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ارز صندوق</strong></td>
+<td style="text-align: left;">(اجباری) ارز پایه صندوق. (اگر ارزی باشد، فرآیند تسعیر لازم است)</td>
+<td style="text-align: left;"><code>IRR</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب معین (GL)</strong></td>
+<td style="text-align: left;">(اجباری) <strong>مهم‌ترین فیلد.</strong> حساب معین اختصاصی این صندوق در دفتر کل.</td>
+<td style="text-align: left;"><code>11020105 - تنخواه بازرگانی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب کسری صندوق (Shortage Account)</strong></td>
+<td style="text-align: left;">(توصیه اکید) حساب هزینه‌ای برای ثبت مغایرت‌های <em>کسری</em>.</td>
+<td style="text-align: left;"><code>63010010 - هزینه کسری صندوق</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب سرک صندوق (Overage Account)</strong></td>
+<td style="text-align: left;">(توصیه اکید) حساب درآمدی برای ثبت مغایرت‌های <em>سرک</em>.</td>
+<td style="text-align: left;"><code>71010020 - درآمد سرک صندوق</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ابعاد مالی پیش‌فرض</strong></td>
+<td style="text-align: left;">(اختیاری) برای سادگی در ورود اطلاعات.</td>
+<td style="text-align: left;"><code>مرکز هزینه: 3500</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="petty-cash-controls">بخش ۳: کنترل‌های تنخواه (Petty Cash Controls)</h3>
+<blockquote>
+<p><strong>توجه:</strong> این تب فقط زمانی فعال و اجباری می‌شود که «نوع صندوق» = «تنخواه (Petty Cash)» باشد.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>سقف تنخواه (Imprest Amount)</strong></td>
+<td style="text-align: left;">(اجباری) حداکثر مبلغی که این صندوق <em>باید</em> داشته باشد.</td>
+<td style="text-align: left;"><code>50,000,000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>آستانه هشدار شارژ</strong></td>
+<td style="text-align: left;">درصدی از سقف که در صورت رسیدن موجودی به آن، سیستم هشدار شارژ می‌دهد.</td>
+<td style="text-align: left;"><code>20%</code> (یعنی 10 میلیون)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سقف هر هزینه (Max Expense Limit)</strong></td>
+<td style="text-align: left;">حداکثر مبلغ مجاز برای <em>هر</em> سند هزینه ثبت شده از این تنخواه.</td>
+<td style="text-align: left;"><code>5,000,000</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="core-workflows">۵. فرآیندهای اصلی و گردش کار (Core Workflows)</h2>
+<h3 id="-imprest-system">گردش کار ۱: تنخواه گردان (سیستم سقف ثابت - Imprest System)</h3>
+<p>این فرآیند بر اساس ثابت نگه داشتن موجودی حساب کل تنخواه عمل می‌کند.</p>
+<p><strong>گام اول: ایجاد و شارژ اولیه (Establish Fund):</strong></p>
+<p>مدیر مالی «پرداخت» به مبلغ <code>سقف تنخواه</code> (مثلاً 50 م) از <code>حساب بانک</code> به <code>صندوق تنخواه</code> ثبت می‌کند.</p>
+<p><strong>سند حسابداری (خودکار):</strong></p>
+<ul>
+<li>بدهکار: <code>11020105 - تنخواه بازرگانی</code> (50 م)</li>
+<li>بستانکار: <code>11010001 - بانک پاسارگاد</code> (50 م)</li>
+</ul>
+<p><strong>نکته کنترلی:</strong> از این لحظه، موجودی حساب کل <code>11020105</code> باید <strong>همیشه</strong> 50 م باقی بماند تا زمان تغییر سقف.</p>
+<p><strong>گام دوم: ثبت هزینه‌ها (Expense Reporting - بدون سند دفتر کل):</strong></p>
+<p>تنخواه‌گردان هزینه‌ها را (مثلاً مجموعاً 40 م) پرداخت می‌کند. او <em>فقط</em> «گزارش هزینه» (Expense Report) یا «رسیدهای هزینه» (Vouchers) را در سیستم ثبت می‌کند تا اسناد مثبته جمع‌آوری شوند.</p>
+<p><strong>نکته:</strong> هیچ سند حسابداری صادر نمی‌شود. موجودی حساب کل تنخواه تغییر نمی‌کند (همچنان 50 م است).</p>
+<p><strong>گام سوم: شارژ مجدد (Replenishment):</strong></p>
+<p>تنخواه‌گردان گزارش هزینه‌های خود (به مبلغ 40 م) را برای مدیر مالی ارسال می‌کند. مدیر مالی <em>دقیقاً</em> معادل هزینه‌های تأیید شده (40 م) را از <code>حساب بانک</code> مستقیماً به تنخواه‌گردان پرداخت می‌کند.</p>
+<p><strong>سند حسابداری (خودکار - ثبت هزینه‌ها در این مرحله رخ می‌دهد):</strong></p>
+<ul>
+<li>بدهکار: <code>6201xxxx - هزینه ملزومات</code> (مثلاً 25 م)</li>
+<li>بدهکار: <code>6202xxxx - هزینه ایاب و ذهاب</code> (مثلاً 15 م)</li>
+<li>بستانکار: <code>11010001 - بانک پاسارگاد</code> (40 م)</li>
+</ul>
+<p><strong>نتیجه:</strong> موجودی فیزیکی تنخواه مجدداً به سقف 50 م بازگشت و حساب کل تنخواه نیز دست‌نخورده (50 م) باقی ماند.</p>
+<h3 id="_12">گردش کار ۲: صندوق عملیاتی (فروشگاه)</h3>
+<ol>
+<li><strong>دریافت نقدی (Receipt):</strong><ul>
+<li><strong>عملیات:</strong> مشتری کالا را خریده و مبلغ 1 م نقداً پرداخت می‌کند.</li>
+<li><strong>سند حسابداری (خودکار - از ماژول فروش):</strong><ul>
+<li>بدهکار: <code>11020101 - صندوق فروشگاه 1</code> (1 م)</li>
+<li>بستانکار: <code>41010001 - درآمد فروش</code> (1 م)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>عملیات پایان روز (EOD - واریز به بانک):</strong><ul>
+<li><strong>عملیات:</strong> صندوق‌دار در پایان روز، 30 م از وجوه را به بانک واریز می‌کند. یک "انتقال وجه" (Cash Transfer) از <code>صندوق فروشگاه 1</code> به <code>حساب بانک</code> ثبت می‌کند.</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>11010001 - بانک پاسارگاد</code> (30 م)</li>
+<li>بستانکار: <code>11020101 - صندوق فروشگاه 1</code> (30 م)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="reconciliation">گردش کار ۳: صندوق‌گردانی و ثبت مغایرت (Reconciliation)</h3>
+<p>این فرآیند <em>باید</em> در سیستم پشتیبانی شود.</p>
+<ol>
+<li><strong>شمارش فیزیکی:</strong> مسئول صندوق، موجودی فیزیکی را می‌شمارد (مثلاً 4,500,000).</li>
+<li><strong>مقایسه با سیستم:</strong> موجودی سیستمی (موجودی دفتر کل) در آن لحظه 4,550,000 است.</li>
+<li><strong>نتیجه:</strong> 50,000 کسری وجود دارد.</li>
+<li><strong>عملیات در ERP:</strong> کاربر فرم "صندوق‌گردانی/ثبت مغایرت" را باز می‌کند.<ul>
+<li>صندوق: <code>تنخواه بازرگانی</code></li>
+<li>موجودی سیستمی: <code>4,550,000</code></li>
+<li>موجودی واقعی: <code>4,500,000</code></li>
+<li>مغایرت: <code>(50,000)</code> (کسری)</li>
+</ul>
+</li>
+<li><strong>ثبت سند (خودکار پس از تأیید):</strong><ul>
+<li>سیستم از حساب‌هایی که در "بخش ۲: تنظیمات حسابداری" تعریف کردیم استفاده می‌کند:</li>
+<li>بدهکار: <code>63010010 - هزینه کسری صندوق</code> (50,000)</li>
+<li>بستانکار: <code>11020105 - تنخواه بازرگانی</code> (50,000)</li>
+<li><em>نتیجه:</em> موجودی دفتر کل تنخواه با موجودی واقعی یکسان می‌شود (4,500,000).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="faq">۵.  پرسش‌های متداول (FAQ)</h2>
+<p><strong>تفاوت اصلی "صندوق عملیاتی" و "تنخواه" در سیستم چیست؟</strong></p>
+<p>هر دو صندوق هستند، اما منطق متفاوتی دارند. <strong>صندوق عملیاتی</strong> (مثل فروشگاه) ذاتاً <em>دریافت‌کننده</em> وجه است و موجودی آن متغیر است و در پایان روز به بانک واریز می‌شود. <strong>تنخواه</strong> ذاتاً <em>پرداخت‌کننده</em> هزینه است، بر اساس سقف ثابت (Imprest) کار می‌کند و هدفش رساندن موجودی به سقف تعیین شده از طریق شارژ مجدد است.</p>
+<p><strong>چرا هر صندوق باید "حساب معین" جداگانه داشته باشد؟ آیا نمی‌توان همه را زیر یک حساب "صندوق" تعریف کرد؟</strong></p>
+<p>این یک الزام کنترل داخلی است. اگر همه صندوق‌ها یک حساب معین داشته باشند، شما در ترازنامه فقط یک عدد کلی (مثلاً «موجودی صندوق: 500 م») می‌بینید. اما اگر هر صندوق (تنخواه الف، تنخواه ب، صندوق فروشگاه ۱) حساب معین جدا داشته باشد، می‌توانید مغایرت‌گیری، ردیابی و گزارش‌گیری را <em>به تفکیک هر صندوق</em> انجام دهید و ترازنامه شما شفافیت کامل (Drill-Down) تا سطح هر صندوق خواهد داشت.</p>
+<p><strong>مسئول صندوق (Custodian) چه نقشی دارد؟</strong></p>
+<p>این فرد، مسئول فیزیکی و قانونی وجوه آن صندوق است. در ERP، این فیلد کنترل‌های امنیتی را فعال می‌کند. مثلاً:</p>
+<ol>
+<li>فقط "مسئول" یا کاربران مجاز می‌توانند برای آن صندوق تراکنش ثبت کنند.</li>
+<li>در فرآیند صندوق‌گردانی، نام "مسئول" به عنوان تأیید کننده ثبت می‌شود.</li>
+<li>گزارش‌ها (مانند گردش صندوق) می‌توانند بر اساس مسئول فیلتر شوند.</li>
+</ol>
+<p><strong>اگر در صندوق‌گردانی مغایرت (کسری یا سرک) داشتیم چه؟</strong></p>
+<p>این اتفاق رایج است. به همین دلیل در فرم "تعریف صندوق"، فیلدهای <strong>"حساب کسری"</strong> و <strong>"حساب سرک"</strong> را تعریف کردیم. فرآیند "صندوق‌گردانی" در ERP باید به کاربر اجازه دهد موجودی واقعی را وارد کند و سیستم به طور خودکار سند مغایرت را (همانطور که در مثال گردش کار ۳ توضیح داده شد) صادر کند تا موجودی GL با موجودی واقعی برابر شود.</p>
+<p><strong>آیا یک صندوق می‌تواند چند ارزی (Multi-Currency) باشد؟</strong></p>
+<p><strong>توصیه اکید:</strong> خیر. هر صندوق باید <em>فقط یک ارز</em> داشته باشد (همان فیلد "ارز صندوق"). اگر شما وجوه ریالی و یورویی دارید، باید <em>دو صندوق جداگانه</em> تعریف کنید: <code>صندوق مرکزی (ریالی)</code> و <code>صندوق مرکزی (یورویی)</code> که هر کدام به حساب معین ارزی یا ریالی خود متصل هستند. مدیریت چند ارز در یک صندوق فیزیکی، فرآیندهای حسابداری و تسعیر ارز را به شدت پیچیده و مستعد خطا می‌کند.</p>
+<h1 id="checkbooks">دسته چک‌ها (Checkbooks)</h1>
+<h2 id="_13">۱. هدف و مفهوم</h2>
+<p>در سیستم مالی تابان، موجودیت «دسته چک» نماینده یک دسته چک فیزیکی است که توسط بانک به یکی از <strong>حساب‌های بانکی</strong> شرکت تخصیص داده شده است.</p>
+<p>هدف اصلی این ماژول، ایجاد یک <strong>مرجع واحد و قابل ردیابی (Traceable)</strong> برای مدیریت تمام برگه‌های چک از لحظه دریافت از بانک تا زمان مصرف (صدور، پاس شدن، ابطال) است. این فرآیند برای کنترل داخلی، جلوگیری از صدور چک با شماره تکراری، و مدیریت دقیق نقدینگی خروجی، حیاتی است.</p>
+<ul>
+<li><strong>اهمیت در ایران:</strong> با توجه به الزامات <strong>سامانه صیاد</strong>، ردیابی دقیق هر برگ چک و شناسه صیادی آن از اهمیت بالایی برخوردار است. این ماژول پایه و اساس تمام عملیات پرداختنی از طریق چک صیادی در سیستم است.</li>
+<li><strong>ارتباط کلیدی:</strong> هر «دسته چک» (Checkbook) الزاماً به یک «حساب بانکی» (Bank Account) که قبلاً در سیستم تعریف شده، متصل می‌شود.</li>
+</ul>
+<hr />
+<h2 id="_14">۲. پیش‌نیازها</h2>
+<p>قبل از تعریف یک دسته چک جدید، اطمینان حاصل کنید که:</p>
+<ol>
+<li><strong>حساب بانکی مربوطه:</strong> حساب بانکی (از نوع <strong>جاری</strong>) که دسته چک به آن تعلق دارد، قبلاً در ماژول <code>خزانه‌داری / تعاریف پایه / حساب‌های بانکی</code> با تمام جزئیات (شعبه، شماره حساب و...) تعریف شده باشد.</li>
+</ol>
+<hr />
+<h2 id="checkbook-definition">۳. گام اول: فرم تعریف دسته چک (Checkbook Definition)</h2>
+<p>این فرم، اطلاعات «سربرگ» (Header) دسته چک را ثبت می‌کند. پس از ذخیره این فرم، سیستم به‌طور خودکار برگه‌های چک را ایجاد خواهد کرد.</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / دسته چک‌ها</code></p>
+<h3 id="_15">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح و مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>حساب بانکی (Bank Account)</strong></td>
+<td style="text-align: left;">لیست انتخابی (Lookup)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">حسابی که این دسته چک به آن تعلق دارد.<br> <strong>مثال:</strong> <code>110-810-1234567-1 (جاری - بانک ملت شعبه مرکزی)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>عنوان دسته چک (Name)</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">یک نام توصیفی برای شناسایی آسان‌تر این دسته چک.<br> <strong>مثال:</strong> <code>دسته چک 50 برگی صیادی (ملت) - بهار 1403</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سریال شروع (Start Serial)</strong></td>
+<td style="text-align: left;">عددی/متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شماره سریال <strong>اولین</strong> برگ چک در این دسته فیزیکی.<br> <strong>مثال:</strong> <code>123401</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سریال پایان (End Serial)</strong></td>
+<td style="text-align: left;">عددی/متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شماره سریال <strong>آخرین</strong> برگ چک در این دسته فیزیکی.<br> <strong>مثال:</strong> <code>123450</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تعداد برگ (Leaf Count)</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">خودکار (ReadOnly)</td>
+<td style="text-align: left;">به صورت خودکار محاسبه می‌شود: (سریال پایان - سریال شروع) + 1<br> <strong>مثال:</strong> <code>50</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>پیشوند سریال (Serial Prefix)</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">اگر شماره سریال‌های چاپی روی برگه‌ها دارای بخش ثابت در <strong>ابتدا</strong> هستند.<br> <strong>مثال:</strong> <code>الف/</code> (نتیجه: <code>الف/123401</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>پسوند سریال (Serial Suffix)</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">اگر شماره سریال‌های چاپی روی برگه‌ها دارای بخش ثابت در <strong>انتها</strong> هستند.<br> <strong>مثال:</strong> <code>/980</code> (کد شعبه) (نتیجه: <code>123401/980</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ دریافت (Received Date)</strong></td>
+<td style="text-align: left;">تاریخ (Date Picker)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">تاریخی که دسته چک فیزیکی از بانک تحویل گرفته شد.<br> <strong>مثال:</strong> <code>1403/01/20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت دسته چک (Status)</strong></td>
+<td style="text-align: left;">لیست انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">وضعیت کلی دسته چک را مشخص می‌کند (پیش‌فرض: فعال).<br> <strong>مثال:</strong> <code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="checkbook-status">وضعیت‌های دسته چک (Checkbook Status)</h3>
+<ul>
+<li><strong>فعال (Active):</strong> پیش‌فرض. دسته چک آماده استفاده و صدور برگه‌های چک است.</li>
+<li><strong>مسدود (Blocked):</strong> به دلایل مدیریتی یا احتیاطی (مثلاً اعلام مفقودی بخشی از برگه‌ها)، به طور موقت جلوی استفاده از برگه‌های <em>جدید</em> این دسته چک گرفته می‌شود.</li>
+<li><strong>تمام شده (Finished):</strong> <strong>(وضعیت سیستمی)</strong> این وضعیت نباید دستی انتخاب شود. زمانی که <em>آخرین</em> برگ چک موجود در این دسته از وضعیت «خام» خارج شود (صادر یا باطل گردد)، سیستم به طور خودکار وضعیت دسته چک را «تمام شده» تنظیم می‌کند.</li>
+<li><strong>باطل شده (Voided):</strong> کل دسته چک قبل از استفاده یا در حین استفاده مفقود شده یا به طور کامل توسط بانک باطل اعلام شده است.</li>
+</ul>
+<hr />
+<h2 id="check-leaves">۴. گام دوم: ایجاد و تکمیل برگه‌های چک (Check Leaves)</h2>
+<p>این بخش مهم‌ترین بخش فرآیند است و در دو مرحله (یکی خودکار و یکی دستی توسط کاربر) انجام می‌شود.</p>
+<h3 id="_16">مرحله ۱: ایجاد خودکار برگه‌ها (توسط سیستم)</h3>
+<blockquote>
+<p><strong>فرآیند:</strong> به محض ذخیره فرم «تعریف دسته چک» (گام ۳)، سیستم یک حلقه (Loop) از «سریال شروع» تا «سریال پایان» اجرا می‌کند و به «تعداد برگ» (مثلاً ۵۰ عدد)، رکوردهای مجزای «برگه‌ چک» (Check Leaf) در وضعیت اولیه <strong>«خام» (Unused)</strong> ایجاد می‌کند.</p>
+</blockquote>
+<h3 id="_17">مرحله ۲: ورود شناسه‌های صیادی (توسط کاربر)</h3>
+<blockquote>
+<p><strong>اخطار مهم:</strong> یک دسته چک تا زمانی که شناسه‌های صیادی ۱۶ رقمی منحصربه‌فرد هر برگ در آن ثبت نشده باشد، <strong>قابل استفاده نیست</strong>.</p>
+</blockquote>
+<p><strong>گردش کار پیشنهادی سیستم:</strong></p>
+<ol>
+<li>پس از ذخیره موفقیت‌آمیز فرم «دسته چک»، سیستم کاربر را مستقیماً به لیستی از برگه‌های چک «خام» که به تازگی ایجاد شده‌اند، هدایت می‌کند.</li>
+<li>این لیست باید شامل ستون «شناسه صیادی» (SayadCode) باشد که در ابتدا برای همه برگه‌ها خالی است.</li>
+<li>کاربر <strong>باید</strong> قبل از هرگونه استفاده از این دسته چک، برگه‌های فیزیکی چک را برداشته و شناسه ۱۶ رقمی صیادی چاپ شده روی هر برگ را در فیلد مربوط به همان شماره سریال در سیستم وارد کند. (قابلیت ویرایش گروهی یا Edit-in-Grid در اینجا بسیار مفید است).</li>
+<li>دسته چک تنها زمانی واقعاً «فعال» و قابل استفاده برای صدور چک تلقی می‌شود که برگه‌های آن دارای شناسه صیادی باشند.</li>
+</ol>
+<hr />
+<h2 id="check-leaf">۵. موجودیت «برگ چک» (Check Leaf) و چرخه حیات آن</h2>
+<p>هر رکوردی که در گام ۴ ایجاد می‌شود، یک «برگ چک» است که چرخه حیات خود را طی می‌کند.</p>
+<h3 id="check-leaf-properties">فیلدهای اصلی برگ چک (Check Leaf Properties)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">فارسی</th>
+<th style="text-align: left;">English</th>
+<th style="text-align: left;">توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>شماره سریال (SerialNumber)</strong></td>
+<td style="text-align: left;"><code>SerialNumber</code></td>
+<td style="text-align: left;">شماره منحصربه‌فرد برگ (مثلاً <code>123401</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شناسه صیادی (SayadCode)</strong></td>
+<td style="text-align: left;"><code>SayadCode</code></td>
+<td style="text-align: left;"><strong>اجباری.</strong> شناسه ۱۶ رقمی چاپی روی برگ چک. بدون این شناسه، برگ «خام» قابل صدور نیست.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت برگ چک (Status)</strong></td>
+<td style="text-align: left;"><code>CheckLeafStatus</code></td>
+<td style="text-align: left;">وضعیت فعلی برگ (خام، صادر شده، پاس شده...). (جزئیات در ادامه)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ صدور (IssueDate)</strong></td>
+<td style="text-align: left;"><code>IssueDate</code></td>
+<td style="text-align: left;"><code>Null</code> است تا زمانی که چک صادر شود. در لحظه صدور (اتصال به سند پرداخت) ثبت می‌شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ سررسید (DueDate)</strong></td>
+<td style="text-align: left;"><code>DueDate</code></td>
+<td style="text-align: left;"><code>Null</code> است تا زمانی که چک صادر شود. در لحظه صدور <strong>اجباری</strong> می‌شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مبلغ چک (Amount)</strong></td>
+<td style="text-align: left;"><code>Amount</code></td>
+<td style="text-align: left;"><code>Null</code> است تا زمانی که چک صادر شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>دریافت‌کننده (Payee)</strong></td>
+<td style="text-align: left;"><code>Payee</code></td>
+<td style="text-align: left;"><code>Null</code> است تا زمانی که چک صادر شود. (لینک به موجودیت اشخاص/ذینفعان)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>توضیحات (Description)</strong></td>
+<td style="text-align: left;"><code>Description</code></td>
+<td style="text-align: left;">یادداشت اختیاری (مثلاً علت ابطال یا جزئیات صدور).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخچه وضعیت (StatusHistory)</strong></td>
+<td style="text-align: left;">(Link)</td>
+<td style="text-align: left;">(پیشنهاد) لینکی به تاریخچه کامل تغییرات وضعیت این برگ، شامل کاربر، تاریخ و علت.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="check-leaf-status-lifecycle">چرخه حیات وضعیت برگ چک (Check Leaf Status Lifecycle)</h3>
+<p>وضعیت‌ها صرفاً یک لیست نیستند، بلکه یک فرآیند مشخص را طی می‌کنند.</p>
+<p><strong>۱. وضعیت اولیه:</strong></p>
+<ul>
+<li><strong>خام (Unused):</strong> برگ چک تازه توسط سیستم ایجاد شده، شناسه صیادی آن وارد شده و آماده صدور در «سند پرداخت» است.</li>
+</ul>
+<p><strong>۲. مسیر ابطال (قبل از صدور):</strong></p>
+<ul>
+<li><code>خام</code>  <strong>باطل شده (Voided):</strong><ul>
+<li><strong>علت:</strong> برگ چک قبل از صدور مفقود شده، در هنگام چاپ توسط پرینتر خراب شده، یا به هر دلیل دیگری از رده خارج می‌شود.</li>
+<li><strong>الزام:</strong> سیستم باید هنگام تغییر وضعیت به «باطل شده»، کاربر را ملزم به ثبت «علت ابطال» کند.</li>
+</ul>
+</li>
+</ul>
+<p><strong>۳. مسیر صدور و نقد شدن (مسیر اصلی):</strong></p>
+<ol>
+<li><strong>صادر شده (Issued):</strong><ul>
+<li><strong>رویداد:</strong> کاربر در فرم «سند پرداخت» (Payment Voucher) این برگ چک را برای پرداخت انتخاب می‌کند.</li>
+<li><strong>تغییرات:</strong> فیلدهای <code>تاریخ صدور</code>، <code>تاریخ سررسید</code>، <code>مبلغ</code> و <code>دریافت‌کننده</code> در این مرحله پر می‌شوند.</li>
+</ul>
+</li>
+<li><strong>ثبت شده در صیاد (Registered):</strong><ul>
+<li><strong>رویداد:</strong> (پس از صدور) کاربر تأیید می‌کند که این چک در سامانه صیاد بانک ثبت شده است.</li>
+</ul>
+</li>
+<li><strong>منتظر تأیید ذی‌نفع (Pending Payee Confirmation):</strong><ul>
+<li><strong>رویداد:</strong> وضعیت قانونی طبق سامانه صیاد.</li>
+</ul>
+</li>
+<li><strong>تأیید شده (Confirmed):</strong><ul>
+<li><strong>رویداد:</strong> ذی‌نفع چک را در سامانه صیاد تأیید کرده است. چک اکنون اعتبار قانونی کامل دارد.</li>
+</ul>
+</li>
+<li><strong>تحویل شده (Delivered):</strong><ul>
+<li><strong>رویداد:</strong> (اختیاری اما مفید) واحد مالی، فیزیک چک را به ذی‌نفع تحویل داده و تأییدیه گرفته است.</li>
+</ul>
+</li>
+<li><strong>پاس شده (Cleared):</strong><ul>
+<li><strong>رویداد:</strong> در زمان «صورت مغایرت بانکی» (Reconciliation)، چک در لیست آیتم‌های برداشت شده از حساب بانک ظاهر شده و وضعیت آن در تابان به‌روز می‌شود.</li>
+</ul>
+</li>
+</ol>
+<p><strong>۴. مسیرهای برگشتی:</strong></p>
+<ul>
+<li><strong>برگشت خورده (Returned):</strong><ul>
+<li><strong>رویداد:</strong> پس از مراجعه ذی‌نفع به بانک، چک به دلیل عدم موجودی یا دلایل دیگر توسط بانک برگشت خورده است.</li>
+</ul>
+</li>
+<li><strong>عودت شده (Returned from Payee):</strong><ul>
+<li><strong>رویداد:</strong> ذی‌نفع به هر دلیلی (قبل یا بعد از تأیید صیادی، مثلاً لغو معامله) فیزیک چک را به شرکت عودت داده است. این برگ چک باید «باطل» شود.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="business-rules">۶. قوانین کلیدی و اتوماسیون (Business Rules)</h2>
+<ol>
+<li><strong>اجباری بودن سررسید:</strong> فیلد <code>تاریخ سررسید</code> (DueDate) زمانی که وضعیت برگ «خام» است، باید <code>Null</code> و غیرفعال باشد. اما در لحظه «صدور» (تغییر وضعیت به <code>Issued</code>)، پر کردن آن باید <strong>اجباری</strong> شود.</li>
+<li><strong>تاریخچه وضعیت:</strong> هرگونه تغییر در <code>CheckLeafStatus</code> (به خصوص <code>Voided</code>) باید در یک تاریخچه (Audit Log) ثبت شود: <em>وضعیت قبلی، وضعیت جدید، تاریخ، کاربر، و فیلد اجباری «علت» (Reason)</em>.</li>
+<li><strong>منحصربه‌فردی شناسه صیادی:</strong> سیستم باید در سطح پایگاه داده (Database constraint) اطمینان حاصل کند که هیچ دو برگ چکی (حتی از دسته چک‌های مختلف) نمی‌توانند «شناسه صیادی» یکسان داشته باشند.</li>
+</ol>
+<h1 id="payment-methods">روش‌های پرداخت/دریافت (Payment Methods)</h1>
+<hr />
+<h2 id="_18">۱. مفهوم</h2>
+<p><strong>صندوق (Cash Box)</strong> نماینده وجوه نقد فیزیکی تحت مدیریت سازمان است. این وجوه می‌توانند شامل:</p>
+<ul>
+<li><strong>صندوق نقدی (Operational Cash Box)</strong></li>
+<li><strong>صندوق فروشگاهی (Cash Register)</strong></li>
+<li><strong>تنخواه (Petty Cash / Imprest Fund)</strong></li>
+<li><strong>صندوق مرکزی (Central Cash Box)</strong></li>
+</ul>
+<p>باشند؛ همه‌ی این موارد در ERP تحت یک موجودیت واحد به نام <strong>Cash Box</strong> مدیریت می‌شوند، اما با <strong>نوع صندوق</strong> (Cash Box Type) از یکدیگر تفکیک می‌شوند.</p>
+<ul>
+<li><strong>هدف:</strong> استانداردسازی فرآیندها، کنترل فیلدهای اجباری در فرم «سند دریافت و پرداخت»، و استفاده در «برنامه پرداخت خودکار».</li>
+</ul>
+<hr />
+<h2 id="_19">۲. فرم: تعریف روش‌های پرداخت/دریافت</h2>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / تنظیمات پرداخت / روش‌های پرداخت</code></p>
+<h3 id="_20">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>کد روش</strong></td>
+<td style="text-align: left;">متنی/عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">شناسه یکتا (مثلاً <code>C</code>, <code>P</code>, <code>N</code>).</td>
+<td style="text-align: left;"><code>P</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><em>(اصلاحیه)</em> نام توصیفی روش.</td>
+<td style="text-align: left;"><code>انتقال پایا</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نوع تراکنش</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">(پرداختنی، دریافتنی، هردو، انتقال داخلی).</td>
+<td style="text-align: left;"><code>پرداختنی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>طبقه‌بندی</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">(چک، حواله بانکی، نقد، ...).</td>
+<td style="text-align: left;"><code>حواله بانکی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>کنترل فیلدها</strong></td>
+<td style="text-align: left;">تنظیمات</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><em>(توضیح کامل)</em> این یک تنظیم کلیدی است که رفتار فرم «سند پرداخت» را کنترل می‌کند. مشخص می‌کند که بر اساس این روش، کدام فیلدها باید اجباری (Required)، اختیاری (Optional) یا مخفی (Hidden) باشند.</td>
+<td style="text-align: left;">مثال ۱: برای «پایا»، فیلد «شماره شبا» اجباری است. <br> مثال ۲: برای «چک»، بخش «اطلاعات دسته چک» باید فعال و اجباری شود.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="received-checks-portfolio">پورتفوهای چک‌های دریافت‌شده (Received Checks Portfolio)</h1>
+<h2 id="_21">۱. مفهوم</h2>
+<p><strong>«پورتفوی چک‌های دریافتی»</strong> یک موجودیت پایه (Master Data) و اساسی در ماژول خزانه‌داری است که به عنوان یک <strong>«محفظه» (Container)</strong> منطقی یا فیزیکی برای نگهداری، ردیابی و مدیریت <strong>چک‌های دریافت شده</strong> عمل می‌کند.</p>
+<p>هر پورتفو به عنوان یک <strong>دفتر معین (Sub-Ledger)</strong> مستقل عمل می‌کند و الزاماً به یک <strong>حساب معین منحصربه‌فرد در دفتر کل (GL)</strong> متصل است.</p>
+<ul>
+<li><strong>هدف:</strong><ol>
+<li>فراهم کردن قابلیت ردیابی دقیق محل و وضعیت اسناد دریافتنی.</li>
+<li>ایجاد شفافیت کامل مالی در ترازنامه از طریق تفکیک حسابداری وضعیت‌های مختلف چک (نزد صندوق، در جریان وصول، برگشتی).</li>
+<li>کنترل فرآیندهای عملیاتی مجاز برای هر وضعیت (مثلاً، چکِ در جریان وصول را نمی‌توان خرج کرد).</li>
+</ol>
+</li>
+</ul>
+<p>جابجایی یک سند (مانند چک) بین پورتفوهای مختلف، یک <strong>تراکنش خزانه‌داری</strong> محسوب شده و (در صورت متفاوت بودن حساب‌های GL) منجر به صدور <strong>سند حسابداری خودکار</strong> می‌شود.</p>
+<hr />
+<h2 id="portfolio-definition">۲. فرم: تعریف پورتفوی چک‌های دریافتی (Portfolio Definition)</h2>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / تعاریف پایه / پورتفوهای چک‌های دریافتی</code></p>
+<h3 id="_22">فیلدهای اطلاعاتی فرم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح</th>
+<th style="text-align: left;">مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>نام پورتفو</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">نام توصیفی کامل برای شناسایی در فرم‌ها.</td>
+<td style="text-align: left;"><code>گاوصندوق دفتر مرکزی تهران</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">بنگاهی که مالک این پورتفو است.</td>
+<td style="text-align: left;"><code>شرکت اصلی تابان</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نوع پورتفو</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><strong>(فیلد کلیدی)</strong> منطق و رفتار پورتفو را تعیین می‌کند. (جزئیات در بخش ۳).</td>
+<td style="text-align: left;"><code>نزد صندوق (In-House)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب معین (GL)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><strong>(حیاتی‌ترین فیلد)</strong> حساب دفتر کلی که موجودی ریالی این پورتفو را نشان می‌دهد.</td>
+<td style="text-align: left;"><code>12010101 - اسناد نزد صندوق تهران</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ارز</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">ارز پایه اسناد داخل این پورتفو (معمولاً <code>IRR</code>).</td>
+<td style="text-align: left;"><code>IRR</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">(فعال، غیرفعال).</td>
+<td style="text-align: left;"><code>فعال</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="portfolio-type">۳. تشریح «نوع پورتفو» (Portfolio Type)</h2>
+<p>«نوع پورتفو» یک فیلد دسته‌بندی است که رفتار و عملیات مجاز پورتفو را تعریف می‌کند. این فیلد، الگو (Template) رفتار پورتفو است.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نوع پورتفو</th>
+<th style="text-align: left;">توضیح و منطق</th>
+<th style="text-align: left;">حساب GL نمونه</th>
+<th style="text-align: left;">عملیات ورودی مجاز</th>
+<th style="text-align: left;">عملیات خروجی مجاز</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>نزد صندوق (In-House)</strong></td>
+<td style="text-align: left;"><strong>(مهم‌ترین نوع)</strong> نماینده اسناد فیزیکی موجود در شرکت (مثلاً داخل گاوصندوق). نقطه شروع چرخه حیات چک.</td>
+<td style="text-align: left;"><code>120101 - اسناد نزد صندوق</code></td>
+<td style="text-align: left;">۱. <strong>دریافت</strong> (از مشتری در سند دریافت)</td>
+<td style="text-align: left;">۱. <strong>ارسال جهت وصول</strong> (به پورتفوی "در جریان وصول")<br>۲. <strong>واگذاری/خرج کردن</strong> (به تأمین‌کننده در سند پرداخت)<br>۳. <strong>عودت</strong> (به مشتری)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>در جریان وصول (In-Collection)</strong></td>
+<td style="text-align: left;">اسنادی که به بانک تحویل داده شده (خوابانده شده) و منتظر سررسید و واریز به حساب هستند.</td>
+<td style="text-align: left;"><code>120102 - اسناد در جریان وصول</code></td>
+<td style="text-align: left;">۱. <strong>ارسال جهت وصول</strong> (از پورتفوی "نزد صندوق")</td>
+<td style="text-align: left;">۱. <strong>اعلام وصول</strong> (تبدیل به موجودی بانک)<br>۲. <strong>اعلام برگشت</strong> (انتقال به پورتفوی "برگشتی")</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>برگشتی (Bounced)</strong></td>
+<td style="text-align: left;">اسنادی که توسط بانک برگشت خورده‌اند و باید توسط واحد مالی یا حقوقی پیگیری شوند.</td>
+<td style="text-align: left;"><code>120103 - اسناد برگشتی</code></td>
+<td style="text-align: left;">۱. <strong>اعلام برگشت</strong> (از پورتفوی "در جریان وصول")</td>
+<td style="text-align: left;">۱. <strong>واخواست</strong> (ارسال به واحد حقوقی)<br>۲. <strong>عودت</strong> (به مشتری پس از تسویه)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lifecycle-example">۴. کاربرد در سیستم و گردش کار نمونه (Lifecycle Example)</h2>
+<p>فرض کنید مشتری «الف» یک چک به مبلغ ۱۰,۰۰۰,۰۰۰ ریال به ما می‌دهد.</p>
+<p><strong>گام ۱: دریافت چک</strong></p>
+<ul>
+<li><strong>عملیات:</strong> کاربر «سند دریافت» صادر می‌کند.</li>
+<li><strong>انتخاب کاربر:</strong> در ردیف «روش دریافت»، پورتفوی <code>IN_HOUSE_TEH</code> (گاوصندوق تهران) را به عنوان مقصد انتخاب می‌کند.</li>
+<li><strong>نتیجه:</strong> یک «سند دریافتنی» جدید ایجاد شده و در این پورتفو قرار می‌گیرد.</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>12010101 - اسناد نزد صندوق تهران</code> (موجودی این پورتفو زیاد شد)</li>
+<li>بستانکار: <code>11030001 - حساب‌های دریافتنی - مشتری الف</code> (بدهی مشتری کم شد)</li>
+</ul>
+</li>
+</ul>
+<p><strong>گام ۲: ارسال به بانک جهت وصول</strong></p>
+<ul>
+<li><strong>عملیات:</strong> یک هفته قبل از سررسید، کاربر فرم «ارسال جهت وصول» را باز می‌کند.</li>
+<li><strong>انتخاب کاربر:</strong> چک را از پورتفوی <code>IN_HOUSE_TEH</code> انتخاب و به پورتفوی <code>IN_COLLECTION_MELAT</code> (در جریان وصول بانک ملت) منتقل می‌کند.</li>
+<li><strong>نتیجه:</strong> چک از پورتفوی مبدأ به مقصد منتقل می‌شود.</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>12010201 - اسناد در جریان وصول ملت</code> (موجودی پورتفوی مقصد زیاد شد)</li>
+<li>بستانکار: <code>12010101 - اسناد نزد صندوق تهران</code> (موجودی پورتفوی مبدأ کم شد)</li>
+</ul>
+</li>
+</ul>
+<p><strong>گام ۳: اعلام وصول توسط بانک</strong></p>
+<ul>
+<li><strong>عملیات:</strong> در تاریخ سررسید، کاربر فرم «اعلام وصول/برگشت» را باز می‌کند (یا از طریق مغایرت بانکی).</li>
+<li><strong>انتخاب کاربر:</strong> چک را در پورتفوی <code>IN_COLLECTION_MELAT</code> انتخاب و وضعیت آن را «وصول شده» اعلام می‌کند. مقصد نهایی پول، «حساب بانکی ملت» است.</li>
+<li><strong>نتیجه:</strong> چک از پورتفوی «در جریان وصول» خارج شده و چرخه حیات آن تمام می‌شود.</li>
+<li><strong>سند حسابداری (خودکار):</strong><ul>
+<li>بدهکار: <code>11010101 - بانک ملت</code> (موجودی حساب بانکی زیاد شد)</li>
+<li>بستانکار: <code>12010201 - اسناد در جریان وصول ملت</code> (موجودی پورتفوی چک کم شد)</li>
+</ul>
+</li>
+</ul>
+<p>این ساختار تضمین می‌کند که در هر لحظه، دارایی‌های شما (چه نقد، چه چک نزد صندوق، چه چک نزد بانک) به درستی در ترازنامه منعکس می‌شوند.</p>
+<h1 id="treasury">ماژول خزانه‌داری (Treasury): اهداف، جایگاه و یکپارچگی</h1>
+<hr />
+<h2 id="_23">۱. هدف و تعریف ماژول خزانه‌داری</h2>
+<p>ماژول خزانه‌داری (Treasury) در ERP تابان، به عنوان <strong>قلب مدیریت نقدینگی</strong> سازمان عمل می‌کند. این ماژول مسئولیت مدیریت، ردیابی، و گزارش‌دهی تمامی وجوه نقد (شامل حساب‌های بانکی و صندوق‌ها) و اسناد بهادار (مانند چک‌های دریافتی و پرداختی) را بر عهده دارد.</p>
+<p>هدف اصلی این ماژول، اطمینان از سلامت جریان نقدینگی، بهینه‌سازی منابع مالی و ارائه گزارش‌های دقیق برای تصمیم‌گیری‌های مالی است.</p>
+<h3 id="key-objectives">اهداف کلیدی (Key Objectives)</h3>
+<ul>
+<li><strong>مدیریت نقدینگی (Liquidity Management):</strong> ردیابی دقیق و لحظه‌ای موجودی هر حساب بانکی، صندوق و تنخواه.</li>
+<li><strong>مدیریت اسناد بهادار (Document Management):</strong> مدیریت کامل چرخه عمر (Lifecycle) چک‌های دریافتی (از دریافت تا واگذاری و وصول) و چک‌های پرداختی (از صدور تا پاس شدن).</li>
+<li><strong>تسویه حساب (Settlement):</strong> اطمینان از تسویه دقیق فاکتورهای خرید (AP) و فروش (AR) با دریافت‌ها و پرداخت‌های مرتبط.</li>
+<li><strong>گزارش‌دهی و کنترل (Reporting &amp; Control):</strong> ارائه گزارش‌های حیاتی مانند مغایرت بانکی، جریان وجوه نقد، و وضعیت چک‌ها.</li>
+</ul>
+<hr />
+<h2 id="_24">۲. جایگاه در ساختار سازمانی تابان (بنگاه و مکان)</h2>
+<p>ماژول خزانه‌داری به شدت به ساختار سازمانی تعریف شده در مستندات پایه تابان وابسته است:</p>
+<h3 id="legal-entity">الف) بنگاه اقتصادی (Legal Entity) و خزانه‌داری</h3>
+<p>همانطور که در مستندات تابان ذکر شده، <strong>بنگاه اقتصادی</strong> یک موجودیت حقوقی مستقل با گزارش‌های مالی مستقل است.</p>
+<blockquote>
+<p><strong>قانون کلیدی خزانه‌داری:</strong> <strong>حساب‌های بانکی</strong> (Bank Accounts) و <strong>دسته چک‌ها</strong> (Checkbooks) در سطح <strong>بنگاه اقتصادی</strong> تعریف و تملک می‌شوند.</p>
+</blockquote>
+<ul>
+<li>از آنجایی که ترازنامه و صورت‌های مالی در سطح بنگاه اقتصادی تهیه می‌شود، حساب بانکی که یکی از اقلام اصلی دارایی‌های جاری است، باید متعلق به یک بنگاه اقتصادی مشخص باشد.</li>
+<li><strong>مثال:</strong> اگر «ایران خودرو مرکزی» (کد 1000) و «بخش فروش و بازاریابی» (کد 2000) دو بنگاه اقتصادی جداگانه باشند، هر کدام باید حساب‌های بانکی، دسته چک‌ها و اسناد مالی مجزای خود را در سیستم داشته باشند. نمی‌توان چکی را از حساب بنگاه 1000 برای پرداخت فاکتور بنگاه 2000 (مگر در فرآیندهای مالی بین شرکتی) استفاده کرد.</li>
+</ul>
+<h3 id="operating-unit">ب) مکان عملیاتی (Operating Unit) و خزانه‌داری</h3>
+<p><strong>مکان عملیاتی</strong> یک مکان فیزیکی (مانند کارخانه، انبار یا دفتر) است که در آن فرآیندهای لجستیکی و عملیاتی رخ می‌دهد.</p>
+<blockquote>
+<p><strong>قانون کلیدی خزانه‌داری:</strong> <strong>صندوق‌ها (Petty Cash)</strong> و <strong>تنخواه‌گردان‌ها</strong> معمولاً در سطح <strong>مکان عملیاتی</strong> مدیریت می‌شوند.</p>
+</blockquote>
+<ul>
+<li>در حالی که حساب‌های بانکی ماهیت حقوقی دارند، صندوق‌ها ماهیت فیزیکی و مکانی دارند.</li>
+<li><strong>مثال:</strong> برای پوشش هزینه‌های نقدی روزمره «کارخانه تهران» (مکان عملیاتی 1100) یا «دفتر مرکزی اداری» (مکان 1500)، یک «صندوق» یا «تنخواه» در سیستم تعریف می‌شود که به آن مکان عملیاتی و یک فرد مسئول (تنخواه‌گردان) مرتبط است.</li>
+</ul>
+<hr />
+<h2 id="fi">۳. قانون طلایی: یکپارچگی با حسابداری مالی (FI)</h2>
+<p>ماژول خزانه‌داری نمی‌تواند و نباید بدون اتصال لحظه‌ای و خودکار به ماژول حسابداری مالی (FI) کار کند.</p>
+<blockquote>
+<p><strong>قانون طلایی یکپارچگی:</strong> <strong>هیچ تراکنشی در خزانه‌داری (تغییر موجودی بانک یا صندوق) نباید رخ دهد، مگر آنکه یک سند حسابداری (Journal Entry) معادل و خودکار در دفتر کل (GL) ثبت شود.</strong></p>
+</blockquote>
+<p>این یکپارچگی از طریق <strong>نگاشت حساب‌ها (Account Mapping)</strong> در تعاریف پایه تضمین می‌شود:</p>
+<ol>
+<li><strong>حساب بانکی:</strong> هر «حساب بانکی» در خزانه‌داری (مثلاً <code>MEL-100 - بانک ملت مرکزی</code>) به یک حساب معین در دفتر کل (مثلاً <code>11010101 - موجودی نقد - بانک ملت</code>) متصل است.</li>
+<li><strong>صندوق:</strong> هر «صندوق» (مثلاً <code>PC-10 - صندوق دفتر مرکزی</code>) به یک حساب معین در دفتر کل (مثلاً <code>11020101 - صندوق مرکزی</code>) متصل است.</li>
+<li><strong>طرف حساب:</strong> هر مشتری به حساب معین «حساب‌های دریافتنی» (AR) و هر تأمین‌کننده به «حساب‌های پرداختنی» (AP) متصل است.</li>
+</ol>
+<hr />
+<h2 id="_25">۴. ارتباط جامع با سایر ماژول‌ها (جریان‌های فرآیندی)</h2>
+<p>ماژول خزانه‌داری، «مجری» نهایی فرآیندهای مالی است که در ماژول‌های دیگر آغاز می‌شوند.</p>
+<h3 id="sales-sd">الف) یکپارچگی با فروش (Sales - SD)</h3>
+<p>فرآیند فروش (صدور فاکتور) نیاز به «دریافت» وجه را ایجاد می‌کند.</p>
+<ul>
+<li><strong>فرآیند:</strong> ماژول فروش، «سفارش فروش» و سپس «فاکتور فروش» را صادر می‌کند. این فاکتور یک «آیتم باز» (Open Item) بدهکار در حساب مشتری در ماژول AR (حساب‌های دریافتنی) ایجاد می‌کند.</li>
+<li><strong>اتصال:</strong> مشتری وجه فاکتور را پرداخت می‌کند (نقدی، چک، یا حواله).</li>
+<li><strong>عملیات خزانه‌داری:</strong> کاربر یک <strong>«سند دریافت» (Receipt Document)</strong> در خزانه‌داری ثبت می‌کند.</li>
+<li><strong>مثال (دریافت نقدی بابت فاکتور):</strong><ul>
+<li><em>عملیات:</em> دریافت 10,000,000 ریال وجه نقد از «مشتری الف» بابت فاکتور <code>F-901</code> و واریز به «صندوق مرکزی».</li>
+<li><em>تأثیر خزانه‌داری:</em> موجودی <code>صندوق مرکزی</code> 10,000,000 افزایش می‌یابد.</li>
+<li><em>تأثیر تسویه:</em> فاکتور <code>F-901</code> به وضعیت «تسویه شده» (Cleared) در می‌آید.</li>
+<li><em>سند حسابداری خودکار (FI):</em><ul>
+<li><strong>بدهکار (Debit):</strong> 10,000,000 - <code>11020101 - صندوق مرکزی</code> (دارایی (نقد) افزایش یافت)</li>
+<li><strong>بستانکار (Credit):</strong> 10,000,000 - <code>12010101 - حساب‌های دریافتنی - مشتری الف</code> (دارایی (طلب) کاهش یافت)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="purchasing-mm">ب) یکپارچگی با خرید و تدارکات (Purchasing - MM)</h3>
+<p>فرآیند خرید (دریافت فاکتور) نیاز به «پرداخت» وجه را ایجاد می‌کند.</p>
+<ul>
+<li><strong>فرآیند:</strong> ماژول خرید، «سفارش خرید» (PO) و سپس «فاکتور خرید» (Purchase Invoice) را ثبت می‌کند. این فاکتور یک «آیتم باز» بستانکار در حساب تأمین‌کننده در ماژول AP (حساب‌های پرداختنی) ایجاد می‌کند.</li>
+<li><strong>اتصال:</strong> شرکت می‌خواهد وجه فاکتور را پرداخت کند.</li>
+<li><strong>عملیات خزانه‌داری:</strong> کاربر یک <strong>«سند پرداخت» (Payment Document)</strong> در خزانه‌داری ثبت می‌کند.</li>
+<li><strong>مثال (پرداخت با چک بابت فاکتور):</strong><ul>
+<li><em>عملیات:</em> صدور چک به مبلغ 50,000,000 ریال از «بانک ملت» در وجه «تأمین‌کننده ب» بابت فاکتور <code>P-750</code>.</li>
+<li><em>تأثیر خزانه‌داری:</em> یک برگ چک از «دسته چک بانک ملت» (مثلاً سریال 1001) از وضعیت «خام» به «صادر شده» (Issued) تغییر می‌کند.</li>
+<li><em>تأثیر تسویه:</em> فاکتور <code>P-750</code> به وضعیت «تسویه شده» در می‌آید.</li>
+<li><em>سند حسابداری خودکار (FI) - در زمان صدور چک:</em><ul>
+<li><strong>بدهکار (Debit):</strong> 50,000,000 - <code>21010101 - حساب‌های پرداختنی - تأمین‌کننده ب</code> (بدهی ما تسویه شد)</li>
+<li><strong>بستانکار (Credit):</strong> 50,000,000 - <code>21030101 - اسناد پرداختنی</code> (یک بدهی جدید (چک) ایجاد شد)</li>
+</ul>
+</li>
+<li><em>سند حسابداری خودکار (FI) - در زمان پاس شدن چک (از طریق مغایرت بانکی):</em><ul>
+<li><strong>بدهکار (Debit):</strong> 50,000,000 - <code>21030101 - اسناد پرداختنی</code> (بدهی چک بسته شد)</li>
+<li><strong>بستانکار (Credit):</strong> 50,000,000 - <code>11010101 - بانک ملت</code> (موجودی بانک (دارایی) کاهش یافت)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_26">ج) مدیریت چک و حسابداری (مثال‌های پیچیده)</h3>
+<p>عملیات داخلی خزانه‌داری نیز مستقیماً با حسابداری در ارتباط است:</p>
+<ul>
+<li>
+<p><strong>مثال ۱: واگذاری چک دریافتی به بانک (جهت خواباندن به حساب)</strong></p>
+<ul>
+<li><em>عملیات:</em> چکی که قبلاً از مشتری دریافت شده و در «صندوق» (نزد صندوق) نگهداری می‌شد، به «بانک ملت» جهت وصول تحویل داده می‌شود.</li>
+<li><em>تأثیر خزانه‌داری:</em> وضعیت چک از «نزد صندوق» به «در جریان وصول» (In Collection) تغییر می‌کند.</li>
+<li><em>سند حسابداری خودکار (FI):</em> (این یک انتقال دارایی است)<ul>
+<li><strong>بدهکار (Debit):</strong> <code>11030102 - اسناد در جریان وصول</code> (حساب واسط بانکی)</li>
+<li><strong>بستانکار (Credit):</strong> <code>11030101 - اسناد دریافتنی (نزد صندوق)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>مثال ۲: وصول (پاس شدن) همان چک</strong></p>
+<ul>
+<li><em>عملیات:</em> بانک اعلام می‌کند چک مشتری وصول و مبلغ به حساب واریز شد.</li>
+<li><em>تأثیر خزانه‌داری:</em> وضعیت چک «پاس شده» (Cleared) می‌شود. <strong>موجودی واقعی بانک ملت افزایش می‌یابد.</strong></li>
+<li><em>سند حسابداری خودکار (FI):</em><ul>
+<li><strong>بدهکار (Debit):</strong> <code>11010101 - بانک ملت</code> (موجودی بانک (دارایی) افزایش یافت)</li>
+<li><strong>بستانکار (Credit):</strong> <code>11030102 - اسناد در جریان وصول</code> (حساب واسط بسته شد)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_27">د) یکپارچگی داخلی (شارژ تنخواه)</h3>
+<ul>
+<li><strong>فرآیند:</strong> انتقال وجه بین حساب‌های داخلی شرکت.</li>
+<li><strong>مثال (شارژ صندوق از بانک):</strong><ul>
+<li><em>عملیات:</em> انتقال 5,000,000 ریال از «بانک ملت» به «صندوق مرکزی» جهت شارژ تنخواه.</li>
+<li><em>تأثیر خزانه‌داری:</em> موجودی «بانک ملت» 5,000,000 کاهش و موجودی «صندوق مرکزی» 5,000,000 افزایش می‌یابد.</li>
+<li><em>سند حسابداری خودکار (FI):</em> (این یک جابجایی دارایی است)<ul>
+<li><strong>بدهکار (Debit):</strong> 5,000,000 - <code>11020101 - صندوق مرکزی</code> (دارایی صندوق افزایش یافت)</li>
+<li><strong>بستانکار (Credit):</strong> 5,000,000 - <code>11010101 - بانک ملت</code> (دارایی بانک کاهش یافت)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="data-flow-summary">۵. خلاصه جریان اطلاعات (Data Flow Summary)</h2>
+<ol>
+<li><strong>ماژول‌های عملیاتی (SD/MM):</strong> فاکتورهای فروش و خرید، <strong>نیاز</strong> به دریافت یا پرداخت را ایجاد می‌کنند.</li>
+<li><strong>ماژول خزانه‌داری (Treasury):</strong> <strong>عملیات</strong> دریافت و پرداخت را از طریق اسناد (نقد، چک، حواله) مدیریت و <strong>اجرا</strong> می‌کند.</li>
+<li><strong>ماژول حسابداری (FI):</strong> <strong>تأثیر مالی</strong> این عملیات را به صورت خودکار در دفتر کل (GL) <strong>ثبت</strong> کرده و مبنای گزارش‌های مالی (ترازنامه، سود و زیان) را فراهم می‌کند.</li>
+<li><strong>ماژول داده‌های پایه (MDM):</strong> اطمینان می‌دهد که این عملیات در چارچوب ساختار سازمانی صحیح (بنگاه اقتصادی و مکان عملیاتی) انجام می‌شود.</li>
+</ol>
+<h1 id="bank-reconciliation">مفهوم و فرم: مغایرت بانکی (Bank Reconciliation)</h1>
+<hr />
+<h2 id="_28">۱. مفهوم</h2>
+<p>مغایرت بانکی فرآیندی است که در پایان هر دوره مالی (معمولاً ماهانه) انجام می‌شود تا تراکنش‌های ثبت‌شده در ERP تابان (در سرفصل GL حساب بانکی) با صورتحساب ارائه‌شده توسط بانک تطبیق داده شود.</p>
+<ul>
+<li><strong>هدف:</strong> شناسایی و رفع اختلافات بین سوابق شرکت و سوابق بانک.</li>
+<li><strong>دلایل اختلاف (مغایرت):</strong><ol>
+<li><strong>چک‌های معوق (Outstanding Checks):</strong> چک‌های پرداختی که شرکت صادر کرده اما هنوز توسط تأمین‌کننده به بانک ارائه نشده‌اند (در ERP ثبت شده، در بانک نه).</li>
+<li><strong>سپرده‌های در راه (Deposits in Transit):</strong> وجوهی (مانند چک‌های مشتریان) که شرکت به بانک واگذار کرده اما هنوز توسط بانک وصول و به حساب اضافه نشده‌اند (در ERP ثبت شده، در بانک نه).</li>
+<li><strong>کارمزدهای بانکی (Bank Fees):</strong> هزینه‌هایی که بانک مستقیماً از حساب کسر کرده اما شرکت هنوز آن‌ها را ثبت نکرده (در بانک ثبت شده، در ERP نه).</li>
+<li><strong>سود بانکی (Interest Earned):</strong> مبالغی که بانک به حساب واریز کرده (در بانک ثبت شده، در ERP نه).</li>
+<li><strong>اشتباهات (Errors):</strong> اشتباهات ثبت در هر یک از طرفین.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="bank-reconciliation-workbench">۲. فرم: میزکار مغایرت بانکی (Bank Reconciliation Workbench)</h2>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / عملیات دوره‌ای / مغایرت بانکی</code></p>
+<h3 id="ux">رابط کاربری (UX)</h3>
+<ol>
+<li><strong>انتخاب حساب:</strong> کاربر «حساب بانکی» (مثلاً بانک ملت مرکزی) و «بازه زمانی» (مثلاً دی ماه 1403) را انتخاب می‌کند.</li>
+<li><strong>ورود اطلاعات بانک:</strong><ul>
+<li><strong>روش ۱ (دستی):</strong> کاربر «موجودی نهایی» طبق صورتحساب بانک را دستی وارد می‌کند.</li>
+<li><strong>روش ۲ (بارگذاری فایل):</strong> کاربر فایل اکسل یا فایل استاندارد صورتحساب بانک (CSV/Excel) را در سیستم بارگذاری می‌کند.</li>
+</ul>
+</li>
+<li>
+<p><strong>نمایش تطبیقی (Reconciliation View):</strong></p>
+<ul>
+<li>سیستم یک نمای دو ستونی یا سه ستونی ارائه می‌دهد:<ul>
+<li><strong>ستون ۱: تراکنش‌های ثبت شده در تابان (ERP)</strong></li>
+<li><strong>ستون ۲: تراکنش‌های ثبت شده در صورتحساب بانک (Bank Statement)</strong></li>
+</ul>
+</li>
+<li>سیستم به صورت هوشمند (بر اساس تاریخ و مبلغ) سعی می‌کند تراکنش‌های مشابه را با هم «تطبیق» (Match) دهد.</li>
+</ul>
+</li>
+<li>
+<p><strong>فرآیند مغایرت‌گیری:</strong></p>
+<ul>
+<li><strong>تراکنش‌های تطبیق‌یافته (Matched):</strong> به صورت سبز رنگ نمایش داده می‌شوند و کاربر آن‌ها را تأیید می‌کند.</li>
+<li><strong>تراکنش‌های مغایر (Unmatched):</strong><ul>
+<li><em>موجود در ERP، ناموجود در بانک:</em> (مانند چک معوق). کاربر این موارد را به عنوان «مغایرت باز» علامت‌گذاری می‌کند تا به دوره بعد منتقل شوند.</li>
+<li><em>موجود در بانک، ناموجود در ERP:</em> (مانند کارمزد). کاربر باید مستقیماً از همین فرم، برای این موارد «سند حسابداری» یا «سند خزانه‌داری» (مثلاً سند پرداخت بابت کارمزد) صادر کند.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>نتیجه نهایی:</strong></p>
+<ul>
+<li><code>موجودی ERP (دفتر کل)</code></li>
+<li><code>+ موارد بستانکار ثبت نشده در ERP (مثل سود)</code></li>
+<li><code>- موارد بدهکار ثبت نشده در ERP (مثل کارمزد)</code></li>
+<li><code>= موجودی واقعی ERP (Adjusted Book Balance)</code></li>
+<li>
+<hr />
+</li>
+<li><code>موجودی صورتحساب بانک</code></li>
+<li><code>+ سپرده‌های در راه</code></li>
+<li><code>- چک‌های معوق</code></li>
+<li><code>= موجودی واقعی بانک (Adjusted Bank Balance)</code></li>
+</ul>
+<blockquote>
+<p><strong>هدف نهایی: موجودی واقعی ERP = موجودی واقعی بانک</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>بستن مغایرت:</strong> پس از تراز شدن، کاربر دوره مغایرت را «نهایی» و «قفل» می‌کند.</p>
+</li>
+</ol>
+<h1 id="_29">تعیین وضعیت چک (اعلام وصول یا برگشت)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; مدیریت چک‌های دریافتی &gt; عملیات چک &gt; اعلام وصول/برگشت</code></p>
+<hr />
+<h2 id="_30">۱. مقدمه و کاربرد</h2>
+<p>چک‌هایی که در مرحله قبل به بانک واگذار کردید (خواباندید)، اکنون در <strong>«مخزن در جریان وصول»</strong> منتظر هستند.
+پس از گذشت تاریخ سررسید، شما باید صورتحساب بانک (Bank Statement) یا پیامک‌های واریز بانک را بررسی کنید.</p>
+<ul>
+<li>اگر پول به حساب آمده باشد می توان نتیجه گرفت که چک <strong>وصول</strong> شده است.</li>
+<li>اگر بانک اعلام عدم موجودی کند نتیجه گرفت که چک <strong>برگشت</strong> خورده است.</li>
+</ul>
+<p>این فرم طراحی شده تا شما وضعیت سیستم را دقیقاً با آنچه در بانک اتفاق افتاده، هماهنگ کنید.</p>
+<hr />
+<h2 id="_31">۲. سناریوی اول: اعلام وصول (پاس شدن چک)</h2>
+<p>این حالت زمانی رخ می‌دهد که چک با موفقیت نقد شده و مبلغ آن به حساب بانکی شرکت افزوده شده است.</p>
+<h3 id="_32">گام‌به‌گام عملیات وصول:</h3>
+<ol>
+<li><strong>انتخاب مخزن:</strong> در بالای فرم، مخزن بانکی که چک‌ها در آن هستند را انتخاب کنید (مثلاً: <code>در جریان وصول - بانک ملت</code>).</li>
+<li><strong>یافتن چک:</strong> سیستم لیست چک‌های منتظر در آن بانک را نشان می‌دهد. چک مورد نظر را پیدا کنید.</li>
+<li><strong>انتخاب و اقدام:</strong> چک (یا گروهی از چک‌ها) را تیک بزنید و دکمه <strong>«اعلام وصول» (Cleared)</strong> را کلیک کنید.</li>
+<li><strong>تأیید تاریخ:</strong> پنجره‌ای باز می‌شود که <strong>«تاریخ واقعی واریز»</strong> را می‌پرسد.<ul>
+<li><em>نکته:</em> ممکن است سررسید چک ۲۰ام باشد، اما بانک آن را ۲۱ام به حساب ریخته باشد. تاریخ ۲۱ام را وارد کنید تا مغایرت بانکی نداشته باشید.</li>
+</ul>
+</li>
+<li><strong>ثبت:</strong> تأیید نهایی را بزنید.</li>
+</ol>
+<h3 id="_33">مثال عملی (وصول):</h3>
+<p>چک ۵۰ میلیون تومانی «آقای رضایی» که سررسیدش امروز بود، در صورتحساب بانک ملت دیده می‌شود.</p>
+<ul>
+<li>شما چک را انتخاب و دکمه وصول را می‌زنید.</li>
+<li><strong>نتیجه:</strong> موجودی بانک ملت در سیستم ۵۰ میلیون افزایش می‌یابد و چک از لیست کارهای باز حذف می‌شود.</li>
+</ul>
+<blockquote>
+<p><strong>سند حسابداری خودکار (وصول):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">بدهکار</th>
+<th style="text-align: left;">بستانکار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۱۰۰۱</td>
+<td style="text-align: left;"><strong>موجودی نقد و بانک - بانک ملت</strong></td>
+<td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۲</td>
+<td style="text-align: left;"><strong>اسناد در جریان وصول - بانک ملت</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h2 id="_34">۳. سناریوی دوم: اعلام برگشت (نکول چک)</h2>
+<p>این حالت زمانی رخ می‌دهد که متصدی بانک تماس می‌گیرد یا در سیستم بانکی می‌بینید که چک به دلیل «کسری موجودی»، «امضا نامطابق» یا «مسدودی حساب» برگشت خورده است.</p>
+<h3 id="_35">گام‌به‌گام عملیات برگشت:</h3>
+<ol>
+<li><strong>انتخاب مخزن:</strong> مخزن بانک مربوطه را انتخاب کنید.</li>
+<li><strong>یافتن چک:</strong> چک مشکل‌دار را در لیست پیدا کنید.</li>
+<li><strong>انتخاب و اقدام:</strong> دکمه <strong>«اعلام برگشت» (Bounced)</strong> را بزنید.</li>
+<li><strong>ورود علت (اختیاری):</strong> می‌توانید علت برگشت (مثلاً: کسر موجودی) را وارد کنید.</li>
+<li><strong>ثبت:</strong> تأیید نهایی را بزنید.</li>
+</ol>
+<h3 id="_36">مثال عملی (برگشت):</h3>
+<p>چک ۲۰ میلیون تومانی «شرکت البرز» موجودی نداشته و بانک گواهی عدم پرداخت صادر کرده است.</p>
+<ul>
+<li>شما دکمه برگشت را می‌زنید.</li>
+<li><strong>نتیجه:</strong> چک از «مخزن بانک» خارج شده و به <strong>«مخزن چک‌های برگشتی»</strong> منتقل می‌شود. اکنون تیم مالی می‌داند که این یک قلم "بدهی معوقه و پرریسک" است که باید پیگیری شود.</li>
+</ul>
+<blockquote>
+<p><strong>سند حسابداری خودکار (برگشت):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">بدهکار</th>
+<th style="text-align: left;">بستانکار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۵</td>
+<td style="text-align: left;"><strong>اسناد دریافتنی برگشتی</strong></td>
+<td style="text-align: left;">۲۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۲</td>
+<td style="text-align: left;"><strong>اسناد در جریان وصول - بانک ملت</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">۲۰,۰۰۰,۰۰۰</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h2 id="_37">۴. سناریوی سوم: عودت از حالت در جریان وصول (پس گرفتن از بانک)</h2>
+<p>گاهی پیش می‌آید که چک را به بانک داده‌اید (واگذار کرده‌اید)، اما قبل از سررسید یا قبل از اقدام بانک، به هر دلیلی چک را از بانک پس می‌گیرید (مثلاً مشتری پول نقد آورده و می‌گوید چک را از بانک برگردانید).</p>
+<h3 id="_38">گام‌به‌گام عملیات:</h3>
+<ol>
+<li>در همان لیست چک‌های در جریان وصول، چک را انتخاب کنید.</li>
+<li>دکمه <strong>«بازگشت به صندوق» (Undo Deposit)</strong> را بزنید.</li>
+<li><strong>نتیجه:</strong> چک از بانک خارج شده و دوباره به <strong>«مخزن صندوق» (گاوصندوق)</strong> برمی‌گردد.</li>
+<li><strong>سند:</strong> سند واگذاری (صفحه ۳) معکوس می‌شود.</li>
+</ol>
+<hr />
+<h2 id="_39">۵. نکات کلیدی و سوالات متداول</h2>
+<p><strong>۱. اهمیت تاریخ واقعی واریز</strong>
+در هنگام زدن دکمه «وصول»، سیستم از شما تاریخ می‌پرسد. دقت کنید که <strong>تاریخی که در پرینت بانک می‌بینید</strong> را وارد کنید. اگر سررسید چک ۱۴۰۳/۰۵/۲۰ است اما بانک در ۱۴۰۳/۰۵/۲۲ پول را واریز کرده، حتماً تاریخ ۲۲ام را وارد کنید. این کار باعث می‌شود در پایان ماه هنگام <strong>«مغایرت‌گیری بانکی»</strong>، مانده سیستم و بانک دقیقاً یکسان باشد.</p>
+<p><strong>۲. اگر اشتباه دکمه وصول را زدم چه؟</strong>
+نگران نباشید.</p>
+<ul>
+<li>به منوی <code>گزارشات &gt; لیست چک‌های وصول شده</code> بروید.</li>
+<li>چک مورد نظر را پیدا کنید.</li>
+<li>روی آن کلیک راست کرده (یا دکمه عملیات) و گزینه <strong>«ابطال وصول»</strong> را بزنید.</li>
+<li>چک دوباره به وضعیت «در جریان وصول» برمی‌گردد و سند حسابداری واریز وجه باطل می‌شود.</li>
+</ul>
+<p><strong>۳. آیا چک برگشتی را می‌توانم دوباره به بانک ببرم؟</strong>
+بله. اگر مشتری تماس گرفت و گفت "حسابم را پر کردم، دوباره چک را بزنید به حساب":</p>
+<ul>
+<li>ابتدا باید چک را از وضعیت "برگشتی" خارج کنید (عملیات: واگذاری مجدد از مخزن برگشتی به مخزن بانک).</li>
+<li>یا بهتر است چک را به صندوق برگردانید و دوباره واگذار کنید تا تاریخچه شفاف بماند.</li>
+</ul>
+<p><strong>۴. هزینه کارمزد برگشت چک چه می‌شود؟</strong>
+معمولاً بانک بابت صدور گواهی عدم پرداخت، مبلغی از حساب شما کسر می‌کند. این مبلغ ربطی به خودِ چک ندارد.</p>
+<ul>
+<li>این هزینه را باید جداگانه در فرم <strong>«سند پرداخت»</strong> (نوع: هزینه بانکی) ثبت کنید و ربطی به فرم مدیریت چک ندارد.</li>
+</ul>
+<h1 id="_40">واگذاری چک به بانک (خواباندن به حساب)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; مدیریت چک‌های دریافتی &gt; عملیات چک &gt; واگذاری به بانک</code></p>
+<hr />
+<h2 id="_41">۱. مقدمه و کاربرد</h2>
+<p>چک‌هایی که از مشتری دریافت کرده‌اید و در <strong>«مخزن صندوق»</strong> (گاوصندوق) نگهداری می‌شوند، هنوز تبدیل به پول نشده‌اند. برای نقد کردن این چک‌ها، باید در تاریخ سررسید (یا چند روز زودتر)، آن‌ها را دسته‌بندی کرده، در قالب یک لیست به بانک ببرید و تحویل باجه کلر (Clear) دهید.</p>
+<p>این فرم در سیستم تابان دقیقاً همین فرآیند فیزیکی را شبیه‌سازی می‌کند.</p>
+<ul>
+<li><strong>هدف:</strong> تغییر محل استقرار چک از «شرکت» به «بانک».</li>
+<li><strong>نتیجه:</strong> حسابدار می‌فهمد که این چک‌ها دیگر در کشوی میز خزانه‌دار نیستند و نزد بانک امانت هستند تا وصول شوند.</li>
+</ul>
+<hr />
+<h2 id="_42">۲. فرآیند گام‌به‌گام واگذاری</h2>
+<p>این عملیات معمولاً به صورت <strong>گروهی</strong> انجام می‌شود (مثلاً ۱۰ چک با هم به بانک برده می‌شوند).</p>
+<h3 id="header">گام اول: تنظیمات انتقال (Header)</h3>
+<p>در بالای فرم، مشخص کنید که چک‌ها از کجا به کجا می‌روند:</p>
+<ol>
+<li><strong>تاریخ واگذاری:</strong> تاریخ روز (روزی که چک‌ها را به بانک می‌برید).</li>
+<li><strong>مخزن مبدأ:</strong> <code>مخزن اسناد نزد صندوق</code> (یا گاوصندوق خاصی که چک‌ها در آن هستند).</li>
+<li><strong>مخزن مقصد (بانک):</strong> <code>مخزن در جریان وصول - [نام بانک]</code> (مثلاً: در جریان وصول بانک ملت).<ul>
+<li><em>نکته:</em> اگر چک‌ها را به بانک "تجارت" می‌برید، حتماً مخزن "در جریان وصول تجارت" را انتخاب کنید.</li>
+</ul>
+</li>
+</ol>
+<h3 id="selection">گام دوم: انتخاب چک‌ها (Selection)</h3>
+<ol>
+<li>دکمه <strong>«افزودن چک / جستجو»</strong> را بزنید.</li>
+<li>پنجره‌ای باز می‌شود که لیست تمام چک‌های موجود در «مخزن مبدأ» را نمایش می‌دهد.</li>
+<li><strong>فیلتر کردن:</strong> از فیلتر تاریخ سررسید استفاده کنید. (مثلاً چک‌های سررسید امروز و فردا را فیلتر کنید).</li>
+<li><strong>تیک زدن:</strong> چک‌هایی که قصد واگذاری دارید را انتخاب (Select) کنید.</li>
+<li>دکمه تأیید را بزنید تا چک‌ها به لیست اصلی فرم اضافه شوند.</li>
+</ol>
+<h3 id="deposit-slip-">گام سوم: چاپ فرم واگذاری (Deposit Slip) - اختیاری</h3>
+<p>قبل از ثبت نهایی، می‌توانید دکمه <strong>«چاپ فرم واگذاری»</strong> را بزنید. سیستم یک لیست مرتب شامل شماره چک، مبلغ، بانک صادرکننده و نام صاحب حساب به شما می‌دهد.</p>
+<ul>
+<li><em>کاربرد:</em> این لیست را پرینت بگیرید و همراه فیزیک چک‌ها به متصدی بانک تحویل دهید تا رسید مهر شده دریافت کنید.</li>
+</ul>
+<h3 id="_43">گام چهارم: ثبت نهایی</h3>
+<p>دکمه <strong>«ذخیره / انجام عملیات»</strong> را بزنید.
+* <strong>نتیجه:</strong> چک‌ها از «مخزن صندوق» ناپدید شده و در «مخزن بانک» ظاهر می‌شوند.</p>
+<hr />
+<h2 id="_44">۳. سناریوی عملی (مثال واقعی)</h2>
+<p><strong>داستان:</strong>
+امروز <strong>۱۵ اردیبهشت</strong> است. خزانه‌دار شرکت (آقای حسینی) چک‌های مشتریانی را که سررسید آن‌ها <strong>۱۶ اردیبهشت</strong> است، بررسی می‌کند. او ۳ فقره چک پیدا می‌کند که باید به حساب جاری شرکت در <strong>بانک ملت</strong> واریز شوند.</p>
+<p><strong>مشخصات چک‌ها:</strong></p>
+<ol>
+<li>چک آقای رضایی (۵۰ میلیون تومان)</li>
+<li>چک شرکت البرز (۲۰ میلیون تومان)</li>
+<li>چک فروشگاه کوروش (۳۰ میلیون تومان)</li>
+</ol>
+<p><strong>اقدامات در سیستم:</strong></p>
+<ol>
+<li>آقای حسینی فرم «واگذاری به بانک» را باز می‌کند.</li>
+<li><strong>مبدأ:</strong> صندوق مرکزی | <strong>مقصد:</strong> در جریان وصول بانک ملت.</li>
+<li>دکمه افزودن را می‌زند و فیلتر تاریخ را روی <code>1403/02/16</code> تنظیم می‌کند.</li>
+<li>هر ۳ چک را در لیست می‌بیند و تیک می‌زند.</li>
+<li>دکمه <strong>«چاپ رسید»</strong> را می‌زند، پرینت می‌گیرد و چک‌ها را منگنه می‌کند.</li>
+<li>دکمه <strong>«ثبت»</strong> را در سیستم می‌زند.</li>
+<li>حالا با خیال راحت چک‌ها را برداشته و فیزیک آن‌ها را به شعبه بانک ملت می‌برد.</li>
+</ol>
+<hr />
+<h2 id="_45">۴. پشت صحنه سیستم (حسابداری)</h2>
+<p>در این مرحله هنوز پولی به حساب ننشسته است، اما دارایی از یک شکل به شکل دیگر تبدیل شده است. سیستم سند زیر را صادر می‌کند:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">بدهکار</th>
+<th style="text-align: left;">بستانکار</th>
+<th style="text-align: left;">شرح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۲</td>
+<td style="text-align: left;"><strong>اسناد در جریان وصول - بانک ملت</strong></td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">واگذاری ۳ فقره چک به بانک ملت ...</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۱</td>
+<td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">واگذاری ۳ فقره چک به بانک ملت ...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>تفسیر:</strong> حسابداری متوجه می‌شود که ۱۰۰ میلیون تومان اسناد ما الان نزد بانک ملت است و منتظر وصول می‌باشد.</li>
+</ul>
+<hr />
+<h2 id="_46">۵. سوالات متداول و نکات کنترلی</h2>
+<p><strong>۱. آیا می‌توانم چک‌هایی که مربوط به بانک‌های مختلف هستند را در یک فرم ثبت کنم؟</strong>
+خیر.</p>
+<ul>
+<li>هر فرم واگذاری فقط <strong>یک مقصد</strong> (یک بانک) دارد.</li>
+<li>اگر می‌خواهید تعدادی چک به بانک ملت و تعدادی را به بانک صادرات ببرید، باید <strong>دو فرم واگذاری جداگانه</strong> ثبت کنید (یکی با مقصد مخزن ملت و دیگری با مقصد مخزن صادرات).</li>
+</ul>
+<p><strong>۲. اگر اشتباهی چکی را واگذار کردم چه می‌شود؟ (مثلاً چکی که قرار بود فردا ببرم)</strong>
+نترسید. تا زمانی که وضعیت چک «در جریان وصول» است (هنوز وصول یا برگشت نشده)، می‌توانید عملیات را برگردانید.</p>
+<ul>
+<li>به لیست واگذاری‌ها بروید.</li>
+<li>فرم مربوطه را باز کنید.</li>
+<li>دکمه <strong>«ابطال»</strong> یا <strong>«حذف»</strong> را بزنید. چک‌ها دوباره به وضعیت «نزد صندوق» برمی‌گردند و سند حسابداری معکوس می‌شود.</li>
+</ul>
+<p><strong>۳. آیا تاریخ واگذاری مهم است؟</strong>
+بله. معمولاً بانک‌ها چک‌ها را ۲۴ ساعت زودتر برای کلر قبول می‌کنند. تاریخ واگذاری در سیستم باید با تاریخی که چک را به بانک تحویل دادید یکی باشد تا در صورت گم شدن چک، بدانید در چه روزی و به چه کسی تحویل داده شده است.</p>
+<p><strong>۴. چک "بین بانکی" (رمزدار) را هم باید واگذار کنم؟</strong>
+بله. هر برگه فیزیکی که وارد صندوق شده، برای نقد شدن باید از طریق این فرم به بانک منتقل شود. حتی اگر چک رمزدار باشد و همان لحظه نقد شود، برای حفظ زنجیره اسناد، بهتر است مسیر <code>صندوق -&gt; واگذاری -&gt; وصول</code> طی شود.</p>
+<h1 id="-check-endorsement">خرج کردن چک - واگذاری به غیر (Check Endorsement)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; عملیات پرداخت &gt; سند پرداخت جدید</code></p>
+<hr />
+<h2 id="_47">۱. مفهوم و کاربرد</h2>
+<h3 id="_48">خرج کردن چک چیست؟</h3>
+<p>در بازار ایران، بسیار رایج است که شرکت‌ها چک‌هایی را که از مشتریان خود دریافت کرده‌اند، نقد نکنند؛ بلکه همان چک را بابت بدهی‌های خود به شخص دیگری (مانند تأمین‌کننده کالا، پیمانکار یا فروشنده مواد اولیه) واگذار کنند.
+به این عمل در اصطلاح بازار <strong>«خرج کردن چک»</strong> و در اصطلاح حقوقی <strong>«ظهرنویسی» (Endorsement)</strong> گفته می‌شود.</p>
+<h3 id="_49">چرا این کار را انجام می‌دهیم؟</h3>
+<ol>
+<li><strong>حفظ نقدینگی:</strong> به جای خالی کردن حساب بانکی شرکت، از اسناد موجود استفاده می‌کنیم.</li>
+<li><strong>تسویه سریع:</strong> بدون نیاز به منتظر ماندن برای سررسید چک مشتری، بدهی خود به تأمین‌کننده را تسویه می‌کنیم.</li>
+</ol>
+<blockquote>
+<p><strong>قانون مهم سیستم:</strong> شما فقط می‌توانید چک‌هایی را خرج کنید که وضعیت آن‌ها <strong>«نزد صندوق» (On-Hand)</strong> باشد. چکی که به بانک واگذار شده یا برگشت خورده است، ابتدا باید به صندوق برگردد تا قابل خرج کردن باشد.</p>
+</blockquote>
+<hr />
+<h2 id="_50">۲. مراحل انجام کار در سیستم</h2>
+<p>از آنجا که خرج کردن چک نوعی "پرداخت بدهی" محسوب می‌شود، این عملیات در فرم <strong>«سند پرداخت»</strong> انجام می‌گیرد، نه در منوی عملیات چک.</p>
+<h3 id="_51">گام ۱: باز کردن سند پرداخت</h3>
+<p>به مسیر <code>خزانه‌داری &gt; عملیات پرداخت</code> رفته و روی <strong>«سند پرداخت جدید»</strong> کلیک کنید.</p>
+<h3 id="_52">گام ۲: انتخاب گیرنده</h3>
+<p>در فیلد <strong>طرف حساب (Payee)</strong>، نام شخص یا شرکتی را که می‌خواهید چک را به او بدهید انتخاب کنید.</p>
+<ul>
+<li><em>مثال: شرکت فولاد مبارکه (تأمین‌کننده)</em></li>
+</ul>
+<h3 id="_53">گام ۳: انتخاب روش پرداخت</h3>
+<p>در بخش جزئیات پرداخت (Payment Lines):</p>
+<ol>
+<li>یک ردیف جدید ایجاد کنید.</li>
+<li>نوع روش پرداخت را <strong>«خرج چک» (Endorse Check)</strong> انتخاب کنید.</li>
+<li>با انتخاب این گزینه، فیلد مبلغ غیرفعال می‌شود (چون مبلغ تابع چکی است که انتخاب می‌کنید) و دکمه <strong>«انتخاب چک»</strong> فعال می‌گردد.</li>
+</ol>
+<h3 id="_54">گام ۴: انتخاب چک از مخزن</h3>
+<p>با زدن دکمه انتخاب چک، سیستم پنجره‌ای باز می‌کند که <strong>فقط</strong> شامل چک‌های موجود در <strong>«مخزن اسناد نزد صندوق»</strong> است.</p>
+<ul>
+<li>می‌توانید لیست را بر اساس مبلغ، سررسید یا نام مشتریِ صادرکننده فیلتر کنید.</li>
+<li>چک (یا چک‌های) مورد نظر را تیک بزنید.</li>
+</ul>
+<h3 id="post">گام ۵: ثبت نهایی (Post)</h3>
+<p>پس از انتخاب چک، مبلغ سند به صورت خودکار پر می‌شود. دکمه <strong>«ثبت»</strong> را بزنید.</p>
+<hr />
+<h2 id="_55">۳. تأثیرات مالی و حسابداری</h2>
+<p>با ثبت این سند، دو اتفاق مهم در سیستم رخ می‌دهد:</p>
+<ol>
+<li>
+<p><strong>تغییر در خزانه‌داری:</strong></p>
+<ul>
+<li>چک از «مخزن اسناد نزد صندوق» خارج می‌شود.</li>
+<li>وضعیت چک به <strong>«خرج شده» (Endorsed)</strong> تغییر می‌کند.</li>
+<li>مالکیت چک از شرکت شما سلب می‌شود.</li>
+</ul>
+</li>
+<li>
+<p><strong>سند حسابداری خودکار (GL Entry):</strong>
+    سیستم به صورت اتوماتیک سند زیر را صادر می‌کند:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">بدهکار (Dr)</th>
+<th style="text-align: left;">بستانکار (Cr)</th>
+<th style="text-align: left;">توضیحات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>210101</code></td>
+<td style="text-align: left;"><strong>حساب‌های پرداختنی</strong> <br> <em>(شرکت فولاد)</em></td>
+<td style="text-align: left;">100,000,000</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">بدهی ما به تأمین‌کننده کم شد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>120101</code></td>
+<td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong> <br> <em>(مخزن صندوق)</em></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">100,000,000</td>
+<td style="text-align: left;">دارایی چک از صندوق خارج شد.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_56">۴. مثال جامع عملیاتی</h2>
+<p><strong>سناریو:</strong>
+شرکت شما (تابان) مبلغ ۵۰ میلیون تومان به «بازرگانی آهن‌چی» بدهکار است.
+از طرفی، در گاوصندوق شرکت، یک چک ۵۰ میلیون تومانی از مشتری خود (آقای رضایی) دارید که سررسید آن ۲۰ روز دیگر است.
+مدیر مالی تصمیم می‌گیرد به جای پرداخت پول نقد، چک آقای رضایی را به بازرگانی آهن‌چی بدهد.</p>
+<p><strong>اجرا در نرم‌افزار:</strong></p>
+<ol>
+<li>وارد فرم <strong>سند پرداخت</strong> می‌شوید.</li>
+<li>گیرنده را <strong>«بازرگانی آهن‌چی»</strong> انتخاب می‌کنید.</li>
+<li>در ردیف پرداخت، گزینه <strong>«خرج چک»</strong> را انتخاب می‌کنید.</li>
+<li>لیست چک‌ها باز می‌شود. چک <strong>آقای رضایی</strong> (به مبلغ ۵۰ میلیون و شناسه صیادی <code>123...</code>) را انتخاب می‌کنید.</li>
+<li>سند را ثبت می‌کنید.</li>
+</ol>
+<p><strong>نتیجه:</strong></p>
+<ul>
+<li>بدهی شما به بازرگانی آهن‌چی صفر می‌شود.</li>
+<li>چک آقای رضایی از لیست چک‌های موجود در صندوق شما حذف می‌شود.</li>
+<li>در گزارش کاردکس چک آقای رضایی، یک ردیف اضافه می‌شود: <em>"واگذاری به بازرگانی آهن‌چی بابت سند پرداخت شماره X"</em>.</li>
+</ul>
+<hr />
+<h2 id="_57">۵. سوالات متداول و نکات کنترلی</h2>
+<p><strong>سوال ۱: اگر چکی را خرج کنیم و بعداً آن چک پاس نشود (برگشت بخورد) چه می‌شود؟</strong>
+<strong>پاسخ:</strong> این پیچیده‌ترین حالت است.</p>
+<ol>
+<li>بازرگانی آهن‌چی چک را به شما برمی‌گرداند، بنابراین شما باید در سیستم <strong>«استرداد از خرج»</strong> بزنید (بدهی آهن‌چی دوباره باز می‌شود و چک به مخزن برگشتی شما می‌آید).</li>
+<li>سپس شما سراغ مشتری (آقای رضایی) می‌روید و مراحل پیگیری چک برگشتی را طی می‌کنید.</li>
+</ol>
+<p><strong>سوال ۲: آیا می‌توانم فقط بخشی از مبلغ چک را خرج کنم؟</strong>
+<strong>پاسخ:</strong> خیر. چک یک موجودیت واحد است. نمی‌توانید نیمی از کاغذ چک را پاره کنید و بدهید! اگر مبلغ چک ۵۰ میلیون است و بدهی شما ۳۰ میلیون است، باید چک را بدهید و ۲۰ میلیون مابقی را از طرف مقابل به صورت نقد یا چکِ خرجیِ خودش دریافت کنید (که این عملیات ترکیبی می‌شود).</p>
+<p><strong>سوال ۳: آیا می‌توانم چکی که "در جریان وصول" (نزد بانک) است را خرج کنم؟</strong>
+<strong>پاسخ:</strong> خیر. فیزیک چک اکنون دست بانک است. برای خرج کردن، ابتدا باید عملیات <strong>«استرداد از واگذاری»</strong> را انجام دهید تا چک به وضعیت «نزد صندوق» برگردد، سپس آن را خرج کنید.</p>
+<p><strong>سوال ۴: آیا سیستم برای خرج کردن چک هشدار می‌دهد؟</strong>
+<strong>پاسخ:</strong> بله، اگر سررسید چک گذشته باشد یا وضعیت اعتباری صادرکننده چک (مشتری) قرمز باشد، سیستم می‌تواند به کاربر هشدار دهد که "این چک ریسک برگشت دارد، آیا از خرج کردن آن مطمئن هستید؟".</p>
+<h1 id="_58">مروری بر مدیریت چک‌های دریافتی</h1>
+<hr />
+<h2 id="_59">۱. مقدمه: چک به عنوان یک دارایی زنده</h2>
+<p>به بخش <strong>مدیریت چک‌های دریافتی</strong> در ERP تابان خوش آمدید.
+در حسابداری سنتی، چک‌ها اغلب به عنوان اعداد و ارقام در دفاتر ثبت می‌شوند. اما در سیستم تابان، هر برگ چک یک <strong>موجودیت زنده (Living Entity)</strong> است. چرا؟ چون هر چک:</p>
+<ol>
+<li><strong>متولد می‌شود:</strong> (لحظه دریافت از مشتری).</li>
+<li><strong>سفر می‌کند:</strong> (از گاوصندوق به بانک، یا به دست تأمین‌کننده).</li>
+<li><strong>تغییر وضعیت می‌دهد:</strong> (نقد می‌شود، برگشت می‌خورد، یا استرداد می‌شود).</li>
+</ol>
+<p>این ماژول طراحی شده تا شما به عنوان مدیر مالی یا خزانه‌دار، در هر لحظه بر سرنوشت تک‌تک اسناد تجاری خود مسلط باشید و دیگر نگران گم شدن فیزیک چک یا فراموشی تاریخ سررسید نباشید.</p>
+<hr />
+<h2 id="check-repository">۲. معماری سیستم: مفهوم «مخزن چک» (Check Repository)</h2>
+<p>مهم‌ترین مفهومی که باید در این سیستم با آن آشنا شوید، <strong>«مخزن چک»</strong> است.
+در دنیای واقعی، چک فیزیکی نمی‌تواند همزمان در دو جا باشد. در سیستم نیز ما از «مخزن» استفاده می‌کنیم تا دقیقاً بگوییم فیزیک چک الان کجاست. چک‌ها در طول عمر خود بین این مخازن جابجا می‌شوند.</p>
+<h3 id="_60">لیست مخازن استاندارد سیستم</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام مخزن</th>
+<th style="text-align: left;">نام انگلیسی</th>
+<th style="text-align: left;">شرح کاربردی</th>
+<th style="text-align: left;">وضعیت حسابداری</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>مخزن اسناد نزد صندوق</strong></td>
+<td style="text-align: left;"><code>Safe Repository</code></td>
+<td style="text-align: left;"><strong>(گاوصندوق شرکت)</strong> <br> چک‌هایی که تازه از مشتری گرفته‌اید و فیزیک آن‌ها داخل کشو یا گاوصندوق خزانه‌دار است.</td>
+<td style="text-align: left;"><code>اسناد دریافتنی نزد صندوق</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مخزن در جریان وصول</strong></td>
+<td style="text-align: left;"><code>In-Collection Repo</code></td>
+<td style="text-align: left;"><strong>(نزد بانک)</strong> <br> چک‌هایی که از شرکت خارج شده و برای وصول (کلر) به متصدی بانک تحویل داده شده‌اند.</td>
+<td style="text-align: left;"><code>اسناد در جریان وصول</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مخزن چک‌های برگشتی</strong></td>
+<td style="text-align: left;"><code>Bounced Repo</code></td>
+<td style="text-align: left;"><strong>(واحد پیگیری)</strong> <br> چک‌هایی که سررسید شده‌اند اما به دلیل عدم موجودی، نکول شده‌اند.</td>
+<td style="text-align: left;"><code>اسناد دریافتنی برگشتی</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مخزن چک‌های تضمینی</strong></td>
+<td style="text-align: left;"><code>Guarantee Repo</code></td>
+<td style="text-align: left;"><strong>(بایگانی تضمینات)</strong> <br> چک‌هایی که بابت حسن انجام کار گرفته شده و قرار نیست نقد شوند.</td>
+<td style="text-align: left;"><code>حساب‌های انتظامی</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>نکته مهم:</strong> هر مخزن در نرم‌افزار به یک <strong>حساب معین (GL Account)</strong> اختصاصی متصل است. وقتی شما در سیستم، چک را از یک مخزن به مخزن دیگر می‌برید، سیستم به صورت خودکار سند حسابداری جابجایی بین این حساب‌ها را صادر می‌کند.</p>
+</blockquote>
+<hr />
+<h2 id="workflows">۳. نقشه راه عملیات (Workflows)</h2>
+<p>در این ماژول، شما با ۵ عملیات اصلی سروکار دارید. بیایید سناریوی هر کدام را بررسی کنیم:</p>
+<h3 id="receipt">۱. دریافت (Receipt)</h3>
+<ul>
+<li><strong>سناریو:</strong> مشتری چک را روی میز شما می‌گذارد.</li>
+<li><strong>عملیات سیستم:</strong> ثبت «سند دریافت».</li>
+<li><strong>نتیجه:</strong> چک در <strong>مخزن صندوق</strong> ایجاد می‌شود.</li>
+</ul>
+<h3 id="depositlodge">۲. واگذاری (Deposit/Lodge)</h3>
+<ul>
+<li><strong>سناریو:</strong> موعد چک نزدیک است. شما چک‌ها را در پاکت می‌گذارید و به بانک می‌برید.</li>
+<li><strong>عملیات سیستم:</strong> استفاده از فرم «واگذاری به بانک».</li>
+<li><strong>نتیجه:</strong> چک از مخزن صندوق کسر و به <strong>مخزن در جریان وصول</strong> اضافه می‌شود.</li>
+</ul>
+<h3 id="clearancebounce">۳. تعیین تکلیف (Clearance/Bounce)</h3>
+<ul>
+<li><strong>سناریو:</strong> صورتحساب بانک را چک می‌کنید.<ul>
+<li><em>حالت اول:</em> پول واریز شده، دکمه <strong>«وصول شد»</strong> را می‌زنید. (چک از سیستم خارج و تبدیل به پول نقد می‌شود).</li>
+<li><em>حالت دوم:</em> چک برگشت خورده، دکمه <strong>«برگشت خورد»</strong> را می‌زنید. (چک به مخزن برگشتی می‌رود).</li>
+</ul>
+</li>
+</ul>
+<h3 id="endorsement">۴. خرج کردن (Endorsement)</h3>
+<ul>
+<li><strong>سناریو:</strong> بدهی به یک فروشنده آهن دارید. به جای پول نقد، چک مشتری خودتان را پشت‌نویسی می‌کنید و به او می‌دهید.</li>
+<li><strong>عملیات سیستم:</strong> ثبت «سند پرداخت» با روش «خرج چک».</li>
+<li><strong>نتیجه:</strong> چک از دارایی‌های شما خارج شده و بدهی شما تسویه می‌شود.</li>
+</ul>
+<h3 id="return">۵. استرداد (Return)</h3>
+<ul>
+<li><strong>سناریو:</strong> مشتری می‌آید و می‌گوید "چکم را نبر بانک، بیا پول نقد بگیر و لاشه چک را پس بده".</li>
+<li><strong>عملیات سیستم:</strong> فرم «استرداد چک».</li>
+<li><strong>نتیجه:</strong> سند دریافت اولیه معکوس شده و چک از سیستم حذف می‌شود.</li>
+</ul>
+<hr />
+<h2 id="_61">۴. شناسه صیادی: قلب تپنده ردیابی</h2>
+<p>در سیستم تابان، <strong>شناسه ۱۶ رقمی صیادی</strong> یک فیلد متنی ساده نیست؛ بلکه اثر انگشت چک است.</p>
+<ul>
+<li><strong>جلوگیری از تقلب:</strong> سیستم اجازه نمی‌دهد یک شناسه صیادی دو بار در سیستم ثبت شود (حتی اگر سال‌ها پیش ثبت شده باشد).</li>
+<li><strong>یکپارچگی:</strong> در آینده برای مغایرت‌گیری بانکی، سیستم بر اساس همین شناسه متوجه می‌شود کدام ردیف بانک مربوط به کدام چک در سیستم است.</li>
+</ul>
+<hr />
+<h2 id="_62">۵. مثال جامع عملیاتی (سناریوی شرکت پخش)</h2>
+<p>بیایید یک داستان واقعی را مرور کنیم تا مفاهیم بالا کاملاً جا بیفتد.</p>
+<p><strong>بازیگران:</strong></p>
+<ul>
+<li><strong>شرکت ما:</strong> پخش مواد غذایی تابان.</li>
+<li><strong>مشتری:</strong> سوپرمارکت کوروش (آقای رضایی).</li>
+<li><strong>بانک ما:</strong> بانک ملت (شعبه مرکزی).</li>
+</ul>
+<p><strong>پرده اول: دریافت چک (۱۴۰۳/۰۲/۰۱)</strong>
+آقای رضایی بابت خرید کالا، یک چک ۵۰ میلیون تومانی به تاریخ سررسید ۱۰ روز بعد (۱۴۰۳/۰۲/۱۰) به ویزیتور ما می‌دهد.</p>
+<ul>
+<li><em>در سیستم:</em> کاربر «سند دریافت» ثبت می‌کند.</li>
+<li><em>وضعیت:</em> چک در <strong>مخزن صندوق</strong> قرار می‌گیرد.</li>
+</ul>
+<p><strong>پرده دوم: خواباندن به حساب (۱۴۰۳/۰۲/۰۸)</strong>
+دو روز مانده به سررسید، حسابدار چک را از گاوصندوق برداشته و به بانک ملت می‌برد.</p>
+<ul>
+<li><em>در سیستم:</em> کاربر فرم «واگذاری به بانک» را باز کرده، مبدأ را صندوق و مقصد را بانک ملت انتخاب می‌کند.</li>
+<li><em>وضعیت:</em> چک به <strong>مخزن در جریان وصول (ملت)</strong> منتقل می‌شود.</li>
+</ul>
+<p><strong>پرده سوم: روز سررسید و برگشت (۱۴۰۳/۰۲/۱۰)</strong>
+بانک پیامک می‌دهد که حساب آقای رضایی موجودی ندارد. چک برگشت می‌خورد.</p>
+<ul>
+<li><em>در سیستم:</em> کاربر در فرم «اعلام وضعیت»، گزینه <strong>برگشت</strong> را می‌زند.</li>
+<li><em>وضعیت:</em> چک به <strong>مخزن چک‌های برگشتی</strong> می‌رود. (سیستم حساب اسناد برگشتی را بدهکار می‌کند).</li>
+</ul>
+<p><strong>پرده آخر: تسویه نهایی (۱۴۰۳/۰۲/۱۵)</strong>
+با آقای رضایی تماس می‌گیریم. او می‌آید، ۵۰ میلیون کارت می‌کشد (واریز نقد) و لاشه چک برگشتی‌اش را می‌خواهد.</p>
+<ol>
+<li>یک «سند دریافت نقدی» ثبت می‌کنیم (پول به حساب بانک می‌نشیند).</li>
+<li>از فرم «استرداد چک»، چک موجود در مخزن برگشتی را انتخاب و به آقای رضایی استرداد می‌کنیم.</li>
+</ol>
+<!-- end list -->
+
+<ul>
+<li><em>نتیجه:</em> پرونده چک بسته می‌شود.</li>
+</ul>
+<hr />
+<h2 id="_63">۶. پیش‌نیازهای شروع کار</h2>
+<p>برای اینکه بتوانید از این ماژول استفاده کنید، باید موارد زیر در بخش <code>تعاریف پایه</code> تکمیل شده باشند:</p>
+<ol>
+<li><strong>تعریف بانک‌ها:</strong> نام بانک‌های کشور (ملی، صادرات، ...) در سیستم باشد.</li>
+<li><strong>تعریف مخازن چک:</strong><ul>
+<li>حداقل یک مخزن از نوع "نزد صندوق".</li>
+<li>به ازای هر حساب جاری شرکت، یک مخزن از نوع "در جریان وصول".</li>
+<li>یک مخزن از نوع "برگشتی".</li>
+</ul>
+</li>
+<li><strong>ارتباط با حسابداری:</strong> مطمئن شوید حسابدار ارشد، کدهای حساب معین (GL Codes) مربوط به هر مخزن را در تنظیمات لینک کرده است. بدون این لینک، اسناد اتوماتیک صادر نمی‌شوند.</li>
+</ol>
+<h1 id="_64">دریافت چک جدید (دریافت از مشتری)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; عملیات دریافت &gt; سند دریافت جدید</code></p>
+<hr />
+<h2 id="_65">۱. مقدمه و کاربرد</h2>
+<p>این فرم، دروازه ورود چک‌ها به سیستم ERP تابان است. هر زمانی که مشتری، کارمند یا هر طرف حساب دیگری بابت تسویه بدهی، پیش‌پرداخت سفارش یا سایر درآمدها به شما <strong>چک</strong> می‌دهد، باید اطلاعات آن را در این فرم ثبت کنید.</p>
+<p><strong>چرا دقت در این فرم حیاتی است؟</strong>
+اطلاعاتی که اینجا وارد می‌کنید (به ویژه تاریخ سررسید و شناسه صیادی)، مبنای تمام گزارش‌های نقدینگی، هشدارهای سررسید و پیگیری‌های حقوقی آینده خواهد بود. یک اشتباه تایپی در مبلغ یا تاریخ، می‌تواند گزارشات مالی مدیران را منحرف کند.</p>
+<hr />
+<h2 id="_66">۲. فرآیند گام‌به‌گام ثبت چک</h2>
+<p>برای ثبت چک، مراحل زیر را در فرم <strong>«سند دریافت»</strong> طی کنید:</p>
+<h3 id="header_1">گام اول: اطلاعات عمومی سند (Header)</h3>
+<p>ابتدا مشخص کنید چه کسی و بابت چه چیزی پول می‌دهد.</p>
+<ol>
+<li><strong>طرف حساب (پرداخت‌کننده):</strong> نام مشتری یا شخصی که چک را داده انتخاب کنید.</li>
+<li><strong>تاریخ سند:</strong> تاریخ روز (تاریخی که چک را تحویل گرفتید).</li>
+<li><strong>شرح سند:</strong> توضیحی کوتاه بنویسید (مثلاً: بابت تسویه فاکتور شماره ۱۰۱).</li>
+</ol>
+<h3 id="_67">گام دوم: انتخاب روش پرداخت</h3>
+<p>در بخش ردیف‌های دریافت، دکمه <strong>«افزودن ردیف»</strong> را زده و در فیلد روش پرداخت، گزینه <strong>«چک»</strong> را انتخاب کنید. با این کار، فیلدهای مخصوص چک فعال می‌شوند.</p>
+<h3 id="detail">گام سوم: ورود مشخصات چک (Detail)</h3>
+<p>اطلاعات روی فیزیک چک را با دقت وارد کنید. (جدول راهنمای فیلدها را در پایین ببینید).</p>
+<h3 id="_68">گام چهارم: ثبت نهایی</h3>
+<p>پس از اطمینان از صحت اطلاعات، دکمه <strong>«ذخیره / ثبت نهایی»</strong> را بزنید.</p>
+<ul>
+<li><strong>نتیجه:</strong> سیستم یک «رسید دریافت» به شما می‌دهد که می‌توانید آن را چاپ کرده و به عنوان رسید به مشتری تحویل دهید.</li>
+</ul>
+<hr />
+<h2 id="_69">۳. راهنمای جامع فیلدهای چک</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد (فارسی)</th>
+<th style="text-align: left;">نام فیلد (لاتین)</th>
+<th style="text-align: left;">وضعیت</th>
+<th style="text-align: left;">توضیحات کاربردی و نکات کنترلی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>مبلغ چک</strong></td>
+<td style="text-align: left;"><code>Amount</code></td>
+<td style="text-align: left;"><strong>اجباری</strong></td>
+<td style="text-align: left;">مبلغ دقیق نوشته شده روی چک به ریال. <br> <em>نکته:</em> سیستم به صورت خودکار مبلغ را به حروف در زیر فیلد نمایش می‌دهد؛ حتماً چک کنید.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ سررسید</strong></td>
+<td style="text-align: left;"><code>DueDate</code></td>
+<td style="text-align: left;"><strong>اجباری</strong></td>
+<td style="text-align: left;">تاریخی که باید چک را به بانک ببرید (تاریخ نقد شدن). <br> <em>نکته:</em> این تاریخ مبنای گزارشات "جریان نقدینگی" (Cash Flow) است.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شناسه صیادی</strong></td>
+<td style="text-align: left;"><code>SayadID</code></td>
+<td style="text-align: left;"><strong>اجباری</strong></td>
+<td style="text-align: left;">کد ۱۶ رقمی گوشه بالای چک. <br> <em>کنترل:</em> سیستم یکتا بودن این کد را چک می‌کند. اگر قبلاً ثبت شده باشد، خطای تکراری می‌دهد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شماره سریال</strong></td>
+<td style="text-align: left;"><code>SerialNo</code></td>
+<td style="text-align: left;">اجباری</td>
+<td style="text-align: left;">شماره چاپی پایین یا گوشه چک (معمولاً ترکیبی از عدد و ممیز). <br> <em>کاربرد:</em> برای پیدا کردن فیزیک چک در بایگانی/گاوصندوق استفاده می‌شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بانک صادرکننده</strong></td>
+<td style="text-align: left;"><code>BankName</code></td>
+<td style="text-align: left;">اختیاری</td>
+<td style="text-align: left;">نام بانک دسته چک مشتری (مثلاً: ملت، تجارت).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شعبه</strong></td>
+<td style="text-align: left;"><code>BranchName</code></td>
+<td style="text-align: left;">اختیاری</td>
+<td style="text-align: left;">نام یا کد شعبه صادرکننده.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>صاحب حساب</strong></td>
+<td style="text-align: left;"><code>Owner</code></td>
+<td style="text-align: left;">اختیاری</td>
+<td style="text-align: left;">نام شخصی که زیر چک را امضا کرده است. <br> <em>نکته:</em> گاهی مشتری (پرداخت‌کننده) چک شخص دیگری را به ما می‌دهد (چک خرج شده). در این صورت نام مشتری در هدر سند و نام صاحب حساب واقعی در این فیلد درج می‌شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>در وجه</strong></td>
+<td style="text-align: left;"><code>Payee</code></td>
+<td style="text-align: left;">پیش‌فرض</td>
+<td style="text-align: left;">نام شرکت شما (گیرنده). اگر چک در وجه حامل است، می‌توانید این فیلد را ویرایش کنید.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_70">۴. سناریوی عملی (مثال واقعی)</h2>
+<p><strong>داستان:</strong>
+فرض کنید شما حسابدار شرکت «پخش تابان» هستید. «آقای رضایی» (مالک فروشگاه کوروش) بابت خرید کالاهای هفته گذشته، به شرکت مراجعه کرده و یک چک صیادی بنفش رنگ تحویل می‌دهد.</p>
+<p><strong>مشخصات چک:</strong></p>
+<ul>
+<li><strong>مبلغ:</strong> ۵۰۰,۰۰۰,۰۰۰ ریال (۵۰ میلیون تومان)</li>
+<li><strong>سررسید:</strong> ۲۰ مرداد ۱۴۰۳</li>
+<li><strong>بانک:</strong> صادرات - شعبه بازار</li>
+<li><strong>شماره صیادی:</strong> 1234123412341234</li>
+</ul>
+<p><strong>اقدامات شما در سیستم:</strong></p>
+<ol>
+<li>وارد مسیر <code>خزانه‌داری &gt; سند دریافت جدید</code> می‌شوید.</li>
+<li>در فیلد طرف حساب، <strong>«فروشگاه کوروش - آقای رضایی»</strong> را انتخاب می‌کنید.</li>
+<li>در قسمت ردیف‌ها، روش <strong>«چک»</strong> را انتخاب می‌کنید.</li>
+<li>مبلغ <code>500,000,000</code> و تاریخ سررسید <code>1403/05/20</code> را وارد می‌کنید.</li>
+<li>شناسه صیادی ۱۶ رقمی را با دقت از روی چک تایپ می‌کنید (یا با بارکدخوان اسکن می‌کنید).</li>
+<li>سایر مشخصات (بانک صادرات، شماره سریال) را پر می‌کنید.</li>
+<li>دکمه <strong>ثبت</strong> را می‌زنید.</li>
+</ol>
+<hr />
+<h2 id="_71">۵. پشت صحنه سیستم (آنچه کاربر نمی‌بیند)</h2>
+<p>به محض اینکه دکمه ثبت را فشار می‌دهید، سیستم سه کار مهم انجام می‌دهد:</p>
+<ol>
+<li>
+<p><strong>تولد چک در مخزن:</strong>
+    یک رکورد جدید در پایگاه داده چک‌ها ایجاد می‌شود و وضعیت آن به صورت پیش‌فرض <strong>«نزد صندوق» (On-Hand)</strong> تنظیم می‌شود. یعنی سیستم می‌فهمد که این چک الان در گاوصندوق شرکت است.</p>
+</li>
+<li>
+<p><strong>کاهش بدهی مشتری:</strong>
+    مانده حساب آقای رضایی ۵۰ میلیون تومان کاهش می‌یابد.</p>
+</li>
+<li>
+<p><strong>صدور سند حسابداری اتوماتیک:</strong>
+    سیستم بدون دخالت شما، سند زیر را در دفتر کل (GL) صادر می‌کند:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">بدهکار</th>
+<th style="text-align: left;">بستانکار</th>
+<th style="text-align: left;">شرح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۱</td>
+<td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
+<td style="text-align: left;">۵۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">دریافت چک صیادی ... بابت فروشگاه کوروش</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۳۰۰۵</td>
+<td style="text-align: left;"><strong>حساب‌های دریافتنی تجاری</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">۵۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">دریافت چک صیادی ... بابت فروشگاه کوروش</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_72">۶. سوالات متداول و نکات طلایی</h2>
+<p><strong>۱. اگر چک "در وجه حامل" بود چه کنیم؟</strong>
+در فیلد "در وجه"، کلمه "حامل" را تایپ کنید. اما توجه داشته باشید طبق قوانین جدید چک صیادی، ثبت چک در وجه حامل محدودیت دارد و حتماً باید انتقال در سامانه صیاد انجام شود.</p>
+<p><strong>۲. مشتری چک شخص دیگری را به ما داده است (چک خرج شده). طرف حساب کیست؟</strong>
+طرف حساب شما همچنان <strong>مشتری (کسی که بدهکار است)</strong> می‌باشد، نه صاحب چک.</p>
+<ul>
+<li><em>مثال:</em> آقای رضایی (مشتری ما) چکِ برادرش (آقای اکبری) را به ما می‌دهد.</li>
+<li><em>در سیستم:</em> در فیلد "پرداخت‌کننده" نام <strong>آقای رضایی</strong> را انتخاب کنید (چون می‌خواهیم حساب او تسویه شود). در فیلد "صاحب حساب"، نام <strong>آقای اکبری</strong> را بنویسید تا اگر چک برگشت خورد، بدانید صاحبش کیست.</li>
+</ul>
+<p><strong>۳. سیستم خطای "شناسه صیادی تکراری" می‌دهد.</strong>
+این یعنی چکی با همین شناسه قبلاً در سیستم ثبت شده است. ممکن است:</p>
+<ul>
+<li>همکار دیگری قبلاً آن را ثبت کرده باشد.</li>
+<li>این چک قبلاً دریافت شده، خرج شده و دوباره به شرکت برگشته است (گردش چک).</li>
+<li><em>راه حل:</em> از گزارش "جستجوی چک" استفاده کنید تا وضعیت قبلی این شناسه را ببینید.</li>
+</ul>
+<p><strong>۴. آیا می‌توانم چند چک را در یک سند ثبت کنم؟</strong>
+بله. اگر مشتری همزمان ۵ فقره چک به شما می‌دهد، نیازی نیست ۵ سند جداگانه بزنید. در همان فرم سند دریافت، ۵ بار دکمه "افزودن ردیف" را بزنید و مشخصات هر چک را جداگانه وارد کنید. سیستم یک سند حسابداری کلی برای همه آن‌ها صادر می‌کند.</p>
+<h1 id="-check-return">استرداد چک - بازگرداندن به مشتری (Check Return)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; مدیریت چک‌های دریافتی &gt; عملیات چک &gt; استرداد چک</code></p>
+<hr />
+<h2 id="_73">۱. مفهوم و کاربرد</h2>
+<h3 id="_74">استرداد چک چیست؟</h3>
+<p>عملیات <strong>استرداد</strong> به معنای بازگرداندن فیزیک چک (لاشه چک) به صادرکننده آن (مشتری) و خارج کردن چک از چرخه دارایی‌های شرکت است.
+در این حالت، چک نه نقد شده و نه خرج شده؛ بلکه معامله‌ای که بابت آن چک گرفته بودیم، به نحوی تغییر کرده است که باید چک را پس بدهیم.</p>
+<h3 id="_75">چه زمانی از این فرم استفاده می‌کنیم؟</h3>
+<p>این فرم در سه سناریوی اصلی کاربرد دارد:</p>
+<ol>
+<li><strong>فسخ معامله:</strong> مشتری کالا را پس داده و چک خود را می‌خواهد.</li>
+<li><strong>تعویض چک (Replacement):</strong> مشتری می‌خواهد چک فعلی را با یک چک جدید (تاریخ متفاوت) یا پول نقد عوض کند.</li>
+<li><strong>تسویه چک برگشتی:</strong> چک برگشت خورده، مشتری می‌آید تسویه می‌کند و لاشه چک برگشتی را تحویل می‌گیرد.</li>
+</ol>
+<blockquote>
+<p><strong>نکته مهم:</strong> استرداد چک باعث می‌شود حساب مشتری دوباره <strong>بدهکار</strong> شود (چون چکی که بابت پرداخت داده بود را پس گرفته است). بنابراین معمولاً قبل یا بعد از استرداد، یک سند دریافت دیگر (نقد یا چک جدید) ثبت می‌شود.</p>
+</blockquote>
+<hr />
+<h2 id="_76">۲. پیش‌نیازهای سیستمی</h2>
+<p>برای استرداد یک چک، آن چک باید حتماً در یکی از مخازن زیر باشد:</p>
+<ul>
+<li><strong>مخزن اسناد نزد صندوق (Safe Repository):</strong> برای چک‌های عادی که هنوز به بانک نرفته‌اند.</li>
+<li><strong>مخزن چک‌های برگشتی (Bounced Repository):</strong> برای چک‌هایی که نکول شده‌اند.</li>
+</ul>
+<blockquote>
+<p><strong>هشدار:</strong> شما نمی‌توانید چکی را که در وضعیت <strong>«در جریان وصول» (نزد بانک)</strong> است، مستقیماً به مشتری استرداد کنید. ابتدا باید آن را از بانک تحویل بگیرید (عملیات «استرداد از واگذاری») تا به صندوق برگردد، سپس به مشتری پس دهید.</p>
+</blockquote>
+<hr />
+<h2 id="_77">۳. مراحل انجام کار</h2>
+<h3 id="_78">گام ۱: انتخاب فیلترها</h3>
+<p>وارد فرم استرداد شوید. برای پیدا کردن چک، دو فیلد را تنظیم کنید:</p>
+<ol>
+<li><strong>مخزن فعلی:</strong> مشخص کنید چک الان کجاست؟ (مثلاً "مخزن چک‌های برگشتی").</li>
+<li><strong>طرف حساب:</strong> نام مشتری را انتخاب کنید.</li>
+</ol>
+<h3 id="_79">گام ۲: انتخاب چک</h3>
+<p>سیستم لیست چک‌های آن مشتری در آن مخزن خاص را نمایش می‌دهد.
+چک (یا چک‌های) مورد نظر را تیک بزنید.</p>
+<h3 id="_80">گام ۳: ثبت استرداد</h3>
+<p>دکمه <strong>«ثبت استرداد»</strong> را بزنید. سیستم ممکن است از شما "بابت" یا "توضیحات" بخواهد (مثلاً: بابت تعویض با چک جدید).</p>
+<hr />
+<h2 id="_81">۴. سناریوهای عملیاتی و اسناد حسابداری</h2>
+<p>بیایید دو مثال بسیار رایج در بازار کار ایران را بررسی کنیم.</p>
+<h3 id="_82">سناریوی ۱: تعویض چک (قبل از سررسید)</h3>
+<p><strong>داستان:</strong> آقای رضایی چکی به مبلغ ۲۰ میلیون تومان برای تاریخ فردا دارد. تماس می‌گیرد و می‌گوید: "چکم پاس نمی‌شود، آن را پس بدهید و یک چک برای ۱۰ روز دیگر بگیرید."</p>
+<p><strong>اقدامات شما در سیستم:</strong></p>
+<ol>
+<li><strong>مرحله استرداد:</strong> به فرم «استرداد چک» می‌روید. مخزن "نزد صندوق" را انتخاب کرده و چک ۲۰ میلیونی را به آقای رضایی استرداد می‌کنید.<ul>
+<li><em>اثر:</em> چک از سیستم خارج می‌شود. حساب آقای رضایی ۲۰ میلیون <strong>بدهکار</strong> می‌شود.</li>
+</ul>
+</li>
+<li><strong>مرحله دریافت جدید:</strong> به فرم «سند دریافت» می‌روید و چک جدید (تاریخ ۱۰ روز بعد) را ثبت می‌کنید.<ul>
+<li><em>اثر:</em> چک جدید وارد سیستم می‌شود. حساب آقای رضایی ۲۰ میلیون <strong>بستانکار</strong> می‌شود.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>سند حسابداری استرداد (خودکار):</strong></p>
+<ul>
+<li><strong>بدهکار:</strong> حساب‌های دریافتنی - آقای رضایی</li>
+<li><strong>بستانکار:</strong> اسناد دریافتنی نزد صندوق</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="_83">سناریوی ۲: تسویه چک برگشتی (پس از نکول)</h3>
+<p><strong>داستان:</strong> چک ۵۰ میلیونی "شرکت پخش البرز" برگشت خورده و در <strong>مخزن برگشتی</strong> است. نماینده شرکت می‌آید، ۵۰ میلیون کارت می‌کشد (واریز نقد) و لاشه چک برگشتی را می‌برد.</p>
+<p><strong>اقدامات شما در سیستم:</strong></p>
+<ol>
+<li><strong>مرحله دریافت پول:</strong> ابتدا یک «سند دریافت» از نوع <strong>نقد/کارت‌خوان</strong> ثبت می‌کنید.<ul>
+<li><em>اثر:</em> موجودی بانک شما ۵۰ میلیون زیاد می‌شود. حساب شرکت البرز ۵۰ میلیون <strong>بستانکار</strong> می‌شود.</li>
+</ul>
+</li>
+<li><strong>مرحله استرداد لاشه:</strong> به فرم «استرداد چک» می‌روید. مخزن <strong>"چک‌های برگشتی"</strong> را انتخاب می‌کنید. چک مورد نظر را تیک زده و استرداد می‌کنید.<ul>
+<li><em>اثر:</em> چک از لیست برگشتی‌ها حذف می‌شود. حساب شرکت البرز ۵۰ میلیون <strong>بدهکار</strong> می‌شود.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>تحلیل مانده حساب مشتری:</strong>
+مشتری ۵۰ میلیون بدهکار شد (بابت گرفتن لاشه) و ۵۰ میلیون بستانکار شد (بابت واریز پول). پس مانده حسابش صفر و تسویه می‌شود.</p>
+<p><strong>سند حسابداری استرداد از برگشتی (خودکار):</strong></p>
+<ul>
+<li><strong>بدهکار:</strong> حساب‌های دریافتنی - شرکت پخش البرز</li>
+<li><strong>بستانکار:</strong> حساب اسناد دریافتنی برگشتی</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="faq_1">۵. سوالات متداول (FAQ)</h2>
+<p><strong>سوال: آیا با استرداد چک، سابقه آن کلاً پاک می‌شود؟</strong>
+<strong>پاسخ:</strong> خیر، رکورد چک پاک نمی‌شود. وضعیت (Status) آن به <strong>«استرداد شده» (Returned)</strong> تغییر می‌کند و در گزارشات با رنگ متمایز نمایش داده می‌شود تا تاریخچه همکاری با مشتری حفظ شود.</p>
+<p><strong>سوال: اگر بخواهم فقط بخشی از مبلغ چک را دریافت کنم و بقیه را چک جدید بگیرم چه؟</strong>
+<strong>پاسخ:</strong> فرآیند مشابه سناریوی تعویض است.</p>
+<ol>
+<li>چک قدیم را کامل <strong>استرداد</strong> می‌کنید (مشتری کل مبلغ را بدهکار می‌شود).</li>
+<li>یک سند دریافت ترکیبی ثبت می‌کنید: یک ردیف "نقد" (برای مبلغی که داده) و یک ردیف "چک جدید" (برای باقیمانده).</li>
+</ol>
+<p><strong>سوال: اشتباهاً چک را استرداد کردم. چه کنم؟</strong>
+<strong>پاسخ:</strong> باید به لیست چک‌های استرداد شده بروید (یا از طریق گزارش کاردکس چک)، روی آن کلیک راست کرده و گزینه <strong>«ابطال استرداد»</strong> را بزنید. چک به مخزن قبلی خود باز می‌گردد.</p>
+<h1 id="bank-statements">صورتحساب‌های بانکی (Bank Statements)</h1>
+<p>توضیح: موجودیت Header برای فایلی که از بانک دریافت می‌کنید (برای مغایرت‌گیری).</p>
+<p>فیلدها:</p>
+<p>Statement_ID (PK)</p>
+<p>Bank_Account_ID (FK)</p>
+<p>Statement_Date</p>
+<p>Opening_Balance</p>
+<p>Closing_Balance</p>
+<p>ردیف صورتحساب بانکی (Bank Statement Line)</p>
+<p>توضیح: ردیف‌های داخل فایل صورتحساب بانک.</p>
+<p>فیلدها:</p>
+<p>Statement_Line_ID (PK)</p>
+<p>Statement_ID (FK)</p>
+<p>Transaction_Date</p>
+<p>Amount_Debit</p>
+<p>Amount_Credit</p>
+<p>Description (شرحی که بانک می‌زند)</p>
+<p>Reconciled (Boolean - آیا این ردیف مغایرت‌گیری شده؟)</p>
+<h1 id="paymentreceipt-documents">اسناد دریافت و پرداخت (Payment/Receipt Documents)</h1>
+<hr />
+<h2 id="_84">۱. مفهوم و هدف</h2>
+<p>این فرم، <strong>قلب تپنده و فرم عملیاتی اصلی</strong> در ماژول خزانه‌داری است. بر اساس این اصل کلیدی طراحی شده است که:</p>
+<blockquote>
+<p><strong>اصل طلایی:</strong> هیچ جابجایی وجهی (نقد، چک، یا حواله) در دنیای واقعی نباید اتفاق بیفتد، مگر آنکه یک «سند دریافت و پرداخت» متناظر در ERP تابان برای ردیابی آن ثبت شود.</p>
+</blockquote>
+<p>این سند، موجودیت واحدی است که تمام ورودی‌ها، خروجی‌ها و جابجایی‌های داخلی وجوه نقد سازمان را ثبت می‌کند. این فرم، مسئول مستقیم تغییر موجودی بانک/صندوق و همچنین مبنای اصلی صدور <strong>سند حسابداری خودکار</strong> در دفتر کل (GL) است.</p>
+<h3 id="_85">انواع تراکنش‌های تحت پوشش</h3>
+<p>این فرم باید سه سناریوی اصلی را از طریق یک فیلد کلیدی به نام <strong>«نوع سند» (Document Type)</strong> مدیریت کند:</p>
+<ol>
+<li><strong>دریافت (Receipt):</strong><ul>
+<li><strong>هدف:</strong> ثبت ورود وجه به سازمان.</li>
+<li><strong>مثال‌ها:</strong> دریافت چک از مشتری بابت فاکتور فروش، دریافت واریز نقدی بابت پیش‌پرداخت سفارش، دریافت درآمد متفرقه (مثلاً فروش ضایعات).</li>
+</ul>
+</li>
+<li><strong>پرداخت (Payment):</strong><ul>
+<li><strong>هدف:</strong> ثبت خروج وجه از سازمان.</li>
+<li><strong>مثال‌ها:</strong> صدور چک برای تأمین‌کننده بابت فاکتور خرید، پرداخت نقدی هزینه‌های مستقیم (مانند پیک)، پرداخت علی‌الحساب به کارمند.</li>
+</ul>
+</li>
+<li><strong>انتقال (Transfer):</strong><ul>
+<li><strong>هدف:</strong> ثبت جابجایی وجه بین دو حساب داخلی شرکت (بدون دخالت طرف حساب خارجی).</li>
+<li><strong>مثال‌ها:</strong> انتقال پول از «حساب بانک ملت» به «حساب بانک سامان»، یا انتقال وجه از «بانک» برای «شارژ صندوق تنخواه».</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="_86">۲. ملاحظات کلیدی: مدیریت سناریوهای پرداخت</h2>
+<p>یک سند پرداخت ساده فقط پرداخت یک فاکتور است. اما یک ERP قدرتمند باید سناریوهای پیچیده‌تر را مدیریت کند. این فرم باید سه حالت اصلی ارتباط با طرف حساب را پوشش دهد:</p>
+<h3 id="standard">الف) پرداخت/دریافت بابت فاکتور (Standard)</h3>
+<ul>
+<li><strong>مفهوم:</strong> ساده‌ترین حالت. یک یا چند فاکتور مشخص وجود دارد و این سند برای تسویه (کامل یا بخشی از) آن‌ها صادر می‌شود.</li>
+<li><strong>نحوه اجرا:</strong> این کار معمولاً در این فرم انجام <strong>نمی‌شود</strong>، بلکه در فرم «تسویه حساب» (Settlement) انجام می‌شود. این فرم فقط پول را دریافت یا پرداخت می‌کند (به بخش ۴، گام ۴ مراجعه کنید).</li>
+</ul>
+<h3 id="prepayment-">ب) پیش‌پرداخت (Prepayment - مرتبط با سفارش)</h3>
+<ul>
+<li><strong>مفهوم:</strong> پرداختی که <em>قبل</em> از دریافت کالا/خدمات و <em>قبل</em> از صدور فاکتور انجام می‌شود، اما مستقیماً به یک <strong>سفارش (PO/SO)</strong> مشخص مرتبط است.</li>
+<li><strong>مثال سناریو:</strong><ul>
+<li>ما یک «سفارش خرید» (PO-1002) برای خرید مواد اولیه از «شرکت فولاد پارس» به مبلغ ۱ میلیارد ریال ثبت می‌کنیم.</li>
+<li>فولاد پارس برای شروع کار، ۳۰۰ میلیون ریال پیش‌پرداخت می‌خواهد.</li>
+<li>ما یک «سند پرداخت» (نوع: پرداخت) صادر می‌کنیم و در فیلد <strong>«ارجاع به سفارش»</strong>، کد PO-1002 را انتخاب می‌کنیم.</li>
+<li><strong>نتیجه:</strong> این ۳۰۰ میلیون به عنوان یک آیتم باز بستانکار روی PO-1002 می‌نشیند. زمانی که فاکتور نهایی ۱ میلیاردی از فولاد پارس می‌رسد، سیستم به صورت خودکار تشخیص می‌دهد که فقط ۷۰۰ میلیون ریال دیگر قابل پرداخت است.</li>
+</ul>
+</li>
+</ul>
+<h3 id="on-account-">ج) علی‌الحساب (On-Account - شناور)</h3>
+<ul>
+<li><strong>مفهوم:</strong> پرداختی که در لحظه ثبت، به هیچ فاکتور یا سفارش <em>مشخصی</em> مرتبط نیست. این صرفاً واریز یا دریافت وجه به/از حساب یک طرف حساب است.</li>
+<li><strong>مثال سناریو:</strong><ul>
+<li>«شرکت ایران خودرو» (مشتری کلیدی ما) برای ساده‌سازی فرآیند، در ابتدای ماه یک حواله ۵ میلیارد ریالی به حساب ما واریز می‌کند.</li>
+<li>ما یک «سند دریافت» (نوع: دریافت) به مبلغ ۵ میلیارد ریال به صورت «علی‌الحساب» برای ایران خودرو ثبت می‌کنیم.</li>
+<li><strong>نتیجه:</strong> این ۵ میلیارد به عنوان «اعتبار» (Credit) در حساب این مشتری می‌نشیند. طی ماه، ما ۱۰ فاکتور مختلف (مثلاً هر کدام ۲۰۰ میلیون ریال) برای ایران خودرو صادر می‌کنیم. در پایان هفته، حسابدار ما به فرم «تسویه حساب» (Settlement) رفته و آن ۱۰ فاکتور را با استفاده از این اعتبار ۵ میلیاردی تسویه می‌کند، بدون آنکه نیاز به ثبت سند دریافت جدیدی باشد.</li>
+</ul>
+</li>
+</ul>
+<h3 id="direct-expense-gl">د) پرداخت هزینه مستقیم (Direct Expense - مرتبط با G/L)</h3>
+<ul>
+<li><strong>مفهوم:</strong> پرداختی که اصلاً به ماژول‌های خرید (AP) یا فروش (AR) مرتبط نیست. این پرداخت مستقیماً برای یک «حساب هزینه» در دفتر کل انجام می‌شود.</li>
+<li><strong>مثال سناریو:</strong><ul>
+<li>پرداخت هزینه پیک به مبلغ ۵۰۰,۰۰۰ ریال از «صندوق تنخواه».</li>
+<li>پرداخت قبض برق ماهانه به مبلغ ۱۲,۰۰۰,۰۰۰ ریال از «حساب بانک».</li>
+</ul>
+</li>
+<li><strong>نحوه اجرا:</strong> در بخش «طرف حساب» (Partner)، کاربر به جای مشتری یا تأمین‌کننده، مستقیماً <strong>«حساب معین G/L»</strong> (مثلاً <code>6201010 - هزینه پیک</code> یا <code>6105020 - هزینه آب و برق</code>) را انتخاب می‌کند.</li>
+</ul>
+<hr />
+<h2 id="paymentreceipt-document">۳. فرم: سند دریافت و پرداخت (Payment/Receipt Document)</h2>
+<p><strong>مسیر:</strong> <code>خزانه‌داری / عملیات / سند دریافت و پرداخت جدید</code></p>
+<p>این فرم از یک بخش «سربرگ» (اطلاعات کلی) و یک یا چند «ردیف» (جزئیات روش پرداخت) تشکیل شده است.</p>
+<h3 id="header_2">بخش سربرگ (Header)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح و مثال‌ها</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">بنگاهی که تراکنش مالی را انجام می‌دهد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نوع سند</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><strong>(فیلد کنترلی اصلی)</strong> <code>دریافت</code> / <code>پرداخت</code> / <code>انتقال</code>. (انتخاب این گزینه، رفتار سایر فیلدها را تغییر می‌دهد).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ سند</strong></td>
+<td style="text-align: left;">تاریخ</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">تاریخ واقعی چک، حواله یا واریز نقدی.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ ثبت</strong></td>
+<td style="text-align: left;">تاریخ</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">تاریخ ورود داده در سیستم (معمولاً خودکار = تاریخ روز).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>طرف حساب (Partner)</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">(بله، برای دریافت/پرداخت)</td>
+<td style="text-align: left;"><strong>(فیلد هوشمند)</strong> <br> * <strong>اگر پرداخت/دریافت استاندارد بود:</strong> <code>مشتری</code> یا <code>تأمین‌کننده</code> را انتخاب می‌کنید (مثلاً: «شرکت فولاد پارس»). <br> * <strong>اگر پرداخت هزینه مستقیم بود:</strong> <code>حساب G/L</code> را انتخاب می‌کنید (مثلاً: «6201010 - هزینه پیک»). <br> * <strong>اگر انتقال بود:</strong> این فیلد غیرفعال/مخفی می‌شود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مبلغ کل</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">مبلغ کل سند. سیستم باید اعتبارسنجی کند که <strong>مجموع ردیف‌ها = مبلغ کل</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شرح سند</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">توضیح کلی (مثلاً: «پرداخت علی‌الحساب بابت PO-1002»).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ارجاع به سفارش</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">(فقط برای سناریوی «پیش‌پرداخت») شماره سفارش فروش یا سفارش خرید.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="lines-">بخش ردیف‌ها (Lines) - (جزئیات روش پرداخت)</h3>
+<p>کاربر می‌تواند برای یک سند، چندین ردیف اضافه کند. (مثال: پرداخت یک فاکتور ۵۰ میلیونی با ۱۰ میلیون نقد + یک چک ۴۰ میلیونی).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع داده</th>
+<th style="text-align: left;">اجباری</th>
+<th style="text-align: left;">توضیح و مثال‌ها</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>روش پرداخت</strong></td>
+<td style="text-align: left;">انتخابی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;"><code>نقد</code> / <code>چک</code> / <code>حواله (انتقال بانکی)</code> / <code>کارت‌خوان (POS)</code>...</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مبلغ</strong></td>
+<td style="text-align: left;">عددی</td>
+<td style="text-align: left;">بله</td>
+<td style="text-align: left;">مبلغ مربوط به این ردیف خاص.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب/صندوق مبدأ</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">(بله، برای <code>پرداخت</code>/<code>انتقال</code>)</td>
+<td style="text-align: left;">حساب بانکی یا صندوقی که پول از آن <em>خارج</em> می‌شود. (مثلاً: «بانک ملت»)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حساب/صندوق مقصد</strong></td>
+<td style="text-align: left;">انتخابی (FK)</td>
+<td style="text-align: left;">(بله، برای <code>دریافت</code>/<code>انتقال</code>)</td>
+<td style="text-align: left;">حساب بانکی یا صندوقی که پول به آن <em>وارد</em> می‌شود. (مثلاً: «صندوق مرکزی»)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شرح ردیف</strong></td>
+<td style="text-align: left;">متنی</td>
+<td style="text-align: left;">خیر</td>
+<td style="text-align: left;">توضیحات جزئی (مثلاً: «چک اول از سه قسط»).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_87">بخش ردیف‌ها: فیلدهای پویا بر اساس روش پرداخت</h3>
+<p>بخش ردیف‌ها باید هوشمند باشد و فیلدهای اضافی را فقط در صورت نیاز نشان دهد:</p>
+<p><strong>الف) اگر روش = <code>چک</code> (پرداختی):</strong></p>
+<ul>
+<li><strong>حساب بانکی مبدأ:</strong> (اجباری) حسابی که چک از دسته چک آن صادر می‌شود.</li>
+<li><strong>شماره سریال چک:</strong> (اجباری) <strong>لیست انتخابی</strong> از سریال‌های «خام» ثبت شده در «دسته چک» آن حساب. (کاربر دستی وارد نمی‌کند، بلکه انتخاب می‌کند).</li>
+<li><strong>تاریخ سررسید:</strong> (اجباری) تاریخ سررسید چک.</li>
+<li><strong>در وجه:</strong> (متنی) نام گیرنده (معمولاً از سربرگ می‌آید).</li>
+</ul>
+<p><strong>ب) اگر روش = <code>چک</code> (دریافتی):</strong></p>
+<ul>
+<li><strong>شماره سریال چک:</strong> (متنی) کاربر شماره چک مشتری را <strong>دستی</strong> وارد می‌کند.</li>
+<li><strong>بانک چک:</strong> (انتخابی FK) بانکی که چک مشتری روی آن است (از لیست بانک‌ها).</li>
+<li><strong>شعبه و کد:</strong> (متنی) اطلاعات شعبه چک مشتری.</li>
+<li><strong>تاریخ سررسید:</strong> (اجباری) تاریخ سررسید چک.</li>
+<li><strong>صاحب حساب:</strong> (متنی) نام صاحب حساب چک (جهت ردیابی).</li>
+</ul>
+<p><strong>ج) اگر روش = <code>حواله (انتقال بانکی)</code>:</strong></p>
+<ul>
+<li><strong>شماره پیگیری/ارجاع:</strong> (متنی) کد رهگیری انتقال بانکی (ساتنا، پایا، یا شماره رسید).</li>
+</ul>
+<hr />
+<h2 id="post-registration-logic">۴. فرآیند پس از ثبت (Post-Registration Logic)</h2>
+<p>پس از اینکه کاربر دکمه «ثبت نهایی» (Post) را فشار می‌دهد، چهار اتفاق کلیدی <em>باید</em> در پشت صحنه رخ دهد:</p>
+<ol>
+<li>
+<p><strong>ثبت نهایی (Posting):</strong></p>
+<ul>
+<li>سند قفل می‌شود و دیگر قابل ویرایش نیست (مگر با فرآیند ابطال).</li>
+<li>وضعیت آن از «پیش‌نویس» (Draft) به «ثبت شده» (Posted) تغییر می‌کند.</li>
+</ul>
+</li>
+<li>
+<p><strong>تأثیر بر موجودی (Cash Balance Impact):</strong></p>
+<ul>
+<li><strong>برای نقد/حواله:</strong> موجودی «حساب بانکی» یا «صندوق» انتخاب شده در ردیف‌ها، <em>بلافاصله</em> به‌روزرسانی (کم یا زیاد) می‌شود.</li>
+<li><strong>برای چک (پرداختی/دریافتی):</strong> موجودی بانک/صندوق <em>تغییر نمی‌کند</em>. چک فقط در ماژول «مدیریت چک» (Check Management) با وضعیت «صادر شده» یا «نزد صندوق» ثبت می‌شود. تأثیر واقعی بر موجودی بانک، بعداً در زمان «پاس شدن» یا «وصول» چک رخ خواهد داد.</li>
+</ul>
+</li>
+<li>
+<p><strong>ایجاد سند حسابداری (G/L Creation):</strong></p>
+<ul>
+<li>مهم‌ترین بخش. سیستم باید <em>بلافاصله</em> و <em>به‌صورت خودکار</em> یک سند حسابداری در دفتر کل صادر کند. (نمونه‌ها در بخش ۵).</li>
+</ul>
+</li>
+<li>
+<p><strong>ایجاد آیتم باز (Open Item Creation):</strong></p>
+<ul>
+<li><strong>اگر سند «علی‌الحساب» یا «پیش‌پرداخت» باشد:</strong> یک «آیتم باز» (Open Item) در حساب طرف حساب (مشتری یا تأمین‌کننده) ایجاد می‌کند. این آیتم نشان‌دهنده اعتبار یا بدهی شناوری است که باید بعداً در فرم <strong>«تسویه حساب» (Settlement Workbench)</strong> با فاکتورها تسویه شود.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="gl-journals">۵. نمونه اسناد حسابداری خودکار (G/L Journals)</h2>
+<p>این فرم باید اسناد زیر را به صورت خودکار ایجاد کند:</p>
+<p><strong>سناریو ۱: دریافت نقدی علی‌الحساب از مشتری (10 م ریال به صندوق)</strong></p>
+<ul>
+<li>بدهکار: <code>11020101 - صندوق مرکزی</code> (10 م)</li>
+<li>بستانکار: <code>12010101 - حساب‌های دریافتنی - مشتری الف</code> (10 م)</li>
+</ul>
+<p><strong>سناریو ۲: پرداخت هزینه مستقیم (پیک) از تنخواه (500 ه.ر)</strong></p>
+<ul>
+<li>بدهکار: <code>6201010 - هزینه پیک</code> (500 ه.ر)</li>
+<li>بستانکار: <code>11020105 - تنخواه بازرگانی</code> (500 ه.ر)</li>
+</ul>
+<p><strong>سناریو ۳: صدور چک برای تأمین‌کننده (40 م ریال)</strong></p>
+<ul>
+<li>بدهکار: <code>21010101 - حساب‌های پرداختنی - تأمین‌کننده ب</code> (40 م)</li>
+<li>بستانکار: <code>21030101 - اسناد پرداختنی</code> (40 م)
+<em>(توجه: حساب بانک هنوز بستانکار نمی‌شود تا زمان پاس شدن چک)</em></li>
+</ul>
+<p><strong>سناریو ۴: انتقال از بانک به صندوق (شارژ تنخواه - 5 م ریال)</strong></p>
+<ul>
+<li>بدهکار: <code>11020105 - تنخواه بازرگانی</code> (5 م)</li>
+<li>بستانکار: <code>11010001 - بانک ملت</code> (5 م)</li>
+</ul>
+<h1 id="settlement-clearing">مفهوم و فرم: تسویه حساب (Settlement / Clearing)</h1>
+<hr />
+<h2 id="_88">۱. مفهوم</h2>
+<p>تسویه حساب، فرآیند حیاتی «اتصال» آیتم‌های بستانکار (مانند پرداخت‌ها، پیش‌پرداخت‌ها، اعتبارات) به آیتم‌های بدهکار (مانند فاکتورها) در حساب یک طرف حساب (مشتری یا تأمین‌کننده) است.</p>
+<ul>
+<li><strong>هدف:</strong> صفر کردن مانده حساب آیتم‌های باز و تعیین وضعیت «تسویه شده» برای فاکتورها و پرداخت‌ها.</li>
+<li><strong>نیاز به تسویه (M:N):</strong> این فرآیند ضروری است زیرا ارتباط بین فاکتور و پرداخت همیشه یک به یک (1:1) نیست:<ul>
+<li><strong>چند به یک (N:1):</strong> یک مشتری ممکن است ۳ فاکتور باز را با ۱ چک پرداخت کند.</li>
+<li><strong>یک به چند (1:N):</strong> یک مشتری ممکن است ۱ فاکتور را در ۳ قسط پرداخت کند.</li>
+<li><strong>چند به چند (M:N):</strong> یک مشتری ممکن است ۲ فاکتور و بخشی از فاکتور سوم را با ۱ چک و ۱ واریز نقدی (که قبلاً علی‌الحساب پرداخت کرده) تسویه کند.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="settlement-workbench">۲. فرم: میزکار تسویه حساب (Settlement Workbench)</h2>
+<p>این فرم یک ابزار تعاملی است که به کاربر (حسابدار) اجازه می‌دهد آیتم‌های باز یک طرف حساب را مشاهده و با هم تسویه کند.</p>
+<p><strong>مسیر:</strong>
+<code>خزانه‌داری / عملیات / تسویه حساب مشتریان</code>
+<code>خزانه‌داری / عملیات / تسویه حساب تأمین‌کنندگان</code></p>
+<h3 id="ux_1">رابط کاربری (UX)</h3>
+<p>این فرم معمولاً به صورت زیر طراحی می‌شود:</p>
+<ol>
+<li><strong>انتخاب طرف حساب:</strong> کاربر ابتدا مشتری یا تأمین‌کننده مورد نظر را انتخاب می‌کند.</li>
+<li>
+<p><strong>نمایش دو ستونی:</strong> سیستم تمامی آیتم‌های باز (Open Items) آن شخص را در دو ستون نمایش می‌دهد:</p>
+<ul>
+<li>
+<p><strong>ستون ۱: بدهی‌ها (Invoices / Debits):</strong></p>
+<ul>
+<li>لیست تمام فاکتورهای فروش (برای مشتری) یا فاکتورهای خرید (برای تأمین‌کننده) که هنوز تسویه نشده‌اند.</li>
+<li>شامل: شماره فاکتور، تاریخ، مبلغ کل، مبلغ باقیمانده.</li>
+</ul>
+</li>
+<li>
+<p><strong>ستون ۲: بستانکاری‌ها (Payments / Credits):</strong></p>
+<ul>
+<li>لیست تمام پرداخت‌های «علی‌الحساب».</li>
+<li>پیش‌پرداخت‌های مرتبط.</li>
+<li>برگشت از فروش‌ها (Credit Memos).</li>
+<li>شامل: شماره سند پرداخت، تاریخ، مبلغ کل، مبلغ باقیمانده قابل تخصیص.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>فرآیند تسویه (Matching):</strong></p>
+<ul>
+<li>کاربر آیتم‌های مورد نظر از هر دو ستون را انتخاب (تیک) می‌کند.</li>
+<li><em>مثال:</em> انتخاب فاکتور ۱ (مبلغ ۱۰۰) و فاکتور ۲ (مبلغ ۵۰) از ستون ۱؛ و انتخاب پرداخت علی‌الحساب (مبلغ ۱۲۰) و پرداخت جدید (مبلغ ۳۰) از ستون ۲.</li>
+<li>مجموع بدهی انتخاب شده = ۱۵۰</li>
+<li>مجموع بستانکاری انتخاب شده = ۱۵۰</li>
+</ul>
+</li>
+<li>
+<p><strong>دکمه «تسویه» (Settle):</strong></p>
+<ul>
+<li>کاربر دکمه تسویه را می‌زند.</li>
+<li>سیستم بررسی می‌کند که مجموع دو طرف برابر باشد (یا در صورت تسویه جزئی، منطق آن رعایت شود).</li>
+<li>سیستم وضعیت فاکتورها و پرداخت‌های انتخاب شده را به «تسویه شده» (Cleared) تغییر می‌دهد و رکوردهای ارتباطی (Settlement Line) را ایجاد می‌کند.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="automatic-settlement">۳. تسویه خودکار (Automatic Settlement)</h2>
+<p>برای سادگی، سیستم می‌تواند یک دکمه «تسویه خودکار» نیز داشته باشد که بر اساس منطق FIFO (اولین فاکتور با اولین پرداخت) یا بر اساس شماره ارجاع یکسان، آیتم‌ها را به صورت خودکار تسویه کند.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
