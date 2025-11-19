@@ -40,6 +40,7 @@ nav:
               - "واگذاری چک به بانک": financial/treasury/received-check-management/deposite-check.md
               - "اعلام وصول/برگشت چک": financial/treasury/received-check-management/clearance-check.md
               - "خرج کردن چک": financial/treasury/received-check-management/endorsement-check.md
+              - "استرداد چک": financial/treasury/received-check-management/return-check.md
           - "عملیات دوره‌ای":
               - "مغایرت بانکی": financial/treasury/periodic-operations/bank-reconciliation.md
       - "حسابداری":
