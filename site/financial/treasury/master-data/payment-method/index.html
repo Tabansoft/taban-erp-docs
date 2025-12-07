@@ -18,7 +18,7 @@
         <link rel="prev" href="../checkbook/">
       
       
-        <link rel="next" href="../../transactions/payment-receipt-document/">
+        <link rel="next" href="../../received-check-management/overview/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -762,7 +762,16 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. مقدمه: روش پرداخت چیست؟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. انواع روش‌های پرداخت (The Core Logic)
     </span>
   </a>
   
@@ -771,17 +780,44 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف روش‌های پرداخت/دریافت
+      ۳. راهنمای تکمیل فرم تعریف روش پرداخت
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف روش‌های پرداخت/دریافت">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. سناریوهای عملیاتی: تأثیر تنظیمات بر فرم سند
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. سناریوهای عملیاتی: تأثیر تنظیمات بر فرم سند">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#check-issuance" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      سناریو ۱: پرداخت با چک (Check Issuance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریو ۲: دریافت با کارت‌خوان (POS Receipt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cash-deposit" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریو ۳: واریز نقدی (Cash Deposit)
     </span>
   </a>
   
@@ -789,6 +825,33 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. کنترل‌های هوشمند سیستم (System Validations)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. پرسش‌های متداول (FAQ)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. گزارش‌های کلیدی
+    </span>
+  </a>
   
 </li>
       
@@ -832,7 +895,7 @@
   
   
   <span class="md-ellipsis">
-    عملیات
+    مدیریت چک‌های دریافتی
     
   </span>
   
@@ -842,98 +905,6 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_3">
-            <span class="md-nav__icon md-icon"></span>
-            عملیات
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../transactions/payment-receipt-document/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ثبت دریافت/پرداخت
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../transactions/settlement/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    تسویه حساب
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    مدیریت چک‌های دریافتی
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1_4">
             <span class="md-nav__icon md-icon"></span>
             مدیریت چک‌های دریافتی
           </label>
@@ -1067,6 +1038,144 @@
   
   <span class="md-ellipsis">
     استرداد چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/payment-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    پرداخت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/receipt-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دریافت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/transfer-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انتقال‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/settlement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تسویه حساب
     
   </span>
   
@@ -2068,7 +2177,16 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مفهوم
+      ۱. مقدمه: روش پرداخت چیست؟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. انواع روش‌های پرداخت (The Core Logic)
     </span>
   </a>
   
@@ -2077,17 +2195,44 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. فرم: تعریف روش‌های پرداخت/دریافت
+      ۳. راهنمای تکمیل فرم تعریف روش پرداخت
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="۲. فرم: تعریف روش‌های پرداخت/دریافت">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. سناریوهای عملیاتی: تأثیر تنظیمات بر فرم سند
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. سناریوهای عملیاتی: تأثیر تنظیمات بر فرم سند">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#check-issuance" class="md-nav__link">
     <span class="md-ellipsis">
-      فیلدهای اطلاعاتی فرم
+      سناریو ۱: پرداخت با چک (Check Issuance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریو ۲: دریافت با کارت‌خوان (POS Receipt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cash-deposit" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریو ۳: واریز نقدی (Cash Deposit)
     </span>
   </a>
   
@@ -2095,6 +2240,33 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. کنترل‌های هوشمند سیستم (System Validations)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. پرسش‌های متداول (FAQ)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. گزارش‌های کلیدی
+    </span>
+  </a>
   
 </li>
       
@@ -2117,73 +2289,200 @@
   
 
 
-<h1 id="payment-methods">روش‌های پرداخت/دریافت (Payment Methods)</h1>
-<hr />
-<h2 id="_1">۱. مفهوم</h2>
-<p><strong>صندوق (Cash Box)</strong> نماینده وجوه نقد فیزیکی تحت مدیریت سازمان است. این وجوه می‌توانند شامل:</p>
+<h1 id="payment-methods">روش‌های پرداخت و دریافت (Payment Methods)</h1>
+<h2 id="_1">۱. مقدمه: روش پرداخت چیست؟</h2>
+<p>در سیستم ERP تابان، وقتی می‌خواهید پولی را دریافت یا پرداخت کنید، اولین سوال سیستم این است: <strong>«چگونه؟»</strong>
+آیا پول نقد است؟ چک است؟ کارت می‌کشید؟ یا حواله اینترنتی می‌زنید؟</p>
+<p>موجودیت <strong>«روش پرداخت» (Payment Method)</strong>، پیکربندی هوشمندی است که رفتار فرم‌های عملیاتی را کنترل می‌کند.</p>
 <ul>
-<li><strong>صندوق نقدی (Operational Cash Box)</strong></li>
-<li><strong>صندوق فروشگاهی (Cash Register)</strong></li>
-<li><strong>تنخواه (Petty Cash / Imprest Fund)</strong></li>
-<li><strong>صندوق مرکزی (Central Cash Box)</strong></li>
+<li>اگر روش را <strong>«چک»</strong> انتخاب کنید -&gt; سیستم فیلدهای "شماره چک" و "تاریخ سررسید" را نشان می‌دهد.</li>
+<li>اگر روش را <strong>«کارت‌خوان»</strong> انتخاب کنید -&gt; سیستم فیلد "شماره مرجع تراکنش" را می‌خواهد.</li>
 </ul>
-<p>باشند؛ همه‌ی این موارد در ERP تحت یک موجودیت واحد به نام <strong>Cash Box</strong> مدیریت می‌شوند، اما با <strong>نوع صندوق</strong> (Cash Box Type) از یکدیگر تفکیک می‌شوند.</p>
-<ul>
-<li><strong>هدف:</strong> استانداردسازی فرآیندها، کنترل فیلدهای اجباری در فرم «سند دریافت و پرداخت»، و استفاده در «برنامه پرداخت خودکار».</li>
-</ul>
+<p><strong>هدف:</strong> جلوگیری از شلوغی فرم‌ها و اجباری کردن فیلدهای مرتبط با هر روش.</p>
 <hr />
-<h2 id="_2">۲. فرم: تعریف روش‌های پرداخت/دریافت</h2>
-<p><strong>مسیر:</strong>
-<code>خزانه‌داری / تعاریف پایه / تنظیمات پرداخت / روش‌های پرداخت</code></p>
-<h3 id="_3">فیلدهای اطلاعاتی فرم</h3>
+<h2 id="the-core-logic">۲. انواع روش‌های پرداخت (The Core Logic)</h2>
+<p>قبل از تعریف روش‌ها، باید بدانید که زیرساخت فنی سیستم (Backend) چه رفتارهایی را پشتیبانی می‌کند. فیلد <code>MethodType</code> تعیین‌کننده منطق برنامه است:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
+<th style="text-align: left;">نوع روش (فارسی)</th>
+<th style="text-align: left;">نام فنی (System Enum)</th>
+<th style="text-align: left;">رفتار هوشمند فرم (UI Behavior)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>۱. نقد / اسکناس</strong></td>
+<td style="text-align: left;"><code>Cash</code></td>
+<td style="text-align: left;">ساده‌ترین حالت. فقط مبلغ را می‌گیرد. متصل به «صندوق‌های نقدی».</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>۲. چک (صیادی/عادی)</strong></td>
+<td style="text-align: left;"><code>Check</code></td>
+<td style="text-align: left;"><strong>پیچیده‌ترین حالت.</strong> فیلدهای شماره سریال، صیاد، سررسید و بانک را فعال می‌کند. متصل به «دسته چک» یا «صندوق اسناد».</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>۳. حواله بانکی (فیش/اینترنتی)</strong></td>
+<td style="text-align: left;"><code>WireTransfer</code> / <code>EFT</code></td>
+<td style="text-align: left;">فیلدهای شماره پیگیری (Trace No) و تاریخ واریز را اجباری می‌کند. متصل به «حساب بانکی».</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>۴. کارت‌خوان (POS)</strong></td>
+<td style="text-align: left;"><code>POS</code></td>
+<td style="text-align: left;">فیلد شماره مرجع و ترمینال را فعال می‌کند. کارمزد بانکی را محاسبه می‌کند (اگر تنظیم شده باشد).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>۵. سفته</strong></td>
+<td style="text-align: left;"><code>PromissoryNote</code></td>
+<td style="text-align: left;">شبیه چک است اما منطق صیاد و دسته چک بانکی را ندارد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>۶. خرج چک (واگذاری)</strong></td>
+<td style="text-align: left;"><code>Endorsement</code></td>
+<td style="text-align: left;">لیستی از چک‌های موجود در صندوق را باز می‌کند تا یکی را انتخاب کنید (نه اینکه چک جدید بنویسید).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2">۳. راهنمای تکمیل فرم تعریف روش پرداخت</h2>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; تعاریف پایه &gt; روش‌های پرداخت</code></p>
+<p>این فرم توسط مدیر سیستم تنظیم می‌شود تا گزینه‌های در دسترس کاربران را کنترل کند.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">عنوان فیلد</th>
+<th style="text-align: left;">نام فنی (Technical)</th>
 <th style="text-align: left;">نوع داده</th>
-<th style="text-align: left;">اجباری</th>
-<th style="text-align: left;">توضیح</th>
-<th style="text-align: left;">مثال</th>
+<th style="text-align: left;">راهنمای تکمیل و منطق سیستم</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>کد روش</strong></td>
-<td style="text-align: left;">متنی/عددی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">شناسه یکتا (مثلاً <code>C</code>, <code>P</code>, <code>N</code>).</td>
-<td style="text-align: left;"><code>P</code></td>
+<td style="text-align: left;"><code>Code</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">کد کوتاه (مثلاً <code>CHK</code> برای چک، <code>CSH</code> برای نقد).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>نام</strong></td>
-<td style="text-align: left;">متنی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><em>(اصلاحیه)</em> نام توصیفی روش.</td>
-<td style="text-align: left;"><code>انتقال پایا</code></td>
+<td style="text-align: left;"><strong>عنوان روش</strong></td>
+<td style="text-align: left;"><code>Name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">نامی که کاربر در لیست کشویی می‌بیند. <br> <em>مثال:</em> <code>صدور چک روز</code> یا <code>کارت‌خوان فروشگاه</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>نوع تراکنش</strong></td>
-<td style="text-align: left;">انتخابی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">(پرداختنی، دریافتنی، هردو، انتقال داخلی).</td>
-<td style="text-align: left;"><code>پرداختنی</code></td>
+<td style="text-align: left;"><strong>نوع رفتار</strong></td>
+<td style="text-align: left;"><code>MethodType</code></td>
+<td style="text-align: left;">Enum</td>
+<td style="text-align: left;"><strong>(حیاتی)</strong> مشخص می‌کند که این روش از چه منطقی پیروی می‌کند (طبق جدول بالا).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>طبقه‌بندی</strong></td>
-<td style="text-align: left;">انتخابی</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">(چک، حواله بانکی، نقد، ...).</td>
-<td style="text-align: left;"><code>حواله بانکی</code></td>
+<td style="text-align: left;"><strong>جهت تراکنش</strong></td>
+<td style="text-align: left;"><code>Direction</code></td>
+<td style="text-align: left;">Enum</td>
+<td style="text-align: left;">این روش کجا نمایش داده شود؟ <br> <code>Inbound</code>: فقط در دریافت‌ها (مثل کارت‌خوان). <br> <code>Outbound</code>: فقط در پرداخت‌ها (مثل صدور چک). <br> <code>Both</code>: در هر دو (مثل نقد یا حواله).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>کنترل فیلدها</strong></td>
-<td style="text-align: left;">تنظیمات</td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><em>(توضیح کامل)</em> این یک تنظیم کلیدی است که رفتار فرم «سند پرداخت» را کنترل می‌کند. مشخص می‌کند که بر اساس این روش، کدام فیلدها باید اجباری (Required)، اختیاری (Optional) یا مخفی (Hidden) باشند.</td>
-<td style="text-align: left;">مثال ۱: برای «پایا»، فیلد «شماره شبا» اجباری است. <br> مثال ۲: برای «چک»، بخش «اطلاعات دسته چک» باید فعال و اجباری شود.</td>
+<td style="text-align: left;"><strong>نیاز به شماره پیگیری</strong></td>
+<td style="text-align: left;"><code>RequireRefNo</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">اگر تیک بزنید، کاربر نمی‌تواند بدون وارد کردن "شماره فیش/ارجاع" سند را ذخیره کند.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نیاز به بانک طرف مقابل</strong></td>
+<td style="text-align: left;"><code>RequireDestBank</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">(مخصوص حواله) آیا لازم است بدانیم پول به کدام بانکِ مشتری واریز شده؟</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;"><code>IsActive</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">فعال/غیرفعال.</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="_3">۴. سناریوهای عملیاتی: تأثیر تنظیمات بر فرم سند</h2>
+<p>بیایید ببینیم این تنظیمات چطور ظاهر فرم <strong>«سند دریافت/پرداخت»</strong> را تغییر می‌دهند.</p>
+<h3 id="check-issuance">سناریو ۱: پرداخت با چک (Check Issuance)</h3>
+<p><strong>تنظیمات:</strong> روشی به نام «صدور چک» با نوع رفتار <code>Check</code> و جهت <code>Outbound</code> تعریف شده است.</p>
+<ol>
+<li><strong>کاربر:</strong> وارد فرم سند پرداخت می‌شود.</li>
+<li><strong>انتخاب:</strong> در لیست روش‌ها، <strong>«صدور چک»</strong> را انتخاب می‌کند.</li>
+<li><strong>تغییر فرم:</strong><ul>
+<li>فیلد "صندوق مبدأ" مخفی می‌شود.</li>
+<li>فیلد "حساب بانکی" ظاهر می‌شود.</li>
+<li>فیلد "دسته چک" ظاهر می‌شود.</li>
+<li>سیستم شماره سریال چک بعدی را پیشنهاد می‌دهد.</li>
+<li>فیلد "شناسه صیادی" نمایش داده می‌شود.</li>
+</ul>
+</li>
+</ol>
+<h3 id="pos-receipt">سناریو ۲: دریافت با کارت‌خوان (POS Receipt)</h3>
+<p><strong>تنظیمات:</strong> روشی به نام «کارت‌خوان ملت» با نوع رفتار <code>POS</code> و جهت <code>Inbound</code> تعریف شده است.</p>
+<ol>
+<li><strong>کاربر:</strong> وارد فرم سند دریافت می‌شود.</li>
+<li><strong>انتخاب:</strong> در لیست روش‌ها، <strong>«کارت‌خوان ملت»</strong> را انتخاب می‌کند.</li>
+<li><strong>تغییر فرم:</strong><ul>
+<li>فیلد "حساب بانکی" به صورت خودکار روی "حساب متصل به پوز ملت" قفل می‌شود.</li>
+<li>فیلد "شماره پیگیری" (RRN) <strong>اجباری</strong> می‌شود (چون در تنظیمات تیک <code>RequireRefNo</code> را زده‌اید).</li>
+<li>کاربر باید ۴ رقم آخر کارت مشتری را وارد کند (اختیاری).</li>
+</ul>
+</li>
+</ol>
+<h3 id="cash-deposit">سناریو ۳: واریز نقدی (Cash Deposit)</h3>
+<p><strong>تنظیمات:</strong> روشی به نام «نقد» با نوع رفتار <code>Cash</code> تعریف شده است.</p>
+<ol>
+<li><strong>کاربر:</strong> روش <strong>«نقد»</strong> را انتخاب می‌کند.</li>
+<li><strong>تغییر فرم:</strong><ul>
+<li>تمام فیلدهای بانکی و چک مخفی می‌شوند.</li>
+<li>فقط فیلد "انتخاب صندوق" (مثلاً صندوق فروشگاه ۱) نمایش داده می‌شود.</li>
+<li>کاربر فقط مبلغ را وارد می‌کند.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="system-validations">۵. کنترل‌های هوشمند سیستم (System Validations)</h2>
+<p>این قوانین تضمین می‌کنند که کاربر روش غلطی را انتخاب نکند:</p>
+<ol>
+<li><strong>محدودیت نوع حساب:</strong><ul>
+<li>اگر روش پرداخت <code>Check</code> باشد، کاربر فقط می‌تواند حساب‌های بانکی نوع <strong>«جاری» (Current)</strong> را انتخاب کند. (نمی‌توان از حساب پس‌انداز چک کشید).</li>
+</ul>
+</li>
+<li><strong>اجبار ارجاع:</strong><ul>
+<li>اگر روش پرداخت <code>WireTransfer</code> (حواله) باشد، سیستم اجازه ثبت بدون "شماره پیگیری" را نمی‌دهد.</li>
+</ul>
+</li>
+<li><strong>موجودی چک:</strong><ul>
+<li>در روش <code>Endorsement</code> (خرج چک)، سیستم فقط چک‌هایی را لیست می‌کند که وضعیت آن‌ها <strong>«نزد صندوق»</strong> است. چک‌های واگذار شده یا برگشتی نمایش داده نمی‌شوند.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="faq">۶. پرسش‌های متداول (FAQ)</h2>
+<p><strong>س: آیا می‌توانم روشی تعریف کنم که همزمان نقد و چک باشد؟</strong></p>
+<p><strong>پ:</strong> خیر. در هدر سند نمی‌توانید. اما در <strong>«جزئیات سند»</strong> (Payment Lines) می‌توانید چند ردیف ایجاد کنید.</p>
+<ul>
+<li><em>ردیف ۱:</em> ۱۰ میلیون تومان -&gt; روش: نقد</li>
+<li><em>ردیف ۲:</em> ۲۰ میلیون تومان -&gt; روش: چک</li>
+<li>سیستم جمع این‌ها را به عنوان مبلغ کل سند در نظر می‌گیرد.</li>
+</ul>
+<p><strong>س: روش «تهاتر» (Clearing) چگونه تعریف می‌شود؟</strong></p>
+<p><strong>پ:</strong> تهاتر معمولاً جریان نقدینگی ندارد. اما اگر می‌خواهید در این فرم باشد، می‌توانید روشی با نوع <code>Journal / Adjustment</code> تعریف کنید که به جای بانک/صندوق، یک حساب واسط را درگیر کند. (هرچند توصیه می‌شود تهاتر در فرم "تسویه حساب" انجام شود نه اینجا).</p>
+<p><strong>س: اگر کارت‌خوان من به دو حساب وصل باشد چه؟</strong></p>
+<p><strong>پ:</strong> باید دو روش پرداخت تعریف کنید:</p>
+<ol>
+<li>کارت‌خوان (حساب ملت)</li>
+<li>کارت‌خوان (حساب سامان)
+    این کار باعث می‌شود کاربر در لحظه کشیدن کارت، دقیقاً مشخص کند پول به کدام حساب رفته تا مغایرت بانکی پیش نیاید.</li>
+</ol>
+<hr />
+<h2 id="_4">۷. گزارش‌های کلیدی</h2>
+<ul>
+<li><strong>گزارش تفکیکی روش‌ها:</strong> چه مقدار از فروش امروز "نقد"، چه مقدار "کارت‌خوان" و چه مقدار "چک" بوده است؟</li>
+<li><strong>کنترل کارت‌خوان:</strong> گزارشی که تراکنش‌های ثبت شده در سیستم با روش <code>POS</code> را لیست می‌کند تا با "ستلمنت" (Settlement) دستگاه پوز مقایسه کنید.</li>
+<li><strong>چک‌های صادر شده:</strong> فیلتر کردن تمام پرداخت‌ها بر اساس روش <code>Check</code>.</li>
+</ul>
 
 
 

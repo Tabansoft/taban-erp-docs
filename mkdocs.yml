@@ -30,9 +30,6 @@ nav:
               - "حساب‌های بانکی": financial/treasury/master-data/bank-account.md
               - "دسته‌چک‌ها": financial/treasury/master-data/checkbook.md
               - "روش‌های پرداخت": financial/treasury/master-data/payment-method.md
-          - "عملیات":
-              - "ثبت دریافت/پرداخت": financial/treasury/transactions/payment-receipt-document.md
-              - "تسویه حساب": financial/treasury/transactions/settlement.md
           - "مدیریت چک‌های دریافتی":
               - "مقدمه": financial/treasury/received-check-management/overview.md
               - "دریافت چک جدید": financial/treasury/received-check-management/receipt-check.md
@@ -40,6 +37,12 @@ nav:
               - "اعلام وصول/برگشت چک": financial/treasury/received-check-management/clearance-check.md
               - "خرج کردن چک": financial/treasury/received-check-management/endorsement-check.md
               - "استرداد چک": financial/treasury/received-check-management/return-check.md
+          - "عملیات":
+              - "پرداخت‌ها": financial/treasury/operations/payment-voucher.md
+              - "دریافت‌ها": financial/treasury/operations/receipt-voucher.md
+              - "انتقال‌ها": financial/treasury/operations/transfer-voucher.md
+              - "تسویه حساب": financial/treasury/operations/settlement.md
+
           - "عملیات دوره‌ای":
               - "مغایرت بانکی": financial/treasury/periodic-operations/bank-reconciliation.md
       - "حسابداری":
