@@ -49,6 +49,10 @@
       
     
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -3416,627 +3420,701 @@
     MixedLogic --&gt; Row1[ردیف ۱: فاکتور]
     MixedLogic --&gt; Row2[ردیف ۲: سفارش]
     end</code></pre></h2>
-<h1 id="deductions-management">تب ۲: مدیریت کسورات (Deductions Management)</h1>
-<h2 id="_15">۱. فلسفه و مشکل بیزینس</h2>
-<p>در فروش‌های خرد (B2C)، وقتی شما یک نوشابه ۱۰ هزار تومانی می‌خرید، دقیقا ۱۰ هزار تومان کارت می‌کشید.
-اما در فروش‌های کلان و پیمانکاری، فرمول متفاوت است:
-$$\text{پول نقد دریافتی} \neq \text{مبلغ فاکتور}$$</p>
-<p>معمولاً کارفرما (مشتری) طبق قانون یا قرارداد، بخشی از پول فاکتور را نگه می‌دارد.</p>
+<h2 id="-deductions-management">۴-۳. بخش سوم: تب مدیریت کسورات (Deductions Management)</h2>
+<p><strong>موقعیت:</strong> تب دوم (معمولاً کنار تب تخصیص).</p>
+<p><strong>هدف:</strong> مدیریت اختلاف میان "پول دریافتی" و "مبلغ فاکتور".</p>
+<h3 id="_15">۱. فلسفه و صورت مسئله: "پول کجاست؟"</h3>
+<p>در فروش‌های خرد (B2C)، معادله ساده است: <code>مبلغ فاکتور = مبلغ پرداخت</code>.
+اما در فروش‌های سازمانی (B2B) و پیمانکاری، فرمول تغییر می‌کند:</p>
+<div class="arithmatex">\[\text{پول نقد دریافتی (Bank)} \neq \text{مبلغ تسویه شده (Settled Amount)}\]</div>
+<p>معمولاً کارفرما طبق قرارداد، بخشی از پول را کسر می‌کند.</p>
 <ul>
 <li><strong>سوال:</strong> اگر فاکتور ۱۰۰ میلیون است و مشتری ۸۰ میلیون واریز کرده، آن ۲۰ میلیون کجاست؟</li>
-<li><strong>پاسخ غلط:</strong> مشتری هنوز ۲۰ میلیون بدهکار است. (خیر، مشتری تسویه کرده است).</li>
-<li><strong>پاسخ صحیح:</strong> آن ۲۰ میلیون تبدیل به یک <strong>دارایی دیگر</strong> (مثل طلب از بیمه یا اداره مالیات) شده است. تب کسورات وظیفه ثبت این "تبدیل" را دارد.</li>
+<li><strong>پاسخ سیستم:</strong> آن ۲۰ میلیون "سوخت" نشده (مگر در تخفیف)، بلکه <strong>تغییر ماهیت</strong> داده است. وظیفه تب کسورات، ثبت این "تبدیل دارایی" است (مثلاً تبدیل "طلب از مشتری" به "طلب از اداره مالیات").</li>
 </ul>
 <hr />
-<h2 id="_16">۲. انواع کسورات و ماهیت حسابداری آن‌ها</h2>
-<p>سیستم باید انواع زیر را به صورت پیش‌فرض (و قابل تعریف) پشتیبانی کند. نکته کلیدی <strong>«حساب معین» (GL Account)</strong> پشت هر نوع است:</p>
+<h3 id="configuration">۲. انواع کسورات و پیکربندی (Configuration)</h3>
+<p>سیستم باید جدولی برای تعریف انواع کسورات داشته باشد. هر نوع کسر، به یک <strong>حساب معین (GL Account)</strong> خاص متصل است.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نوع کسورات</th>
-<th style="text-align: left;">مثال درصد</th>
+<th style="text-align: left;">عنوان کسورات</th>
 <th style="text-align: left;">ماهیت حسابداری</th>
-<th style="text-align: left;">توضیح برای کاربر و تحلیل‌گر</th>
+<th style="text-align: left;">حساب معین پیشنهادی</th>
+<th style="text-align: left;">توضیح بیزینسی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>۱. سپرده بیمه (SSO Retention)</strong></td>
-<td style="text-align: left;">معمولاً ۱۶.۶۷٪ یا ۵٪</td>
-<td style="text-align: left;"><strong>دارایی جاری</strong> <br> <em>(سپرده بیمه نزد پیمانکاران)</em></td>
-<td style="text-align: left;">کارفرما این پول را نگه می‌دارد تا زمانی که ما «مفاصاحساب بیمه» را از تامین اجتماعی بگیریم و به او بدهیم. پس پول ما سوخت نشده، فقط گروگان است.</td>
+<td style="text-align: left;"><strong>دارایی جاری</strong></td>
+<td style="text-align: left;">سپرده‌های حسن انجام کار/بیمه</td>
+<td style="text-align: left;">کارفرما پول را نگه می‌دارد تا زمانی که پیمانکار "مفاصاحساب بیمه" را ارائه کند. (پول گروگان است).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۲. مالیات تکلیفی (Withholding Tax)</strong></td>
-<td style="text-align: left;">معمولاً ۳٪ یا ۵٪</td>
-<td style="text-align: left;"><strong>دارایی جاری</strong> <br> <em>(پیش‌پرداخت مالیات)</em></td>
-<td style="text-align: left;">کارفرما این پول را مستقیماً به اداره دارایی می‌دهد. فیش آن برای ما حکم "پول نقد" را دارد چون از مالیات پایان سال ما کم می‌شود.</td>
+<td style="text-align: left;"><strong>۲. مالیات تکلیفی (Tax Withholding)</strong></td>
+<td style="text-align: left;"><strong>دارایی جاری</strong></td>
+<td style="text-align: left;">پیش‌پرداخت مالیات</td>
+<td style="text-align: left;">کارفرما پول را مستقیم به اداره دارایی می‌دهد. فیش آن برای ما حکم پول نقد را دارد (چون از مالیات سالانه کم می‌شود).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۳. حسن انجام کار (Good Performance)</strong></td>
-<td style="text-align: left;">معمولاً ۱۰٪</td>
-<td style="text-align: left;"><strong>دارایی غیرجاری</strong> <br> <em>(سپرده حسن انجام کار)</em></td>
-<td style="text-align: left;">کارفرما این مبلغ را تا پایان دوره گارانتی (مثلاً ۱ سال) نگه می‌دارد. اگر دستگاه خراب نشد، پول را پس می‌دهد.</td>
+<td style="text-align: left;"><strong>۳. حسن انجام کار (Retention)</strong></td>
+<td style="text-align: left;"><strong>دارایی غیرجاری</strong></td>
+<td style="text-align: left;">سپرده حسن انجام کار</td>
+<td style="text-align: left;">کسر ۱۰٪ مبلغ تا پایان دوره گارانتی (مثلاً ۱ سال).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۴. تخفیف نقدی (Cash Discount)</strong></td>
-<td style="text-align: left;">توافقی</td>
-<td style="text-align: left;"><strong>هزینه</strong> <br> <em>(تخفیفات نقدی فروش)</em></td>
-<td style="text-align: left;">این تنها موردی است که پول واقعاً "می‌سوزد". ما برای تسریع در دریافت پول، مبلغی را می‌بخشیم.</td>
+<td style="text-align: left;"><strong>۴. تخفیف نقدی (Discount)</strong></td>
+<td style="text-align: left;"><strong>هزینه</strong></td>
+<td style="text-align: left;">تخفیفات نقدی فروش</td>
+<td style="text-align: left;">تنها موردی که پول واقعاً از بین می‌رود (هزینه می‌شود) تا نقدینگی سریع‌تر جذب شود.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>۵. جریمه دیرکرد (Penalty)</strong></td>
-<td style="text-align: left;">متغیر</td>
-<td style="text-align: left;"><strong>هزینه</strong> <br> <em>(هزینه جرایم قراردادی)</em></td>
-<td style="text-align: left;">اگر کالا را دیر تحویل داده باشیم و کارفرما جریمه کم کرده باشد.</td>
+<td style="text-align: left;"><strong>هزینه</strong></td>
+<td style="text-align: left;">هزینه‌های متفرقه / جرایم</td>
+<td style="text-align: left;">جریمه بابت تاخیر در تحویل کالا/پروژه.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>۶. کارمزد بانکی (Bank Charge)</strong></td>
-<td style="text-align: left;">مبلغی</td>
-<td style="text-align: left;"><strong>هزینه</strong> <br> <em>(هزینه خدمات بانکی)</em></td>
-<td style="text-align: left;">وقتی مشتری هزینه حواله پایا/ساتنا را از اصل پول کم می‌کند.</td>
+<td style="text-align: left;"><strong>هزینه</strong></td>
+<td style="text-align: left;">هزینه خدمات بانکی</td>
+<td style="text-align: left;">کسر کارمزد انتقال وجه توسط بانک واسط.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="walkthrough">۳. سناریوی جامع و مثال عددی (Walkthrough)</h2>
-<p>فرض کنید شرکت "تابان" یک صورت‌وضعیت (فاکتور) به مبلغ <strong>۱,۰۰۰,۰۰۰,۰۰۰ ریال (یک میلیارد)</strong> برای "پالایشگاه تهران" صادر کرده است.
-پالایشگاه مبالغ زیر را کسر و مابقی را واریز می‌کند:</p>
-<ol>
-<li><strong>بیمه:</strong> ۱۶۷,۰۰۰,۰۰۰ ریال (۱۶.۶۷٪)</li>
-<li><strong>مالیات:</strong> ۵۰,۰۰۰,۰۰۰ ریال (۵٪)</li>
-<li><strong>حسن انجام کار:</strong> ۱۰۰,۰۰۰,۰۰۰ ریال (۱۰٪)</li>
-<li><strong>تخفیف:</strong> ۳,۰۰۰,۰۰۰ ریال (گرد کردن مبلغ)</li>
-</ol>
-<p><strong>محاسبه:</strong>
-<code>۱۰۰۰ (فاکتور) - ۱۶۷ - ۵۰ - ۱۰۰ - ۳ = ۶۸۰ میلیون ریال.</code>
-پالایشگاه یک چک <strong>۶۸۰ میلیون تومانی</strong> می‌دهد.</p>
-<h3 id="_17">نحوه ثبت در سیستم (توسط کاربر)</h3>
-<ol>
-<li><strong>هدر:</strong> کاربر مبلغ دریافتی را <strong>۶۸۰,۰۰۰,۰۰۰</strong> وارد می‌کند. (چون نقدینگی واقعی این است).</li>
-<li><strong>تب ۱ (تخصیص):</strong> کاربر فاکتور یک میلیاردی را انتخاب می‌کند. در ستون "مبلغ تخصیص"، عدد <strong>۱,۰۰۰,۰۰۰,۰۰۰</strong> را وارد می‌کند.<ul>
-<li><em>هشدار سیستم:</em> "شما می‌خواهید ۱ میلیارد بدهی را پاک کنید، اما فقط ۶۸۰ میلیون پول دادید. ۳۲۰ میلیون اختلاف دارید!"</li>
+<h3 id="walkthrough">۳. سناریوی عملیاتی جامع (Walkthrough)</h3>
+<p><strong>سناریو:</strong> شرکت "تابان" صورت‌وضعیتی به مبلغ <strong>۱ میلیارد ریال</strong> برای "پالایشگاه تهران" صادر کرده است.
+پالایشگاه پس از اعمال کسورات قانونی و قراردادی، مبلغ <strong>۶۸۰ میلیون ریال</strong> واریز می‌کند.</p>
+<h4 id="_16">گام ۱: ثبت هدر (واقعیت بانکی)</h4>
+<p>کاربر در هدر سند، دقیقاً مبلغی که به حساب نشسته را وارد می‌کند:</p>
+<ul>
+<li><strong>مبلغ دریافتی:</strong> ۶۸۰,۰۰۰,۰۰۰ ریال</li>
 </ul>
-</li>
-<li><strong>تب ۲ (کسورات):</strong> کاربر اختلاف ۳۲۰ میلیونی را به ریز وارد می‌کند:</li>
-</ol>
+<h4 id="_17">گام ۲: تب تخصیص (واقعیت تجاری)</h4>
+<p>کاربر فاکتور ۱ میلیاردی را انتخاب می‌کند و می‌گوید "کل این فاکتور باید تسویه شود".</p>
+<ul>
+<li><strong>مبلغ تخصیص:</strong> ۱,۰۰۰,۰۰۰,۰۰۰ ریال</li>
+<li><em>وضعیت:</em> سیستم در این لحظه خطا دارد (تراز نیست): <em>"شما ۳۲۰ میلیون ریال کسری دارید!"</em></li>
+</ul>
+<h4 id="_18">گام ۳: تب کسورات (پل زدن روی شکاف)</h4>
+<p>کاربر اختلاف ۳۲۰ میلیونی را با جزئیات پر می‌کند:</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">ردیف</th>
 <th style="text-align: left;">نوع کسورات</th>
-<th style="text-align: left;">حساب معین (پیشنهاد سیستم)</th>
 <th style="text-align: left;">مبلغ (ریال)</th>
+<th style="text-align: left;">حساب معین (اتوماتیک)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
-<td style="text-align: left;">سپرده بیمه</td>
-<td style="text-align: left;">حساب سپرده‌های بیمه</td>
+<td style="text-align: left;">سپرده بیمه (۱۶.۶۷٪)</td>
 <td style="text-align: left;">۱۶۷,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">۱۱۵۰۱ (سپرده بیمه)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
-<td style="text-align: left;">مالیات تکلیفی</td>
-<td style="text-align: left;">حساب پیش‌پرداخت مالیات</td>
+<td style="text-align: left;">مالیات تکلیفی (۵٪)</td>
 <td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">۱۱۵۰۲ (پیش‌پرداخت مالیات)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۳</td>
-<td style="text-align: left;">حسن انجام کار</td>
-<td style="text-align: left;">حساب سپرده حسن انجام کار</td>
+<td style="text-align: left;">حسن انجام کار (۱۰٪)</td>
 <td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">۱۱۵۰۵ (سپرده حسن انجام کار)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۴</td>
-<td style="text-align: left;">تخفیف</td>
-<td style="text-align: left;">هزینه تخفیفات</td>
+<td style="text-align: left;">تخفیف (رندینگ)</td>
 <td style="text-align: left;">۳,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">۶۰۵۰۰ (هزینه تخفیف)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>جمع</strong></td>
 <td style="text-align: left;">--</td>
-<td style="text-align: left;">--</td>
 <td style="text-align: left;"><strong>۳۲۰,۰۰۰,۰۰۰</strong></td>
+<td style="text-align: left;">--</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li><strong>تب ۳ (دریافت):</strong> چک ۶۸۰ میلیونی ثبت می‌شود.</li>
-</ol>
-<p><strong>نتیجه معادله تراز:</strong>
-<code>۱۰۰۰ (تخصیص) = ۶۸۰ (چک) + ۳۲۰ (کسورات)</code> ✅</p>
+<h4 id="_19">گام ۴: تراز نهایی</h4>
+<p>سیستم چک می‌کند:</p>
+<div class="arithmatex">\[۶۸۰ (\text{دریافت}) + ۳۲۰ (\text{کسورات}) = ۱۰۰۰ (\text{تسویه فاکتور})\]</div>
+<p>معادله برقرار است ✅. سند آماده ثبت است.</p>
 <hr />
-<h2 id="_18">۴. منطق فنی و دیتابیس (برای برنامه‌نویس)</h2>
-<h3 id="-deductiontypes">۴-۱. جدول تنظیمات انواع کسورات (<code>DeductionTypes</code>)</h3>
-<p>برای اینکه کاربر هر بار حساب معین را دستی انتخاب نکند، باید یک جدول تنظیمات داشته باشیم:</p>
+<h3 id="compound-journal-entry">۴. اثر حسابداری: سند مرکب (Compound Journal Entry)</h3>
+<p>این بخش مهم‌ترین خروجی سیستم برای واحد مالی است. سیستم یک سند چند سطری صادر می‌کند که بدهی مشتری را صفر کرده و دارایی‌ها را تفکیک می‌کند:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">Title (عنوان)</th>
-<th style="text-align: left;">DefaultGLAccount (حساب معین پیش‌فرض)</th>
-<th style="text-align: left;">IsExpense (آیا هزینه است؟)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">سپرده بیمه</td>
-<td style="text-align: left;">10501 (دارایی)</td>
-<td style="text-align: left;">False</td>
-</tr>
-<tr>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">تخفیف نقدی</td>
-<td style="text-align: left;">50200 (هزینه)</td>
-<td style="text-align: left;">True</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-">۴-۲. رفتار فیلدها در تب کسورات</h3>
-<ul>
-<li><strong>نوع کسورات:</strong> Dropdown (از جدول بالا می‌خواند).</li>
-<li><strong>حساب معین:</strong> به محض انتخاب نوع، حساب پیش‌فرض پر می‌شود اما کاربر می‌تواند آن را عوض کند.</li>
-<li><strong>مبلغ:</strong> دستی وارد می‌شود.</li>
-<li><strong>شرح:</strong> اختیاری (برای توضیحات تکمیلی مثل "کسر بابت عدم ارائه کلاه ایمنی").</li>
-</ul>
-<hr />
-<h2 id="gl-entry">۵. سند حسابداری اتوماتیک (GL Entry)</h2>
-<p>این بخش نشان می‌دهد چرا این تب حیاتی است. سیستم به جای یک ثبت ساده، یک سند مرکب (Compound Entry) می‌زند:</p>
-<p><strong>آرتیکل سند:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">ماهیت</th>
-<th style="text-align: left;">نام حساب</th>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">شرح حساب</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">تحلیل</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;">موجودی بانک (چک)</td>
-<td style="text-align: left;">680,000,000</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">پول واقعی</td>
+<td style="text-align: left;">۱۰۱</td>
+<td style="text-align: left;"><strong>بانک / صندوق</strong> (نقد)</td>
+<td style="text-align: left;">۶۸۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;">سپرده بیمه نزد کارفرما</td>
-<td style="text-align: left;">167,000,000</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">طلب ما از بیمه</td>
+<td style="text-align: left;">۱۱۵</td>
+<td style="text-align: left;"><strong>سپرده بیمه</strong> (دارایی)</td>
+<td style="text-align: left;">۱۶۷,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;">پیش‌پرداخت مالیات</td>
-<td style="text-align: left;">50,000,000</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">طلب ما از دارایی</td>
+<td style="text-align: left;">۱۱۵</td>
+<td style="text-align: left;"><strong>پیش‌پرداخت مالیات</strong> (دارایی)</td>
+<td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;">سپرده حسن انجام کار</td>
-<td style="text-align: left;">100,000,000</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">طلب بلندمدت ما</td>
+<td style="text-align: left;">۱۱۵</td>
+<td style="text-align: left;"><strong>سپرده حسن انجام کار</strong> (دارایی)</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;">هزینه</td>
-<td style="text-align: left;">هزینه تخفیفات</td>
-<td style="text-align: left;">3,000,000</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">هزینه شناسایی شده</td>
+<td style="text-align: left;">۶۰۵</td>
+<td style="text-align: left;"><strong>هزینه تخفیفات</strong> (هزینه)</td>
+<td style="text-align: left;">۳,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;"><strong>حساب‌های دریافتنی (پالایشگاه)</strong></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>1,000,000,000</strong></td>
-<td style="text-align: left;"><strong>تسویه کامل بدهی</strong></td>
+<td style="text-align: left;">۱۲۰</td>
+<td style="text-align: left;"><strong>حساب دریافتنی - پالایشگاه</strong></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;"><strong>۱,۰۰۰,۰۰۰,۰۰۰</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>نکته نهایی:</strong> اگر تب کسورات وجود نداشت، حسابدار مجبور بود فقط ۶۸۰ میلیون را سند بزند و حساب پالایشگاه ۳۲۰ میلیون <strong>بدهکار کاذب</strong> می‌ماند که بعداً باید با سندهای دستی اصلاح می‌شد. این تب، حسابداری را اتوماتیک و دقیق می‌کند.</p>
 <hr />
-<p>این بخش، <strong>«ویترین نقدینگی»</strong> سیستم است. پس از اینکه مشخص کردیم پول بابت کدام فاکتور است (تب ۱) و چقدر کسورات داشته (تب ۲)، در <strong>تب ۳</strong> باید فیزیکِ پول را تعیین تکلیف کنیم.</p>
-<p>در واقع، این تب پاسخ به سوال مدیر مالی است: <em>"این پولی که ثبت کردی، الان دقیقاً کجاست؟ در گاوصندوق است؟ در بانک نشسته؟ یا یک کاغذ (چک) است که ۶ ماه دیگر پول می‌شود؟"</em></p>
+<h3 id="developer-notes_1">۵. نکات فنی و پیاده‌سازی (Developer Notes)</h3>
+<h4 id="-deductiontypes">۵-۱. جدول <code>DeductionTypes</code></h4>
+<p>جدولی برای تعریف انواع کسورات توسط ادمین مالی:</p>
+<div class="highlight"><pre><span></span><code><span class="k">TABLE</span><span class="w"> </span><span class="n">DeductionTypes</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">ID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">PK</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Title</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="w">       </span><span class="c1">-- عنوان (مثلاً بیمه)</span>
+<span class="w">    </span><span class="n">GLAccountID</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">           </span><span class="c1">-- حساب معین پیش‌فرض</span>
+<span class="w">    </span><span class="n">IsExpense</span><span class="w"> </span><span class="nb">BIT</span><span class="p">,</span><span class="w">             </span><span class="c1">-- آیا هزینه است؟ (جهت گزارش‌دهی)</span>
+<span class="w">    </span><span class="n">DefaultPercent</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="w">     </span><span class="c1">-- درصد پیش‌فرض (اختیاری، جهت محاسبه اتوماتیک)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h4 id="-auto-calculate-logic">۵-۲. لاجیک محاسبه خودکار (Auto-Calculate Logic)</h4>
+<p>در تب کسورات، اگر کاربر نوع "بیمه" را انتخاب کرد، سیستم می‌تواند به صورت هوشمند:</p>
+<ol>
+<li>مبلغ فاکتورهای انتخاب شده در تب تخصیص را جمع بزند (Base Amount).</li>
+<li>درصد بیمه (۱۶.۶۷٪) را در آن ضرب کند.</li>
+<li>عدد پیشنهادی را در فیلد مبلغ قرار دهد (کاربر می‌تواند تغییر دهد).</li>
+</ol>
+<h4 id="-validation-rule">۵-۳. قانون اعتبارسنجی (Validation Rule)</h4>
+<p>سیستم نباید اجازه <code>Post</code> شدن سند را بدهد مگر اینکه معادله زیر دقیقاً برقرار باشد:</p>
+<div class="arithmatex">\[(\text{Header Total Amount}) + (\text{Sum of Deductions}) = (\text{Sum of Allocated Invoices})\]</div>
+<p>اگر حتی ۱ ریال اختلاف باشد، سند تراز نیست و ثبت حسابداری آن خطا خواهد داد.</p>
 <hr />
-<h1 id="payment-instruments">تب ۳: روش‌های دریافت (Payment Instruments)</h1>
-<h2 id="_19">۱. فلسفه و منطق حاکم</h2>
-<p>این تب تعیین‌کننده <strong>«سمت بدهکار سند» (Debit Side)</strong> است.
-برخلاف تب ۱ و ۲ که از حساب مشتری (بستانکار) کم می‌کردند، این تب دارایی‌های نقد و شبه‌نقد ما را زیاد می‌کند.</p>
-<h3 id="golden-rule">قانون طلایی (Golden Rule)</h3>
-<p>سیستم باید یک اعتبارسنجی سخت‌گیرانه داشته باشد:</p>
-<blockquote>
-<p><strong>جمع مبالغ ردیف‌های این تب = مبلغ کل دریافتی (Total Receipt Amount) در هدر</strong></p>
-</blockquote>
-<p>اگر مبلغ هدر ۱۰۰ میلیون است، کاربر نمی‌تواند اینجا ۹۰ میلیون چک و ۵ میلیون نقد ثبت کند. باید دقیقاً ۱۰۰ میلیون را توجیه کند.</p>
+<h2 id="-payment-instruments">۴-۴. بخش چهارم: تب روش‌های دریافت (Payment Instruments)</h2>
+<p><strong>موقعیت:</strong> تب سوم (آخرین مرحله ورود اطلاعات).</p>
+<p><strong>هدف:</strong> تعیین ماهیت دارایی ورودی و مشخص کردن سمت <strong>بدهکار (Debit Side)</strong> سند حسابداری.</p>
+<h3 id="_20">۱. فلسفه و منطق حاکم: "پول نقد یا کاغذ مدت‌دار؟"</h3>
+<p>برخلاف تب‌های قبلی که روی کاهش بدهی مشتری (بستانکار) تمرکز داشتند، این تب بر <strong>افزایش دارایی شرکت</strong> تمرکز دارد.</p>
+<ul>
+<li>
+<p><strong>قانون طلایی (Golden Rule):</strong> سیستم یک شرط اعتبارسنجی سخت‌گیرانه دارد:</p>
+<div class="arithmatex">\[(\text{جمع مبالغ ردیف‌های تب ۳}) = (\text{Total Receipt Amount در هدر})\]</div>
+</li>
+</ul>
+<p>اگر کاربر در هدر ادعا کرده ۱۰۰ میلیون دریافت کرده، باید در این تب دقیقاً ۱۰۰ میلیون را با ترکیبی از چک، نقد و حواله توجیه کند.</p>
 <hr />
-<h2 id="instrument-types">۲. انواع ابزار پرداخت (Instrument Types)</h2>
-<p>سیستم باید ۴ روش اصلی را پشتیبانی کند. با انتخاب هر روش، فیلدهای خاص آن ظاهر می‌شوند:</p>
-<h3 id="cheque-pdc">الف) چک دریافتی (Cheque / PDC)</h3>
-<p><strong>پیچیده‌ترین و مهم‌ترین نوع در ایران.</strong> چک، "پول" نیست؛ بلکه "اسناد دریافتنی" است.</p>
+<h3 id="instrument-types">۲. انواع ابزار پرداخت (Instrument Types)</h3>
+<p>سیستم ۴ روش اصلی پرداخت را پشتیبانی می‌کند که هر کدام فیلدها و رفتار حسابداری خاص خود را دارند:</p>
+<h4 id="cheque-pdc">الف) چک دریافتی (Cheque / PDC)</h4>
+<p>مهم‌ترین و حساس‌ترین روش در بازار ایران. چک، "پول" نیست؛ بلکه "سند تجاری" است.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
-<th style="text-align: left;">الزامی</th>
-<th style="text-align: left;">توضیحات و منطق سیستم</th>
+<th style="text-align: left;">فیلد</th>
+<th style="text-align: left;">وضعیت</th>
+<th style="text-align: left;">منطق و کنترل سیستمی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>مبلغ چک</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">مبلغ روی برگه چک.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">مبلغ روی برگه.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>شناسه صیادی</strong></td>
-<td style="text-align: left;"><strong>بله</strong></td>
-<td style="text-align: left;"><code>SayadID</code>. فیلد ۱۶ رقمی. <strong>کنترل:</strong> سیستم باید با الگوریتم «لهم» چک کند و همچنین بررسی کند این چک قبلاً در سیستم ثبت نشده باشد (جلوگیری از تقلب).</td>
+<td style="text-align: left;"><strong>الزامی</strong></td>
+<td style="text-align: left;"><code>SayadID</code> (۱۶ رقمی). <strong>کنترل:</strong> بررسی الگوریتم Luhn و یکتایی در سیستم (جلوگیری از ثبت تکراری).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>تاریخ سررسید</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><code>DueDate</code>. تاریخ نقد شدن چک. بسیار حیاتی برای گزارش "جریان نقدینگی" (Cash Flow).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>شماره سریال</strong></td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">شماره قدیمی چک (سری/سریال) برای بایگانی فیزیکی.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;"><code>DueDate</code>. حیاتی برای گزارش جریان نقدینگی (Cash Flow).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>بانک و شعبه</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">بانک صادرکننده (مثلاً صادرات شعبه بازار).</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">نام بانک صادرکننده.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>صاحب حساب</strong></td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">نام شخصی که چک را امضا کرده. (مفید برای وقتی که مشتری، چکِ شخص ثالث (خرج شده) به ما می‌دهد).</td>
+<td style="text-align: left;">اختیاری</td>
+<td style="text-align: left;">نام صاحب چک (مفید برای چک‌های خرج شده/شخص ثالث).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>صندوق مقصد</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">این برگه چک فیزیکی در کدام گاوصندوق/کشوی شرکت نگهداری می‌شود؟</td>
+<td style="text-align: left;"><strong>محل نگهداری</strong></td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">چک فیزیکی در کدام صندوق/گاوصندوق قرار می‌گیرد؟</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bank-transfer">ب) واریز بانکی / حواله (Bank Transfer)</h3>
-<p>پول‌هایی که با ساتنا، پایا، کارت‌به‌کارت یا واریز فیش نقدی به حساب شرکت می‌آیند.</p>
+<h4 id="bank-transfer">ب) واریز بانکی / حواله (Bank Transfer)</h4>
+<p>پول‌هایی که با پایا، ساتنا، کارت‌به‌کارت یا فیش نقدی به حساب شرکت می‌آیند.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
-<th style="text-align: left;">الزامی</th>
-<th style="text-align: left;">توضیحات و منطق سیستم</th>
+<th style="text-align: left;">فیلد</th>
+<th style="text-align: left;">وضعیت</th>
+<th style="text-align: left;">منطق و کنترل سیستمی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>مبلغ واریزی</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">مبلغی که دقیقاً به حساب نشسته است.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">مبلغ دقیق واریز شده.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>حساب مقصد</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><code>TargetBankAccount</code>. پول به کدام حساب شرکت واریز شده؟ (مثلاً جاری ملت).</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">پول به کدام حساب بانکی شرکت نشسته است؟</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>شماره پیگیری</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><code>TraceNo</code>. شماره ارجاع/فیش. <strong>کنترل:</strong> یکتایی شماره پیگیری در آن بانک خاص.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;"><code>TraceNo</code>. <strong>کنترل:</strong> بررسی یکتایی در آن بانک خاص.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>تاریخ مؤثر</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">تاریخی که پول در پرینت بانک دیده می‌شود (گاهی با تاریخ ثبت فرق دارد).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>شبای واریزکننده</strong></td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">برای کنترل‌های پولشویی و اطمینان از اینکه پول از حساب خود مشتری آمده است.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">تاریخی که پول در پرینت بانک دیده می‌شود.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="pos">ج) دستگاه کارت‌خوان (POS)</h3>
-<p>فروش‌های حضوری یا تسویه در محل.</p>
+<h4 id="pos">ج) دستگاه کارت‌خوان (POS)</h4>
+<p>فروش‌های حضوری یا تسویه در محل با کارت بانکی.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
-<th style="text-align: left;">الزامی</th>
-<th style="text-align: left;">توضیحات و منطق سیستم</th>
+<th style="text-align: left;">فیلد</th>
+<th style="text-align: left;">وضعیت</th>
+<th style="text-align: left;">منطق و کنترل سیستمی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>مبلغ تراکنش</strong></td>
-<td style="text-align: left;">بله</td>
+<td style="text-align: left;">الزامی</td>
 <td style="text-align: left;">مبلغ کشیده شده.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>ترمینال پوز</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">انتخاب دستگاه پوز. (هر پوز در تنظیمات به یک حساب بانکی متصل است).</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">انتخاب دستگاه (اتصال خودکار به حساب بانکی متصل).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>شماره مرجع</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><code>RRN</code>. کد ۱۲ رقمی روی رسید کاغذی پوز.</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;"><code>RRN</code>. کد ۱۲ رقمی روی رسید کاغذی.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>کارمزد شاپرک</strong></td>
-<td style="text-align: left;">خیر</td>
-<td style="text-align: left;">(جدید) مبلغی که شاپرک از ما کم کرده (اگر تنظیم شده باشد که کارمزد را جدا ثبت کنیم).</td>
+<td style="text-align: left;"><strong>کارمزد</strong></td>
+<td style="text-align: left;">سیستمی</td>
+<td style="text-align: left;">محاسبه اتوماتیک کارمزد شاپرک (در صورت تنظیم).</td>
 </tr>
 </tbody>
 </table>
-<h3 id="cash">د) دریافت نقدی (Cash)</h3>
-<p>دریافت اسکناس (ریال/دلار).</p>
+<h4 id="cash">د) دریافت نقدی (Cash)</h4>
+<p>دریافت فیزیکی اسکناس (ریال/دلار).</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نام فیلد</th>
-<th style="text-align: left;">الزامی</th>
-<th style="text-align: left;">توضیحات و منطق سیستم</th>
+<th style="text-align: left;">فیلد</th>
+<th style="text-align: left;">وضعیت</th>
+<th style="text-align: left;">منطق و کنترل سیستمی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>مبلغ</strong></td>
-<td style="text-align: left;">بله</td>
+<td style="text-align: left;">الزامی</td>
 <td style="text-align: left;">ارزش اسکناس‌ها.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>صندوق مقصد</strong></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;"><code>TargetSafe</code>. پول در کدام صندوق (تنخواه) قرار گرفت؟</td>
+<td style="text-align: left;">الزامی</td>
+<td style="text-align: left;">پول در کدام صندوق (Safe) قرار گرفت؟</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="complex-scenario">۳. مثال جامع ترکیبی (Complex Scenario)</h2>
-<p>فرض کنید شرکت "فولاد مبارکه" باید <strong>۱ میلیارد تومان</strong> به ما بدهد.
-مسئول مالی آن‌ها می‌گوید: "۵۰۰ تومن رو چک میدم برای ۲ ماه دیگه، ۳۰۰ تومن رو الان پایا می‌کنم، ۲۰۰ تومن هم کارت می‌کشم."</p>
-<p><strong>نحوه ثبت در تب ۳:</strong></p>
-<p><strong>ردیف ۱ (چک):</strong></p>
-<ul>
-<li><strong>نوع:</strong> چک دریافتی</li>
-<li><strong>مبلغ:</strong> ۵,۰۰۰,۰۰۰,۰۰۰ ریال</li>
-<li><strong>صیاد:</strong> ۱۲۳۴...</li>
-<li><strong>سررسید:</strong> ۱۴۰۳/۱۱/۲۰</li>
-<li><strong>محل:</strong> صندوق امانات شرکت</li>
+<h3 id="complex-instrument-mix">۳. سناریوی جامع ترکیبی (Complex Instrument Mix)</h3>
+<p><strong>سناریو:</strong> "فولاد مبارکه" باید <strong>۱ میلیارد تومان</strong> پرداخت کند. مسئول مالی آن‌ها می‌گوید: "۵۰۰ میلیون چک ۲ ماهه، ۳۰۰ میلیون پایا، ۲۰۰ میلیون هم کارت می‌کشم."</p>
+<p><strong>ثبت در سیستم:</strong></p>
+<ol>
+<li><strong>ردیف ۱ (چک):</strong><ul>
+<li>نوع: چک دریافتی | مبلغ: ۵۰۰,۰۰۰,۰۰۰ | سررسید: ۱۴۰۳/۱۱/۲۰ | صیاد: ۱۲۳۴...</li>
 </ul>
-<p><strong>ردیف ۲ (حواله):</strong></p>
-<ul>
-<li><strong>نوع:</strong> واریز بانکی</li>
-<li><strong>مبلغ:</strong> ۳,۰۰۰,۰۰۰,۰۰۰ ریال</li>
-<li><strong>حساب:</strong> جاری بانک تجارت</li>
-<li><strong>شماره پیگیری:</strong> ۸۸۹۹۶۶</li>
+</li>
+<li><strong>ردیف ۲ (حواله):</strong><ul>
+<li>نوع: واریز بانکی | مبلغ: ۳۰۰,۰۰۰,۰۰۰ | حساب: جاری تجارت | پیگیری: ۸۸۹۹۶۶</li>
 </ul>
-<p><strong>ردیف ۳ (پوز):</strong></p>
-<ul>
-<li><strong>نوع:</strong> کارت‌خوان</li>
-<li><strong>مبلغ:</strong> ۲,۰۰۰,۰۰۰,۰۰۰ ریال</li>
-<li><strong>ترمینال:</strong> پوز بانک ملت (واحد فروش)</li>
-<li><strong>شماره مرجع:</strong> ۵۵۴۴۱۱</li>
+</li>
+<li><strong>ردیف ۳ (پوز):</strong><ul>
+<li>نوع: کارت‌خوان | مبلغ: ۲۰۰,۰۰۰,۰۰۰ | ترمینال: پوز ملت فروش | مرجع: ۵۵۴۴۱۱</li>
 </ul>
-<p><strong>کنترل سیستم:</strong>
-<code>۵۰۰ + ۳۰۰ + ۲۰۰ = ۱۰۰۰</code> (برابر با مبلغ کل). ✅ اجازه ثبت داده می‌شود.</p>
+</li>
+</ol>
+<p><strong>کنترل تراز:</strong></p>
+<div class="arithmatex">\[۵۰۰ + ۳۰۰ + ۲۰۰ = ۱۰۰۰\]</div>
+<p>معادله برقرار است ✅.</p>
 <hr />
-<h2 id="gl-impact">۴. چرخه حیات و اثر حسابداری (GL Impact)</h2>
-<p>نکته کلیدی برای برنامه‌نویسان و حسابداران این است که هر روش، یک حساب معین متفاوت را درگیر می‌کند:</p>
+<h3 id="gl-impact-matrix">۴. اثر حسابداری (GL Impact Matrix)</h3>
+<p>نکته حیاتی برای تیم مالی و فنی، تفکیک حساب بدهکار است:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">روش دریافت</th>
-<th style="text-align: left;">حساب بدهکار (Dr)</th>
-<th style="text-align: left;">توضیح فنی</th>
+<th style="text-align: left;">ابزار پرداخت</th>
+<th style="text-align: left;">حساب بدهکار (Debit Account)</th>
+<th style="text-align: left;">شرح فنی</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>چک</strong></td>
 <td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
-<td style="text-align: left;">این حساب "شبه نقد" است. هنوز پول نیست. بعداً با عملیات "واگذاری به بانک"، از این حساب خارج می‌شود.</td>
+<td style="text-align: left;">یک حساب واسط (شبه نقد). چک هنوز نقد نشده است.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>واریز بانکی</strong></td>
 <td style="text-align: left;"><strong>موجودی بانک</strong></td>
-<td style="text-align: left;">مستقیماً موجودی قابل برداشت را زیاد می‌کند.</td>
+<td style="text-align: left;">افزایش مستقیم موجودی قابل برداشت.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>کارت‌خوان</strong></td>
-<td style="text-align: left;"><strong>حساب‌های در جریان وصول (Settlement)</strong> <br> <em>یا</em> <strong>موجودی بانک</strong></td>
-<td style="text-align: left;">معمولاً پول پوز فردا صبح به حساب می‌نشیند. برخی شرکت‌ها مستقیم به بانک می‌زنند، برخی به حساب واسط "شاپرک".</td>
+<td style="text-align: left;"><strong>حساب‌های در جریان وصول</strong></td>
+<td style="text-align: left;">پول پوز معمولاً با تاخیر (سیکل پایا) به حساب می‌نشیند.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>نقد</strong></td>
-<td style="text-align: left;"><strong>موجودی نقد / صندوق</strong></td>
-<td style="text-align: left;">موجودی فیزیکی شرکت را زیاد می‌کند.</td>
+<td style="text-align: left;"><strong>موجودی صندوق (Cash on Hand)</strong></td>
+<td style="text-align: left;">افزایش موجودی فیزیکی شرکت.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="pro-tips">۵. نکات ریز اما حیاتی (Pro Tips)</h2>
+<h3 id="advanced-features">۵. ویژگی‌های پیشرفته (Advanced Features)</h3>
 <ol>
 <li>
-<p><strong>مدیریت چک‌های امانی (Guarantee Cheques):</strong></p>
+<p><strong>تولید دسته‌الی چک (Batch Entry):</strong></p>
 <ul>
-<li>گاهی چک بابت "ضمانت" گرفته می‌شود نه پرداخت.</li>
-<li><strong>راهکار:</strong> یک چک‌باکس <code>IsGuarantee</code> در فرم چک بگذارید. اگر تیک خورد، سند حسابداری آن متفاوت خواهد بود (حساب‌های انتظامی) و از مبلغ بدهی مشتری کم نمی‌کند.</li>
+<li>ابزاری برای ورود سریع چک‌های اقساطی.</li>
+<li><strong>ورودی:</strong> مبلغ کل (۵۰۰ میلیون)، تعداد اقساط (۱۰)، تاریخ شروع (۱۴۰۳/۱۰/۰۱)، فاصله (۱ ماه).</li>
+<li><strong>خروجی:</strong> تولید خودکار ۱۰ ردیف چک ۵۰ میلیونی با تاریخ‌های متوالی.</li>
 </ul>
 </li>
 <li>
-<p><strong>دریافت چک‌های متعدد (Batch Entry):</strong></p>
+<p><strong>چک ضمانت (Guarantee Cheque):</strong></p>
 <ul>
-<li>گاهی مشتری ۱۰ فقره چک متوالی می‌دهد.</li>
-<li><strong>ویژگی UX:</strong> دکمه‌ای به نام "تولید خودکار چک" بگذارید که بگوید: "۱۰ چک، هر کدام ۵۰ میلیون، تاریخ‌ها ماه به ماه". سیستم خودش ۱۰ ردیف تولید کند.</li>
+<li>افزودن تیک <code>IsGuarantee</code> در فرم چک.</li>
+<li><strong>اثر:</strong> اگر تیک بخورد، سند روی حساب‌های انتظامی (Off-balance sheet) صادر می‌شود و از بدهی مشتری کم نمی‌کند.</li>
 </ul>
 </li>
 <li>
-<p><strong>تصویر چک:</strong></p>
+<p><strong>پیوست تصویر (Attachments):</strong></p>
 <ul>
-<li>حتماً امکان آپلود عکس چک (پشت و رو) را در همین تب (کنار هر ردیف) فراهم کنید. این برای پیگیری‌های حقوقی بعدی نجات‌بخش است.</li>
+<li>امکان آپلود عکس روی و پشت چک یا فیش واریزی برای هر ردیف. این قابلیت در دعاوی حقوقی (برگشت چک) بسیار حیاتی است.</li>
 </ul>
 </li>
 </ol>
 <hr />
-<p>این بخش، نقش <strong>«پلیس دروازه‌بان»</strong> سیستم را بازی می‌کند.
-اگر زیباترین رابط کاربری را داشته باشید اما کنترل‌های امنیتی (Validations) ضعیف باشند، دیتابیس شما پر از زباله (Dirty Data)، مغایرت مالی و حتی کلاهبرداری خواهد شد.</p>
-<p>کنترل‌ها در سیستم ERP تابان به دو دسته تقسیم می‌شوند:
-1.  <strong>خطاهای بازدارنده (Hard Stop):</strong> کاربر به هیچ وجه نمی‌تواند عبور کند (مثل عدم تراز سند).
-2.  <strong>هشدارهای هوشمند (Soft Warning):</strong> سیستم اخطار می‌دهد اما با تایید کاربر رد می‌شود (مثل سقف اعتبار).</p>
-<p>در ادامه، ۵ قانون حیاتی را با جزئیات و مثال‌های واقعی بررسی می‌کنیم.</p>
-<hr />
-<h1 id="validation-rules_1">۵. کنترل‌های امنیتی و هوشمند (Validation Rules)</h1>
-<h2 id="-accounting-balance-check">۵-۱. قانون طلایی: معادله تراز سند (Accounting Balance Check)</h2>
-<p><strong>نوع:</strong> بازدارنده (Error) ⛔</p>
-<p>این مهم‌ترین قانون سیستم است. دکمه <code>Post</code> (تایید نهایی) باید غیرفعال باشد مگر اینکه این تساوی ریاضی برقرار باشد. سیستم نباید اجازه دهد حتی ۱ ریال اختلاف وجود داشته باشد.</p>
-<h3 id="_20">فرمول ریاضی:</h3>
-<p>$$\text{مبلغ تخصیص داده شده به بدهی‌ها} = (\text{جمع پول و چک دریافتی}) + (\text{جمع کسورات ثبت شده})$$</p>
-<h3 id="_21">مثال تخلف:</h3>
-<ul>
-<li><strong>بدهکار:</strong> مشتری فاکتوری به مبلغ <strong>۱۰۰ میلیون</strong> دارد.</li>
-<li><strong>دریافت:</strong> مشتری <strong>۹۰ میلیون</strong> چک می‌دهد.</li>
-<li><strong>کاربر:</strong> در تب تخصیص، جلوی فاکتور ۱۰۰ میلیونی عدد <strong>۱۰۰ میلیون</strong> را وارد می‌کند (می‌خواهد کل بدهی را پاک کند) اما در تب کسورات چیزی وارد نمی‌کند.</li>
-<li><strong>واکنش سیستم:</strong>
-    &gt; ❌ <strong>خطای عدم تراز:</strong> شما قصد تسویه ۱۰۰ میلیون بدهی را دارید، اما منابع شما (۹۰ میلیون چک) کافی نیست. اختلاف: ۱۰ میلیون ریال. لطفاً یا مبلغ تخصیص را کم کنید یا کسورات (مثل مالیات/تخفیف) را ثبت کنید.</li>
-</ul>
-<hr />
-<h2 id="-duplicate-check">۵-۲. کنترل یکتایی اسناد (Duplicate Check)</h2>
-<p><strong>نوع:</strong> بازدارنده (Error) ⛔</p>
-<p>جلوگیری از ثبت تکراری یک چک یا فیش واریزی در سیستم. این کنترل باید <strong>Global</strong> باشد (یعنی در کل دیتابیس و بین همه شعبه‌ها چک شود).</p>
-<h3 id="_22">سناریوی تقلب/اشتباه:</h3>
-<p>یک چک ۵۰ میلیونی قبلاً بابت فاکتور A ثبت شده است. دو ماه بعد، حسابدار جدید (یا کاربر بدطینت) سعی می‌کند همان شماره چک را بابت فاکتور B وارد کند تا بدهی مشتری را ظاهراً تسویه کند.</p>
-<h3 id="_23">منطق سیستم:</h3>
-<p>هنگام ورود اطلاعات در تب ۳ (روش‌های دریافت):
-1.  <strong>برای چک:</strong> ترکیب <code>SayadID</code> (شناسه صیادی) باید در کل جدول چک‌های سیستم یکتا باشد.
-2.  <strong>برای واریز:</strong> ترکیب <code>TraceNo</code> (شماره پیگیری) + <code>BankID</code> (بانک مقصد) + <code>Amount</code> باید یکتا باشد. (چون ممکن است شماره پیگیری تصادفاً تکراری باشد، اما احتمال اینکه مبلغ و بانک هم یکی باشند صفر است).</p>
-<hr />
-<h2 id="-allocation-over-cap">۵-۳. کنترل سقف تخصیص (Allocation Over-Cap)</h2>
-<p><strong>نوع:</strong> بازدارنده (Error) ⛔</p>
-<p>سیستم نباید اجازه دهد کاربر بیشتر از "مانده بدهی واقعی"، پولی را به یک فاکتور تخصیص دهد (مگر اینکه ماژول اجازه Over-payment را بدهد که آن هم باید به پیش‌دریافت برود، نه اینکه بدهی را منفی کند).</p>
-<h3 id="_24">مثال:</h3>
-<ul>
-<li><strong>فاکتور:</strong> ۱۰ میلیون تومان.</li>
-<li><strong>پرداخت قبلی:</strong> ۴ میلیون تومان.</li>
-<li><strong>مانده فعلی:</strong> ۶ میلیون تومان.</li>
-<li><strong>اقدام کاربر:</strong> کاربر سعی می‌کند در ستون "مبلغ تخصیص"، عدد ۷ میلیون تومان وارد کند.</li>
-<li><strong>واکنش سیستم:</strong>
-    &gt; ❌ <strong>خطای سقف تخصیص:</strong> حداکثر مبلغ قابل تخصیص به این فاکتور ۶,۰۰۰,۰۰۰ ریال است.</li>
-</ul>
-<hr />
-<h2 id="-period-control">۵-۴. کنترل دوره مالی و تاریخ (Period Control)</h2>
-<p><strong>نوع:</strong> بازدارنده (Error) ⛔</p>
-<p>حسابداری یک موجود زنده با بازه‌های زمانی (ماهانه/سالانه) است.</p>
-<h3 id="_25">سناریو:</h3>
-<p>امروز ۱۸ آذر است. مدیر مالی حساب‌های ماه "آبان" را بسته و گزارش سود و زیان را به هیئت مدیره داده است.
-کاربر سعی می‌کند یک سند دریافت با تاریخ ۲۵ آبان ثبت کند.</p>
-<h3 id="_26">منطق سیستم:</h3>
+<h1 id="validation-rules_1">فصل پنجم: کنترل‌های امنیتی و قوانین اعتبارسنجی (Validation Rules)</h1>
+<h2 id="-">۵-۱. مقدمه: دروازه‌بان سیستم</h2>
+<p>این بخش نقش «پلیس ترافیک» داده‌ها را بازی می‌کند. اگر زیباترین رابط کاربری را داشته باشید اما کنترل‌های امنیتی (Validations) ضعیف باشند، دیتابیس شما پر از داده‌های کثیف (Dirty Data) و مغایرت‌های مالی خواهد شد.</p>
+<p>کنترل‌ها در سیستم به دو سطح تقسیم می‌شوند:</p>
 <ol>
-<li>تاریخ سند (<code>DocDate</code>) را می‌خواند.</li>
-<li>به جدول <code>FinancialPeriods</code> مراجعه می‌کند.</li>
-<li>اگر وضعیت ماه آبان <code>Closed</code> یا <code>Locked</code> باشد:
-    &gt; ❌ <strong>خطای دوره مالی:</strong> دوره مالی منتهی به ۳۰ آبان بسته شده است. شما مجاز به صدور سند در این تاریخ نیستید.</li>
+<li><strong>خطای بازدارنده (Hard Stop ⛔):</strong> مانع ثبت سند می‌شود.</li>
+<li><strong>هشدار هوشمند (Soft Warning ⚠️):</strong> با تایید مجدد کاربر یا مدیر اجازه عبور می‌دهد.</li>
 </ol>
 <hr />
-<h2 id="-credit-limit-logic">۵-۵. کنترل اعتبار مشتری (Credit Limit Logic)</h2>
-<p><strong>نوع:</strong> هشدار (Warning) ⚠️</p>
-<p>این کنترل کمی ظریف است. در "فروش"، سقف اعتبار مانع صدور فاکتور می‌شود. اما در "دریافت"، ما داریم پول می‌گیریم! پس چرا باید مانع شویم؟
-پاسخ: اگر دریافت <strong>«چک»</strong> باشد.</p>
-<p>چک، پول نقد نیست. چک، یک "وعده" است. اگر مشتری ۱ میلیارد سقف اعتبار دارد و تا الان ۵۰۰ میلیون بدهی دارد، و امروز یک چک ۲ میلیاردی می‌دهد:
-1.  بدهی دفتری او صفر می‌شود (و حتی بستانکار می‌شود).
-2.  سیستم فروش اجازه می‌دهد کالای جدید ببرد.
-3.  اما چک او ۲ ماه دیگر پاس نمی‌شود!</p>
-<h3 id="_27">منطق هوشمند:</h3>
+<h2 id="-critical-errors">۵-۲. قوانین بازدارنده (Critical Errors)</h2>
+<h3 id="accounting-balance-check">۱. قانون طلایی: معادله تراز سند (Accounting Balance Check)</h3>
+<p>این مهم‌ترین قانون ریاضی سیستم است. دکمه <code>Post</code> باید غیرفعال باشد مگر اینکه تساوی زیر برقرار باشد:</p>
+<div class="arithmatex">\[(\text{جمع وجوه نقد و چک}) + (\text{جمع کسورات}) = (\text{جمع تخصیص فاکتورها} + \text{پیش‌دریافت‌ها})\]</div>
 <ul>
-<li><strong>فرمول ریسک:</strong> <code>مانده حساب</code> + <code>اسناد دریافتنی وصول نشده (چک‌های در راه)</code> &gt; <code>سقف اعتبار</code></li>
-<li><strong>واکنش سیستم:</strong>
-    &gt; ⚠️ <strong>هشدار ریسک اعتباری:</strong> دریافت این چک باعث می‌شود تعهدات مشتری (شامل چک‌های پاس نشده) از سقف اعتبار او تجاوز کند. آیا مطمئن هستید؟ (نیاز به تایید مدیر).</li>
+<li><strong>سناریوی خطا:</strong> کاربر می‌خواهد ۱۰۰ میلیون فاکتور را تسویه کند، اما فقط ۹۰ میلیون چک وارد کرده و ۱۰ میلیون اختلاف را در تب کسورات توجیه نکرده است.</li>
+<li><strong>پیام سیستم:</strong> <em>"سند تراز نیست. اختلاف: ۱۰,۰۰۰,۰۰۰ ریال. لطفاً کسورات را ثبت کنید یا مبلغ تخصیص را کاهش دهید."</em></li>
+</ul>
+<h3 id="duplicate-check">۲. کنترل یکتایی اسناد (Duplicate Check)</h3>
+<p>جلوگیری از کلاهبرداری یا اشتباه سهوی در ثبت مجدد یک فیش یا چک.</p>
+<ul>
+<li><strong>منطق چک:</strong> ترکیب <code>SayadID</code> (شناسه ۱۶ رقمی) باید در کل سیستم یکتا باشد.</li>
+<li><strong>منطق واریز:</strong> ترکیب <code>TraceNo</code> (شماره پیگیری) + <code>Amount</code> + <code>BankID</code> باید یکتا باشد.</li>
+</ul>
+<h3 id="allocation-cap">۳. کنترل سقف تخصیص (Allocation Cap)</h3>
+<p>سیستم نباید اجازه دهد کاربر بدهی را "منفی" کند.</p>
+<ul>
+<li><strong>منطق:</strong> <code>Allocated Amount</code> <span class="arithmatex">\(\le\)</span> <code>Open Balance</code>.</li>
+<li><strong>پیام سیستم:</strong> <em>"مبلغ تخصیص داده شده (۷۰ ریال) بیشتر از مانده فاکتور (۶۰ ریال) است."</em></li>
+</ul>
+<h3 id="financial-period-control">۴. کنترل دوره مالی (Financial Period Control)</h3>
+<p>جلوگیری از تغییر در دفاتر ماه‌های بسته شده.</p>
+<ul>
+<li><strong>منطق:</strong> قبل از ثبت، سیستم <code>DocDate</code> را با جدول <code>FiscalPeriods</code> چک می‌کند. اگر وضعیت دوره <code>Closed</code> یا <code>Locked</code> باشد، ثبت ممنوع است.</li>
 </ul>
 <hr />
-<h2 id="-cross-field-validations">۵-۶. کنترل‌های متقابل (Cross-Field Validations)</h2>
-<p>این‌ها قوانین کوچک اما مهمی هستند که فیلدها را نسبت به هم می‌سنجند:</p>
-<ol>
-<li><strong>ارز و نرخ:</strong> اگر <code>Currency</code> ≠ ریال باشد، فیلد <code>ExchangeRate</code> نمی‌تواند ۱ یا ۰ یا خالی باشد.</li>
-<li><strong>تاریخ سررسید چک:</strong> <code>DueDate</code> چک نباید قبل از <code>DocDate</code> (تاریخ دریافت) باشد. (چک تاریخ گذشته معنی ندارد، مگر در شرایط خاص که سیستم باید هشدار دهد).</li>
-<li><strong>الزام فیلد:</strong> اگر نوع دریافت "چک" است، فیلد "شناسه صیادی" اجباری است. اگر نوع دریافت "نقد" است، فیلد "شناسه صیادی" باید غیرفعال/خالی باشد.</li>
-</ol>
+<h2 id="-warnings">۵-۳. هشدارهای هوشمند (Warnings)</h2>
+<h3 id="credit-limit-risk">۱. کنترل ریسک اعتبار (Credit Limit Risk)</h3>
+<p>این کنترل در دریافت‌های <strong>«چک»</strong> حیاتی است. دریافت چک به معنی تسویه واقعی نیست.</p>
+<ul>
+<li><strong>سناریو:</strong> مشتری سقف اعتبارش پر شده. چک می‌دهد تا اعتبارش باز شود و دوباره خرید کند.</li>
+<li><strong>تحلیل سیستم:</strong> اگر چک برگشت بخورد، ریسک مشتری دو برابر می‌شود.</li>
+<li><strong>پیام هشدار:</strong> <em>"توجه: با دریافت این چک، تعهدات وصول نشده مشتری از سقف اعتبار او فراتر می‌رود. آیا مایل به ادامه هستید؟"</em></li>
+</ul>
+<h3 id="cross-validation">۲. هشدارهای متقابل (Cross-Validation)</h3>
+<ul>
+<li><strong>تاریخ چک:</strong> هشدار اگر <code>DueDate</code> چک مربوط به روز تعطیل رسمی باشد.</li>
+<li><strong>نرخ ارز:</strong> هشدار اگر ارز غیر ریالی انتخاب شده اما نرخ تبدیل <code>1</code> یا <code>0</code> است.</li>
+</ul>
 <hr />
-<h3 id="system-messages">جدول خلاصه پیام‌های سیستم (System Messages)</h3>
+<h2 id="accounting-engine">فصل ششم: موتور حسابداری و صدور سند (Accounting Engine)</h2>
+<p>این بخش، <strong>«لحظه حقیقت»</strong> است. تمام داده‌های وارد شده در فرم (هدر، گرید تخصیص، گرید پرداخت، کسورات) باید توسط یک موتور پردازشی (Posting Engine) ترکیب شده و به یک <strong>سند حسابداری (Journal Entry)</strong> استاندارد تبدیل شوند.</p>
+<p>در ادامه ۴ سناریوی اصلی صدور سند را بررسی می‌کنیم.</p>
+<h2 id="-_1">۶-۱. سناریوی ۱: دریافت ساده (نقد/واریز)</h2>
+<p><strong>وضعیت:</strong> مشتری "الف" مبلغ ۱۰۰ میلیون ریال بابت فاکتور ۱۰۱ به بانک "ملت" واریز کرده است.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">کد خطا</th>
-<th style="text-align: left;">متن پیام</th>
-<th style="text-align: left;">نوع</th>
-<th style="text-align: left;">اقدام کاربر</th>
+<th style="text-align: left;">کد حساب (GL)</th>
+<th style="text-align: left;">شرح حساب (Description)</th>
+<th style="text-align: left;">تفصیلی (Dimension)</th>
+<th style="text-align: left;">بدهکار (Dr)</th>
+<th style="text-align: left;">بستانکار (Cr)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>VAL-001</strong></td>
-<td style="text-align: left;">جمع اقلام تخصیص و روش‌های دریافت برابر نیست. اختلاف: [مبلغ]</td>
-<td style="text-align: left;">Error</td>
-<td style="text-align: left;">اصلاح مبالغ در تب ۳ یا ۱</td>
+<td style="text-align: left;">۱۰۱۰۰۱</td>
+<td style="text-align: left;">موجودی بانک - ملت</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>VAL-002</strong></td>
-<td style="text-align: left;">شناسه صیادی [شماره] قبلاً در سند [شماره سند] استفاده شده است.</td>
-<td style="text-align: left;">Error</td>
-<td style="text-align: left;">بررسی لاشه چک و اصلاح شماره</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>VAL-003</strong></td>
-<td style="text-align: left;">دوره مالی تاریخ انتخابی بسته شده است.</td>
-<td style="text-align: left;">Error</td>
-<td style="text-align: left;">تغییر تاریخ سند به دوره جاری</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>WRN-001</strong></td>
-<td style="text-align: left;">مبلغ چک از میانگین گردش حساب مشتری بالاتر است.</td>
-<td style="text-align: left;">Warning</td>
-<td style="text-align: left;">اخذ تاییدیه مدیر</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>WRN-002</strong></td>
-<td style="text-align: left;">تاریخ سررسید چک مربوط به روز تعطیل رسمی است.</td>
-<td style="text-align: left;">Warning</td>
-<td style="text-align: left;">اطلاع به کاربر (جهت اطمینان)</td>
+<td style="text-align: left;">۱۲۰۰۰۱</td>
+<td style="text-align: left;">حساب‌های دریافتنی تجاری</td>
+<td style="text-align: left;">مشتری الف</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<p>این بخش، <strong>«لحظه حقیقت»</strong> در سیستم ERP است. تمام زحماتی که کاربر در وارد کردن اطلاعات (هدر، تخصیص، چک، کسورات) کشیده است، در نهایت باید تبدیل به یک <strong>«سند حسابداری» (Journal Entry)</strong> استاندارد شود تا ترازنامه شرکت شکل بگیرد.</p>
-<p>در سیستم‌های سنتی، حسابدار این سند را دستی می‌زند (که پر از خطاست). در سیستم تابان، این سند <strong>خودکار</strong> صادر می‌شود.</p>
-<p>در ادامه، موتور صدور سند را با ۴ سناریوی مختلف (از ساده تا بسیار پیچیده) کالبدشکافی می‌کنیم.</p>
+<h2 id="-_2">۶-۲. سناریوی ۲: دریافت چک (اسناد دریافتنی)</h2>
+<p><strong>وضعیت:</strong> مشتری "ب" یک فقره چک ۱۰۰ میلیونی برای ۲ ماه آینده داده است.
+<strong>نکته فنی:</strong> در اینجا حساب بانک درگیر نمی‌شود، بلکه حساب <strong>"اسناد دریافتنی نزد صندوق"</strong> بدهکار می‌شود.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب (GL)</th>
+<th style="text-align: left;">شرح حساب</th>
+<th style="text-align: left;">تفصیلی</th>
+<th style="text-align: left;">بدهکار (Dr)</th>
+<th style="text-align: left;">بستانکار (Cr)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۱</td>
+<td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۲۰۰۰۱</td>
+<td style="text-align: left;">حساب‌های دریافتنی تجاری</td>
+<td style="text-align: left;">مشتری ب</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h1 id="automated-gl-engine">۶. موتور صدور سند حسابداری (Automated GL Engine)</h1>
-<p><strong>زمان اجرا:</strong> دقیقا لحظه‌ای که وضعیت سند از <code>Draft</code> به <code>Posted</code> تغییر می‌کند.
-<strong>قانون کلی:</strong> مجموع ستون بدهکار (Dr) باید دقیقاً برابر با مجموع ستون بستانکار (Cr) باشد.</p>
+<h2 id="-_3">۶-۳. سناریوی ۳: دریافت با کسورات (سند مرکب)</h2>
+<p><strong>وضعیت:</strong> فاکتور ۱۰۰ میلیون است. مشتری ۸۵ میلیون چک داده، ۱۰ میلیون بیمه کسر کرده و ۵ میلیون مالیات.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">شرح حساب</th>
+<th style="text-align: left;">تفصیلی</th>
+<th style="text-align: left;">بدهکار (Dr)</th>
+<th style="text-align: left;">بستانکار (Cr)</th>
+<th style="text-align: left;">ماهیت</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱۱۴۰۰۱</td>
+<td style="text-align: left;">اسناد دریافتنی نزد صندوق</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۸۵,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی (چک)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۵۰۰۱</td>
+<td style="text-align: left;">سپرده بیمه پیمانکاران</td>
+<td style="text-align: left;">سازمان تامین اجتماعی</td>
+<td style="text-align: left;">۱۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی (طلب)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۱۵۰۰۲</td>
+<td style="text-align: left;">پیش‌پرداخت مالیات</td>
+<td style="text-align: left;">سازمان امور مالیاتی</td>
+<td style="text-align: left;">۵,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی (طلب)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۱۲۰۰۰۱</td>
+<td style="text-align: left;">حساب‌های دریافتنی تجاری</td>
+<td style="text-align: left;">مشتری ج</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;"><strong>تسویه کامل</strong></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="_28">سناریوی ۱: دریافت ساده (تسویه چک)</h2>
-<p><strong>شرح:</strong> مشتری یک فاکتور ۵۰۰ میلیونی دارد و یک چک ۵۰۰ میلیونی می‌دهد. هیچ کسوراتی در کار نیست.</p>
-<p><strong>تحلیل سیستم:</strong>
-* بدهی مشتری باید صفر شود (پس حساب مشتری <strong>بستانکار</strong> می‌شود).
-* یک برگه چک وارد صندوق شده (پس حساب اسناد دریافتنی <strong>بدهکار</strong> می‌شود).</p>
+<h2 id="-the-complex-hybrid">۶-۴. سناریوی ۴: "مادرِ تمام اسناد" (The Complex Hybrid)</h2>
+<p><strong>وضعیت:</strong> مشتری "د" یک واریزی <strong>۲۰۰ میلیونی</strong> انجام داده است.</p>
+<ul>
+<li>۱۲۰ میلیون بابت تسویه فاکتورهای قبلی.</li>
+<li>۵ میلیون بابت هزینه رندینگ (کسورات).</li>
+<li>۷۰ میلیون بابت پیش‌پرداخت سفارش جدید.</li>
+<li>۵ میلیون بابت خرید ضایعات (درآمد).</li>
+</ul>
+<p>این سند تمام بخش‌های سیستم (هدر، تخصیص، کسورات، درآمد) را درگیر می‌کند:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ردیف</th>
+<th style="text-align: left;">کد حساب</th>
+<th style="text-align: left;">شرح حساب</th>
+<th style="text-align: left;">بدهکار (Dr)</th>
+<th style="text-align: left;">بستانکار (Cr)</th>
+<th style="text-align: left;">منشأ دیتا</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">۱</td>
+<td style="text-align: left;">۱۰۱۰۰۱</td>
+<td style="text-align: left;">بانک تجارت</td>
+<td style="text-align: left;">۲۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب ۳ (ابزار پرداخت)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۲</td>
+<td style="text-align: left;">۶۰۵۰۰۱</td>
+<td style="text-align: left;">هزینه تخفیفات/رندینگ</td>
+<td style="text-align: left;">۵,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب ۲ (کسورات)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۳</td>
+<td style="text-align: left;">۱۲۰۰۰۱</td>
+<td style="text-align: left;">حساب دریافتنی تجاری</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۲۵,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (تخصیص فاکتور + ۵ تومن کسورات)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۴</td>
+<td style="text-align: left;">۲۱۰۰۰۱</td>
+<td style="text-align: left;">پیش‌دریافت مشتریان</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۷۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (تخصیص سفارش)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۵</td>
+<td style="text-align: left;">۷۰۱۰۰۵</td>
+<td style="text-align: left;">درآمد فروش ضایعات</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (تخصیص درآمد)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>کنترل تراز:</strong></p>
+<ul>
+<li>جمع بدهکار: ۲۰۵,۰۰۰,۰۰۰</li>
+<li>جمع بستانکار: ۲۰۵,۰۰۰,۰۰۰ (۱۲۵ + ۷۰ + ۱۰)</li>
+<li><em>نکته: ۵ میلیون کسورات به مبلغ تسویه فاکتور (۱۲۰) اضافه شده تا حساب مشتری به اندازه ۱۲۵ میلیون بستانکار شود و فاکتور کامل بسته شود.</em></li>
+</ul>
+<hr />
+<h2 id="-posting-logic-for-developers">۶-۵. الگوریتم نگاشت (Posting Logic for Developers)</h2>
+<p>برای پیاده‌سازی این موتور، از الگوریتم زیر استفاده کنید:</p>
+<ol>
+<li><strong>Group By Instrument:</strong> تمام ردیف‌های تب پرداخت (نقد، چک، بانک) را جمع بزنید <span class="arithmatex">\(\rightarrow\)</span> سمت <strong>بدهکار</strong> سند (معمولاً).</li>
+<li><strong>Group By Deduction:</strong> تمام ردیف‌های تب کسورات را جمع بزنید <span class="arithmatex">\(\rightarrow\)</span> سمت <strong>بدهکار</strong> سند (اگر ماهیت دارایی/هزینه باشد).</li>
+<li><strong>Group By Allocation:</strong><ul>
+<li>اگر <code>Type = Invoice</code>: جمع مبالغ + سهم کسورات مرتبط <span class="arithmatex">\(\rightarrow\)</span> بستانکار (حساب دریافتنی).</li>
+<li>اگر <code>Type = Order</code>: جمع مبالغ <span class="arithmatex">\(\rightarrow\)</span> بستانکار (پیش‌دریافت).</li>
+<li>اگر <code>Type = GL</code>: جمع مبالغ <span class="arithmatex">\(\rightarrow\)</span> بستانکار (حساب درآمد).</li>
+</ul>
+</li>
+<li><strong>Insert Header:</strong> یک رکورد در جدول <code>GLHeader</code> بسازید.</li>
+<li><strong>Insert Lines:</strong> رکوردهای تولید شده را در <code>GLLines</code> درج کنید.</li>
+<li><strong>Update Status:</strong> وضعیت سند دریافت را به <code>Posted</code> تغییر دهید.</li>
+</ol>
+<hr />
+<h2 id="automated-gl-engine">فصل ششم: موتور صدور سند حسابداری (Automated GL Engine)</h2>
+<h2 id="-_4">۶-۱. مقدمه: لحظه حقیقت</h2>
+<p>این بخش مغز پردازشی سیستم است. موتور صدور سند (GL Engine) زمانی فعال می‌شود که وضعیت سند از <code>Draft</code> به <code>Posted</code> تغییر کند.
+<strong>قانون تغییرناپذیر:</strong> جمع ستون بدهکار (Dr) باید دقیقاً برابر با جمع ستون بستانکار (Cr) باشد. در غیر این صورت، تراکنش <code>Rollback</code> می‌شود.</p>
+<hr />
+<h2 id="-_5">۶-۲. سناریوهای استاندارد صدور سند</h2>
+<h3 id="_21">سناریوی ۱: دریافت ساده (تسویه چک/نقد)</h3>
+<p><strong>شرح:</strong> مشتری یک فاکتور ۵۰۰ میلیونی دارد و یک چک ۵۰۰ میلیونی جهت تسویه کامل می‌دهد.
+<strong>تحلیل:</strong> کاهش طلب (AR) و افزایش دارایی اسناد دریافتنی.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">ردیف</th>
 <th style="text-align: left;">کد حساب (GL Code)</th>
-<th style="text-align: left;">نام حساب (Account Name)</th>
+<th style="text-align: left;">شرح حساب</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">تحلیل سیستمی</th>
+<th style="text-align: left;">منشأ دیتا</th>
 </tr>
 </thead>
 <tbody>
@@ -4045,143 +4123,124 @@ $$\text{پول نقد دریافتی} \neq \text{مبلغ فاکتور}$$</p>
 <td style="text-align: left;">۱۰۲۰۱</td>
 <td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
 <td style="text-align: left;">۵۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">دارایی جاری شرکت زیاد شد (چک).</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب ۳ (چک)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
 <td style="text-align: left;">۱۰۳۰۱</td>
-<td style="text-align: left;"><strong>حساب‌های دریافتنی تجاری</strong> (تفصیلی: مشتری X)</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>حساب‌های دریافتنی تجاری</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۵۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">دارایی (طلب) شرکت کم شد / تسویه شد.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>جمع</strong></td>
-<td style="text-align: left;">--</td>
-<td style="text-align: left;">--</td>
-<td style="text-align: left;"><strong>۵۰۰,۰۰۰,۰۰۰</strong></td>
-<td style="text-align: left;"><strong>۵۰۰,۰۰۰,۰۰۰</strong></td>
-<td style="text-align: left;">تراز ✅</td>
+<td style="text-align: left;">تب ۱ (تخصیص)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="-_1">سناریوی ۲: دریافت پیمانکاری (پیچیده - با کسورات و نقد/چک)</h2>
-<p><strong>این سناریو قدرت واقعی سیستم شماست.</strong>
-<strong>شرح:</strong>
-* فاکتور صادره: <strong>۱,۰۰۰ واحد</strong> (شامل ارزش افزوده).
-* کسورات مشتری: ۱۰۰ واحد حسن انجام کار + ۵۰ واحد مالیات + ۱۶۷ واحد بیمه.
-* مبلغ قابل پرداخت: ۶۸۳ واحد.
-* پرداخت شده با: ۴۰۰ واحد چک + ۲۸۳ واحد واریز به بانک.</p>
-<p><strong>تحلیل سیستم:</strong>
-سیستم باید بداند که گرچه مشتری ۶۸۳ واحد پول داده، اما کل ۱۰۰۰ واحد بدهی‌اش پاک شده است. مابه‌التفاوت به حساب‌های واسط می‌رود.</p>
+<h3 id="-_6">سناریوی ۲: دریافت پیمانکاری (پیچیده - با کسورات)</h3>
+<p><strong>شرح:</strong> فاکتور ۱۰۰۰ واحد است. مشتری ۶۸۳ واحد (ترکیبی از چک و واریز) پرداخت کرده و مابقی (۳۱۷ واحد) را بابت بیمه، مالیات و حسن انجام کار کسر کرده است.
+<strong>تحلیل:</strong> کل بدهی ۱۰۰۰ واحدی مشتری باید پاک شود.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">ردیف</th>
-<th style="text-align: left;">ماهیت</th>
 <th style="text-align: left;">نام حساب</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">منبع داده در فرم</th>
+<th style="text-align: left;">نوع</th>
+<th style="text-align: left;">منشأ دیتا</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;"><strong>موجودی بانک ملت</strong></td>
+<td style="text-align: left;"><strong>موجودی بانک</strong></td>
 <td style="text-align: left;">۲۸۳,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;">تب ۳ (واریز)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;"><strong>اسناد دریافتنی نزد صندوق</strong></td>
+<td style="text-align: left;"><strong>اسناد دریافتنی</strong></td>
 <td style="text-align: left;">۴۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;">تب ۳ (چک)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۳</td>
-<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;"><strong>سپرده حسن انجام کار</strong></td>
 <td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;">تب ۲ (کسورات)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۴</td>
-<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;"><strong>پیش‌پرداخت مالیات</strong></td>
 <td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;">تب ۲ (کسورات)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۵</td>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;"><strong>سپرده بیمه پیمانکاری</strong></td>
+<td style="text-align: left;"><strong>سپرده بیمه</strong></td>
 <td style="text-align: left;">۱۶۷,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;">تب ۲ (کسورات)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۶</td>
-<td style="text-align: left;">دارایی</td>
-<td style="text-align: left;"><strong>حساب‌های دریافتنی تجاری</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>حساب‌های دریافتنی</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;"><strong>۱,۰۰۰,۰۰۰,۰۰۰</strong></td>
-<td style="text-align: left;">تب ۱ (مبلغ تخصیص)</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب ۱ (تخصیص)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="advance-payment">سناریوی ۳: پیش‌دریافت (Advance Payment)</h2>
-<p><strong>شرح:</strong> مشتری برای سفارشی که هنوز فاکتور نشده، ۲۰۰ میلیون واریز می‌کند.</p>
-<p><strong>تحلیل سیستم:</strong>
-* چون فاکتوری وجود ندارد، حساب "حساب‌های دریافتنی" نباید درگیر شود.
-* پول دریافتی برای شرکت "درآمد" نیست، بلکه <strong>"بدهی به مشتری" (تعهد)</strong> است.</p>
+<h3 id="advance-payment">سناریوی ۳: پیش‌دریافت (Advance Payment)</h3>
+<p><strong>شرح:</strong> مشتری برای سفارشی که هنوز فاکتور نشده، ۲۰۰ میلیون واریز می‌کند.
+<strong>تحلیل:</strong> درآمدی شناسایی نمی‌شود؛ بلکه یک "بدهی جاری" (تعهد) ایجاد می‌گردد.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">ردیف</th>
-<th style="text-align: left;">ماهیت</th>
 <th style="text-align: left;">نام حساب</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">تحلیل سیستمی</th>
+<th style="text-align: left;">تحلیل</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
-<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;"><strong>موجودی بانک</strong></td>
 <td style="text-align: left;">۲۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">پول وارد شد.</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">ورود نقدینگی</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
-<td style="text-align: left;">بدهی جاری</td>
 <td style="text-align: left;"><strong>پیش‌دریافت مشتریان</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۲۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">تعهد ایجاد شد (Liability).</td>
+<td style="text-align: left;">ایجاد تعهد (Liability)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>نکته فنی:</strong> سیستم در اینجا <code>RefOrderID</code> را در دیتابیس نگه می‌دارد، اما در سند حسابداری معمولاً فقط در شرح سند (Narration) می‌نویسد: "بابت سفارش شماره SO-100".</p>
 <hr />
-<h2 id="forex-gainloss">سناریوی ۴: دریافت ارزی و تسعیر (Forex Gain/Loss)</h2>
-<p><strong>شرح:</strong>
-* فاکتور صادره در تاریخ ۱ فروردین: <strong>۱۰,۰۰۰ دلار</strong> (نرخ ۵۰,۰۰۰ تومان) -&gt; بدهی مشتری: <strong>۵۰۰ میلیون ریال</strong>.
-* دریافت پول در تاریخ ۱ خرداد: <strong>۱۰,۰۰۰ دلار</strong> (نرخ ۵۲,۰۰۰ تومان) -&gt; ارزش پول: <strong>۵۲۰ میلیون ریال</strong>.</p>
-<p><strong>تحلیل سیستم:</strong>
-مشتری ۱۰ هزار دلار داده و بدهی ۱۰ هزار دلاری‌اش صاف شده. اما در دفاتر ریالی ما، ۲۰ میلیون تومان "اضافه" آمده است. این پول از کجا آمده؟ <strong>سود ناشی از تسعیر ارز.</strong></p>
+<h3 id="forex-realized-gainloss">سناریوی ۴: دریافت ارزی و سود/زیان تسعیر (Forex Realized Gain/Loss)</h3>
+<p><strong>شرح:</strong></p>
+<ul>
+<li>زمان فاکتور (۱ فروردین): ۱۰,۰۰۰ دلار با نرخ ۵۰,۰۰۰ (بدهی دفتری: ۵۰۰ میلیون ریال).</li>
+<li>زمان دریافت (۱ خرداد): ۱۰,۰۰۰ دلار با نرخ ۵۲,۰۰۰ (ارزش ریالی روز: ۵۲۰ میلیون ریال).
+    <strong>تحلیل:</strong> مشتری ۱۰,۰۰۰ دلار داده و بدهی ارزی‌اش صفر شده. اما ۲۰ میلیون ریال اضافه مانده که ناشی از نوسان ارز است.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -4195,30 +4254,31 @@ $$\text{پول نقد دریافتی} \neq \text{مبلغ فاکتور}$$</p>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
-<td style="text-align: left;"><strong>موجودی ارزی (بانک)</strong></td>
+<td style="text-align: left;"><strong>موجودی بانک ارزی</strong></td>
 <td style="text-align: left;">۵۲۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">۱۰,۰۰۰ دلار × ۵۲,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;"><span class="arithmatex">\(10,000 \times 52,000\)</span></td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
 <td style="text-align: left;"><strong>حساب‌های دریافتنی</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۵۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">باید دقیقاً به اندازه بدهی اولیه بسته شود</td>
+<td style="text-align: left;">بستن مانده دفتری فاکتور</td>
 </tr>
 <tr>
 <td style="text-align: left;">۳</td>
-<td style="text-align: left;"><strong>سود/زیان تسعیر ارز</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>سود تسعیر ارز</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;"><strong>۲۰,۰۰۰,۰۰۰</strong></td>
-<td style="text-align: left;">نقش "تراز کننده" (Plug Figure)</td>
+<td style="text-align: left;">مبلغ تراز کننده (Plug)</td>
 </tr>
 </tbody>
 </table>
+<p><em>نکته: اگر نرخ پایین می‌آمد، حساب "زیان تسعیر ارز" بدهکار می‌شد.</em></p>
 <hr />
-<h2 id="expense-handling">سناریوی ۵: کارمزد بانکی و تخفیف (Expense Handling)</h2>
-<p><strong>شرح:</strong> مشتری باید ۱۰۰ میلیون می‌ریخت، اما ۹۹ میلیون ریخته و ۱ میلیون هزینه انتقال را کم کرده (یا تخفیف گرفته). ما می‌خواهیم حسابش کامل (۱۰۰) بسته شود.</p>
+<h3 id="hybrid-">سناریوی ۵: دریافت ترکیبی (Hybrid - سوپر سناریو)</h3>
+<p><strong>شرح:</strong> دریافت ۲۰۰ میلیون تومان: ۱۲۰ تومان تسویه فاکتور + ۷۰ تومان پیش‌پرداخت سفارش جدید + ۱۰ تومان فروش ضایعات.</p>
 <table>
 <thead>
 <tr>
@@ -4226,109 +4286,176 @@ $$\text{پول نقد دریافتی} \neq \text{مبلغ فاکتور}$$</p>
 <th style="text-align: left;">نام حساب</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">تحلیل</th>
+<th style="text-align: left;">منشأ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
 <td style="text-align: left;"><strong>موجودی بانک</strong></td>
-<td style="text-align: left;">۹۹,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">پول واقعی</td>
+<td style="text-align: left;">۲۰۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب ۳</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
-<td style="text-align: left;"><strong>هزینه کارمزد بانکی</strong></td>
-<td style="text-align: left;">۱,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">هزینه شناسایی شده</td>
+<td style="text-align: left;"><strong>حساب دریافتنی</strong></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۲۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (نوع Invoice)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۳</td>
-<td style="text-align: left;"><strong>حساب‌های دریافتنی</strong></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">۱۰۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">تسویه کامل بدهی</td>
+<td style="text-align: left;"><strong>پیش‌دریافت مشتری</strong></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۷۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (نوع Order)</td>
+</tr>
+<tr>
+<td style="text-align: left;">۴</td>
+<td style="text-align: left;"><strong>درآمد ضایعات</strong></td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">۱۰,۰۰۰,۰۰۰</td>
+<td style="text-align: left;">تب ۱ (نوع Misc)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="gl-determination">بخش فنی: سیستم چگونه حساب‌ها را پیدا می‌کند؟ (GL Determination)</h2>
-<p>برنامه‌نویسان می‌پرسند: <em>"سیستم از کجا می‌فهمد کد حساب بانک ملت چیست یا کد حساب پیش‌دریافت کدام است؟"</em>
-ما نباید کدها را در برنامه Hard-code کنیم. سیستم از <strong>«ماتریس تنظیمات حسابداری»</strong> استفاده می‌کند:</p>
-<ol>
-<li><strong>حساب بانک:</strong> از تنظیمات حساب بانکی انتخاب شده در تب ۳ خوانده می‌شود (<code>BankAccount.GLCode</code>).</li>
-<li><strong>حساب مشتری:</strong> از تنظیمات "گروه تفصیلی مشتری" خوانده می‌شود (<code>CustomerGroup.AccountReceivableGL</code>).</li>
-<li><strong>کسورات:</strong> از تنظیمات "انوع کسورات" خوانده می‌شود (<code>DeductionType.GLAccount</code>).</li>
-<li><strong>پیش‌دریافت:</strong> از تنظیمات کلی سیستم فروش خوانده می‌شود (<code>SystemSettings.Sales.AdvanceGL</code>).</li>
+<h2 id="-gl-account-determination">۶-۳. منطق تعیین حساب (GL Account Determination)</h2>
+<p>برای تیم فنی، سوال اصلی این است: <em>"سیستم کد حساب‌ها را از کجا پیدا می‌کند؟"</em>
+ما از یک الگوریتم <strong>"Lookup Priority"</strong> استفاده می‌کنیم تا کدها را از تنظیمات بخوانیم:</p>
+<h3 id="_22">۱. تعیین حساب‌های بدهکار (سمت چپ سند)</h3>
+<ul>
+<li><strong>اگر نقد/واریز است:</strong> به تنظیمات حساب بانکی انتخاب شده برو (<code>BankAccount.GLAccount</code>).</li>
+<li><strong>اگر چک است:</strong> به تنظیمات صندوقدار یا تنظیمات عمومی خزانه برو (<code>TreasurySettings.ChequeOnHandGL</code>).</li>
+<li><strong>اگر کسورات است:</strong> به جدول تنظیمات انواع کسورات برو (<code>DeductionType.MappedGL</code>).</li>
+</ul>
+<h3 id="_23">۲. تعیین حساب‌های بستانکار (سمت راست سند)</h3>
+<ul>
+<li><strong>اگر تسویه فاکتور است:</strong> به گروه تفصیلی مشتری نگاه کن (<code>CustomerGroup.AR_Account</code>).</li>
+<li><strong>اگر پیش‌دریافت است:</strong> به تنظیمات فروش نگاه کن (<code>SalesSettings.Advance_Account</code>).</li>
+<li><strong>اگر درآمد متفرقه است:</strong> به جدول نگاشت درآمدهای انتزاعی نگاه کن (<code>IncomeCategory.MappedGL</code>).</li>
+<li><strong>اگر سود/زیان تسعیر است:</strong> به تنظیمات ارزی سیستم نگاه کن (<code>CurrencySettings.RealizedGainLossGL</code>).</li>
+</ul>
+<h3 id="data-flow-to-gl">دیاگرام جریان داده (Data Flow to GL)</h3>
+<h2 id="graph-td-subgraph-inputs-t3-t2-t1-end-subgraph-engine-logicgl-determination-logic-end-subgraph-output-dr-dr-cr-cr-end-t3-logic-t2-logic-t1-logic-logic-dr-logic-dr-logic-cr-logic-cr-logic-cr-logic-cr"><pre class="mermaid"><code>graph TD
+    subgraph INPUTS [ورودی‌های کاربر]
+    T3[تب ۳: پرداخت‌ها]
+    T2[تب ۲: کسورات]
+    T1[تب ۱: تخصیص]
+    end
+
+    subgraph ENGINE [موتور صدور سند]
+    Logic[GL Determination Logic]
+    end
+
+    subgraph OUTPUT [سند حسابداری]
+    Dr[سمت بدهکار Dr]
+    Cr[سمت بستانکار Cr]
+    end
+
+    T3 --&gt; Logic
+    T2 --&gt; Logic
+    T1 --&gt; Logic
+
+    Logic -- دارایی نقد/چک --&gt; Dr
+    Logic -- هزینه/کسورات --&gt; Dr
+
+    Logic -- کاهش بدهی مشتری --&gt; Cr
+    Logic -- ایجاد تعهد پیش‌دریافت --&gt; Cr
+    Logic -- شناسایی درآمد --&gt; Cr
+    Logic -- سود تسعیر ارز --&gt; Cr</code></pre></h2>
+<h2 id="faq-troubleshooting">فصل هفتم: پرسش‌های متداول و عیب‌یابی (FAQ &amp; Troubleshooting)</h2>
+<h2 id="-operational-corrections">۷-۱. مدیریت اصلاحات و خطاها (Operational Corrections)</h2>
+<p><strong>س ۱: سندی را «قطعی» (Post) کرده‌ام، اما متوجه شدم مبلغ آن اشتباه است. آیا امکان ویرایش وجود دارد؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> خیر. بر اساس اصول استاندارد حسابداری (GAAP) و جهت حفظ یکپارچگی داده‌ها (Audit Trail)، سند قطعی شده <strong>غیرقابل تغییر (Immutable)</strong> است.</li>
+<li><strong>راهکار:</strong> باید از فرآیند <strong>«ابطال» (Void)</strong> استفاده کنید.<ol>
+<li>دکمه <code>Void</code> را بزنید.</li>
+<li>سیستم یک <strong>سند معکوس (Reversal Entry)</strong> صادر می‌کند تا اثر مالی سند غلط دقیقاً خنثی شود.</li>
+<li>سپس یک سند جدید با اطلاعات صحیح ثبت کنید.</li>
 </ol>
-<h3 id="_29">دیاگرام منطق صدور سند</h3>
-<p>این دیاگرام نشان می‌دهد که:
-* مبالغ <strong>تب ۳ (دریافت‌ها)</strong> ---&gt; همیشه به سمت <strong>بدهکار (Dr)</strong> می‌روند.
-* مبالغ <strong>تب ۲ (کسورات)</strong> ---&gt; همیشه به سمت <strong>بدهکار (Dr)</strong> می‌روند (چون دارایی یا هزینه هستند).
-* مبلغ <strong>تب ۱ (تخصیص)</strong> ---&gt; همیشه به سمت <strong>بستانکار (Cr)</strong> می‌رود (کاهش بدهی مشتری).
-* <strong>استثنا:</strong> اگر پیش‌دریافت باشد، سمت بستانکار حساب "پیش‌دریافت" است.</p>
+</li>
+</ul>
+<p><strong>س ۲: تاریخ سند را اشتباه زدم، اما سند هنوز «پیش‌نویس» (Draft) است. چه کنم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> تا زمانی که سند در وضعیت <code>Draft</code> است، ویرایش تمام فیلدها آزاد است.</li>
+<li><strong>نکته مهم:</strong> اگر سند ارزی است و تاریخ را تغییر می‌دهید، حتماً دکمه <strong>«بروزرسانی نرخ ارز»</strong> را بزنید تا نرخ روز جدید از سامانه فراخوانی شود.</li>
+</ul>
+<p><strong>س ۳: مشتری چک داد و ما ثبت کردیم. بعداً چک را پس گرفت و پول نقد داد (تعویض چک). چه کنیم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> بستگی به "موقعیت چک" در سیستم دارد:<ol>
+<li><strong>چک نزد صندوق (On Hand):</strong> سند دریافت اولیه را <strong>ابطال</strong> کنید و یک سند جدید (نوع نقد/واریز) ثبت کنید.</li>
+<li><strong>چک واگذار شده به بانک (Deposited):</strong> چون چک از صندوق خارج شده، ابطال سند دریافت ممکن نیست. باید از ماژول <strong>«استرداد چک» (Cheque Return)</strong> چک را به مشتری عودت دهید و سپس سند دریافت نقدی جدید بزنید.</li>
+</ol>
+</li>
+</ul>
 <hr />
-<p>این بخش <strong>«جعبه ابزار حل بحران»</strong> برای کاربران است. معمولاً کاربران وقتی به این بخش مراجعه می‌کنند که به مشکلی برخورده‌اند یا با سناریویی مواجه شده‌اند که در روال عادی نمی‌گنجد.</p>
-<p>بخش FAQ را به سه دسته کلیدی تقسیم کرده‌ام: <strong>۱. اصلاحات و اشتباهات، ۲. سناریوهای خاص مالی، ۳. سوالات فنی و سیستمی.</strong></p>
+<h2 id="-financial-complexities">۷-۲. سناریوهای خاص مالی (Financial Complexities)</h2>
+<p><strong>س ۴: مشتری مبلغی بیشتر از بدهی‌اش واریز کرده است (اضافه واریز). مابقی پول چه می‌شود؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> نگران نباشید. کل مبلغ را در هدر وارد کنید و فاکتورها را تسویه نمایید.</li>
+<li><strong>رفتار سیستم:</strong> سیستم هوشمندانه عمل می‌کند:<ul>
+<li>مبلغ معادل بدهی <span class="arithmatex">\(\rightarrow\)</span> تسویه حساب دریافتنی (AR).</li>
+<li>مبلغ مازاد <span class="arithmatex">\(\rightarrow\)</span> بستانکار شدن حساب <strong>«پیش‌دریافت مشتریان»</strong> (ایجاد تعهد اتوماتیک).</li>
+</ul>
+</li>
+</ul>
+<p><strong>س ۵: مشتری «چک خرجی» (چک شخص ثالث) داده است. یعنی چک متعلق به خودش نیست. چگونه ثبت کنم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> سیستم باید بداند بدهی چه کسی کم می‌شود و چک را چه کسی امضا کرده است.<ul>
+<li><strong>فیلد مشتری (Header):</strong> نام <strong>مشتری طرف حساب خودتان</strong> را انتخاب کنید (تا بدهی او کم شود).</li>
+<li><strong>فیلد صاحب حساب (Drawer - در تب ۳):</strong> نام <strong>صاحب اصلی چک</strong> (کسی که چک را امضا کرده) بنویسید.</li>
+<li><em>فایده:</em> اگر چک برگشت بخورد، حساب مشتری شما بدهکار می‌شود، اما در سابقه چک نام صاحب اصلی حفظ می‌گردد.</li>
+</ul>
+</li>
+</ul>
+<p><strong>س ۶: مالیات بر ارزش افزوده (VAT) کجاست؟ چرا در سند دریافت فیلد مالیات نداریم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> این یک خطای ذهنی رایج است. مالیات در زمان <strong>«صدور فاکتور فروش»</strong> شناسایی و ثبت شده است.<ul>
+<li>سند دریافت صرفاً مربوط به <strong>جریان نقدینگی (Cash Flow)</strong> است و کاری به درآمد یا مالیات ندارد. شما کل پول (اصل + مالیات) را یکجا دریافت و بدهی را تسویه می‌کنید.</li>
+</ul>
+</li>
+</ul>
+<p><strong>س ۷: مشتری پول را واریز کرده اما هزینه کارمزد بانکی را کم کرده است (خالص پرداخت کرده).</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> از تب کسورات استفاده کنید.<ol>
+<li>مبلغ هدر: مبلغ واقعی واریز شده (مثلاً ۹۹۵۰).</li>
+<li>مبلغ تخصیص: مبلغ کل فاکتور (مثلاً ۱۰۰۰۰).</li>
+<li><strong>تب کسورات:</strong> ثبت ۵۰ واحد اختلاف با نوع <strong>«هزینه کارمزد بانکی»</strong>.</li>
+</ol>
+</li>
+</ul>
 <hr />
-<h1 id="faq-troubleshooting">۷. پرسش‌های متداول و سناریوهای خاص (FAQ &amp; Troubleshooting)</h1>
-<h2 id="-corrections">۷-۱. اصلاحات و خطاهای کاربری (Corrections)</h2>
-<p><strong>س ۱: سندی را «قطعی» (Post) کرده‌ام، اما متوجه شدم مبلغ آن اشتباه تایپ شده است (مثلاً ۱۰ میلیون را ۱۰۰ میلیون زدم). آیا می‌توانم ویرایش کنم؟</strong>
-* <strong>پاسخ:</strong> خیر. طبق اصول استاندارد حسابداری و برای حفظ امنیت داده‌ها، سند قطعی شده هرگز ویرایش نمی‌شود.
-* <strong>راهکار:</strong> باید از دکمه <strong>«ابطال» (Void)</strong> استفاده کنید.
-    * <strong>رفتار سیستم:</strong> با زدن ابطال، سیستم یک سند حسابداری قرینه (معکوس) صادر می‌کند تا اثر مالی سند غلط کاملاً خنثی شود. سپس باید یک سند دریافت جدید با مبلغ صحیح صادر کنید.
-    * <em>مثال:</em> سند اشتباه (بانک بدهکار ۱۰۰). سند ابطال (بانک بستانکار ۱۰۰). سند صحیح جدید (بانک بدهکار ۱۰).</p>
-<p><strong>س ۲: تاریخ سند را اشتباه زده‌ام، اما هنوز سند در حالت «پیش‌نویس» (Draft) است. آیا مشکلی دارد؟</strong>
-* <strong>پاسخ:</strong> خیر، تا زمانی که سند <code>Draft</code> است، می‌توانید تاریخ، مبلغ و همه چیز را تغییر دهید.
-* <strong>نکته:</strong> اگر تاریخ را تغییر دادید، حتماً دکمه "بروزرسانی نرخ ارز" (در صورت ارزی بودن) را بزنید تا نرخ روز جدید اعمال شود.</p>
-<p><strong>س ۳: مشتری چک را داد و ما ثبت کردیم. بعد از ۲ روز مشتری تماس گرفت و گفت "چک را نقد نکنید، بیایید با پول نقد عوض کنیم". چه کنیم؟</strong>
-* <strong>پاسخ:</strong> دو حالت دارد:
-    1.  <strong>اگر چک هنوز در صندوق است:</strong> سند دریافت را <strong>ابطال</strong> کنید و یک سند جدید با نوع "دریافت نقد/واریز" ثبت کنید.
-    2.  <strong>اگر چک را به بانک واگذار کرده‌اید:</strong> دیگر نمی‌توانید سند دریافت را ابطال کنید. باید از طریق ماژول "استرداد چک" (Cheque Return) چک را به مشتری برگردانید و سپس یک سند دریافت جدید بابت پول نقد ثبت کنید.</p>
-<hr />
-<h2 id="-financial-scenarios">۷-۲. سناریوهای خاص مالی و بانکی (Financial Scenarios)</h2>
-<p><strong>س ۴: مشتری مبلغی بیشتر از بدهی‌اش واریز کرده است (اضافه واریز). با مابقی پول چه کنم؟</strong>
-* <strong>پاسخ:</strong> کل مبلغ دریافتی را در هدر وارد کنید. در تب تخصیص، فاکتورها را تسویه کنید.
-* <strong>رفتار سیستم:</strong> سیستم به صورت هوشمند مابه‌التفاوت را تشخیص می‌دهد و آن را در حساب مشتری به عنوان <strong>«پیش‌دریافت / بستانکار»</strong> ثبت می‌کند.
-* <em>مثال:</em> بدهی ۱۰۰ واحد، واریزی ۱۲۰ واحد.
-    * ۱۰۰ واحد -&gt; تسویه فاکتور (Accounts Receivable).
-    * ۲۰ واحد -&gt; پیش‌دریافت (Customer Advances).</p>
-<p><strong>س ۵: مشتری چک "شخص ثالث" (چک خرجی) داده است. یعنی چک متعلق به خودش نیست. چگونه ثبت کنم؟</strong>
-* <strong>پاسخ:</strong> برای سیستم مهم است که <strong>"بدهی چه کسی کم می‌شود"</strong>.
-    * در هدر (فیلد <code>PayerID</code>)، نام <strong>مشتری خودتان</strong> را انتخاب کنید (چون می‌خواهیم حساب او تسویه شود).
-    * در تب روش دریافت (ردیف چک)، فیلد <strong>«صاحب حساب» (Account Holder)</strong> را پر کنید و نام صاحبِ اصلیِ چک را بنویسید.
-    * <em>فایده:</em> اگر چک برگشت خورد، سیستم حساب مشتری شما را بدهکار می‌کند، اما در گزارشات می‌نویسد که این چک متعلق به آقای X بوده است.</p>
-<p><strong>س ۶: مالیات بر ارزش افزوده (VAT) کجاست؟ چرا فیلدی برای ثبت مالیات دریافتی نداریم؟</strong>
-* <strong>پاسخ:</strong> مالیات در زمان <strong>«صدور فاکتور فروش»</strong> شناسایی و ثبت شده است.
-    * وقتی فاکتور ۱۰۰ میلیونی صادر کردید (که ۹۰ تومن اصل و ۱۰ تومن مالیات بوده)، مشتری کلاً ۱۰۰ میلیون بدهکار شده است.
-    * در سند دریافت، شما کل ۱۰۰ میلیون را می‌گیرید و بدهی را تسویه می‌کنید. نیازی به تفکیک مجدد مالیات نیست.</p>
-<p><strong>س ۷: مشتری پول را واریز کرده اما می‌گوید "۵ هزار تومان هزینه کارت‌به‌کارت را شما بدهید". (یعنی ۵ هزار تومان کمتر ریخته).</strong>
-* <strong>پاسخ:</strong>
-    1.  مبلغ فاکتور: ۱,۰۰۰,۰۰۰ ریال.
-    2.  مبلغ واریزی: ۹۹۵,۰۰۰ ریال.
-    3.  در تب تخصیص: ۱,۰۰۰,۰۰۰ را انتخاب کنید.
-    4.  در تب کسورات: مبلغ ۵,۰۰۰ ریال را با نوع <strong>«هزینه کارمزد بانکی»</strong> ثبت کنید.
-    * <em>نتیجه:</em> حساب مشتری کامل بسته می‌شود و شرکت شما ۵۰۰۰ ریال هزینه شناسایی می‌کند.</p>
-<hr />
-<h2 id="-technical-logic">۷-۳. سوالات فنی و سیستمی (Technical &amp; Logic)</h2>
-<p><strong>س ۸: چرا دکمه "تایید نهایی" (Post) غیرفعال یا خاکستری است؟</strong>
-* <strong>پاسخ:</strong> سیستم کنترل تراز را انجام داده و مغایرت پیدا کرده است.
-* <strong>چک‌لیست:</strong>
-    1.  آیا جمع مبالغ تب "روش‌های دریافت" (چک+نقد) دقیقاً برابر با مبلغ هدر است؟
-    2.  آیا جمع مبلغ "تخصیص داده شده" با (دریافتی + کسورات) برابر است؟
-    3.  پیام خطای قرمز رنگ پایین صفحه را بخوانید.</p>
-<p><strong>س ۹: آیا می‌توانم سند را بدون "تخصیص" ثبت کنم؟ (مثلاً وقت ندارم الان فاکتورها را پیدا کنم).</strong>
-* <strong>پاسخ:</strong> بله.
-    * اگر نوع دریافت را "دریافت از مشتری" انتخاب کنید و تب تخصیص را خالی بگذارید، کل مبلغ به عنوان <strong>«علی‌الحساب» (On Account)</strong> در حساب مشتری ثبت می‌شود.
-    * <em>نکته:</em> توصیه می‌شود بعداً از طریق فرم "تخصیص دستی" (Manual Allocation)، این مبلغ را به فاکتورها وصل کنید تا گزارش سنی مطالبات (Aging) مشتری خراب نشود.</p>
-<p><strong>س ۱۰: نرخ ارز تغییر کرده است. فاکتور با دلار ۵۰ تومن بوده، الان دلار ۵۵ تومن شده. این ۵ تومن اختلاف کجا می‌رود؟</strong>
-* <strong>پاسخ:</strong> سیستم به صورت اتوماتیک محاسبه می‌کند.
-    * شما فقط مبلغ دلاری (۱۰,۰۰۰) و نرخ روز (۵۵,۰۰۰) را وارد کنید.
-    * سیستم بدهی ۵۰,۰۰۰ تومانی (قبلی) را می‌بندد و مابه‌التفاوت را در سطر <strong>«سود و زیان ناشی از تسعیر ارز»</strong> در سند حسابداری درج می‌کند. کاربر نیازی به محاسبه دستی ندارد.</p>
-<p><strong>س ۱۱: آیا می‌توانم عکس فیش واریزی یا چک را به سند بچسبانم؟</strong>
-* <strong>پاسخ:</strong> بله، در نوار ابزار بالا دکمه 📎 (Attachments) وجود دارد. توصیه اکید می‌شود تصویر چک و فیش را آپلود کنید تا در زمان حسابرسی یا گم شدن لاشه چک، مدرک داشته باشید.</p>
+<h2 id="-system-logic-errors">۷-۳. منطق سیستم و عیب‌یابی (System Logic &amp; Errors)</h2>
+<p><strong>س ۸: چرا دکمه "تایید نهایی" (Post) غیرفعال است؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> احتمالاً «معادله تراز» برقرار نیست.</li>
+<li><strong>چک‌لیست عیب‌یابی:</strong><ol>
+<li>آیا جمع (نقد + چک) دقیقاً برابر با (مبلغ هدر) است؟</li>
+<li>آیا جمع (تخصیص + کسورات) دقیقاً برابر با (مبلغ هدر) است؟</li>
+<li>آیا فیلدهای اجباری (مثل شماره صیادی یا تاریخ سررسید) پر شده‌اند؟</li>
+</ol>
+</li>
+</ul>
+<p><strong>س ۹: آیا می‌توانم سند را بدون "تخصیص" ثبت کنم؟ (وقت ندارم فاکتورها را پیدا کنم).</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> بله.</li>
+<li><strong>رفتار سیستم:</strong> اگر تب تخصیص را خالی بگذارید، کل مبلغ به عنوان <strong>«علی‌الحساب» (On Account)</strong> در مانده مشتری ثبت می‌شود.</li>
+<li><strong>هشدار:</strong> اگرچه مانده کل مشتری درست می‌شود، اما در <strong>«گزارش سنی مطالبات» (Aging Report)</strong>، فاکتورهای او همچنان "باز" و "معوق" نشان داده می‌شوند. توصیه می‌شود در اولین فرصت تخصیص را انجام دهید.</li>
+</ul>
+<p><strong>س ۱۰: نرخ ارز تغییر کرده است. فاکتور با دلار ۵۰ تومن بوده، الان دلار ۵۵ تومن شده. اختلاف چه می‌شود؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> سیستم اتوماتیک محاسبه می‌کند (Realized Exchange Gain/Loss).<ul>
+<li>شما فقط مبلغ ارزی و نرخ روز دریافت را وارد کنید.</li>
+<li>موتور حسابداری، فاکتور را با نرخ قدیم می‌بندد و مابه‌التفاوت را به حساب <strong>«سود/زیان ناشی از تسعیر ارز»</strong> می‌فرستد.</li>
+</ul>
+</li>
+</ul>
+<p><strong>س ۱۱: اهمیت پیوست‌ها (Attachments) چیست؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> توصیه اکید می‌شود تصویر چک و فیش واریزی را آپلود کنید. در زمان حسابرسی مالیاتی یا مفقود شدن لاشه چک، این تصویر تنها مدرک معتبر شماست که مستقیماً به سند حسابداری لینک شده است.</li>
+</ul>
 
 
 
@@ -4383,6 +4510,12 @@ $$\text{پول نقد دریافتی} \neq \text{مبلغ فاکتور}$$</p>
       <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
