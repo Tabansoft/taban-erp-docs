@@ -1,0 +1,16 @@
+/* تنظیم فونت کل سایت */
+body, .md-typeset {
+    font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* تنظیم فونت برای متن‌های داخل فرمول کاتک */
+.katex .text {
+    font-family: "Vazirmatn", sans-serif !important;
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* اصلاح تراز عمودی متن فارسی کنار فرمول */
+.katex .text > span {
+     padding-top: 5px; /* تنظیم ریز برای تراز بهتر */
+}

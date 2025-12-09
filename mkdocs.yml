@@ -12,6 +12,27 @@ theme:
     text: Vazirmatn
     code: Fira Code
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+
+# اضافه کردن کتابخانه جاوااسکریپت Mermaid
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - javascripts/katex.js # فایل تنظیمات جدید ما
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+
+
+extra_css:
+    - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css # استایل‌های کاتک
+    - stylesheets/extra.css
+
 nav:
   - "معرفی": index.md
   - "ساختار سازمان":
