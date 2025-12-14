@@ -106,3 +106,29 @@ nav:
   - "مدیریت حمل‌ونقل":
       - "تعاریف پایه":
           - "انواع وسیله نقلیه": transportation-management/master-data/vehicle-type.md
+
+  - "مدیریت اموال و دارایی‌های ثابت":
+       - "معرفی": "fixed-asset-management/overview.md"
+       - "تعاریف پایه":
+          - "گروه‌های دارایی": fixed-asset-management/master-data/asset-category.md
+          - "طبقه‌های دارایی": fixed-asset-management/master-data/asset-class.md
+          - "دفاتر استهلاک": fixed-asset-management/master-data/depreciation-book.md
+          - "تنظیمات پلاک‌دهی": fixed-asset-management/master-data/tagging-settings.md
+          - "مدیریت بارکد و RFID": fixed-asset-management/master-data/asset-identification-system.md
+       - "مدیریت":
+          - "کارت‌های دارایی‌ها": fixed-asset-management/management/asset-master.md
+       - "عملیات":
+          - "تحصیل دارایی": fixed-asset-management/operations/asset-acquisition.md
+          - "نقل و انتقال دارایی": fixed-asset-management/operations/asset-transfer.md
+          - "تغییر وضعیت دارایی": fixed-asset-management/operations/asset-status-change.md
+          - "اموال‌گردانی": fixed-asset-management/operations/asset-physical-inventory.md
+          - "محاسبه استهلاک": fixed-asset-management/operations/depreciation-run.md
+          - "خروج دارایی":
+            - "مقدمه": fixed-asset-management/operations/asset-disposal/overview.md
+            - "فروش دارایی": fixed-asset-management/operations/asset-disposal/asset-sale.md
+            - "اسقاط دارایی": fixed-asset-management/operations/asset-disposal/asset-scrap.md
+            - "اهدا و انتقال": fixed-asset-management/operations/asset-disposal/asset-donation.md
+            - "مفقودی و حوادث": fixed-asset-management/operations/asset-disposal/asset-loss.md
+       - "عملیات مالی":
+          - "بستن دوره": fixed-asset-management/financial-operations/fiscal-period-close.md
+          - "اسناد تعدیل": fixed-asset-management/financial-operations/asset-adjustment.md
