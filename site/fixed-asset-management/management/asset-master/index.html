@@ -1,0 +1,3458 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="توضیحات پروژه شما اینجا قرار می‌گیرد.">
+      
+      
+        <meta name="author" content="تابان‌سافت">
+      
+      
+        <link rel="canonical" href="https://docs.tabansoft.ir/fixed-asset-management/management/asset-master/">
+      
+      
+        <link rel="prev" href="../../master-data/asset-identification-system/">
+      
+      
+        <link rel="next" href="../../operations/asset-acquisition/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>کارت‌های دارایی‌ها - مستندات ERP تابان</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#asset-master-data" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="../../.." title="مستندات ERP تابان" class="md-header__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات ERP تابان
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              کارت‌های دارایی‌ها
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tabansoft/taban-erp-docs/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="مستندات ERP تابان" class="md-nav__button md-logo" aria-label="مستندات ERP تابان" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات ERP تابان
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tabansoft/taban-erp-docs/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار سازمان
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار سازمان
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enterprise-structure/financial/legal-entity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بنگاه‌های اقتصادی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ساختار عملیاتی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ساختار عملیاتی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enterprise-structure/operational/operating-unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مکان‌های عملیاتی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    خزانه‌داری
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            خزانه‌داری
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی ماژول خزانه‌داری
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/cash-box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صندوق‌های نقدی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/document-box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صندوق‌های اسناد
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/bank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بانک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/bank-branch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ‌شعب بانک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/bank-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    حساب‌های بانکی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/checkbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دسته‌چک‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/master-data/payment-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    روش‌های پرداخت
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت چک‌های دریافتی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت چک‌های دریافتی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مقدمه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/receipt-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دریافت چک جدید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/deposite-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    واگذاری چک به بانک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/clearance-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اعلام وصول/برگشت چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/endorsement-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    خرج کردن چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/received-check-management/return-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    استرداد چک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/operations/payment-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    پرداخت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/operations/receipt-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دریافت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/operations/transfer-voucher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انتقال‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/operations/settlement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تسویه حساب
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات دوره‌ای
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات دوره‌ای
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/treasury/periodic-operations/bank-reconciliation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مغایرت بانکی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    حسابداری
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            حسابداری
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../financial/accounting/overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی ماژول حسابداری
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت موجودی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت موجودی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع بسته‌بندی کالا
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت انبار
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت انبار
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inventory-management/master-data/package-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع بسته‌بندی کالا
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌ریزی و کنترل تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            برنامه‌ریزی و کنترل تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/capability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    قابلیت‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/resource-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع منبع
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/resource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    منابع
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/work-center/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مراکز کار
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/dispatching-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    قواعد تخصیص
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/master-data/sheduler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    موتور زمان‌بندی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مهندسی تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            مهندسی تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/production-engineering/bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فرمول‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/production-engineering/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فرآیند‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌ریزی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            برنامه‌ریزی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/planning/master-production-schedules.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    برنامه‌های تولید اصلی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    اجرای تولید
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            اجرای تولید
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manufacturing/planning/resources.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دستور‌های تولید
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت حمل‌ونقل
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت حمل‌ونقل
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../transportation-management/master-data/vehicle-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    انواع وسیله نقلیه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت اموال و دارایی‌های ثابت
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت اموال و دارایی‌های ثابت
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data/asset-category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    گروه‌های دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data/asset-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    طبقه‌های دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data/depreciation-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دفاتر استهلاک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data/tagging-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تنظیمات پلاک‌دهی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data/asset-identification-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مدیریت بارکد و RFID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    کارت‌های دارایی‌ها
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    کارت‌های دارایی‌ها
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مقدمه و فلسفه وجودی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. آناتومی کارت دارایی (Structure &amp; Tabs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. آناتومی کارت دارایی (Structure &amp; Tabs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۱. سربرگ (Header) - اطلاعات هویتی
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-financial-acquisition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۲. تب مالی و تحصیل (Financial &amp; Acquisition)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-depreciation-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۳. تب استهلاک و ارزش‌ها (Depreciation &amp; Values)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-location-custody" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۴. تب استقرار و مسئولیت (Location &amp; Custody)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-technical-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۵. تب مشخصات فنی (Technical Specs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-components-ifrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۶. تب اجزاء (Components) - استاندارد IFRS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. عملیات روی کارت (Actions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. سناریوهای کاربردی (Use Cases)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. سناریوهای کاربردی (Use Cases)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریوی ۱: ردیابی دارایی مفقوده (دولتی)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریوی ۲: هشدار گارانتی (خصوصی)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. تعامل با سایر بخش‌ها (Integration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. ملاحظات فنی برای توسعه‌دهندگان (Developer Notes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۶. ملاحظات فنی برای توسعه‌دهندگان (Developer Notes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporal-data-audit-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      الف) تاریخچه زمانی (Temporal Data / Audit Log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      ب) همزمانی (Concurrency)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ج) ایندکس‌گذاری (Indexing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. پرسش‌های متداول (FAQ)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-acquisition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تحصیل دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    نقل و انتقال دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-status-change/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تغییر وضعیت دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-physical-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اموال‌گردانی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/depreciation-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    محاسبه استهلاک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_6" id="__nav_8_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    خروج دارایی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            خروج دارایی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-disposal/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مقدمه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-disposal/asset-sale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فروش دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-disposal/asset-scrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اسقاط دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-disposal/asset-donation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اهدا و انتقال
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/asset-disposal/asset-loss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مفقودی و حوادث
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-operations/fiscal-period-close/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بستن دوره
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-operations/asset-adjustment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اسناد تعدیل
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. مقدمه و فلسفه وجودی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. آناتومی کارت دارایی (Structure &amp; Tabs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۲. آناتومی کارت دارایی (Structure &amp; Tabs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۱. سربرگ (Header) - اطلاعات هویتی
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-financial-acquisition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۲. تب مالی و تحصیل (Financial &amp; Acquisition)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-depreciation-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۳. تب استهلاک و ارزش‌ها (Depreciation &amp; Values)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-location-custody" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۴. تب استقرار و مسئولیت (Location &amp; Custody)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-technical-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۵. تب مشخصات فنی (Technical Specs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-components-ifrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲-۶. تب اجزاء (Components) - استاندارد IFRS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. عملیات روی کارت (Actions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. سناریوهای کاربردی (Use Cases)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. سناریوهای کاربردی (Use Cases)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریوی ۱: ردیابی دارایی مفقوده (دولتی)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      سناریوی ۲: هشدار گارانتی (خصوصی)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. تعامل با سایر بخش‌ها (Integration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. ملاحظات فنی برای توسعه‌دهندگان (Developer Notes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۶. ملاحظات فنی برای توسعه‌دهندگان (Developer Notes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporal-data-audit-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      الف) تاریخچه زمانی (Temporal Data / Audit Log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      ب) همزمانی (Concurrency)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ج) ایندکس‌گذاری (Indexing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. پرسش‌های متداول (FAQ)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="asset-master-data">کارت دارایی (Asset Master Data)</h1>
+<p><strong>مسیر دسترسی:</strong> <code>دارایی ثابت &gt; مدیریت دارایی‌ها &gt; کارت دارایی</code>
+<strong>نام فنی:</strong> <code>AssetMaster</code></p>
+<h2 id="_1">۱. مقدمه و فلسفه وجودی</h2>
+<p>کارت دارایی، <strong>«پرونده جامع»</strong> و <strong>«منبع حقیقت» (Single Source of Truth)</strong> برای هر قلم دارایی در سازمان است.
+این فرم صرفاً یک صفحه برای نمایش اطلاعات نیست؛ بلکه یک <strong>«داشبورد زنده»</strong> است که وضعیت مالی، فیزیکی و فنی دارایی را در لحظه نشان می‌دهد.</p>
+<p>در ERP تابان، کارت دارایی بر اساس اصل <strong>۳۶۰ درجه</strong> طراحی شده است:</p>
+<ol>
+<li><strong>چهره مالی:</strong> چقدر خریدیم؟ چقدر می‌ارزد؟ (برای حسابدار)</li>
+<li><strong>چهره فیزیکی:</strong> کجاست؟ دست کیست؟ (برای جمعدار)</li>
+<li><strong>چهره فنی:</strong> مدلش چیست؟ کی سرویس شده؟ (برای مهندس فنی)</li>
+</ol>
+<hr />
+<h2 id="structure-tabs">۲. آناتومی کارت دارایی (Structure &amp; Tabs)</h2>
+<p>این فرم به دلیل حجم بالای اطلاعات، به چند زبانه (Tab) تقسیم می‌شود.</p>
+<h3 id="-header-">۲-۱. سربرگ (Header) - اطلاعات هویتی</h3>
+<p>این بخش همیشه ثابت است و تغییر نمی‌کند.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">عنوان فیلد</th>
+<th style="text-align: left;">شرح و منطق بیزینسی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>شماره پلاک (Asset Tag)</strong></td>
+<td style="text-align: left;">شناسه منحصر‌به‌فرد روی برچسب (مثلاً <code>IT-1403-005</code>). لینک اصلی به دنیای فیزیکی.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نام دارایی</strong></td>
+<td style="text-align: left;">عنوان گویا (مثلاً: لپ‌تاپ ایسوس مدل ZenBook).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>گروه دارایی</strong></td>
+<td style="text-align: left;">لینک به درختواره (مثلاً: تجهیزات رایانه‌ای). <em>بسیاری از فیلدها را از اینجا به ارث می‌برد.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت (Status)</strong></td>
+<td style="text-align: left;">وضعیت چرخه عمر: <code>فعال</code>، <code>راکد</code>، <code>تحت تعمیر</code>، <code>آماده فروش</code>، <code>اسقاط شده</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بارکد/سریال</strong></td>
+<td style="text-align: left;">شماره سریال کارخانه سازنده (S/N) جهت ردیابی گارانتی.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شناسه سادا</strong></td>
+<td style="text-align: left;"><strong>(مخصوص دولتی)</strong> کد ۱۴ رقمی اموال دولتی که باید به وزارت دارایی گزارش شود.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="-financial-acquisition">۲-۲. تب مالی و تحصیل (Financial &amp; Acquisition)</h3>
+<p>اطلاعات ریالی که از "فرم تحصیل" آمده است.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">عنوان فیلد</th>
+<th style="text-align: left;">نوع</th>
+<th style="text-align: left;">شرح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>تاریخ تحصیل</strong></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">روزی که مالک آن شدیم.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تاریخ شروع استهلاک</strong></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">معمولاً همان تاریخ تحصیل یا اول ماه بعد (قابل تنظیم).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بهای تمام شده (Cost)</strong></td>
+<td style="text-align: left;">Money</td>
+<td style="text-align: left;">مبلغ خرید + هزینه‌های نصب. (این عدد ثابت است مگر تجدید ارزیابی شود).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تامین‌کننده</strong></td>
+<td style="text-align: left;">Link</td>
+<td style="text-align: left;">فروشنده کالا (جهت خدمات پس از فروش).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>شماره سند خرید</strong></td>
+<td style="text-align: left;">Link</td>
+<td style="text-align: left;">لینک به فاکتور خرید یا سند حسابداری تحصیل.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="-depreciation-values">۲-۳. تب استهلاک و ارزش‌ها (Depreciation &amp; Values)</h3>
+<p>این بخش "موتور محاسباتی" کارت است. اگر سازمان چند دفتری باشد، این تب به صورت گرید (جدول) نمایش داده می‌شود.</p>
+<p><strong>ستون‌های جدول برای هر دفتر:</strong></p>
+<ol>
+<li><strong>نام دفتر:</strong> (مثلاً دفتر مالیاتی).</li>
+<li><strong>روش استهلاک:</strong> (مثلاً نزولی ماده ۱۴۹). <em>به ارث رسیده از طبقه دارایی.</em></li>
+<li><strong>عمر مفید:</strong> (مثلاً ۱۰ سال).</li>
+<li><strong>نرخ:</strong> (مثلاً ۲۵٪).</li>
+<li><strong>ارزش دفتری لحظه‌ای (NBV):</strong> <code>بهای تمام شده - استهلاک انباشته</code>. <em>این عدد زنده است.</em></li>
+<li><strong>استهلاک انباشته:</strong> کل پولی که تا امروز مستهلک شده.</li>
+<li><strong>هزینه سال جاری:</strong> استهلاک امسال چقدر بوده؟</li>
+</ol>
+<hr />
+<h3 id="-location-custody">۲-۴. تب استقرار و مسئولیت (Location &amp; Custody)</h3>
+<p>چه کسی پاسخگوی این دارایی است؟</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">عنوان فیلد</th>
+<th style="text-align: left;">شرح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>واحد جمعداری</strong></td>
+<td style="text-align: left;">واحد سازمانی مسئول (مثلاً جمعداری مرکزی).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>محل استقرار</strong></td>
+<td style="text-align: left;">آدرس فیزیکی دقیق (ساختمان A، طبقه ۲، اتاق ۲۰۵).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تحویل گیرنده (Custodian)</strong></td>
+<td style="text-align: left;">کارمندی که دارایی را تحویل گرفته (لینک به ماژول HR).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مرکز هزینه (Cost Center)</strong></td>
+<td style="text-align: left;"><strong>حیاتی برای حسابداری.</strong> هزینه استهلاک به پای کدام واحد نوشته شود؟ (مثلاً واحد فروش).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>نکته امنیتی:</strong> این تب معمولاً قفل است و فقط از طریق "فرم نقل و انتقال" تغییر می‌کند تا تاریخچه (History) حفظ شود.</p>
+</blockquote>
+<hr />
+<h3 id="-technical-specs">۲-۵. تب مشخصات فنی (Technical Specs)</h3>
+<p>این تب کاملاً <strong>پویا (Dynamic)</strong> است و بر اساس "گروه دارایی" تغییر می‌کند.</p>
+<ul>
+<li>اگر گروه "خودرو" باشد -&gt; فیلدهای: شماره شاسی، شماره موتور، نوع سوخت، رنگ.</li>
+<li>اگر گروه "ملک" باشد -&gt; فیلدهای: پلاک ثبتی، متراژ عرصه، متراژ اعیان.</li>
+</ul>
+<hr />
+<h3 id="-components-ifrs">۲-۶. تب اجزاء (Components) - استاندارد IFRS</h3>
+<p>برای دارایی‌های پیچیده که از چند بخش تشکیل شده‌اند (Component Accounting).</p>
+<ul>
+<li><strong>دارایی والد:</strong> کامیون ولوو (پلاک ۱۰۰).</li>
+<li><strong>اجزاء:</strong><ul>
+<li>شاسی (پلاک ۱۰۰-۱) -&gt; عمر ۲۰ سال.</li>
+<li>موتور (پلاک ۱۰۰-۲) -&gt; عمر ۵ سال.</li>
+<li>لاستیک (پلاک ۱۰۰-۳) -&gt; عمر ۲ سال.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="actions">۳. عملیات روی کارت (Actions)</h2>
+<p>در بالای فرم کارت دارایی، دکمه‌های عملیاتی وجود دارد که هر کدام یک فرآیند را استارت می‌زنند:</p>
+<ol>
+<li><strong>چاپ لیبل:</strong> ارسال دستور چاپ به لیبل‌زن.</li>
+<li><strong>نقل و انتقال:</strong> باز کردن فرم جابجایی (تغییر اتاق/فرد).</li>
+<li><strong>تغییر وضعیت:</strong> مثلاً اعلام خرابی (تغییر وضعیت به "تحت تعمیر").</li>
+<li><strong>کاردکس گردش:</strong> مشاهده تاریخچه تمام اتفاقات (کی خریده شد؟ کی تعمیر شد؟ کی جابجا شد؟).</li>
+<li><strong>تصاویر/پیوست:</strong> آپلود عکس دارایی، اسکن فاکتور، کارت گارانتی.</li>
+</ol>
+<hr />
+<h2 id="use-cases">۴. سناریوهای کاربردی (Use Cases)</h2>
+<h3 id="_2">سناریوی ۱: ردیابی دارایی مفقوده (دولتی)</h3>
+<p>حراست یک مانیتور پیدا کرده که پلاک ندارد، اما شماره سریال پشت آن هست.</p>
+<ol>
+<li>کاربر وارد لیست کارت دارایی می‌شود.</li>
+<li>شماره سریال را سرچ می‌کند.</li>
+<li>کارت پیدا می‌شود: "مانیتور ال‌جی، تحویل آقای محمدی، اتاق ۱۰۲".</li>
+<li>سیستم نشان می‌دهد که این دارایی در وضعیت "فعال" است (یعنی نباید در راهرو رها شده باشد!).</li>
+</ol>
+<h3 id="_3">سناریوی ۲: هشدار گارانتی (خصوصی)</h3>
+<p>مدیر فنی می‌خواهد بداند گارانتی کدام سرورها ماه آینده تمام می‌شود.</p>
+<ol>
+<li>در کارت دارایی، فیلد "تاریخ پایان گارانتی" (از تب فنی) پر شده است.</li>
+<li>گزارشی می‌گیرد از دارایی‌هایی که <code>WarrantyDate &lt; NextMonth</code> است.</li>
+</ol>
+<hr />
+<h2 id="integration">۵. تعامل با سایر بخش‌ها (Integration)</h2>
+<ol>
+<li>
+<p><strong>با تعمیرات (Maintenance):</strong></p>
+<ul>
+<li>در کارت دارایی، دکمه "تاریخچه تعمیرات" وجود دارد که لیست تمام Work Orderهای صادر شده برای این دستگاه را از ماژول نت می‌خواند.</li>
+</ul>
+</li>
+<li>
+<p><strong>با بیمه:</strong></p>
+<ul>
+<li>فیلد "شماره بیمه‌نامه" و "تاریخ انقضا" در کارت دارایی، به ماژول قراردادها لینک است.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="developer-notes">۶. ملاحظات فنی برای توسعه‌دهندگان (Developer Notes)</h2>
+<h3 id="temporal-data-audit-log">الف) تاریخچه زمانی (Temporal Data / Audit Log)</h3>
+<p>کارت دارایی <strong>نباید</strong> فقط آخرین وضعیت را نگه دارد. ما نیاز داریم بدانیم "در تاریخ ۱ خرداد، این دارایی دست چه کسی بود؟".</p>
+<ul>
+<li><strong>راهکار:</strong> استفاده از جدول <code>AssetHistory</code> یا ویژگی <code>Temporal Tables</code> در SQL Server. هر تغییری در فیلدهای کلیدی (محل، مسئول، مرکز هزینه) باید یک ورژن جدید در تاریخچه بسازد.</li>
+</ul>
+<h3 id="concurrency">ب) همزمانی (Concurrency)</h3>
+<p>اگر دو جمعدار هم‌زمان بخواهند یک دارایی را ویرایش کنند (مثلاً یکی محل را عوض کند، دیگری مسئول را)، سیستم باید از مکانیزم <code>Optimistic Locking</code> (چک کردن ورژن رکورد) استفاده کند تا تغییرات یکدیگر را بازنویسی نکنند.</p>
+<h3 id="indexing">ج) ایندکس‌گذاری (Indexing)</h3>
+<p>چون جستجو روی این جدول بسیار زیاد است (با پلاک، با نام، با سریال، با تحویل‌گیرنده)، ایندکس‌های دیتابیس باید روی این ستون‌ها بهینه باشند.</p>
+<hr />
+<h2 id="faq">۷. پرسش‌های متداول (FAQ)</h2>
+<p><strong>س: آیا می‌توانم نام دارایی را بعد از پلاک‌کوبی عوض کنم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> بله، نام و توضیحات قابل ویرایش هستند. اما فیلدهای مالی (مثل بهای تمام شده) قفل هستند و فقط با "سند تعدیل" تغییر می‌کنند.</li>
+</ul>
+<p><strong>س: اگر یک دارایی دزدیده شود، کارت آن را حذف کنیم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> <strong>هرگز!</strong> در سیستم‌های مالی چیزی حذف نمی‌شود. شما وضعیت آن را به <strong>«مفقود شده»</strong> تغییر می‌دهید. دارایی همچنان در سیستم هست اما استهلاک آن متوقف می‌شود و در لیست اموال‌گردانی با رنگ قرمز نمایش داده می‌شود.</li>
+</ul>
+<p><strong>س: شناسه سادا (دولتی) را از کجا بیاوریم؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> این شناسه توسط وب‌سرویس وزارت دارایی یا فایل اکسل مرجع ارائه می‌شود. در ERP تابان، کاتالوگ سادا بارگذاری شده و کاربر فقط کالا را انتخاب می‌کند تا کد ۱۴ رقمی در کارت بنشیند.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

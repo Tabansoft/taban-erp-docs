@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#payables-management" class="md-skip">
+        <a href="#payment-vouchers" class="md-skip">
           پرش به محتویات
         </a>
       
@@ -1019,99 +1019,96 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مقدمه: فلسفه و معماری کنترل نقدینگی
+      ۱. مقدمه: تغییر پارادایم از «خرج کردن» به «مدیریت تعهدات»
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#payment-types" class="md-nav__link">
+  <a href="#payment-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. انواع پرداخت (Payment Types)
+      ۲. معماری داده‌ها و انواع پرداخت (Payment Architecture)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#allocation-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۳. اسناد مرجع قابل تخصیص (Allocation Sources)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#payment-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۴. فرم عملیاتی: سند پرداخت (Payment Document)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="۴. فرم عملیاتی: سند پرداخت (Payment Document)">
+    <nav class="md-nav" aria-label="۲. معماری داده‌ها و انواع پرداخت (Payment Architecture)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      بخش اول: اطلاعات سربرگ (Header)
+      جدول استراتژی انواع پرداخت
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. فرم عملیاتی: کالبدشکافی سند پرداخت
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۳. فرم عملیاتی: کالبدشکافی سند پرداخت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳-۱. بخش سربرگ (Header) - زمینه و هویت
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#allocation" class="md-nav__link">
+  <a href="#-allocation-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۱: تخصیص (Allocation)
+      ۳-۲. تب اول: تخصیص (Allocation) - "بابت چیست؟"
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deductions" class="md-nav__link">
+  <a href="#-deductions-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۲: کسورات (Deductions)
+      ۳-۳. تب دوم: کسورات (Deductions) - "خالص‌سازی"
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#payment-lines-" class="md-nav__link">
+  <a href="#-instruments-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۳: روش‌های پرداخت (Payment Lines) - "اجرا"
+      ۳-۴. تب سوم: ابزار پرداخت (Instruments) - "اجرا"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="تب ۳: روش‌های پرداخت (Payment Lines) - &#34;اجرا&#34;">
+    <nav class="md-nav" aria-label="۳-۴. تب سوم: ابزار پرداخت (Instruments) - &#34;اجرا&#34;">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#check-issuance" class="md-nav__link">
     <span class="md-ellipsis">
-      روش الف: صدور چک (Check Issuance)
+      الف) صدور چک (Check Issuance)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#wire-transfer" class="md-nav__link">
+  <a href="#wire-transfer-paya-satna" class="md-nav__link">
     <span class="md-ellipsis">
-      روش ب: حواله بانکی (Wire Transfer)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cash-payment" class="md-nav__link">
-    <span class="md-ellipsis">
-      روش ج: پرداخت نقدی (Cash Payment)
+      ب) حواله بانکی (Wire Transfer / Paya / Satna)
     </span>
   </a>
   
@@ -1120,7 +1117,16 @@
           <li class="md-nav__item">
   <a href="#endorsement" class="md-nav__link">
     <span class="md-ellipsis">
-      روش د: خرج چک (Endorsement)
+      ج) خرج چک (Endorsement)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cash" class="md-nav__link">
+    <span class="md-ellipsis">
+      د) پرداخت نقدی (Cash)
     </span>
   </a>
   
@@ -1137,18 +1143,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validations" class="md-nav__link">
+  <a href="#validation-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      ۵. کنترل‌های امنیتی و هوشمند (Validations)
+      ۴. موتور کنترل و اعتبارسنجی (Validation Engine)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. موتور کنترل و اعتبارسنجی (Validation Engine)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-accounting-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴-۱. کنترل تراز (Accounting Balance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-security-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴-۲. کنترل‌های امنیتی (Security Checks)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. موتور صدور سند حسابداری (GL Engine)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gl-entries" class="md-nav__link">
+  <a href="#process-flow-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      ۶. اسناد حسابداری اتوماتیک (GL Entries)
+      ۶. دیاگرام جریان فرآیند (Process Flow Diagram)
     </span>
   </a>
   
@@ -1157,7 +1196,7 @@
         <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
-      ۷. بخش پرسش‌های متداول (FAQ)
+      ۷. پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -2203,6 +2242,718 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت اموال و دارایی‌های ثابت
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت اموال و دارایی‌های ثابت
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    معرفی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    تعاریف پایه
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            تعاریف پایه
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/master-data/asset-category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    گروه‌های دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/master-data/asset-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    طبقه‌های دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/master-data/depreciation-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    دفاتر استهلاک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/master-data/tagging-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تنظیمات پلاک‌دهی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/master-data/asset-identification-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مدیریت بارکد و RFID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    مدیریت
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            مدیریت
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/management/asset-master/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    کارت‌های دارایی‌ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-acquisition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تحصیل دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    نقل و انتقال دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-status-change/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    تغییر وضعیت دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-physical-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اموال‌گردانی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/depreciation-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    محاسبه استهلاک
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_6" id="__nav_8_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    خروج دارایی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            خروج دارایی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-disposal/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مقدمه
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-disposal/asset-sale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    فروش دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-disposal/asset-scrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اسقاط دارایی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-disposal/asset-donation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اهدا و انتقال
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/operations/asset-disposal/asset-loss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مفقودی و حوادث
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    عملیات مالی
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            عملیات مالی
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/financial-operations/fiscal-period-close/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بستن دوره
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fixed-asset-management/financial-operations/asset-adjustment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    اسناد تعدیل
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2232,99 +2983,96 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ۱. مقدمه: فلسفه و معماری کنترل نقدینگی
+      ۱. مقدمه: تغییر پارادایم از «خرج کردن» به «مدیریت تعهدات»
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#payment-types" class="md-nav__link">
+  <a href="#payment-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      ۲. انواع پرداخت (Payment Types)
+      ۲. معماری داده‌ها و انواع پرداخت (Payment Architecture)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#allocation-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۳. اسناد مرجع قابل تخصیص (Allocation Sources)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#payment-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      ۴. فرم عملیاتی: سند پرداخت (Payment Document)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="۴. فرم عملیاتی: سند پرداخت (Payment Document)">
+    <nav class="md-nav" aria-label="۲. معماری داده‌ها و انواع پرداخت (Payment Architecture)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      بخش اول: اطلاعات سربرگ (Header)
+      جدول استراتژی انواع پرداخت
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. فرم عملیاتی: کالبدشکافی سند پرداخت
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۳. فرم عملیاتی: کالبدشکافی سند پرداخت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳-۱. بخش سربرگ (Header) - زمینه و هویت
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#allocation" class="md-nav__link">
+  <a href="#-allocation-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۱: تخصیص (Allocation)
+      ۳-۲. تب اول: تخصیص (Allocation) - "بابت چیست؟"
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deductions" class="md-nav__link">
+  <a href="#-deductions-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۲: کسورات (Deductions)
+      ۳-۳. تب دوم: کسورات (Deductions) - "خالص‌سازی"
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#payment-lines-" class="md-nav__link">
+  <a href="#-instruments-" class="md-nav__link">
     <span class="md-ellipsis">
-      تب ۳: روش‌های پرداخت (Payment Lines) - "اجرا"
+      ۳-۴. تب سوم: ابزار پرداخت (Instruments) - "اجرا"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="تب ۳: روش‌های پرداخت (Payment Lines) - &#34;اجرا&#34;">
+    <nav class="md-nav" aria-label="۳-۴. تب سوم: ابزار پرداخت (Instruments) - &#34;اجرا&#34;">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#check-issuance" class="md-nav__link">
     <span class="md-ellipsis">
-      روش الف: صدور چک (Check Issuance)
+      الف) صدور چک (Check Issuance)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#wire-transfer" class="md-nav__link">
+  <a href="#wire-transfer-paya-satna" class="md-nav__link">
     <span class="md-ellipsis">
-      روش ب: حواله بانکی (Wire Transfer)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cash-payment" class="md-nav__link">
-    <span class="md-ellipsis">
-      روش ج: پرداخت نقدی (Cash Payment)
+      ب) حواله بانکی (Wire Transfer / Paya / Satna)
     </span>
   </a>
   
@@ -2333,7 +3081,16 @@
           <li class="md-nav__item">
   <a href="#endorsement" class="md-nav__link">
     <span class="md-ellipsis">
-      روش د: خرج چک (Endorsement)
+      ج) خرج چک (Endorsement)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cash" class="md-nav__link">
+    <span class="md-ellipsis">
+      د) پرداخت نقدی (Cash)
     </span>
   </a>
   
@@ -2350,18 +3107,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validations" class="md-nav__link">
+  <a href="#validation-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      ۵. کنترل‌های امنیتی و هوشمند (Validations)
+      ۴. موتور کنترل و اعتبارسنجی (Validation Engine)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="۴. موتور کنترل و اعتبارسنجی (Validation Engine)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-accounting-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴-۱. کنترل تراز (Accounting Balance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-security-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴-۲. کنترل‌های امنیتی (Security Checks)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. موتور صدور سند حسابداری (GL Engine)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gl-entries" class="md-nav__link">
+  <a href="#process-flow-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      ۶. اسناد حسابداری اتوماتیک (GL Entries)
+      ۶. دیاگرام جریان فرآیند (Process Flow Diagram)
     </span>
   </a>
   
@@ -2370,7 +3160,7 @@
         <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
-      ۷. بخش پرسش‌های متداول (FAQ)
+      ۷. پرسش‌های متداول (FAQ)
     </span>
   </a>
   
@@ -2395,160 +3185,130 @@
   
 
 
-<h1 id="payables-management">مستندات جامع فنی: ماژول مدیریت پرداخت‌ها (Payables Management)</h1>
-<h2 id="_1">۱. مقدمه: فلسفه و معماری کنترل نقدینگی</h2>
-<p>در سیستم ERP تابان، ماژول <strong>«مدیریت پرداخت‌ها»</strong> یک سیستم کنترل مرکزی برای خروج نقدینگی است. برخلاف سیستم‌های سنتی که پرداخت را صرفاً "صدور چک" می‌دانند، در تابان این یک فرآیند ۳ مرحله‌ای است که تضمین می‌کند هیچ پولی خارج نمی‌شود مگر اینکه:</p>
+<h1 id="payment-vouchers">مستندات جامع فنی: ماژول سند پرداخت (Payment Vouchers)</h1>
+<h2 id="_1">۱. مقدمه: تغییر پارادایم از «خرج کردن» به «مدیریت تعهدات»</h2>
+<p>در سیستم‌های حسابداری سنتی، پرداخت صرفاً به معنای «نوشتن یک چک» است. اما در معماری ERP تابان، سند پرداخت آخرین حلقه از زنجیره تأمین (Supply Chain) است.</p>
+<blockquote>
+<p><strong>«پول نقد، خونِ سازمان است.»</strong></p>
+</blockquote>
+<p>مدیریت خروج این خون حیاتی، نیازمند مکانیزمی است که مطمئن شود هر ریالی که از سازمان خارج می‌شود، دقیقاً در ازای یک «تعهد تایید شده» و با رعایت «الزامات قانونی» صورت گرفته است.</p>
+<p>ماژول پرداخت، یک <strong>گیت وی (Gateway)</strong> کنترلی است که سه شرط را قبل از خروج پول بررسی می‌کند:</p>
 <ol>
-<li><strong>تعهد شناسایی شده باشد</strong> (تخصیص به بدهی).</li>
-<li><strong>حقوق قانونی و قراردادی کسر شده باشد</strong> (خالص‌سازی).</li>
-<li><strong>ابزار پرداخت معتبر باشد</strong> (اجرا).</li>
+<li><strong>مشروعیت (Validity):</strong> آیا بدهی وجود دارد و تایید شده است؟ (تخصیص).</li>
+<li><strong>خالص‌سازی (Netting):</strong> آیا سهم دولت و سپرده‌ها کسر شده است؟ (کسورات).</li>
+<li><strong>قابلیت اجرا (Execution):</strong> آیا موجودی و ابزار پرداخت معتبر است؟ (روش پرداخت).</li>
 </ol>
 <hr />
-<h2 id="payment-types">۲. انواع پرداخت (Payment Types)</h2>
-<p>فیلد <code>PaymentType</code> تعیین می‌کند فرم چه رفتاری داشته باشد و کدام حساب‌های معین درگیر شوند:</p>
+<h2 id="payment-architecture">۲. معماری داده‌ها و انواع پرداخت (Payment Architecture)</h2>
+<p>فیلد <code>PaymentType</code> در سربرگ، نقش <strong>کنترل‌کننده (Controller)</strong> رفتار فرم را دارد. انتخاب نوع پرداخت، قوانین اعتبارسنجی و حساب‌های GL درگیر را تغییر می‌دهد.</p>
+<h3 id="_2">جدول استراتژی انواع پرداخت</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">نوع پرداخت</th>
-<th style="text-align: left;">نام فنی</th>
-<th style="text-align: left;">کاربرد و منطق رفتاری</th>
+<th style="text-align: left;">نوع پرداخت (Type)</th>
+<th style="text-align: left;">نام فنی (Enum)</th>
+<th style="text-align: left;">سناریوی بیزینس</th>
+<th style="text-align: left;">رفتار فرم و محدودیت‌ها</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>۱. پرداخت به تأمین‌کننده</strong></td>
+<td style="text-align: left;"><strong>پرداخت تجاری</strong></td>
 <td style="text-align: left;"><code>VendorPayment</code></td>
-<td style="text-align: left;"><strong>(استاندارد)</strong> پرداخت بابت فاکتورهای خرید، صورت‌وضعیت‌ها یا علی‌الحساب تجاری. <br> <em>الزامات:</em> انتخاب «تأمین‌کننده» اجباری است. تب‌های «تخصیص» و «کسورات» فعال هستند.</td>
+<td style="text-align: left;">تسویه فاکتور خرید یا صورت‌وضعیت پیمانکار.</td>
+<td style="text-align: left;"><strong>تأمین‌کننده الزامی.</strong> تب تخصیص و کسورات فعال.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۲. پیش‌پرداخت سفارش</strong></td>
+<td style="text-align: left;"><strong>پیش‌پرداخت</strong></td>
 <td style="text-align: left;"><code>Prepayment</code></td>
-<td style="text-align: left;">پرداخت قبل از دریافت کالا/خدمت. <br> <em>الزامات:</em> مستقیماً به «سفارش خرید» (PO) لینک می‌شود. تب تخصیص غیرفعال (چون فاکتوری نیست) اما تب کسورات فعال است.</td>
+<td style="text-align: left;">پرداخت قبل از دریافت کالا (بیعانه).</td>
+<td style="text-align: left;">اتصال به <strong>سفارش خرید (PO)</strong>. تب تخصیص غیرفعال (چون فاکتوری نیست).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۳. هزینه مستقیم</strong></td>
+<td style="text-align: left;"><strong>هزینه مستقیم</strong></td>
 <td style="text-align: left;"><code>DirectExpense</code></td>
-<td style="text-align: left;">پرداخت‌های بدون فاکتور خرید (مثل هزینه پیک، شارژ ساختمان، خرید ملزومات جزئی). <br> <em>الزامات:</em> مستقیماً به یک «حساب هزینه» (Expense GL) لینک می‌شود.</td>
+<td style="text-align: left;">هزینه‌های بدون فاکتور خرید (شارژ، ایاب‌ذهاب، پذیرایی).</td>
+<td style="text-align: left;">اتصال مستقیم به <strong>کد حساب هزینه (GL Account)</strong>. بدون نیاز به تأمین‌کننده تعریف شده.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۴. حقوق و دستمزد</strong></td>
-<td style="text-align: left;"><code>SalaryPayment</code></td>
-<td style="text-align: left;">پرداخت حقوق کارکنان (معمولاً از طریق «ویزارد پرداخت گروهی» انجام می‌شود).</td>
+<td style="text-align: left;"><strong>حقوق و دستمزد</strong></td>
+<td style="text-align: left;"><code>Salary</code></td>
+<td style="text-align: left;">پرداخت ماهانه پرسنل.</td>
+<td style="text-align: left;">اتصال به ماژول حقوق (HR). معمولاً گروهی (Batch) صادر می‌شود.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>۵. پرداخت‌های قانونی</strong></td>
-<td style="text-align: left;"><code>TaxPayment</code></td>
-<td style="text-align: left;">پرداخت بدهی‌های کسر شده (بیمه، مالیات) به سازمان‌های دولتی. <br> <em>الزامات:</em> طرف حساب حتماً باید یک ارگان دولتی باشد.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="allocation-sources">۳. اسناد مرجع قابل تخصیص (Allocation Sources)</h2>
-<p>در تب تخصیص، کاربر می‌تواند پرداخت را به اسناد زیر متصل کند:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">نوع سند مرجع</th>
-<th style="text-align: left;">کاربرد</th>
-<th style="text-align: left;">مثال</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>۱. فاکتور خرید (Purchase Invoice)</strong></td>
-<td style="text-align: left;">تسویه بدهی ناشی از خرید کالا/خدمات.</td>
-<td style="text-align: left;">فاکتور خرید ۱۰۰ تن ورق فولادی.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>۲. صورت‌وضعیت (Contractor Statement)</strong></td>
-<td style="text-align: left;">تسویه خدمات پیمانکاری (عمرانی/فنی).</td>
-<td style="text-align: left;">صورت‌وضعیت شماره ۳ برق‌کشی ساختمان.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>۳. سند مانده اول دوره (Opening Balance)</strong></td>
-<td style="text-align: left;">تسویه بدهی‌های سنواتی (قبل از استقرار سیستم).</td>
-<td style="text-align: left;">مانده حساب دفتری سال گذشته.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>۴. اعلامیه بدهکار (Debit Note)</strong></td>
-<td style="text-align: left;">بدهی‌های غیرتجاری یا اصلاحی.</td>
-<td style="text-align: left;">جریمه دیرکرد که توافق کردیم بپردازیم.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>۵. سفارش خرید (Purchase Order)</strong></td>
-<td style="text-align: left;">فقط برای <strong>پیش‌پرداخت</strong>.</td>
-<td style="text-align: left;">پرداخت ۳۰٪ مبلغ قرارداد قبل از حمل کالا.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>۶. گزارش تنخواه (Expense Report)</strong></td>
-<td style="text-align: left;">بازپرداخت هزینه‌های انجام شده توسط پرسنل.</td>
-<td style="text-align: left;">تسویه هزینه مأموریت مدیر فروش.</td>
+<td style="text-align: left;"><strong>پرداخت قانونی</strong></td>
+<td style="text-align: left;"><code>TaxAuthority</code></td>
+<td style="text-align: left;">پرداخت بیمه و مالیات کسر شده به دولت.</td>
+<td style="text-align: left;">طرف حساب: سازمان تامین اجتماعی / دارایی. اتصال به مانده حساب‌های معین بدهی.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="payment-document">۴. فرم عملیاتی: سند پرداخت (Payment Document)</h2>
-<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; عملیات پرداخت &gt; سند پرداخت جدید</code></p>
-<h3 id="header">بخش اول: اطلاعات سربرگ (Header)</h3>
+<h2 id="_3">۳. فرم عملیاتی: کالبدشکافی سند پرداخت</h2>
+<p><strong>مسیر دسترسی:</strong> <code>خزانه‌داری &gt; عملیات &gt; پرداخت جدید</code></p>
+<p>این فرم از ۴ بخش اصلی تشکیل شده است که جریان داده‌ها را از «تعهد» به «تسویه» هدایت می‌کند.</p>
+<h3 id="-header-">۳-۱. بخش سربرگ (Header) - زمینه و هویت</h3>
+<p>این بخش مشخص می‌کند "چه کسی، چه زمانی و چه مبلغی" را دریافت می‌کند.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">عنوان فیلد</th>
-<th style="text-align: left;">نام فنی</th>
-<th style="text-align: left;">الزامی</th>
-<th style="text-align: left;">راهنمای تکمیل و منطق هوشمند</th>
+<th style="text-align: left;">فیلد</th>
+<th style="text-align: left;">شرح فنی و بیزینس</th>
+<th style="text-align: left;">قوانین اعتبارسنجی (Validation)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>شماره سند</strong></td>
-<td style="text-align: left;"><code>DocNum</code></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">تولید خودکار (مثلاً <code>PAY-1403-0150</code>).</td>
+<td style="text-align: left;">شناسه یکتا (<code>PAY-1403-1001</code>).</td>
+<td style="text-align: left;">تولید خودکار (Auto-Increment) و غیرقابل ویرایش.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وضعیت</strong></td>
+<td style="text-align: left;">چرخه حیات (<code>Draft</code>, <code>Approved</code>, <code>Posted</code>).</td>
+<td style="text-align: left;">تغییر وضعیت فقط از طریق Workflow انجام می‌شود.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>بنگاه اقتصادی</strong></td>
-<td style="text-align: left;"><code>LegalEntity</code></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">پرداخت از حساب کدام شرکت انجام می‌شود؟</td>
+<td style="text-align: left;">واحد تجاری پرداخت‌کننده.</td>
+<td style="text-align: left;">فیلتر کردن حساب‌های بانکی بر اساس شعبه انتخابی.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>دریافت‌کننده</strong></td>
-<td style="text-align: left;"><code>PayeeID</code></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">نام تأمین‌کننده، پیمانکار، کارمند یا سازمان.</td>
+<td style="text-align: left;"><code>PayeeID</code> (تأمین‌کننده / کارمند / تفصیلی شناور).</td>
+<td style="text-align: left;">لیست بر اساس <code>PaymentType</code> فیلتر می‌شود.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>تاریخ پرداخت</strong></td>
-<td style="text-align: left;"><code>DocDate</code></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">تاریخ صدور چک یا کسر وجه.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>ارز / نرخ ارز</strong></td>
-<td style="text-align: left;"><code>ExRate</code></td>
-<td style="text-align: left;">بله</td>
-<td style="text-align: left;">نرخ تبدیل در لحظه پرداخت (جهت محاسبه سود/زیان تسعیر ارز).</td>
+<td style="text-align: left;">تاریخ مؤثر خروج پول.</td>
+<td style="text-align: left;">نباید در دوره مالی بسته شده باشد.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>مبلغ قابل پرداخت</strong></td>
-<td style="text-align: left;"><code>TotalNet</code></td>
-<td style="text-align: left;"><strong>بله</strong></td>
-<td style="text-align: left;"><strong>(فیلد هوشمند/دوگانه):</strong> <br> ۱. <strong>حالت محاسباتی (پیش‌فرض):</strong> این فیلد قفل است. سیستم نتیجه <code>(جمع تخصیص - جمع کسورات)</code> را نمایش می‌دهد. <br> ۲. <strong>حالت دستی (علی‌الحساب/جزئی):</strong> با زدن تیک "ورود دستی"، کاربر مبلغ را تایپ می‌کند (مثلاً ۵۰ میلیون) و سقف تخصیص محدود به این عدد می‌شود.</td>
+<td style="text-align: left;"><code>PayableAmount</code>.</td>
+<td style="text-align: left;"><strong>منطق دوگانه:</strong> <br> 1. <strong>اتوماتیک:</strong> برابر با (تخصیص - کسورات). <br> 2. <strong>دستی (On-Account):</strong> کاربر مبلغ را دستی وارد می‌کند (پرداخت علی‌الحساب).</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="allocation">تب ۱: تخصیص (Allocation)</h3>
-<p>در این تب، سیستم لیست بدهی‌های بازِ طرف حساب را نمایش می‌دهد.
-\&lt;span style="color:green"&gt;<strong>نکته مهم (ارزش افزوده):</strong> مبلغ بدهی نمایش داده شده در اینجا، مبلغ <strong>کل فاکتور</strong> (شامل اصل جنس + ارزش افزوده) است. ارزش افزوده قبلاً در فاکتور خرید شناسایی شده و اینجا بخشی از بدهی عادی است.\&lt;/span&gt;</p>
+<h3 id="-allocation-">۳-۲. تب اول: تخصیص (Allocation) - "بابت چیست؟"</h3>
+<p>در این تب، سیستم به سوال <strong>"این پول کدام بدهی را صاف می‌کند؟"</strong> پاسخ می‌دهد.
+سیستم تمام اسناد باز (Open Items) طرف حساب را واکشی می‌کند.</p>
+<p><strong>منابع قابل تخصیص (Source Documents):</strong></p>
+<ol>
+<li><strong>فاکتور خرید (Purchase Invoice):</strong> بدهی ناشی از خرید کالا.</li>
+<li><strong>صورت‌وضعیت (Statement):</strong> بدهی ناشی از خدمات پیمانکاری.</li>
+<li><strong>سند افتتاحیه (Opening Balance):</strong> بدهی‌های سنواتی.</li>
+<li><strong>اعلامیه بدهکار (Debit Note):</strong> بدهی‌های متفرقه/اصلاحی.</li>
+</ol>
+<p><strong>نکته کلیدی (Gross Debt):</strong> مبلغی که اینجا نمایش داده می‌شود، <strong>مبلغ کل فاکتور</strong> (اصل + ارزش افزوده) است. ارزش افزوده قبلاً در فاکتور خرید لحاظ شده و اینجا بخشی از بدهی عادی است.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">انتخاب</th>
-<th style="text-align: left;">نوع سند</th>
-<th style="text-align: left;">شماره مرجع</th>
-<th style="text-align: left;">تاریخ</th>
+<th style="text-align: left;">نوع مرجع</th>
+<th style="text-align: left;">شماره</th>
 <th style="text-align: left;">مبلغ کل بدهی</th>
 <th style="text-align: left;">مانده باز</th>
 <th style="text-align: left;">مبلغ تخصیص (Gross)</th>
@@ -2559,7 +3319,6 @@
 <td style="text-align: center;">☑️</td>
 <td style="text-align: left;">صورت‌وضعیت</td>
 <td style="text-align: left;">ST-101</td>
-<td style="text-align: left;">1403/04/01</td>
 <td style="text-align: left;">100,000,000</td>
 <td style="text-align: left;">100,000,000</td>
 <td style="text-align: left;"><strong>100,000,000</strong></td>
@@ -2568,290 +3327,174 @@
 <td style="text-align: center;">☑️</td>
 <td style="text-align: left;">فاکتور خرید</td>
 <td style="text-align: left;">PUR-505</td>
-<td style="text-align: left;">1403/04/15</td>
 <td style="text-align: left;">20,000,000</td>
 <td style="text-align: left;">20,000,000</td>
 <td style="text-align: left;"><strong>20,000,000</strong></td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>جمع ناخالص تخصیص:</strong> ۱۲۰,۰۰۰,۰۰۰ ریال.</li>
-</ul>
 <hr />
-<h3 id="deductions">تب ۲: کسورات (Deductions)</h3>
-<p><strong>هدف:</strong> نمایش مبالغی که از پول پیمانکار کسر شده و نزد ما به امانت می‌ماند (بیمه، مالیات تکلیفی، حسن انجام کار).
-\&lt;span style="color:red"&gt;<strong>قانون:</strong>\&lt;/span&gt; این تب برای خزانه‌دار <strong>فقط خواندنی (Read-Only)</strong> است تا در محاسبات قانونی دخالت نکند. ارقام از "قرارداد" یا "درخواست پرداخت" فراخوانی می‌شوند.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">ردیف</th>
-<th style="text-align: left;">نوع کسورات</th>
-<th style="text-align: left;">مرتبط با سند</th>
-<th style="text-align: left;">مبلغ کسر شده</th>
-<th style="text-align: left;">شرح محاسباتی</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">۱</td>
-<td style="text-align: left;">سپرده بیمه</td>
-<td style="text-align: left;">ST-101</td>
-<td style="text-align: left;">16,670,000</td>
-<td style="text-align: left;">۱۶.۶۷٪ ماده ۳۸</td>
-</tr>
-<tr>
-<td style="text-align: left;">۲</td>
-<td style="text-align: left;">مالیات تکلیفی</td>
-<td style="text-align: left;">ST-101</td>
-<td style="text-align: left;">5,000,000</td>
-<td style="text-align: left;">۵٪ ماده ۱۰۴</td>
-</tr>
-<tr>
-<td style="text-align: left;">۳</td>
-<td style="text-align: left;">حسن انجام کار</td>
-<td style="text-align: left;">ST-101</td>
-<td style="text-align: left;">10,000,000</td>
-<td style="text-align: left;">۱۰٪ نگهداشت</td>
-</tr>
-<tr>
-<td style="text-align: left;">۴</td>
-<td style="text-align: left;">--</td>
-<td style="text-align: left;">PUR-505</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">خرید کالا کسورات ندارد</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>جمع کسورات:</strong> ۳۱,۶۷۰,۰۰۰ ریال.</li>
-<li><strong>خالص قابل پرداخت:</strong> <code>۱۲۰,۰۰۰,۰۰۰ - ۳۱,۶۷۰,۰۰۰ = ۸۸,۳۳۰,۰۰۰ ریال</code>.</li>
-</ul>
-<hr />
-<h3 id="payment-lines-">تب ۳: روش‌های پرداخت (Payment Lines) - "اجرا"</h3>
-<p>خزانه‌دار موظف است دقیقاً مبلغ <strong>۸۸,۳۳۰,۰۰۰ ریال</strong> (مبلغ خالص) را با استفاده از ترکیب روش‌های زیر پرداخت کند.</p>
-<h4 id="check-issuance">روش الف: صدور چک (Check Issuance)</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">فیلد</th>
-<th style="text-align: left;">توضیحات و منطق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>حساب بانکی</strong></td>
-<td style="text-align: left;">انتخاب حساب جاری (مثلاً بانک ملت).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>دسته چک</strong></td>
-<td style="text-align: left;">انتخاب دسته چک مربوطه.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>شماره سریال</strong></td>
-<td style="text-align: left;"><strong>انتخاب از لیست:</strong> فقط چک‌های "سفید/خام". تایپ دستی ممنوع.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مبلغ چک</strong></td>
-<td style="text-align: left;">مبلغ روی برگه چک.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>تاریخ سررسید</strong></td>
-<td style="text-align: left;">تاریخ نقد شدن.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>در وجه</strong></td>
-<td style="text-align: left;">نام گیرنده (پیش‌فرض: نام تأمین‌کننده، قابل ویرایش).</td>
-</tr>
-</tbody>
-</table>
-<h4 id="wire-transfer">روش ب: حواله بانکی (Wire Transfer)</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">فیلد</th>
-<th style="text-align: left;">توضیحات و منطق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>حساب مبدأ</strong></td>
-<td style="text-align: left;">حساب بانکی شرکت.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>حساب مقصد</strong></td>
-<td style="text-align: left;">\&lt;span style="color:red"&gt;<strong>امنیت:</strong>\&lt;/span&gt; فقط انتخاب از لیست حساب‌های تایید شده در پروفایل تأمین‌کننده (جلوگیری از تغییر شبا).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>شماره پیگیری</strong></td>
-<td style="text-align: left;">Trace No (کد رهگیری بانکی).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مبلغ حواله</strong></td>
-<td style="text-align: left;">مبلغی که به حساب طرف نشسته است.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>کارمزد بانکی</strong></td>
-<td style="text-align: left;"><code>BankChargeAmount</code>: مبلغی که بانک بابت کارمزد کسر کرده (جداگانه سند می‌خورد).</td>
-</tr>
-</tbody>
-</table>
-<h4 id="cash-payment">روش ج: پرداخت نقدی (Cash Payment)</h4>
-<p><em>(مخصوص هزینه‌های خرد، پیک، تنخواه)</em></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">فیلد</th>
-<th style="text-align: left;">توضیحات و منطق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>صندوق مبدأ</strong></td>
-<td style="text-align: left;">انتخاب صندوق نقد (مثلاً: صندوق تنخواه گردان، گاوصندوق اصلی).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مبلغ</strong></td>
-<td style="text-align: left;">مبلغ پرداختی به ریال.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>تحویل گیرنده</strong></td>
-<td style="text-align: left;">نام شخصی که پول نقد را فیزیکی تحویل گرفته است (برای اخذ امضا).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>شرح ردیف</strong></td>
-<td style="text-align: left;">توضیحات تکمیلی (مثلاً: بابت خرید نهار پرسنل).</td>
-</tr>
-</tbody>
-</table>
-<h4 id="endorsement">روش د: خرج چک (Endorsement)</h4>
-<p><em>(استفاده از چک مشتری برای پرداخت بدهی)</em></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">فیلد</th>
-<th style="text-align: left;">توضیحات و منطق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>انتخاب چک</strong></td>
-<td style="text-align: left;">دکمه‌ای که لیست <strong>"چک‌های موجود در صندوق"</strong> (دریافتی از مشتریان) را باز می‌کند.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مبلغ</strong></td>
-<td style="text-align: left;">غیرقابل ویرایش (برابر با مبلغ چک انتخابی).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>عملیات</strong></td>
-<td style="text-align: left;">انتقال مالکیت چک به تأمین‌کننده.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="validations">۵. کنترل‌های امنیتی و هوشمند (Validations)</h2>
+<h3 id="-deductions-">۳-۳. تب دوم: کسورات (Deductions) - "خالص‌سازی"</h3>
+<p>این تب قلب تپنده حسابداری پیمانکاری است. جایی که "حقوق قانونی و قراردادی" قبل از پرداخت کسر می‌شود.</p>
+<p><strong>فلسفه:</strong> خزانه‌دار نباید درگیر محاسبات پیچیده مالیاتی شود. این تب معمولاً <strong>فقط خواندنی (Read-Only)</strong> است و داده‌ها را از "قرارداد خرید" یا "درخواست پرداخت تایید شده" می‌خواند.</p>
+<p><strong>انواع کسورات رایج:</strong></p>
 <ol>
-<li>
-<p><strong>معادله تراز سند:</strong>
-    <code>مبلغ ناخالص تخصیص</code> - <code>کسورات</code> = <code>مبلغ خالص هدر</code> = <code>جمع (چک + نقد + حواله + خرج چک)</code>.
-    <em>(حتی ۱ ریال اختلاف مانع ثبت می‌شود).</em></p>
-</li>
-<li>
-<p><strong>قفل حساب مقصد (IBAN Lock):</strong>
-    در روش حواله، امکان تایپ دستی شماره شبا وجود ندارد.</p>
-</li>
-<li>
-<p><strong>جلوگیری از پرداخت تکراری:</strong></p>
+<li><strong>سپرده بیمه (SSO Deposit):</strong> ماده ۳۸ (معمولاً ۱۶.۶۷٪ یا ۵٪).</li>
+<li><strong>مالیات تکلیفی (WHT):</strong> ماده ۱۰۴ (تکلیف قانونی).</li>
+<li><strong>حسن انجام کار (Retention):</strong> ضمانت کیفی (معمولاً ۱۰٪).</li>
+<li><strong>پیش‌پرداخت مستهلک شده:</strong> کسر پیش‌پرداخت‌های داده شده قبلی از صورت‌وضعیت جاری.</li>
+</ol>
+<div class="arithmatex">\[Net Payable = \sum(Allocated Gross) - \sum(Deductions)\]</div>
+<hr />
+<h3 id="-instruments-">۳-۴. تب سوم: ابزار پرداخت (Instruments) - "اجرا"</h3>
+<p>خزانه‌دار باید دقیقاً به اندازه <strong>"مبلغ خالص قابل پرداخت"</strong>، خروجی صندوق/بانک تعریف کند.</p>
+<h4 id="check-issuance">الف) صدور چک (Check Issuance)</h4>
+<p>سیستم باید چرخه حیات چک‌های صادر شده (برگه چک خام <span class="arithmatex">\(\rightarrow\)</span> امضا شده <span class="arithmatex">\(\rightarrow\)</span> پاس شده) را مدیریت کند.</p>
 <ul>
-<li>سطح ۱: فاکتور انتخاب شده نباید در سند دیگری استفاده شده باشد.</li>
-<li>سطح ۲: هشدار اگر مبلغ و گیرنده مشابه پرداخت‌های ۷۲ ساعت گذشته باشد.</li>
+<li><strong>دسته چک:</strong> انتخاب دسته چک فعال.</li>
+<li><strong>شماره سریال:</strong> انتخاب از لیست سریال‌های سفید (جلوگیری از تایپ دستی).</li>
+<li><strong>وضعیت چک:</strong> <code>Issued</code> (صادر شده).</li>
 </ul>
-</li>
-<li>
-<p><strong>کنترل موجودی لحظه‌ای:</strong></p>
+<h4 id="wire-transfer-paya-satna">ب) حواله بانکی (Wire Transfer / Paya / Satna)</h4>
 <ul>
-<li><strong>صندوق:</strong> اگر موجودی نقد کافی نباشد، اجازه ثبت روش "نقد" را نمی‌دهد.</li>
-<li><strong>خرج چک:</strong> چک انتخاب شده باید وضعیت "نزد صندوق" داشته باشد.</li>
+<li><strong>حساب مقصد:</strong> \&lt;span style="color:red"&gt;<strong>کنترل امنیتی (IBAN Lock):</strong>\&lt;/span&gt; کاربر مجاز به تایپ شماره شبا نیست. باید یکی از حساب‌های تایید شده در پروفایل تأمین‌کننده انتخاب شود (جلوگیری از کلاهبرداری داخلی).</li>
+<li><strong>شماره پیگیری:</strong> <code>TraceNo</code>.</li>
 </ul>
-</li>
+<h4 id="endorsement">ج) خرج چک (Endorsement)</h4>
+<p>استفاده از چک‌های مشتریان برای پرداخت به تأمین‌کننده.</p>
+<ul>
+<li><strong>منبع:</strong> انتخاب از لیست "چک‌های موجود در صندوق" (On Hand Checks).</li>
+<li><strong>اثر مالی:</strong> کاهش حساب "اسناد دریافتنی" (نه بانک!).</li>
+</ul>
+<h4 id="cash">د) پرداخت نقدی (Cash)</h4>
+<p>مخصوص تنخواه‌گردان و هزینه‌های خرد.</p>
+<hr />
+<h2 id="validation-engine">۴. موتور کنترل و اعتبارسنجی (Validation Engine)</h2>
+<h3 id="-accounting-balance">۴-۱. کنترل تراز (Accounting Balance)</h3>
+<p>سیستم اجازه ثبت (<code>Post</code>) را نمی‌دهد مگر معادله زیر برقرار باشد:</p>
+<div class="arithmatex">\[(\text{Gross Allocation}) - (\text{Total Deductions}) = (\text{Cheque} + \text{Cash} + \text{Transfer})\]</div>
+<h3 id="-security-checks">۴-۲. کنترل‌های امنیتی (Security Checks)</h3>
+<ol>
+<li><strong>جلوگیری از پرداخت تکراری:</strong> اگر برای فاکتور انتخابی، قبلاً سندی در وضعیت <code>Submitted</code> یا <code>Posted</code> وجود داشته باشد، سیستم خطا می‌دهد.</li>
+<li><strong>کنترل سقف تخصیص:</strong> <code>Allocated Amount</code> <span class="arithmatex">\(\le\)</span> <code>Open Balance</code>.</li>
+<li><strong>کنترل موجودی منفی:</strong> هشدار در صورت عدم موجودی کافی در حساب بانکی/صندوق انتخاب شده.</li>
 </ol>
 <hr />
-<h2 id="gl-entries">۶. اسناد حسابداری اتوماتیک (GL Entries)</h2>
-<p>سیستم بر اساس مثال عملیاتی بالا، سند زیر را صادر می‌کند:</p>
+<h2 id="gl-engine">۵. موتور صدور سند حسابداری (GL Engine)</h2>
+<p>سیستم به صورت اتوماتیک بر اساس سناریوی ترکیبی زیر، سند حسابداری را صادر می‌کند:</p>
+<p><strong>سناریو:</strong> پرداخت صورت‌وضعیت ۱۲۰ میلیونی پیمانکار با کسر بیمه/مالیات/حسن انجام کار و کسر هزینه کارمزد بانکی.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">ردیف</th>
-<th style="text-align: left;">نام حساب (GL)</th>
+<th style="text-align: left;">ماهیت</th>
+<th style="text-align: left;">شرح حساب (GL)</th>
 <th style="text-align: left;">بدهکار (Dr)</th>
 <th style="text-align: left;">بستانکار (Cr)</th>
-<th style="text-align: left;">شرح و محاسبات</th>
+<th style="text-align: left;">منشأ دیتا</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">۱</td>
-<td style="text-align: left;"><strong>حساب‌های پرداختنی (شرکت البرز)</strong></td>
+<td style="text-align: left;">بدهی</td>
+<td style="text-align: left;"><strong>حساب‌های پرداختنی تجاری</strong></td>
 <td style="text-align: left;">۱۲۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">تسویه کامل بدهی ناخالص</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب تخصیص (بدهی کل)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۲</td>
+<td style="text-align: left;">هزینه</td>
 <td style="text-align: left;"><strong>هزینه کارمزد بانکی</strong></td>
 <td style="text-align: left;">۵,۰۰۰</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">کارمزد حواله</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">تب پرداخت (فیلد کارمزد)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۳</td>
+<td style="text-align: left;">دارایی</td>
 <td style="text-align: left;"><strong>موجودی بانک ملت</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۳۸,۳۳۵,۰۰۰</td>
-<td style="text-align: left;">اصل حواله + کارمزد</td>
+<td style="text-align: left;">تب پرداخت (حواله)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۴</td>
-<td style="text-align: left;"><strong>اسناد پرداختنی</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">بدهی</td>
+<td style="text-align: left;"><strong>اسناد پرداختنی (چک)</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۵۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">صدور چک</td>
+<td style="text-align: left;">تب پرداخت (چک)</td>
 </tr>
 <tr>
 <td style="text-align: left;">۵</td>
-<td style="text-align: left;"><strong>بیمه پرداختنی</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">بدهی</td>
+<td style="text-align: left;"><strong>سازمان تامین اجتماعی (بیمه)</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۱۶,۶۷۰,۰۰۰</td>
-<td style="text-align: left;">بدهی به تامین اجتماعی</td>
+<td style="text-align: left;">تب کسورات</td>
 </tr>
 <tr>
 <td style="text-align: left;">۶</td>
-<td style="text-align: left;"><strong>مالیات تکلیفی</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">بدهی</td>
+<td style="text-align: left;"><strong>سازمان امور مالیاتی (تکلیفی)</strong></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۵,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">بدهی به دارایی</td>
+<td style="text-align: left;">تب کسورات</td>
 </tr>
 <tr>
 <td style="text-align: left;">۷</td>
+<td style="text-align: left;">بدهی</td>
 <td style="text-align: left;"><strong>سپرده حسن انجام کار</strong></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">--</td>
 <td style="text-align: left;">۱۰,۰۰۰,۰۰۰</td>
-<td style="text-align: left;">مبلغ نگهداشت</td>
+<td style="text-align: left;">تب کسورات</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="faq">۷. بخش پرسش‌های متداول (FAQ)</h2>
-<p><strong>س: مالیات بر ارزش افزوده (VAT) کجای این جدول است؟</strong>
-پ: مبلغ ارزش افزوده قبلاً در "فاکتور خرید" به مبلغ بدهی تأمین‌کننده اضافه شده است. در فرم پرداخت، مبلغی که در تب تخصیص می‌بینید شامل VAT هم هست. بنابراین نیازی به تفکیک یا کسر مجدد آن نیست و کل مبلغ به فروشنده پرداخت می‌شود.</p>
-<p><strong>س: کسورات (بیمه/مالیات) کی پرداخت می‌شوند؟</strong>
-پ: در سند پرداخت به پیمانکار، این مبالغ فقط شناسایی (کسر) می‌شوند. پرداخت واقعی به دولت در یک سند جداگانه با نوع <code>TaxPayment</code> انجام می‌شود.</p>
-<p><strong>س: آیا خزانه‌دار باید کسورات را محاسبه کند؟</strong>
-پ: خیر. تب کسورات برای خزانه‌دار فقط خواندنی است و ارقام آن سیستمی پر می‌شود تا خزانه‌دار فقط مجری پرداخت مبلغ خالص باشد.</p>
-<p><strong>س: اگر بخواهم ۵۰ میلیون بدهم ولی فاکتور ۱۰۰ میلیون است؟ (پرداخت جزئی)</strong>
-پ: در هدر سند تیک "ورود دستی" را بزنید و مبلغ ۵۰ میلیون را وارد کنید. سیستم ۵۰ میلیون از بدهی را کسر می‌کند و ۵۰ میلیون دیگر به عنوان "مانده باز" روی فاکتور باقی می‌ماند.</p>
-<p><strong>س: پرداخت هزینه خرد (پیک موتوری) چگونه است؟</strong>
-پ: نوع پرداخت را <code>DirectExpense</code> انتخاب کنید. در تب حسابداری کد "هزینه پیک" را بزنید و در تب روش پرداخت، "نقد" از "صندوق تنخواه" را انتخاب کنید.</p>
+<h2 id="process-flow-diagram">۶. دیاگرام جریان فرآیند (Process Flow Diagram)</h2>
+<pre class="mermaid"><code>graph TD
+    Start[شروع: انتخاب تأمین‌کننده] --&gt; Allocation[تب ۱: انتخاب فاکتورها/بدهی‌ها]
+    Allocation --&gt; CalcGross[محاسبه جمع ناخالص]
+
+    CalcGross --&gt; Deductions[تب ۲: بررسی کسورات]
+    Deductions --&gt; |بیمه/مالیات/سپرده| CalcNet[محاسبه مبلغ قابل پرداخت]
+
+    CalcNet --&gt; PaymentMethod{تب ۳: انتخاب روش پرداخت}
+
+    PaymentMethod --&gt; Cheque[صدور چک]
+    PaymentMethod --&gt; Wire[حواله بانکی]
+    PaymentMethod --&gt; Cash[نقد / تنخواه]
+    PaymentMethod --&gt; Endorse[خرج چک مشتری]
+
+    Cheque --&gt; Validation{تراز سند؟}
+    Wire --&gt; Validation
+    Cash --&gt; Validation
+    Endorse --&gt; Validation
+
+    Validation -- خیر --&gt; Error[نمایش خطا]
+    Validation -- بله --&gt; GL[صدور سند حسابداری]
+    GL --&gt; Finish[پایان: بروزرسانی مانده‌ها]</code></pre>
+<hr />
+<h2 id="faq">۷. پرسش‌های متداول (FAQ)</h2>
+<p><strong>س۱: آیا مالیات بر ارزش افزوده (VAT) در تب کسورات می‌آید؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> خیر! این بزرگترین اشتباه رایج است. ارزش افزوده در زمان "خرید" به مبلغ بدهی تأمین‌کننده اضافه شده است. در اینجا شما کل مبلغ (جنس + ارزش افزوده) را بدهکارید و پرداخت می‌کنید. تب کسورات فقط برای مبالغی است که <strong>نباید</strong> به پیمانکار بدهید (مثل بیمه و مالیات تکلیفی).</li>
+</ul>
+<p><strong>س۲: اگر بخواهم بخشی از پول را بدهم (پرداخت جزئی)، سیستم چه می‌کند؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> در تب تخصیص، ستون "مبلغ تخصیص" قابل ویرایش است. اگر بدهی ۱۰۰ واحد است و شما ۵۰ واحد وارد کنید، وضعیت فاکتور <code>Open</code> می‌ماند اما مانده آن ۵۰ واحد کاهش می‌یابد.</li>
+</ul>
+<p><strong>س۳: چک روز (نقد) با چک مدت‌دار چه تفاوتی در سیستم دارد؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> در ماژول پرداخت تفاوتی ندارند (هر دو اسناد پرداختنی هستند). اما در زمان "پاس شدن چک"، اگر چک روز باشد همان لحظه از بانک کم می‌شود، ولی اگر مدت‌دار باشد، در تاریخ سررسید و پس از عملیات "اعلام وصول" (Clearing) از حساب بانک کسر می‌گردد.</li>
+</ul>
+<p><strong>س۴: فرآیند استرداد چک (برگشت زدن چک صادره) چگونه است؟</strong></p>
+<ul>
+<li><strong>پاسخ:</strong> اگر چکی که داده‌اید پاس نشد یا عودت شد، نباید سند پرداخت را حذف کنید. باید از فرآیند <strong>«ابطال چک» (Void Check)</strong> استفاده کنید تا سیستم یک سند معکوس (Reverse Entry) صادر کند و بدهی تأمین‌کننده دوباره احیا شود.</li>
+</ul>
 
 
 
