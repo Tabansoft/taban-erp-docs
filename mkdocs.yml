@@ -123,12 +123,15 @@ nav:
           - "تغییر وضعیت دارایی": fixed-asset-management/operations/asset-status-change.md
           - "اموال‌گردانی": fixed-asset-management/operations/asset-physical-inventory.md
           - "محاسبه استهلاک": fixed-asset-management/operations/depreciation-run.md
+          - "مخارج پس از تحصیل": fixed-asset-management/operations/asset-expenditure.md
           - "خروج دارایی":
             - "مقدمه": fixed-asset-management/operations/asset-disposal/overview.md
             - "فروش دارایی": fixed-asset-management/operations/asset-disposal/asset-sale.md
             - "اسقاط دارایی": fixed-asset-management/operations/asset-disposal/asset-scrap.md
             - "اهدا و انتقال": fixed-asset-management/operations/asset-disposal/asset-donation.md
             - "مفقودی و حوادث": fixed-asset-management/operations/asset-disposal/asset-loss.md
+       - "مدیریت نگهداری و تعمیرات":
+            "مقدمه": fixed-asset-management/computerized-maintenance-management/overview.md
        - "عملیات مالی":
           - "بستن دوره": fixed-asset-management/financial-operations/fiscal-period-close.md
           - "اسناد تعدیل": fixed-asset-management/financial-operations/asset-adjustment.md
