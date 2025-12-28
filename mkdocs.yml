@@ -40,6 +40,7 @@ nav:
           - "بنگاه‌های اقتصادی": enterprise-structure/financial/legal-entity.md
       - "ساختار عملیاتی":
           - "مکان‌های عملیاتی": enterprise-structure/operational/operating-unit.md
+          - "موقعیت‌های مکانی": enterprise-structure/operational/location.md
   - "مالی":
       - "خزانه‌داری":
           - "معرفی ماژول خزانه‌داری": "financial/treasury/overview.md"
