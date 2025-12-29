@@ -39,7 +39,7 @@ nav:
       - "ساختار مالی":
           - "اشخاص حقوقی": enterprise-structure/financial/legal-entity.md
       - "ساختار عملیاتی":
-          - "مکان‌های عملیاتی": enterprise-structure/operational/operating-unit.md
+          - "مکان‌های عملیاتی": enterprise-structure/operational/site.md
           - "موقعیت‌های مکانی": enterprise-structure/operational/location.md
   - "مالی":
       - "خزانه‌داری":

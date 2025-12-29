@@ -53,7 +53,7 @@
 
 اولویت (Priority): اولویت تولید (بالا، متوسط، پایین) برای مدیریت سفارش‌های فوری.
 وضعیت (Status): وضعیت برنامه (Draft, Approved, Released).
-مکان تولید (Operating Unit): کارخانه یا سایت تولید (از MDM/Organizational Structure).
+مکان تولید (Site): کارخانه یا سایت تولید (از MDM/Organizational Structure).
 یادداشت‌ها (Notes): توضیحات اضافی (مثلاً برای تولید سفارشی).
 
 ویژگی‌های پیشرفته:
