@@ -37,7 +37,7 @@ nav:
   - "معرفی": index.md
   - "ساختار سازمان":
       - "ساختار مالی":
-          - "بنگاه‌های اقتصادی": enterprise-structure/financial/legal-entity.md
+          - "اشخاص حقوقی": enterprise-structure/financial/legal-entity.md
       - "ساختار عملیاتی":
           - "مکان‌های عملیاتی": enterprise-structure/operational/operating-unit.md
           - "موقعیت‌های مکانی": enterprise-structure/operational/location.md
