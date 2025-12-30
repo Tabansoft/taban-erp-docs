@@ -40,7 +40,7 @@ nav:
           - "اشخاص حقوقی": enterprise-structure/financial/legal-entity.md
       - "ساختار عملیاتی":
           - "سایت‌ها": enterprise-structure/operational/site.md
-          - "موقعیت‌های مکانی": enterprise-structure/operational/location.md
+          - "مکان‌ها": enterprise-structure/operational/location.md
   - "مالی":
       - "خزانه‌داری":
           - "معرفی ماژول خزانه‌داری": "financial/treasury/overview.md"
